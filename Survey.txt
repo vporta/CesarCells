@@ -1,0 +1,463 @@
+Survey/Report
+Information about the Enrollment Questionnaire
+Thank you for joining My Retina Tracker™ the Foundation Fighting Blindness' Registry. To make My Retina Tracker™ as useful as possible for you, your doctor and the FFB research community, we need you to answer a number of questions about your visual history and current condition, family history of retinal disease, diagnosis, treatment and participation in research. You will be reminded to update this information on an annual basis.
+
+Since the enrollment questionnaire is fairly long, it is broken up into 18 topics with a range of between 2 and 11 questions in each section. Most sections have between 3 and 5 questions. You can stop at any time and come back to complete the survey later.
+
+If some pages or questions do not apply to you, you should skip them. The exceptions to this are 7 required questions. Their locations in the survey are indicated in the Table of Contents below.
+
+If you want to change an answer after you have returned this survey, you can log into MyRetinaTracker.org with your user name and password, click Profile tab at the top of the page, a list of pages in the survey will appear. By clicking on the page name, a list of the questions on that page, and your answers, will appear. You can change any answer whenever you wish. If you do not have access to a computer or the internet, please contact the Registry Coordinator at 800-683-5555.
+
+Table of Contents
+1. Diagnosis (8 questions - 1 required)
+2. Genetic testing (4 questions)
+3. Gene name (2 questions)
+4. Family history (3 questions)
+5. General health (10 questions - 2 required)
+6. Hearing conditions (6 questions)
+7. Kidney conditions (3 questions)
+8. Vision self evaluation (4 questions)
+9. Visual functioning (8 questions - 1 required)
+10. Driving (3 questions)
+11. Measures for eye health (3 questions - 1 required)
+12. Medication (11 questions)
+13. Research studies (4 questions)
+14. Clinical trial participation (2 questions - 1 required)
+15. Current clinical trial participation (4 questions)
+16. Previous clinical trial participation (8 questions - 1 required)
+17. Future research (2 questions)
+18. Demographics (7 questions)
+
+
+You report will not be shared with anyone. It is for your reference only and for you to bring with you to your doctor. 
+
+/=========
+
+Diagnosis
+
+Does the participant have an inherited retinal degenerative disease? (If you do not have an inherited retinal degeneration, many of the following survey questions will NOT apply to you, but please answer those that are still relevant.
+Yes - I am affected.
+No - I am not affected. I am genetically related to someone who is affected by an inherited retinal degenerative disease.
+
+What was the participant's age in years when they first began experiencing symptoms of the rare disease? Please select one.
+
+
+What is the participant's PRIMARY disease diagnosis or name of their retinal degenerative disease? Please select one.
+
+Other, please specify :  
+
+What is the participant's SECONDARY disease diagnosis or retinal degenerative disease, if any? Please select one, or if there is not a secondary disease diagnosis, enter not applicable.
+
+Other, please specify :  
+
+Has genetic testing to confirm this diagnosis been done? Please select one. Required
+
+
+Have you been told you have Bare Light Perception (BLP)? Please select one.
+
+
+Have you been told you have No Light Perception (NLP)? Please select one.
+
+
+What tests did physicians or other health professionals do to make the rare disease diagnosis? Please check all that apply.
+Unknown
+Fundus Exam
+ERG or Electroretinography
+General Eye Exam
+Genetic laboratory analysis
+Personal Medical History
+Family Medical History
+Imaging by an Ophthalmologist
+Night Blindness Test
+Physical examination
+Visual Field
+Other :  
+
+What was the participant's age in years when the formal diagnosis was made? Please select one.
+/==========================\
+Family History
+
+What other family members have been diagnosed with the SAME inherited retinal degenerative disease as the participant? Please check all that apply.
+Unknown
+None
+Brother
+Daughter
+Father
+Granddaughter
+Grandson
+Half-brother
+Half-sister
+Maternal Aunt
+Maternal Cousin
+Maternal Grandfather
+Maternal Grandmother
+Maternal Uncle
+Mother
+Nephew
+Niece
+Paternal Aunt
+Paternal Cousin
+Paternal Grandfather
+Paternal Grandmother
+Paternal Uncle
+Sister
+Son
+
+What other family members have been diagnosed with a DIFFERENT retinal degenerative disease? Please check all that apply.
+Unknown
+None
+Brother
+Daughter
+Father
+Granddaughter
+Grandson
+Half-brother
+Half-sister
+Maternal Aunt
+Maternal Cousin
+Maternal Grandfather
+Maternal Grandmother
+Maternal Uncle
+Mother
+Nephew
+Niece
+Paternal Aunt
+Paternal Cousin
+Paternal Grandfather
+Paternal Grandmother
+Paternal Uncle
+Sister
+Son
+
+What other retinal degenerative diseases have been diagnosed within your family? Please check all that apply.
+Unknown
+Achromatopsia
+Alstrom Syndrome
+Age-Related Macular Degeneration - Dry
+Age-Related Macular Degeneration - Wet
+Age-Related Macular Degeneration - Both
+Age-Related Macular Degeneration - unspecified
+Bardet-Biedl Syndrome (Laurence-Moon)
+Bassen-Kornzweig Syndrome
+Batten Disease
+Best Disease
+Biette Crystalline Corneoretinal Dystrophy
+Blue Cone Monochromacy
+Choroideremia
+Cone Dystrophy
+Cone-Rod Dystrophy
+Congenital Stationary Night Blindness
+Enhanced S-Cone Syndrome
+Gyrate Atrophy
+Joubert Syndrome
+Juvenile Inerited Macular Degeneration
+Leber Congenital Amaurosis
+Mallatia Leventinese
+North Carolina Macular Dystrophy
+Oguchi Disease
+Pattern Dystrophy
+Refsum Syndrome
+Retinitis Pigmentosa
+Retinitis Pigmentosa - Atypical
+Retinitis Punctata Albescens
+Retinoschisis
+Rod-Cone Dystrophy
+Rod Monochromatism
+Senior-Loken Syndrome
+Sorsby Fundus Dystrophy
+Stargardt Disease
+Usher Syndrome - Type Unknown
+Usher Syndrome - Type 1
+Usher Syndrome - Type 2
+Usher Syndrome - Type 3
+Other, please specify :  
+/====================================\
+General Health
+
+In general, the participant's overall health is? Please select one.
+
+
+Has the participant ever had any of these medical problems? Please check all that apply.
+Breathing (asthma, pneumonia, etc.)
+Cancer
+Chronic alcoholism
+Dental disease
+Hearing loss (mild, moderate or severe)
+Hypertension
+Intellectual disability
+Kidney or bladder disease
+Liver disease
+Malaria
+Loss of muscle tone
+Recurring vomiting/diarrhea/constipation
+Seizures
+Skeletal or bone abnormalities
+Thyroid disease
+None
+Other, please specify :  
+
+Does the participant have hearing problems related to their inherited retinal degenerative disease? Please select one. Required
+
+
+Does the participant have kidney problems related to their inherited retinal degenerative disease? Please select one. Required
+
+
+Does the participant take any of these medicines, or have they taken them in the past? Please answer yes, no or don't know in the first column. For any medicine where the answer is yes, how long has or did the participant take each medication? Please answer in the second column.
+Currently takes or has taken  How long
+Accutane/ Isotrenoin    
+Anti-Psychotic (Thorazine, Sparine, Mellaril, Prolzin)    
+Canthaxathine (Orobronze)   
+Cidofovir   
+Chloroquine/ Hyrdoxychloroquine   
+Cocaine   
+Deferoxamine    
+Digitalis   
+Dorzolamide/Trusopt   
+Echothiophate   
+Ethambutol    
+Gleevac   
+Isoniazid   
+Linezolid   
+Lyrica    
+Methanol    
+Methoxyflurane    
+Nicotinic   
+PDE-5 Inhibitors (Viagra, Cialis, Levitra)    
+Talc    
+Tamoxifen   
+Thioridazine    
+Valproic Acid   
+Vigabatrin (Sabril)   
+
+Does the participant take any dietary supplements, special foods or follow a special diet? Please select one.
+
+
+Which of the following over-the-counter medications or supplements are currently used? Please check all that apply.
+Unsure
+Alpha Lipoic Acid
+Aspirin
+B vitamin
+B-12 (methylcobalamine)
+B-50 Complex
+Calcium
+Choline
+Coenzyme Q10 (CoQ-10)
+Creatine Monohydrate
+Fish oil
+Folic Acid
+Grape Seed Extract
+Green Tea Extract
+Inositol
+L-Arginine
+L-Carnitine
+Magnesium
+Melatonin
+Multivitamin
+Niacin
+Omega fatty acid supplement (DHA, EHA)
+Phosphatidyl Choline
+Saffron
+Selenium
+Taurine
+TUDCA
+Vitamin A Palmitate (Beta Carotene)
+Vitamin C
+Vitamin D
+Vitamin E
+None
+Other :  
+
+Does the participant have a history of smoking? Please select one.
+
+
+If participant is a current or past smoker, what year did they:
+Year
+Start smoking 
+Stop smoking  
+
+On average how many cigarettes or cigars do/did the participant smoke per day? Please select one.
+
+
+Do you have private health insurance, Medicare or Medicaid coverage? Please select:
+No insurance
+Private health insurance
+Medicare
+Medicaid
+/==============================\
+Vision Self Evaluation
+
+What vision problems does the participant experience? Please select yes, no or unknown in the first column. For each yes answer, at what age did the vision problem start? Please answer in the second column.
+Experience this problem?  Age of onset?
+Night blindness   
+Peripheral (side) vision loss   
+Central vision loss   
+Reading impairment    
+Prescribed glasses or contact lenses    
+Far-sighted vision impairment   
+Cataracts   
+Glaucoma    
+Detached retina   
+Slow dark adaptation    
+Photopsia/random light flashes    
+Problem with color vision   
+
+How would you describe the progression of your vision problems from the time you were diagnosed until now? Please select one answer for each problem the participant experiences.
+Progression
+Night blindness 
+Peripheral (side) vision loss 
+Central vision loss 
+Reading impairment  
+Prescribed glasses or contact lenses  
+Far-sighted vision impairment 
+Cataracts 
+Glaucoma  
+Detached retina 
+
+Does the participant use any type of medical or assistive device to help them move around, communicate, or do things? In the first column answer yes or no. For each item where the answer is yes, please select the age in years, when the assistive device was needed, in the second column.
+Aids used Age when needed
+Magnifiers    
+Computer software to enlarge text   
+Computer software to read text    
+White cane    
+Guide dog   
+Hand held reader    
+Braille   
+Argus II
+/===================================\
+Visual Functioning
+
+At the present time, the participant's eyesight using both eyes, with glasses or contact lenses if they use them, is? Please select one.
+
+
+How much of the time does the participant worry about their eyesight? Please select one.
+
+
+How much pain or discomfort does the Participant have in and around their eyes, for example burning, itching, aching, etc.? Please select one.
+
+
+Because of their eyesight, how much difficulty does the participant have doing daily tasks? Please select one answer for each daily task if applicable.
+Status
+Reading ordinary print in newspapers with glasses or contacts?  
+Doing work or hobbies such as cooking, sewing, fixing things around the house, etc.?  
+Finding something on a crowded shelf? 
+Reading street signs or store signs?  
+Going down steps, stairs or curbs in dim light or at night? 
+Noticing objects as they are walking along? 
+Seeing how people react to things you say?  
+Picking out and matching their own clothes? 
+Visiting with people in their homes, at parties or in resturants? 
+Going out to see movies, plays or sports events 
+
+Does the participant accomplish less than they would like because of their vision? Please select one.
+
+
+Is the participant limited in how long they can work or do other activities because of their vision? Please select one.
+
+
+How much does pain or discomfort in or around the eyes, for example, burning, itching or aching, keep the participant from doing what they would like to be doing? Please select one.
+
+
+Because of one's eyesight the participant feels the following statements are: Please select one answer for each question.
+Status
+Stays home most of the time 
+Feels frustrated a lot of the time  
+Has much less control over what they do 
+Has to rely too much on what other people tell them 
+Needs a lot of help from others 
+Worries about doing things that will embarrass them or others 
+
+Is the participant currently driving, at least once in while? Please select one. Required
+
+Click to Continue Survey
+/=============================\
+Stopped Driving
+
+If the participant gave up driving, what was the reason? Please select one.
+Mainly eyesight
+Mainly other reasons
+Both eyesight and other reasons
+/=================================\
+Measures for Eye Health
+
+Does the participant take any dietary supplements, special foods or follow a special diet for treatment of their inherited retinal disease? For each item that applies, please answer yes in the first column and select the age, in years, when the participant began using that item in the second column.
+Supplement used Age when began
+Beta carotene or Vitamin A plamitate    
+Bilberry    
+Fish Oil    
+Lutein and Zeaxanthin   
+Multivitamins for Vision    
+Omega Rich Fish   
+Resveratrol   
+UVA Protection    
+
+Does the participant take any dietary supplements, foods or follows any special diets for treatment of his/her retinal degenerative disease that are not listed above? Please describe.
+
+
+Does the participant take a prescription drug for their inherited retinal disease? Please select one. Required
+/======================================\
+Research Studies
+
+Has that participant ever been in a research study other than a clinical trial? Please select one.
+
+
+Has the participant donated a sample of blood, tissue, or other biospecimen for research in the past? Please select one.
+
+
+If a biospecimen was donated in the past, what type was it? Please check all that apply.
+Blood
+Saliva
+Swab from cheek
+Urine
+Other bodily fluid
+Tissue
+
+What is the name of the hospital/clinic where the biospecimen was donated?
+
+/===============================\
+Current Clinical Trial
+
+Does the participant CURRENTLY participate in any clinical trials related to their rare disease? Please select one. Required
+
+Previous Clinical Trial
+
+Has the participant PREVIOUSLY participated in any clinical trials related to their rare disease? Please select one. Required
+
+/===============================\
+Future Research
+
+Is the participant willing to be contacted in the future about research related to their rare disease? Please select one.
+
+
+Is the participant willing to be contacted about donating a sample of blood, tissue, or other biospecimen for research in the future? Please select one.
+/====================================\
+Demographics
+
+What method of communication does the participant prefer? Please check all that apply.
+Sign language
+Spoken language
+Written language
+
+What method of contact does the participant prefer? Please check all that apply.
+Email
+Mail
+Phone
+
+Is the person entering the data the account holder? Please select one.
+
+
+If no, can the My Retina Tracker Curator contact the person entering data if there is need for information verification? Please select one.
+
+
+If yes, what is the name of the person entering the data?
+First   
+  
+Last  
+  
+
+What is the email of the person entering the data?
+Email   
+  
+
+What is the phone number for the person entering the data?
+Phone Number 
+/========================================\
