@@ -42,13 +42,12 @@ app.engine('handlebars', exphbs({
     defaultLayout: 'main'
 }));
 app.set('view engine', 'handlebars');
-app.get('/', function (req, res) {
-  res.send('index.html');
-});
 
-// var users_controllers = require('./controllers/users_controller.js');
 
-// app.use('/', users_controllers);
+// Require Controllers
+var users_controllers = require('./controllers/users_controller.js');
+
+app.use('/', users_controllers);
 
 // have heroku select the port otherwise use port 3000 locally
 var port = process.env.PORT || 3000;
