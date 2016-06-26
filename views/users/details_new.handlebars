@@ -1,28 +1,30 @@
+<h2 id="header-details-form">Fill out the form below to get started!</h2>
 
 
 <form class="details-new-form" action="/users/details_new" method="post" autocomplete="on">
   <br>
-  First Name<br>
-  <input type="text" name="fname" placeholder="First name"><br>
-  <br>
-  Last Name<br>
-  <input type="text" name="lname" placeholder="Last name"><br>
-  <br>
-
-  <div class="form-group"
-    <label for="sex">Sex: </label>
-    <br>
-    <input type="radio" name="sex" required="true" value="male" checked> Male<br>
-    <input type="radio" name="sex" required="true" value="female"> Female<br>
-    <input type="radio" name="sex" required="true" value="other"> Other
+  
+  <div class="form-group">
+    <label for="FirstName">First Name</label>
+    <input type="text" name="fname" placeholder="First name" class="form-control" > 
   </div>
-  <br>
+
+  <div class="form-group">
+    <label for="LastName">Last Name</label>
+    <input type="text" name="lname" placeholder="Last name" class="form-control" >
+  </div>
+
+  <label for="sexDetails">Sex</label>
+  <select class="form-control">
+    <option value="male" required name="male">Male</option>
+    <option value="female" required name="female">Female</option>
+  </select>
 
   Enter your Birthday<br>
-  <input type="date" name="bday" id="inputBirthday" required="true"><br><br>
+  <input type="date" name="bday" id="inputBirthday" class="form-control" required="true"><br><br>
 
   Have you been diagnosed with Stargardts?<br>
-  <select name="diagnosedSelect">
+  <select name="diagnosedSelect" required>
       <option value=""></option>
       <option value="yes">Yes</option>
       <option value="no">No</option>
@@ -290,7 +292,7 @@
       <option value="Zimbabwe">Zimbabwe</option>
       </select><br>
       <br>
-      <input type="submit" value="Submit"><br>
+      <input type="submit" value="Submit" class="btn btn-default"><br>
       
 
 </form>

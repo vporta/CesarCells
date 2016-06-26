@@ -1,0 +1,25 @@
+#userRegister {
+  margin-top: 100px;
+}
+.details-new-form {
+  margin-top: 30px;
+  width: 500px;
+  /*background-color: green;*/
+  /*text-align: center;*/
+}
+body {
+  color: black;
+}
+#header-details-form {
+  margin-top: 120px;
+}
+#header-passreset-form {
+  margin-top: 120px;
+}
+.create-update-form {
+  width: 500px;
+}
+.reset-password-form {
+  margin-top: 30px;
+  width: 400px;
+}

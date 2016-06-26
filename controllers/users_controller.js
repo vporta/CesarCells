@@ -62,17 +62,13 @@ router.get('/users/sign-out', function(req, res) {
 
 //<--reset password form begins-->
 
-// router.get('/users/password-new', function(req, res) {
-//   res.render('users/password-new');
-// });
-
-router.post('/users/password-new', function(req, res) {
+router.get('/users/password_new', function(req, res) {
+  res.render('users/password_new');
+});
+router.post('/users/password_new', function(req, res) {
   res.redirect('/');
 });
 
-router.get('/users/password-new', function(req, res) {
-  res.render('users/password-new');
-});
 //<--reset password form begins-->
 
 
