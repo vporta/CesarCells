@@ -9,7 +9,7 @@ var bcrypt = require('bcryptjs');
 
 router.get('/', function (req, res) {
   res.render('index');
-});
+})
 
 //<--home ends-->
 
@@ -71,6 +71,14 @@ router.post('/users/password_new', function(req, res) {
 
 //<--reset password form begins-->
 
+// router.get('/do', function(req, res) {
+//  var request = require('request');
+//  request('https://clinicaltrials.gov/search?term=stargardts&studyxml=true&recr=open', function (error, response, body) {
+//    if (!error && response.statusCode == 200) {
+//      console.log(body) // Show the HTML for the Google homepage. 
+//    }
+//  });
+// });
 
 
 
