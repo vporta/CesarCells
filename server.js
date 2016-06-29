@@ -1,5 +1,4 @@
 var path = require('path');
-// var Promise = require('promise');
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
@@ -54,9 +53,13 @@ app.use(express.static('public'));
 
 
 // Require Controllers
-var users_controllers = require('./controllers/users_controller.js');
+var users_controller = require('./controllers/users_controller.js');
 
-app.use('/', users_controllers);
+app.use('/', users_controller);
+
+var tools_controller = require('./controllers/tools_controller.js');
+
+app.use('/', tools_controller);
 
 // have heroku select the port otherwise use port 3000 locally
 var port = process.env.PORT || 3000;

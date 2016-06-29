@@ -69,20 +69,11 @@ router.post('/users/password_new', function(req, res) {
   res.redirect('/');
 });
 
-//<--reset password form begins-->
+//<--reset password form ends-->
 
-// router.get('/do', function(req, res) {
-//  var request = require('request');
-//  request('https://clinicaltrials.gov/search?term=stargardts&studyxml=true&recr=open', function (error, response, body) {
-//    if (!error && response.statusCode == 200) {
-//      console.log(body) // Show the HTML for the Google homepage. 
-//    }
-//  });
-// });
-
-
-
-
+router.get('/test', function (req, res) {
+  res.render('tools/stemcell_assessment')
+});
 
 module.exports = router;
 
