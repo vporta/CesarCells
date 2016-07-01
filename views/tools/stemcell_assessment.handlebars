@@ -1,182 +1,106 @@
-create an array of forms
-
-
-
-<div class="primary-forms">
-      <div class="quizArea">
-       <div id="start" class="assess-questions">
-        
-                <a id="start-clinic-assess" class="click-quiz-button btn btn-primary btn-lg btn-block" href="#" style="padding: 40px 0; font-size: 30px; margin-top: 120px">QUALIFY FOR A CLINIC </a>
+<div class="page-header">
+  <h1 id="assessment-header">Stargardts Disease Clinical Trial Assessment</h1>
+</div>
+<div class="container-fluid bg-info">
+    <div class="modal-dialog">
+    <div class="survey-header-wrapper">
+        <div class="survey-header">
+            <h2>Survey: Stargardts</h2>
+            <a class="quit js-quit-survey" href="#">Back</a>
         </div>
-        <form class='submit-assessment-form' action="/tools/assessment" method="post" autocomplete="on">
-          
-        <div id="q1" class="assess-questions">
-          <p>Question 1 of 10</p>
-          <h3>1. Do you have objective, documented damage to the retina or optic nerve unlikely to improve OR do you have objective, documented damage to the retina or optic nerve that is progressive?</h3>
-          <div class="btn" data-toggle="buttons">
-            <label class="btn btn-default btn-lg">
-              <input type="radio" class="wells-quiz" name="assess_one" value="1">Yes
-            </label>
-            
-            <label class="btn btn-default btn-lg">
-              <input type="radio" class="wells-quiz" name="assess_one" value="0">No
-            </label>
+    </div>
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="col-xs-3 col-xs-offset-5">
+            <div id="loadbar" style="display: none;">
+              <div class="blockG" id="rotateG_01"></div>
+              <div class="blockG" id="rotateG_02"></div>
+              <div class="blockG" id="rotateG_03"></div>
+              <div class="blockG" id="rotateG_04"></div>
+              <div class="blockG" id="rotateG_05"></div>
+              <div class="blockG" id="rotateG_06"></div>
+              <div class="blockG" id="rotateG_07"></div>
+              <div class="blockG" id="rotateG_08"></div>
+            </div>
+          </div>
+          <div class="quiz" id="quiz" data-toggle="buttons">
+            <div class="modal-header">
+                <h3> Do you have a clinical diagnosis of typical autosomal recessive Stargardt macular dystrophy?</h3>
+            </div>
+            <form id="quiz-form" method="post" action="">
+              <label class="element-animation1 btn btn-lg btn-primary btn-block">
+                <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> 
+                <input type="radio" name="q1_answer" value="Yes">    Yes
+              </label>
+              <label class="element-animation2 btn btn-lg btn-primary btn-block">
+                <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> 
+                <input type="radio" name="q1_answer" value="No">    No
+              </label>
+            </form>
           </div>
         </div>
-
-        <div id="q2" class="assess-questions">
-          <p>Question 2 of 10</p>
-          <h3>2. Do you have less than or equal to 20/40 best corrected central visual acuity in one or both eyes AND/OR an abnormal visual field in one or both eyes?</h3>
-          <div class="btn" data-toggle="buttons">
-            <label class="btn btn-default btn-lg">
-              <input type="radio" class="wells-quiz" name="assess_two" value="1">Yes
-            </label>
-            
-            <label class="btn btn-default btn-lg">
-              <input type="radio" class="wells-quiz" name="assess_two" value="0">No
-            </label>
-          </div>
-        </div>
-
-        <div id="q3" class="assess-questions">
-          <p>Question 3 of 10</p>
-          <h3>3. Have you been at least 3 months post-surgical treatment intended to treat any ophthalmologic disease AND are you stable?</h3>
-          <div class="btn" data-toggle="buttons">
-            <label class="btn btn-default btn-lg">
-              <input type="radio" class="wells-quiz" name="assess_three" value="1">Yes
-            </label>
-            
-            <label class="btn btn-default btn-lg">
-              <input type="radio" class="wells-quiz" name="assess_three" value="0">No
-            </label>
-          </div>
-        </div>
-        <div id="q4" class="assess-questions">
-          <p>Question 4 of 10</p>
-          <h3>4. Are you under current medical therapy (pharmacologic treatment) for a retinal or optic nerve disease?</h3>
-          <div class="btn" data-toggle="buttons">
-            <label class="btn btn-default btn-lg" id="q4-yes">
-              <input type="radio" class="wells-quiz" name="assess_four" value="1" >Yes 
-            </label>
-            <label class="btn btn-default btn-lg" id="q4-no">
-              <input type="radio" class="wells-quiz" name="assess_four" value="0">No
-            </label>
-          </div>
-        </div>
-        
-        <div id="q4-part2" class="assess-questions">
-          <h3>If 'YES', are you considered stable on that treatment and unlikely to have visual function improvement (for example, glaucoma with intraocular pressure stable on topical medications but visual field damage)?</h3>
-          <div class="btn" data-toggle="buttons">
-            <label class="btn btn-default btn-lg">
-              <input type="radio" class="wells-quiz" name="assess_four_part2" value="1">Yes
-            </label>
-            
-            <label class="btn btn-default btn-lg">
-              <input type="radio" class="wells-quiz" name="assess_four_part2" value="0">No
-            </label>
-          </div>
-        </div>
-
-        <div id="q5" class="assess-questions">
-          <p>Question 5 of 10</p>
-          <h3>5. Do you have the potential for improvement with BMSC treatment AND be at minimal risk of any potential harm from the procedure?</h3>
-          <div class="btn" data-toggle="buttons">
-            <label class="btn btn-default btn-lg">
-              <input type="radio" class="wells-quiz" name="assess_five" value="1">Yes
-            </label>
-            
-            <label class="btn btn-default btn-lg">
-              <input type="radio" class="wells-quiz" name="assess_five" value="0">No
-            </label>
-          </div>
-        </div>
-        
-        
-        <div id="q6" class="assess-questions">
-          <p>Question 6 of 10</p>
-          <h3>6. Are you over the age of 18?</h3>
-          <div class="btn" data-toggle="buttons">
-            <label class="btn btn-default btn-lg">
-              <input type="radio" class="wells-quiz" name="assess_six" value="1">Yes
-            </label>
-            
-            <label class="btn btn-default btn-lg">
-              <input type="radio" class="wells-quiz" name="assess_six" value="0">No
-            </label>
-          </div>
-        </div>
-
-        <div id="q7" class="assess-questions">
-          <p>Question 7 of 10</p>
-          <h3>7. Are you medically stable and able to be medically cleared by your primary care physician OR a licensed primary care practitioner for the procedure? (Medical clearance means that in the estimation of the primary care practitioner, the patient can reasonably be expected to undergo the procedure without significant medical risk to health.)</h3>
-          <div class="btn" data-toggle="buttons">
-            <label class="btn btn-default btn-lg">
-              <input type="radio" class="wells-quiz" name="assess_seven" value="1">Yes
-            </label>
-            
-            <label class="btn btn-default btn-lg">
-              <input type="radio" class="wells-quiz" name="assess_seven" value="0">No
-            </label>
-          </div>
-        </div>
-
-        <div id="q8" class="assess-questions">
-          <p>Question 8 of 10</p>
-          <h3>8. Patients who are not capable of an adequate ophthalmologic examination OR evaluation to document the pathology would be excluded from some trials. Are you capable of an adequate ophthalmologic examination OR evaluation to document the pathology? </h3>
-          <div class="btn" data-toggle="buttons">
-            <label class="btn btn-default btn-lg">
-              <input type="radio" class="wells-quiz" name="assess_eight" value="1">Yes
-            </label>
-            
-            <label class="btn btn-default btn-lg">
-              <input type="radio" class="wells-quiz" name="assess_eight" value="0">No
-            </label>
-          </div>
-        </div>
-
-        <div id="q9" class="assess-questions">
-          <p>Question 9 of 10</p>
-          <h3>9. Patients who are not capable or not willing to undergo follow up eye exams with the principle investigator or their ophthalmologist or optometrist as outlined in the protocol would be excluded in some trials. Are you willing to undergo follow up eye exams with the principle investigator or their ophthalmologist or optometrist as outlined in the protocol? </h3>
-          <div class="btn" data-toggle="buttons">
-            <label class="btn btn-default btn-lg">
-              <input type="radio" class="wells-quiz" name="assess_nine" value="1">Yes
-            </label>
-            
-            <label class="btn btn-default btn-lg">
-              <input type="radio" class="wells-quiz" name="assess_nine" value="0">No
-            </label>
-          </div>
-        </div>
-
-
-        <div id="q10" class="assess-questions">
-          <p>Question 10 of 11</p>
-          <h3>10. Patients who are not capable of providing informed consent would be excluded from some studies. Are you able to provide informed consent? </h3>
-          <div class="btn" data-toggle="buttons">
-            <label class="btn btn-default btn-lg">
-              <input type="radio" class="wells-quiz" name="assess_nine" value="1">Yes
-            </label>
-            
-            <label class="btn btn-default btn-lg">
-              <input type="radio" class="wells-quiz" name="assess_nine" value="0">No
-            </label>
-          </div>
-        </div>
-
-        <div id="q11" class="assess-questions">
-          <p>Question 11 of 11</p>
-          <h3>11. Patients who may be at significant risk to general health or to the eyes and visual function should they undergo the procedure would be excluded from some studies. Are you at significant risk to general health or to the eyes and visual function should they undergo the procedure?  </h3>
-          <div class="btn" data-toggle="buttons">
-            <label class="btn btn-default btn-lg">
-              <input type="radio" class="wells-quiz" name="assess_nine" value="1">Yes
-            </label>
-            
-            <label class="btn btn-default btn-lg">
-              <input type="radio" class="wells-quiz" name="assess_nine" value="0">No
-            </label>
-          </div>
-        </div>
-        <button type="submit" class="btn btn-default">Sign Up!</button> 
-        <br> 
-        </form>
-
+      <div class="modal-footer text-muted">
+        <span id="answer"></span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <div class="caption">
+      <h3>Thumbnail label</h3>
+      <p></p>
+      <p class="text-center">%</p>
+    </div>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <div class="caption">
+      <h3>Thumbnail label</h3>
+      <p></p>
+      <p class="text-center">%</p>
+    </div>
+  </div>
+  <div class="col-xs-6 col-md-3">
+  <div class="caption">
+    <h3>Thumbnail label</h3>
+    <p></p>
+    <p class="text-center">%</p>
+  </div>  </div>
+  <div class="col-xs-6 col-md-3">
+  <div class="caption">
+    <h3>Thumbnail label</h3>
+    <p></p>
+    <p class="text-center">%</p>
+  </div>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+  <div class="caption">
+    <h3>Thumbnail label</h3>
+    <p></p>
+    <p class="text-center">%</p>
+  </div>
+  </div>
+  <div class="col-xs-6 col-md-3">
+  <div class="caption">
+    <h3>Thumbnail label</h3>
+    <p></p>
+    <p class="text-center">%</p>
+  </div>
+  </div>
+  <div class="col-xs-6 col-md-3">
+  <div class="caption">
+    <h3>Thumbnail label</h3>
+    <p></p>
+    <p class="text-center">%</p>
+  </div>
+  </div>
+  <div class="col-xs-6 col-md-3">
+  <div class="caption">
+    <h3>Thumbnail label</h3>
+    <p></p>
+    <p class="text-center">%</p>
+  </div>
+  </div>
+</div>
