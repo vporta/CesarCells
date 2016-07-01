@@ -97,3 +97,14 @@ img.question-image {
 .panel-footer {
   height: 300px;
 }
+#start-panel-head {
+  margin-top: 200px;
+  text-align: center;
+  /*add border*/
+}
+#start-panel-begin {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  /*add border*/
+}

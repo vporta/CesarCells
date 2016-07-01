@@ -1,0 +1,37 @@
+eye stuff       ear stuff       heart stuff
+
+all have common questions 
+
+you want to ask those common questions frist 
+
+there's got to be a way to figure out which trial they qualify for before you know they qualify for it
+
+users
+id, name, email, birth_day
+
+details
+id, user_id, bunch of stuff here
+
+users_trials
+id, user_id, trial_id, qualification (boolean)
+
+trials
+id, name, min_age_req, max_age_req
+
+questions 
+
+id, question, difficulty_level
+
+question_trials
+
+question_id, trial_id
+
+1, 1
+1, 2
+2, 1
+2, 2
+
+- prioritize common questions first 
+
+- prioritize the difficult questions second
+

@@ -10,7 +10,10 @@ var clinics = [
       'Autosomal Recessive Stargardt Disease 1 (ABCA4-related)'
       ], 
     "interventions": 'Drug: ALK-001|Drug: Placebo', 
-    "url": 'https://ClinicalTrials.gov/show/NCT02402660'
+    "url": 'https://ClinicalTrials.gov/show/NCT02402660',
+    "mainExclusionCriteria": [
+      'Has taken disallowed items (supplement containing vitamin A or beta-carotene, liver-based products, or prescription oral retinoid medications) over the past 30 days', 'Is lactating, pregnant, or has a positive serum or urine pregnancy test at screening or at randomization', 'Has concurrent medical condition or history, which in the opinion of the investigator, is likely to prevent compliance with the protocol and/or interfere with absorption of ALK-001 or study procedures', 'Has clinically significant abnormal laboratory result(s) at screening', 'Has active or historical acute or chronic liver disorder', 'Has active or historical ocular disorder in the primary study eye that, in the opinion of the investigator, may confound assessment of the retina morphologically or functionally (this could include for example cataract surgery within the past 6 months, choroidal neovascularization (CNV), glaucoma, recurring uveitis, diabetic retinopathy, other retinal disease, etc.)', 'Has had intraocular surgery or injections in the primary study eye within 90 days of the screening visit', 'Has a clinically significant abnormal electrocardiogram (ECG), or has a corrected QT interval (QTc) that is 450 ms or greater'
+    ]
   },
   {
     "rank": 2,

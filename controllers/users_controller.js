@@ -71,9 +71,7 @@ router.post('/users/password_new', function(req, res) {
 
 //<--reset password form ends-->
 
-router.get('/test', function (req, res) {
-  res.render('tools/stemcell_assessment')
-});
+
 
 module.exports = router;
 

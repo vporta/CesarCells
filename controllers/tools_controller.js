@@ -3,12 +3,11 @@ var session = require('express-session');
 var router = express.Router();
 var bcrypt = require('bcryptjs');
 
-router.get('/test', function (req, res) {
-  res.render('tools/stemcell_assessment')
+router.get('/tools/start-health-assessment', function (req, res) {
+  res.render('tools/start_assessment');
 });
 
-router.post('/tools/assessment', function (req, res) {
-  res.redirect('/');
+router.get('/tools/stemcell_assessment', function (req, res) {
+  res.render('tools/stemcell_assessment');
 });
-
 module.exports = router;
