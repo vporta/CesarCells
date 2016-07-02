@@ -1,0 +1,18 @@
+Common Questions:
+
+1. What is your age?
+
+2. Do you have a clinical diagnosis of Stargardts Macular Degeneration?
+3. Are you able to give signed and dated written informed consent to participate in a clinical trial?
+
+//study 8 questions
+
+3. Participant must be able to cooperate with detailed psychophysics and electrophysiology testing. Are you able to do this?
+
+4. Participant must be able to provide a blood sample. Are you able to provide a blood sample?
+
+5. Do you have two (or more) clear mutations in the ABCA4 gene (ascertained with CLIA-certified testing) that are known to be associated with retinal disease 
+OR 
+one clear mutation in ABCA4 associated with a classic presentation of fundus flavimaculatus/Stargardt macular dystrophy (e.g., flecks, macular atrophy) 
+OR
+one clear mutation in ABCA4, a cone-rod degeneration, AND no mutation in the ELOV4 or RDS genes?

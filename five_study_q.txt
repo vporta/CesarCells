@@ -1,0 +1,12 @@
+Common Questions:
+
+1. What is your age?
+
+2. Do you have a clinical diagnosis of Stargardts Macular Degeneration?
+3. Are you able to give signed and dated written informed consent to participate in a clinical trial?
+
+//study 5 questions
+
+Do you have changes in pre-retinal media sufficient to obscure a view of the retina? 
+  excluded if yes.
+  

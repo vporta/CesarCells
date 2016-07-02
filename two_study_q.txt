@@ -1,0 +1,25 @@
+Common Questions:
+
+1. What is your age?
+2. Do you have a clinical diagnosis of Stargardts Macular Degeneration?
+3. Are you able to give signed and dated written informed consent to participate in a clinical trial?
+
+//study 2 questions
+
+4. Some studies require Women of childbearing potential must have a negative pregnancy test at Day 1, and agree to use an effective form of contraception for at least three months, or be surgically sterile or postmenopausal, with the last menstrual period being over two years prior to enrollment. Select Yes if you will agree. 
+
+5. Some studies require males to agree with their partner to use two forms of contraception for at least three months following SAR422459 administration. Select Yes if you will agree. 
+
+6. If you will be enrolling in France, Are you affiliated to or benefit from a social security regimen? 
+  excluded if no
+
+7. Is your Visual acuity ≤20/200 or ≤20/100 in the worst eye?
+
+8. Do you have Severe cone-rod dysfunction with no detectable or severely abnormal full-field electroretinogram responses?
+
+9. Do you have Abnormal full-field electroretinogram responses?
+
+10. Have you ever participated in an ocular gene transfer therapy study? no excludes
+
+11. Do you have a past medical history of human immunodeficiency virus (HIV) or hepatitis A, B, or C infection.
+

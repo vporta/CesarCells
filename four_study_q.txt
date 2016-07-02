@@ -1,0 +1,10 @@
+Common Questions:
+
+1. What is your age?
+2. Do you have a clinical diagnosis of Stargardts Macular Degeneration?
+3. Are you able to give signed and dated written informed consent to participate in a clinical trial?
+
+//study 4 questions
+4. Have you been Diagnosed with an inherited retinal degenerative disease OR
+are you Genetically-related to a person diagnosed with an inherited retinal degenerative disease?
+

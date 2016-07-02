@@ -1,4 +1,4 @@
-var clinics = require('../data/clinics');
+var clinics = require('../data/trials');
 var express = require('express');
 var router = express.Router();
 

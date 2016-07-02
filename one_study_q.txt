@@ -1,0 +1,24 @@
+Common Questions:
+
+1. What is your age?
+2. Do you have a clinical diagnosis of Stargardts Macular Degeneration?
+3. Are you able to give signed and dated written informed consent to participate in a clinical trial?
+
+//Study 1 questions
+4. Can you provide a genetic report indicating at least two ABCA4 disease-causing mutations? (When only one ABCA4 disease-causing mutation is reported, sponsor's permission will be required.)
+5. Is at least one eye (called the "primary study eye") must have at least one well-demarcated area of significantly reduced autofluorescence as imaged by fundus autofluorescence (FAF)?
+6. Primary study eye must have clear ocular media and adequate pupillary dilation, including no allergy to dilating eyedrops, to permit good quality retinal imaging. Can you provide good quality retinal imaging?
+7. Some studies require you to be healthy as judged by an investigator. Do you feel you will pass this test?
+8. Are you able and willing to comply with study requirements, restrictions and instructions? For example, some studies are 24-month studies. 
+9. Some studies require a female of childbearing potential to sign the informed consent about birth defects or attestation on contraception requirements. Are you able to sign informed consent?
+
+Exclusiion criteria:
+
+- Has taken disallowed items (supplement containing vitamin A or beta-carotene, liver-based products, or prescription oral retinoid medications) over the past 30 days
+- Is lactating, pregnant, or has a positive serum or urine pregnancy test at screening or at randomization
+- Has concurrent medical condition or history, which in the opinion of the investigator, is likely to prevent compliance with the protocol and/or interfere with absorption of ALK-001 or study procedures
+- Has clinically significant abnormal laboratory result(s) at screening
+- Has active or historical acute or chronic liver disorder
+- Has active or historical ocular disorder in the primary study eye that, in the opinion of the investigator, may confound assessment of the retina morphologically or functionally (this could include for example cataract surgery within the past 6 months, choroidal neovascularization (CNV), glaucoma, recurring uveitis, diabetic retinopathy, other retinal disease, etc.)
+- Has had intraocular surgery or injections in the primary study eye within 90 days of the screening visit
+- Has a clinically significant abnormal electrocardiogram (ECG), or has a corrected QT interval (QTc) that is 450 ms or greater -->
