@@ -42,7 +42,8 @@ CREATE TABLE trials
 CREATE TABLE questions
 (
   id int NOT NULL AUTO_INCREMENT,
-  question varchar(500) NOT NULL,
+  trial_id int NOT NULL,
+  question varchar(900) NOT NULL,
   PRIMARY KEY (id)
 );
 

@@ -1,4 +1,3 @@
-var stargardtsQuestions = require('../../../stargardts_questions');
 
 $(document).ready(function() {
 

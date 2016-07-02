@@ -1,7 +1,6 @@
-var questions = [
+var stargardtsQuestions = [
   "trial_one": 
   {
-
     {
       "question" : "What is your age?",
     },
@@ -27,7 +26,7 @@ var questions = [
       "question": "Are you able and willing to comply with study requirements, restrictions and instructions? For example, some studies are 24-month studies.",
     },
     {
-      "question": " Some studies require a female of childbearing potential to sign the informed consent about birth defects or attestation on contraception requirements. Are you able to sign informed consent?",
+      "question": "Some studies require a female of childbearing potential to sign the informed consent about birth defects or attestation on contraception requirements. Are you able to sign informed consent?",
     },
   }
 ];

@@ -1,14 +1,14 @@
-INSERT INTO categories (category_name, description) VALUES ('history', 'historical facts');
-INSERT INTO categories (category_name, description) VALUES ('sports', 'sports facts');
-INSERT INTO categories (category_name, description) VALUES ('tech', 'tech facts');
-INSERT INTO categories (category_name, description) VALUES ('science', 'science facts');
-INSERT INTO categories (category_name, description) VALUES ('society', 'society facts');
-INSERT INTO categories (category_name, description) VALUES ('fun', 'fun facts');
+INSERT INTO questions (question, trial_id) VALUES ("What is your age?", 1);
+INSERT INTO questions (question, trial_id) VALUES ("Do you have a clinical diagnosis of Stargardts Macular Degeneration?", 1);
+INSERT INTO questions (question, trial_id) VALUES ("Are you able to give signed and dated written informed consent to participate in a clinical trial?", 1);
+INSERT INTO questions (question, trial_id) VALUES ("Can you provide a genetic report indicating at least two ABCA4 disease-causing mutations? (When only one ABCA4 disease-causing mutation is reported, sponsor's permission will be required.)?", 1);
+INSERT INTO questions (question, trial_id) VALUES ("Is at least one eye(called the "'primary study eye'") must have at least one well-demarcated area of significantly reduced autofluorescence as imaged by fundus autofluorescence(FAF)?", 1);
+INSERT INTO questions (question, trial_id) VALUES ("Primary study eye must have clear ocular media and adequate pupillary dilation, including no allergy to dilating eyedrops, to permit good quality retinal imaging. Can you provide good quality retinal imaging?", 1);
+INSERT INTO questions (question, trial_id) VALUES ("Some studies require you to be healthy as judged by an investigator. Do you feel you will pass this test?", 1);
+INSERT INTO questions (question, trial_id) VALUES ("Are you able and willing to comply with study requirements, restrictions and instructions? For example, some studies are 24-month studies.", 1);
+INSERT INTO questions (question, trial_id) VALUES (" Some studies require a female of childbearing potential to sign the informed consent about birth defects or attestation on contraception requirements. Are you able to sign informed consent?", 1);
 
 
-INSERT INTO facts (fact, topic, category_id) VALUES ('Before the mid-19th century dentures were commonly made with teeth pulled from the mouths of dead soldiers.', 'history', 1);
-INSERT INTO facts (fact, topic, category_id) VALUES ('Olympic gold medals are actually made of silver.', 'sports', 2);
-INSERT INTO facts (fact, topic, category_id) VALUES ('Every minute, 100 hours of video are uploaded on YouTube by individual users.', 'tech', 3);
-INSERT INTO facts (fact, topic, category_id) VALUES ('There is enough DNA in an average person’s body to stretch from the sun to Pluto and back. 17 times', 'science', 4);
-INSERT INTO facts (fact, topic, category_id) VALUES ('There are 18.6 million vacant homes in America. There are 3.1 million homeless people.', 'society', 5);
-INSERT INTO facts (fact, topic, category_id) VALUES ('The chocolate chip cookie was invented by Ruth Graves Wakefield. Now Toll House Cookies.', 'fun', 6);
+
+
+
