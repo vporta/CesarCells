@@ -1,6 +1,7 @@
 CREATE DATABASE cesarcells_db;
 USE cesarcells_db;
 
+
 CREATE TABLE users
 (
   id int NOT NULL AUTO_INCREMENT,
@@ -30,13 +31,32 @@ CREATE TABLE user_trials
 CREATE TABLE trials
 (
   id int NOT NULL AUTO_INCREMENT,
+  status varchar(50) NOT NULL,
   name varchar(500) NOT NULL,
-  conditions varchar(500) NOT NULL,
   interventions varchar(500) NOT NULL,
   url varchar(500) NOT NULL,
   min_age_req int NOT NULL,
   max_age_req int NOT NULL,
   PRIMARY KEY (id)
+);
+
+CREATE TABLE conditions
+(
+  id int NOT NULL AUTO_INCREMENT,
+  condition varchar(500) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE conditions_trials
+(
+  trial_id int NOT NULL,
+  condition_id int NOT NULL,
+);
+
+CREATE TABLE user_conditions
+(
+  user_id int NOT NULL,
+  condition_id int NOT NULL,
 );
 
 CREATE TABLE questions
@@ -46,7 +66,6 @@ CREATE TABLE questions
   question varchar(900) NOT NULL,
   PRIMARY KEY (id)
 );
-
 
 CREATE TABLE question_trials
 (

@@ -1,10 +1,16 @@
-<form class="input-searchbox" role="search" method="get" action="">
-  <div class="form-group form-group-lg">
-      <label class="col-sm-2 control-label" for="formGroupInputLarge">
-      </label>
-      <div class="col-sm-10">
-        <input class="form-control" type="text" id="formGroupInputLarge" placeholder="example: Stargardts" :focus>
-      </div>
-  </div>
-  <button type="button" class="btn btn-default btn-lg active">Search</button>
-</form>
+<div class="container">
+        <div class="container-search">
+                <ul class="nav navbar-nav navbar-right">
+                    <button id="search-btn" class="btn btn-primary btn-lg active"><li><a href="#search" id="search-ahref">Search</a></li></button>
+                </ul>
+        </div>
+</div>
+
+
+<div id="search">
+    <button type="button" class="close">×</button>
+    <form>
+        <input type="search" value="" placeholder="Example: Stargardts Disease" />
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</div>
