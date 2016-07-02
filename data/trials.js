@@ -2,7 +2,7 @@ var trials = [
   {
     "status": 'Recruiting',
     "name": 'Phase 2 Tolerability and Effects of ALK-001 on Stargardt Disease',
-    "conditions": [
+    "conditionsDisease": [
       'Stargardt Disease',
       'Stargardt Macular Degeneration', 
       'Stargardt Macular Dystrophy',
@@ -17,7 +17,7 @@ var trials = [
 
     "status": 'Recruiting',
     "name": 'Phase I/IIa Study of SAR422459 in Patients With Stargardt\'s Macular Degeneration',
-    "conditions": [
+    "conditionsDisease": [
       'Stargardt Disease'
       ], 
     "interventions": 'Drug: SAR422459', 
@@ -29,7 +29,7 @@ var trials = [
  
     "status": 'Recruiting',
     "name": 'Clinical Study of Subretinal Transplantation of Human Embryo Stem Cell Derived Retinal Pigment Epitheliums in Treatment of Macular Degeneration Diseases',
-    "conditions": [
+    "conditionsDisease": [
       'Macular Degeneration',
       'Stargardt\'s Macular Dystrophy'
       ], 
@@ -42,7 +42,7 @@ var trials = [
    
     "status": 'Recruiting',
     "name": 'Inherited Retinal Degenerative Disease Registry Recruiting',
-    "conditions": [
+    "conditionsDisease": [
       'Eye Diseases Hereditary',
       'Retinal Disease',
       'Achromatopsia',
@@ -81,7 +81,7 @@ var trials = [
   
     "status": 'Recruiting',
     "name": 'Rod and Cone Mediated Function in Retinal Disease',
-    "conditions": [
+    "conditionsDisease": [
       'Retinal Degeneration',
       'Retinitis Pigmentosa',
       'Stargardt\'s Disease'
@@ -95,7 +95,7 @@ var trials = [
 
     "status": 'Recruiting',
     "name": 'High Resolution Retinal Imaging Recruiting',
-    "conditions": [
+    "conditionsDisease": [
       'Stargardts',
       'Retinitis Pigmentosa',
       'Age-related Macular Degeneration',
@@ -111,7 +111,7 @@ var trials = [
 
     "status": 'Recruiting',
     "name": 'Stem Cell Ophthalmology Treatment Study',
-    "conditions": [
+    "conditionsDisease": [
       'Optic Nerve Disease',
       'Hereditary Retinal Dystrophy',
       'Age-related Macular Degeneration',
@@ -128,7 +128,7 @@ var trials = [
 
     "status": 'Recruiting',
     "name": 'Natural History of Eye Diseases Related to ABCA4 Mutations',
-    "conditions": [
+    "conditionsDisease": [
       'Retinal Degeneration',
       'ABCA4-Related Retinopathies'
       ], 

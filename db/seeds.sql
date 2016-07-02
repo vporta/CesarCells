@@ -50,7 +50,6 @@ INSERT INTO questions (question, trial_id) VALUES ("Are you able to give signed 
 INSERT INTO questions (question, trial_id) VALUES ("Participant must be able to cooperate with detailed psychophysics and electrophysiology testing. Are you able to do this?", 8);
 INSERT INTO questions (question, trial_id) VALUES ("Participant must be able to provide a blood sample. Are you able to provide a blood sample?", 8);
 INSERT INTO questions (question, trial_id) VALUES ("Do you have two (or more) clear mutations in the ABCA4 gene (ascertained with CLIA-certified testing) that are known to be associated with retinal disease OR one clear mutation in ABCA4 associated with a classic presentation of fundus flavimaculatus/Stargardt macular dystrophy (e.g., flecks, macular atrophy) OR one clear mutation in ABCA4, a cone-rod degeneration, AND no mutation in the ELOV4 or RDS genes?", 8);
-
 INSERT INTO trials (status, name, interventions, url, min_age_req, max_age_req) VALUES ("recruiting", 'Phase 2 Tolerability and Effects of ALK-001 on Stargardts Disease', 'Drug: ALK-001|Drug: Placebo', 'https://ClinicalTrials.gov/show/NCT02402660', 12, 60);
 INSERT INTO trials (status, name, interventions, url, min_age_req, max_age_req) VALUES ("recruiting", 'Phase I/IIa Study of SAR422459 in Patients With Stargardt\'s Macular Degeneration', 'Drug: SAR422459', 'https://ClinicalTrials.gov/show/NCT01367444', 6, 150);
 INSERT INTO trials (status, name, interventions, url, min_age_req, max_age_req) VALUES ("recruiting", 'Clinical Study of Subretinal Transplantation of Human Embryo Stem Cell Derived Retinal Pigment Epitheliums in Treatment of Macular Degeneration Diseases', 'Procedure: Subretinal transplantation', 'https://ClinicalTrials.gov/show/NCT02749734', 18, 75);
@@ -58,7 +57,7 @@ INSERT INTO trials (status, name, interventions, url, min_age_req, max_age_req) 
 INSERT INTO trials (status, name, interventions, url, min_age_req, max_age_req) VALUES ("recruiting", 'Rod and Cone Mediated Function in Retinal Disease', 'Procedure: Subretinal transplantation', 'https://ClinicalTrials.gov/show/NCT02617966', 5, 150);
 INSERT INTO trials (status, name, interventions, url, min_age_req, max_age_req) VALUES ("recruiting", 'High Resolution Retinal Imaging Recruiting', 'Procedure: Retinal imaging', 'https://ClinicalTrials.gov/show/NCT01866371', 7, 150);
 INSERT INTO trials (status, name, interventions, url, min_age_req, max_age_req) VALUES ("recruiting", 'Stem Cell Ophthalmology Treatment Study', 'Procedure: IV (Intravenous)|Procedure: IVIT (Intravitreal)|Procedure: IO (Intraocular)', 'https://ClinicalTrials.gov/show/NCT01920867', 18, 150);
-INSERT INTO trials (status, name, interventions, url, min_age_req, max_age_req) VALUES ("recruiting", 'Natural History of Eye Diseases Related to ABCA4 Mutations', 'Procedure: IV (Intravenous)|Procedure: IVIT (Intravitreal)|Procedure: IO (Intraocular)', 'https://ClinicalTrials.gov/show/NCT01736293' 12, 150);
+INSERT INTO trials (status, name, interventions, url, min_age_req, max_age_req) VALUES ("recruiting", 'Natural History of Eye Diseases Related to ABCA4 Mutations', 'Procedure: IV (Intravenous)|Procedure: IVIT (Intravitreal)|Procedure: IO (Intraocular)', 'https://ClinicalTrials.gov/show/NCT01736293', 12, 150);
 
 
 
