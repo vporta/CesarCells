@@ -45,6 +45,7 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 app.use(express.static('public'));
+app.set('views', path.join(__dirname, 'views'));
 
 
 

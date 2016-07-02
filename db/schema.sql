@@ -1,13 +1,21 @@
 CREATE DATABASE cesarcells_db;
 USE cesarcells_db;
-
+-- ask first three questions during signup 
 CREATE TABLE users
 (
   id int NOT NULL AUTO_INCREMENT,
   username varchar(255) NOT NULL,
   email varchar(255) NOT NULL,
   password_hash varchar(255) NOT NULL,
-  birth_day int NOT NULL,
+  birth_day DATE NOT NULL,
+  firstname varchar(255) NOT NULL,
+  lastname varchar(255) NOT NULL,
+  sex varchar(255) NOT NULL,
+  stargardts_diagnosis BOOLEAN DEFAULT false,
+  age int NOT NULL,
+  informed_consent BOOLEAN DEFAULT,
+  country varchar(255) NOT NULL,
+  myDate DATE NOT NULL,
   PRIMARY KEY(id)
 );
 

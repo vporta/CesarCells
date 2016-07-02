@@ -7,7 +7,8 @@ router.get('/tools/start-health-assessment', function (req, res) {
   res.render('tools/start_assessment');
 });
 
-router.get('/tools/stemcell_assessment', function (req, res) {
+router.get('/tools/stemcell-assessment', function (req, res) {
   res.render('tools/stemcell_assessment');
 });
+
 module.exports = router;
