@@ -44,10 +44,13 @@ router.post('/users/details_new', function(req, res) {
 
 //<--login form begins-->
 
-router.post('/users/login', function (req, res) {
-  res.redirect('/');
+router.get('/users/login', function (req, res) {
+  res.render('users/dashboard', {layout: 'dash'});
 });
 
+router.post('/users/login', function (req, res) {
+  res.render('users/dashboard', {layout: 'dash'});
+});
 //<--login form ends-->
 
 
@@ -65,11 +68,19 @@ router.get('/users/sign-out', function(req, res) {
 router.get('/users/password_new', function(req, res) {
   res.render('users/password_new');
 });
+
 router.post('/users/password_new', function(req, res) {
   res.redirect('/');
 });
 
 //<--reset password form ends-->
+
+//<-- homepage sign in-->
+
+router.get('/users/sign-in', function(req, res) {
+  res.render('users/sign_in');
+});
+
 
 
 

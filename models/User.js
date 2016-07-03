@@ -1,19 +1,7 @@
 "use strict";
 
-// var Fact = require('../models/Fact.js');
-// var Category = require('../models/category.js');
-id int NOT NULL AUTO_INCREMENT,
-  username varchar(255) NOT NULL,
-  email varchar(255) NOT NULL,
-  password_hash varchar(255) NOT NULL,
-  birth_day int NOT NULL,
-  firstname varchar(255) NOT NULL,
-  lastname varchar(255) NOT NULL,
-  sex varchar(255) NOT NULL,
-  stargardts_diagnosis varchar(255) NOT NULL,
-  country varchar(255) NOT NULL,
-  PRIMARY KEY(id)
-);
+// var UserResponse = require('../models/UserResponse.js');
+// var Trial = require('../models/Trial.js');
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
     id: {
@@ -45,15 +33,28 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
     },
     stargardts_diagnosis: {
-      type: DataTypes.STRING,
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
+    age: {
+      type: DataTypes.INTEGER,
+    },
+    informed_consent: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     country: {
       type: DataTypes.STRING,
     },
-    myDate: { 
-      type: Sequelize.DATE, 
-      defaultValue: Sequelize.NOW 
+    created_at: { 
+      type: Sequelize.DATETIME, 
+      defaultValue: Sequelize.NOW, 
     },
+    updated_at: { 
+      type: Sequelize.DATETIME, 
+      defaultValue: Sequelize.NOW, 
+    },
+
   },
   {
     underscored: true,
@@ -62,14 +63,11 @@ module.exports = function(sequelize, DataTypes) {
     tableName: 'users',
 
     classMethods: {
-        associate: function(models) {
-          User.belongsToMany(models.Trial, {
-            through: 'user_trials'
-          });
-          User.belongsToMany(models.Condition, {
-            through: "user_conditions"
-          });
-        }
+      associate: function(models) {
+        User.belongsToMany(models.Trial, {
+          through: 'user_trials'
+        });
+      }
     }
   });
   return User;

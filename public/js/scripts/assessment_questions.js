@@ -11,33 +11,27 @@ $(document)
   loading.hide();
 });
   
-$("label.btn").on('click',function () {
-  var choice = $(this).find('input:radio').val();
-  console.log('choice');
-    $('#loadbar').show();
-    $('#quiz').fadeOut();
+  $("label.btn").on('click',function () {
+    var choice = $(this).find('input:radio').val();
+    console.log('choice');
+      $('#loadbar').show();
+      $('#quiz').fadeOut();
 
-    setTimeout(function(){
-         // $( "#answer" ).html(  $(this).checking(choice) );      
-          $('#quiz').show();
-          $('#loadbar').fadeOut();
-         /* something else */
-    }, 1500);
+      setTimeout(function(){
+           // $( "#answer" ).html(  $(this).checking(choice) );      
+            $('#quiz').show();
+            $('#loadbar').fadeOut();
+           /* something else */
+      }, 1500);
+  });
+
+  //dashboard
+  $('[data-toggle="offcanvas"]').click(function(){
+        $("#navigation").toggleClass("hidden-xs");
+  });
 });
 
-//searchbar
-$('a[href="#search"]').on('click', function(event) {
-    event.preventDefault();
-    $('#search').addClass('open');
-    $('#search > form > input[type="search"]').focus();
-});
 
-$('#search, #search button.close').on('click keyup', function(event) {
-    if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
-        $(this).removeClass('open');
-    }
-});
-});
 
       
 

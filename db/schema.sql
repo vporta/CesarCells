@@ -1,6 +1,6 @@
 CREATE DATABASE cesarcells_db;
 USE cesarcells_db;
--- ask first three questions during signup 
+
 CREATE TABLE users
 (
   id int NOT NULL AUTO_INCREMENT,
@@ -11,11 +11,65 @@ CREATE TABLE users
   firstname varchar(255) NOT NULL,
   lastname varchar(255) NOT NULL,
   sex varchar(255) NOT NULL,
-  stargardts_diagnosis BOOLEAN DEFAULT false,
+  stargardts_diagnosis BOOLEAN NOT false,
   age int NOT NULL,
-  informed_consent BOOLEAN DEFAULT,
+  informed_consent BOOLEAN NOT false,
   country varchar(255) NOT NULL,
-  myDate DATE NOT NULL,
+  created_at DATETIME NOT NULL,
+  updated_at DATETIME NOT NULL,
+  PRIMARY KEY(id)
+);
+
+CREATE TABLE trials
+(
+  id int NOT NULL AUTO_INCREMENT,
+  status varchar(50) NOT NULL,
+  name varchar(500) NOT NULL,
+  interventions varchar(500) NOT NULL,
+  url varchar(500) NOT NULL,
+  min_age_req int NOT NULL,
+  max_age_req int NOT NULL,
+  q1 varchar(500) NOT NULL,
+  q2 varchar(500) NOT NULL,
+  q3 varchar(500) NOT NULL,
+  q4 varchar(500) NOT NULL,
+  q5 varchar(500) NOT NULL,
+  q6 varchar(500) NOT NULL,
+  q7 varchar(500) NOT NULL,
+  q8 varchar(500) NOT NULL,
+  q9 varchar(500) NOT NULL,
+  q10 varchar(500) NOT NULL,
+  q11 varchar(500) NOT NULL,
+  desired_a1 char(1) NOT NULL,
+  desired_a2 char(1) NOT NULL,
+  desired_a3 char(1) NOT NULL,
+  desired_a4 char(1) NOT NULL,
+  desired_a5 char(1) NOT NULL,
+  desired_a6 char(1) NOT NULL,
+  desired_a7 char(1) NOT NULL,
+  desired_a8 char(1) NOT NULL,
+  desired_a9 char(1) NOT NULL,
+  desired_a10 char(1) NOT NULL,
+  desired_a11 char(1) NOT NULL,
+  PRIMARY KEY(id)
+);
+
+CREATE TABLE user_responses
+(
+  id int NOT NULL,
+  user_id int NOT NULL,
+  trial_id int NOT NULL,
+  a1 char(1) NOT NULL,
+  a2 char(1) NOT NULL,
+  a3 char(1) NOT NULL,
+  a4 char(1) NOT NULL,
+  a5 char(1) NOT NULL,
+  a6 char(1) NOT NULL,
+  a7 char(1) NOT NULL,
+  a8 char(1) NOT NULL,
+  a9 char(1) NOT NULL,
+  a10 char(1) NOT NULL,
+  a11 char(1) NOT NULL,
   PRIMARY KEY(id)
 );
 
@@ -33,18 +87,6 @@ CREATE TABLE user_trials
   user_id int NOT NULL,
   trial_id int NOT NULL,
   qualification BOOLEAN DEFAULT false,
-  PRIMARY KEY(id)
-);
-
-CREATE TABLE trials
-(
-  id int NOT NULL AUTO_INCREMENT,
-  status varchar(50) NOT NULL,
-  name varchar(500) NOT NULL,
-  interventions varchar(500) NOT NULL,
-  url varchar(500) NOT NULL,
-  min_age_req int NOT NULL,
-  max_age_req int NOT NULL,
   PRIMARY KEY(id)
 );
 
