@@ -107,6 +107,10 @@ ul.dropdown-menu {
     font-size: 20px;
     background-color: #e8efef;
 }
+.panel-body {
+    border-top: #005470;
+    border-top-style: solid;
+}
 
 
 /*dashboard home ends
