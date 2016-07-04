@@ -34,8 +34,40 @@
     background-color: white;
     width: 680px;
     border-radius: 10px;
+    position: relative;
 
 }
+h3 {
+    position: absolute;
+    /*left: 0;*/
+    top: 100px;
+    width: 100%;
+}
+ h3 span {
+    color: white; 
+    font: bold 24px/45px Helvetica, Sans-Serif; 
+    letter-spacing: -1px;  
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+ }
+#top-right-h3 {
+    position: absolute;
+    left: 370px;
+    top: 95px;
+    width: 300px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font: bold 24px/45px Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    padding: 4px;
+    /* padding-left: 3px; */
+    /*height: 50px;*/
+}
+ #top-right-span {
+ }
+
 #col-two-dash-images {
     background-color: white;
     width: 680px;
@@ -71,16 +103,20 @@
 .img-desc {
     font-size: 14px;
 }
+ul.dropdown-menu {
+    font-size: 20px;
+    background-color: #e8efef;
+}
 
 
-/*dashboard home ends*/
+/*dashboard home ends
 
 /*home page sign-in form*/
 form#sign-in-form.form-horizontal {
     margin-top: 150px;
 }
 div.container-fluid.bg-info {
-    background-color: #f7f9fa;
+    background-color: transparent;
 }
 nav.navbar.navbar-default.navbar-fixed-top {
     background-color: #ffffff;
@@ -376,7 +412,7 @@ label .glyphicon {
 div.modal-content {
     border-top-style: solid;
     border-top-width: 5px;
-    border-top-color: darksalmon;
+    border-top-color: #005470;
 }
 .dropdown-toggle:hover {
     color: darksalmon;
