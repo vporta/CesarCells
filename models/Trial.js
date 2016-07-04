@@ -1,29 +1,5 @@
 "use strict";
 
-  q1 varchar(500) NOT NULL,
-  q2 varchar(500) NOT NULL,
-  q3 varchar(500) NOT NULL,
-  q4 varchar(500) NOT NULL,
-  q5 varchar(500) NOT NULL,
-  q6 varchar(500) NOT NULL,
-  q7 varchar(500) NOT NULL,
-  q8 varchar(500) NOT NULL,
-  q9 varchar(500) NOT NULL,
-  q10 varchar(500) NOT NULL,
-  q11 varchar(500) NOT NULL,
-  desired_a1 char(1) NOT NULL,
-  desired_a2 char(1) NOT NULL,
-  desired_a3 char(1) NOT NULL,
-  desired_a4 char(1) NOT NULL,
-  desired_a5 char(1) NOT NULL,
-  desired_a6 char(1) NOT NULL,
-  desired_a7 char(1) NOT NULL,
-  desired_a8 char(1) NOT NULL,
-  desired_a9 char(1) NOT NULL,
-  desired_a10 char(1) NOT NULL,
-  desired_a11 char(1) NOT NULL,
-  PRIMARY KEY(id)
-);
 // var Fact = require('../models/Fact.js');
 // var Category = require('../models/category.js');
 module.exports = function(sequelize, DataTypes) {
