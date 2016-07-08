@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
-// var Fact = require('../models/Fact.js');
-// var Category = require('../models/category.js');
+var User = require('../models/User.js');
+
 module.exports = function(sequelize, DataTypes) {
   var Trial = sequelize.define("Trial", {
     id: {
@@ -30,89 +30,126 @@ module.exports = function(sequelize, DataTypes) {
     },
     q1: {
       type: DataTypes.STRING,
+      allowNull: true,
+
     },
     q2: {
       type: DataTypes.STRING,
+      allowNull: true,
+
     },
     q3: {
       type: DataTypes.STRING,
+      allowNull: true,
+
     },
     q4: {
       type: DataTypes.STRING,
+      allowNull: true,
+
     },
     q5: {
       type: DataTypes.STRING,
+      allowNull: true,
+
     },
     q6: {
       type: DataTypes.STRING,
+      allowNull: true,
+
     },
     q7: {
       type: DataTypes.STRING,
+      allowNull: true,
+
     },
     q8: {
       type: DataTypes.STRING,
+      allowNull: true,
+
     },
     q9: {
       type: DataTypes.STRING,
+      allowNull: true,
+
     },
     q10: {
       type: DataTypes.STRING,
+      allowNull: true,
+
     },
     q11: {
       type: DataTypes.STRING,
+      allowNull: true,
+
     },
     desired_a1: {
       type: DataTypes.STRING,
+      allowNull: true,
+
     },
     desired_a2: {
       type: DataTypes.STRING,
+      allowNull: true,
+
     },
     desired_a3: {
       type: DataTypes.STRING,
+      allowNull: true,
+
     },
     desired_a4: {
       type: DataTypes.STRING,
+      allowNull: true,
+
     },
     desired_a5: {
       type: DataTypes.STRING,
+      allowNull: true,
+
     },
     desired_a6: {
       type: DataTypes.STRING,
+      allowNull: true,
+
     },
     desired_a7: {
       type: DataTypes.STRING,
+      allowNull: true,
+
     },
     desired_a8: {
       type: DataTypes.STRING,
+      allowNull: true,
+
     },
     desired_a9: {
       type: DataTypes.STRING,
+      allowNull: true,
+
     },
     desired_a10: {
       type: DataTypes.STRING,
+      allowNull: true,
+
     },
     desired_a11: {
       type: DataTypes.STRING,
+      allowNull: true,
     },
   },
   {
     underscored: true,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     tableName: 'trials',
 
     classMethods: {
-        associate: function(models) {
-          Trial.belongsToMany(models.User, {
-            through: 'user_trials'
-          });
-          Trial.hasMany(models.Question, {
-            through: "question_trials"
-          });
-          Trial.hasMany(models.Condition, {
-            through: "condition_trials"
-          });
-        }
+      associate: function(models) {
+        Trial.belongsToMany(models.User, {
+          through: 'user_trials'
+        });
+      }
     }
   });
   return Trial;

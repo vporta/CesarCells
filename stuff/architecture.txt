@@ -35,3 +35,100 @@ question_id, trial_id
 
 - prioritize the difficult questions second
 
+SELECT trial_name, desired_a1, desired_a2, desired_a3, a1, a2, a3, user_responses.UserID FROM trials, user_responses 
+WHERE user_responses.TrialsID = trials.id AND user_responses.UserID=2 
+AND desired_a1=a1 AND desired_a2=a2 AND desired_a3=a3
+
+CREATE DATABASE  IF NOT EXISTS `trials` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `trials`;
+-- MySQL dump 10.13  Distrib 5.7.9, for osx10.9 (x86_64)
+--
+-- Host: 127.0.0.1    Database: trials
+-- ------------------------------------------------------
+-- Server version 5.7.12
+​
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+​
+--
+-- Table structure for table `trials`
+--
+​
+DROP TABLE IF EXISTS `trials`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `trials` (
+  `id` int(11) NOT NULL,
+  `trial_name` varchar(45) DEFAULT NULL,
+  `Status` varchar(45) DEFAULT NULL,
+  `Interventions` varchar(45) DEFAULT NULL,
+  `URL` varchar(45) DEFAULT NULL,
+  `min_age` int(11) DEFAULT NULL,
+  `max_age` int(11) DEFAULT NULL,
+  `q1` varchar(128) DEFAULT NULL,
+  `q2` varchar(128) DEFAULT NULL,
+  `q3` varchar(128) DEFAULT NULL,
+  `desired_a1` char(1) DEFAULT NULL,
+  `desired_a2` char(1) DEFAULT NULL,
+  `desired_a3` char(1) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+​
+--
+-- Dumping data for table `trials`
+--
+​
+LOCK TABLES `trials` WRITE;
+/*!40000 ALTER TABLE `trials` DISABLE KEYS */;
+INSERT INTO `trials` VALUES (1,'Tiral1','recruiting','this',NULL,15,30,'What','When','Where','Y','N','N'),(2,'Trial2','recruiting','that',NULL,15,30,'ww','ss','sss','N','N','N');
+/*!40000 ALTER TABLE `trials` ENABLE KEYS */;
+UNLOCK TABLES;
+​
+--
+-- Table structure for table `user_responses`
+--
+​
+DROP TABLE IF EXISTS `user_responses`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user_responses` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `UserID` int(11) DEFAULT NULL,
+  `TrialsID` int(11) DEFAULT NULL,
+  `a1` char(1) DEFAULT NULL,
+  `a2` char(1) DEFAULT NULL,
+  `a3` char(1) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+​
+--
+-- Dumping data for table `user_responses`
+--
+​
+LOCK TABLES `user_responses` WRITE;
+/*!40000 ALTER TABLE `user_responses` DISABLE KEYS */;
+INSERT INTO `user_responses` VALUES (1,2,1,'Y','Y','Y'),(2,2,2,'N','N','N'),(3,3,1,'N','Y','Y');
+/*!40000 ALTER TABLE `user_responses` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+​
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+​
+-- Dump completed on 2016-07-02 16:47:32
+

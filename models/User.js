@@ -1,7 +1,9 @@
 "use strict";
 
-// var UserResponse = require('../models/UserResponse.js');
-// var Trial = require('../models/Trial.js');
+var Trial = require('../models/Trial')
+ , UserResponse = require('../models/UserResponse');
+
+
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
     id: {
@@ -46,25 +48,16 @@ module.exports = function(sequelize, DataTypes) {
     country: {
       type: DataTypes.STRING,
     },
-    created_at: { 
-      type: Sequelize.DATETIME, 
-      defaultValue: Sequelize.NOW, 
-    },
-    updated_at: { 
-      type: Sequelize.DATETIME, 
-      defaultValue: Sequelize.NOW, 
-    },
-
   },
   {
     underscored: true,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     tableName: 'users',
 
     classMethods: {
       associate: function(models) {
-        User.belongsToMany(models.Trial, {
+        User.hasMany(models.Trial, {
           through: 'user_trials'
         });
       }

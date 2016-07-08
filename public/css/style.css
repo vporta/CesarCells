@@ -1,3 +1,42 @@
+/*all_trails page begins*/
+.all-trials{
+    background-color: #e8efef;
+    position: relative;
+    min-height: 100%;
+    margin-bottom: 35px;
+
+}
+.trials-first-row {
+    /*width: 100%;
+    max-height: 100%;*/
+    display: inline-block;
+    margin: 0;
+    color: white;
+    text-align: center;
+    vertical-align: top;
+    display: inline-block;
+    padding: 7.5px;
+   
+}
+.inner {
+    height: 310px;
+    width: 260px;
+    padding: 1em .25em 1.5em;
+    position: relative;
+    top: 50%;
+    _-webkit-transform: translateY(-50%);
+    _-ms-transform: translateY(-50%);
+    _xtransform: translateY(-50%);
+    border: 5px solid white;
+    /*border-right: 1px solid white;*/
+}
+.jumbotron {
+
+    background-image: url("https://stream.org/wp-content/uploads/Embryonic-Stem-Cells-900.jpg");
+    background-size: cover;
+    height: 75%;
+}
+/*all trials_page ends*/
 #userRegister {
   margin-top: 100px;
 }
@@ -28,7 +67,7 @@
     margin-top: 165px;
 }
 #row-btm-dash-images {
-    margin-bottom: 45px;
+    height: 50%;
 }
 #col-one-dash-images {
     background-color: white;
@@ -111,9 +150,16 @@ ul.dropdown-menu {
     border-top: #005470;
     border-top-style: solid;
 }
+/*dashboard home ends*/
+
+/****************************/
+
+/*gene report table begins*/
+#gene-table {
+
+}
 
 
-/*dashboard home ends
 
 /*home page sign-in form*/
 form#sign-in-form.form-horizontal {
@@ -227,7 +273,6 @@ img.question-image {
   background-color: #005470;
 }
 #start-panel-head {
-  margin-top: 200px;
   text-align: center;
   /*add border*/
 }

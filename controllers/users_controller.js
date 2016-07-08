@@ -8,6 +8,18 @@ var bcrypt = require('bcryptjs');
 //<--home begins-->
 
 router.get('/', function (req, res) {
+  // router.get('/', function(req, res) {
+  //   models.User.findAll({
+  //     include: [ models.Trial ]
+  //   }).then(function(user) {
+  //     res.render('index', {
+  //       user_id: req.session.user_id,
+  //       email: req.session.user_email,
+  //       logged_in: req.session.logged_in,
+  //       user: user
+  //     });
+  //   });
+  // })
   res.render('index');
 })
 
@@ -44,11 +56,11 @@ router.post('/users/details_new', function(req, res) {
 
 //<--login form begins-->
 
-router.get('/users/login', function (req, res) {
+router.get('/users/dashboard', function (req, res) {
   res.render('users/dashboard', {layout: 'dash'});
 });
 
-router.post('/users/login', function (req, res) {
+router.post('/users/dashboard', function (req, res) {
   res.render('users/dashboard', {layout: 'dash'});
 });
 //<--login form ends-->

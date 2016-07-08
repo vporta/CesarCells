@@ -1,5 +1,6 @@
 var path = require('path');
 var express = require('express');
+var logger = require('morgan');
 var app = express();
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
@@ -8,27 +9,14 @@ var request = require('request');
 var fs = require('file-system');
 var cookieParser = require('cookie-parser');
 var requirejs = require('requirejs');
-var trials = require('./data/trials');
-
-// Database setup
-// var Sequelize = require('sequelize'),
-//     connection;
-//     console.log(process.env.JAWSDB_URL);
-// if (process.env.JAWSDB_URL) {
-//   connection = new Sequelize(process.env.JAWSDB_URL);
-// } else {
-//   connection = new Sequelize('cesars_db', 'root', '', {
-//     host: 'localhost',
-//     dialect: 'mysql',
-//     port: '3306'
-//   })
-// }
+var favicon = require('serve-favicon');
+var models = require('./models')
 
 //Serve static content for the app from the "public" directory in the application directory.
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(bodyParser.text());
-app.use(bodyParser.json({type:'application/vnd.api+json'}));
+// app.use(bodyParser.text());
+// app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 
 
@@ -50,7 +38,6 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 
-
 // Require Controllers
 var users_controller = require('./controllers/users_controller.js');
 app.use('/', users_controller);
@@ -65,7 +52,17 @@ app.use('/', routing);
 //Heroku select the port otherwise use port 3000 locally
 var port = process.env.PORT || 3000;
 
-app.listen(port, function() {
-  console.log("Rocket has launched, Let's do this! On port:", + port);
+app.use(function(err, req, res, next) {
+  res.status(err.status || 500);
+  res.render('error', {
+    message: err.message,
+    error: (app.get('env') === 'development') ? err : {}
+  });
 });
+
+
+app.listen(port, function() {
+  console.log("Let's do this! On port:", + port);
+});
+
 

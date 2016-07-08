@@ -1,22 +1,21 @@
-var trials = [
   {
     "id": 1,
-    "status": 'Recruiting',
-    "name": 'Phase 2 Tolerability and Effects of ALK-001 on Stargardt Disease',
+    "status": "Recruiting",
+    "name": "Phase 2 Tolerability and Effects of ALK-001 on Stargardt Disease",
     "conditionsDisease": [
-      'Stargardt Disease',
-      'Stargardt Macular Degeneration', 
-      'Stargardt Macular Dystrophy',
-      'Autosomal Recessive Stargardt Disease 1 (ABCA4-related)'
+      "Stargardt Disease",
+      "Stargardt Macular Degeneration", 
+      "Stargardt Macular Dystrophy",
+      "Autosomal Recessive Stargardt Disease 1 (ABCA4-related)"
       ], 
-    "interventions": 'Drug: ALK-001|Drug: Placebo', 
-    "url": 'https://ClinicalTrials.gov/show/NCT02402660',
+    "interventions": "Drug: ALK-001|Drug: Placebo", 
+    "url": "https://ClinicalTrials.gov/show/NCT02402660",
     "min_age_req": 12,
     "max_age_req": 60,
     "questions": [
     
       {
-        "one": "Can you provide a genetic report indicating at least two ABCA4 disease-causing mutations? (When only one ABCA4 disease-causing mutation is reported, sponsor's permission will be required.)?",
+        "one": "Can you provide a genetic report indicating at least two ABCA4 disease-causing mutations? (When only one ABCA4 disease-causing mutation is reported, sponsors permission will be required.)?",
         "answers": [
           {
             "ans": "Y",
@@ -30,7 +29,7 @@ var trials = [
         "correct": "Y"
       },
       {
-        "two": 'Is at least one eye (called the "primary study eye") must have at least one well-demarcated area of significantly reduced autofluorescence as imaged by fundus autofluorescence (FAF)?',
+        "two": "Is at least one eye (called the primary study eye) must have at least one well-demarcated area of significantly reduced autofluorescence as imaged by fundus autofluorescence (FAF)?",
         "answers": [
           {
             "ans": "Y",
@@ -104,13 +103,13 @@ var trials = [
 
   {
     "id": 2,
-    "status": 'Recruiting',
-    "name": 'Phase I/IIa Study of SAR422459 in Patients With Stargardt\'s Macular Degeneration',
+    "status": "Recruiting",
+    "name": "Phase I/IIa Study of SAR422459 in Patients With Stargardt\"s Macular Degeneration",
     "conditionsDisease": [
-      'Stargardt Disease'
+      "Stargardt Disease"
       ], 
-    "interventions": 'Drug: SAR422459', 
-    "url": 'https://ClinicalTrials.gov/show/NCT01367444',
+    "interventions": "Drug: SAR422459", 
+    "url": "https://ClinicalTrials.gov/show/NCT01367444",
     "min_age_req": 6,
     "max_age_req": 150,
     "questions": [
@@ -130,7 +129,7 @@ var trials = [
         "correct": "Y"
       },
       {
-        "two": 'Some studies require males to agree with their partner to use two forms of contraception for at least three months following SAR422459 administration. Select Yes if you will agree.',
+        "two": "Some studies require males to agree with their partner to use two forms of contraception for at least three months following SAR422459 administration. Select Yes if you will agree.",
         "answers": [
           {
             "ans": "Y",
@@ -231,14 +230,14 @@ var trials = [
   },
   {
     "id": 3,
-    "status": 'Recruiting',
-    "name": 'Clinical Study of Subretinal Transplantation of Human Embryo Stem Cell Derived Retinal Pigment Epitheliums in Treatment of Macular Degeneration Diseases',
+    "status": "Recruiting",
+    "name": "Clinical Study of Subretinal Transplantation of Human Embryo Stem Cell Derived Retinal Pigment Epitheliums in Treatment of Macular Degeneration Diseases",
     "conditionsDisease": [
-      'Macular Degeneration',
-      'Stargardt\'s Macular Dystrophy'
+      "Macular Degeneration",
+      "Stargardt\"s Macular Dystrophy"
       ], 
-    "interventions": 'Procedure: Subretinal transplantation', 
-    "url": 'https://ClinicalTrials.gov/show/NCT02749734',
+    "interventions": "Procedure: Subretinal transplantation", 
+    "url": "https://ClinicalTrials.gov/show/NCT02749734",
     "min_age_req": 18,
     "max_age_req": 75,
     "questions": [
@@ -289,40 +288,40 @@ var trials = [
   },
   {
     "id": 4,
-    "status": 'Recruiting',
-    "name": 'Inherited Retinal Degenerative Disease Registry Recruiting',
+    "status": "Recruiting",
+    "name": "Inherited Retinal Degenerative Disease Registry Recruiting",
     "conditionsDisease": [
-      'Eye Diseases Hereditary',
-      'Retinal Disease',
-      'Achromatopsia',
-      'Bardet-Biedl Syndrome',
-      'Bassen-Kornzweig Syndrome',
-      'Batten Disease',
-      'Best Disease',
-      'Choroidal Dystrophy',
-      'Choroideremia',
-      'Cone Dystrophy',
-      'Cone-Rod Dystrophy',
-      'Congenital Stationary Night Blindness',
-      'Enhanced S-Cone Syndrome',
-      'Fundus Albipunctatus',
-      'Goldmann-Favre Syndrome',
-      'Gyrate Atrophy',
-      'Juvenile Macular Degeneration',
-      'Kearns-Sayre Syndrome',
-      'Leber Congenital Amaurosis',
-      'Refsum Syndrome',
-      'Retinitis Pigmentosa',
-      'Retinitis Punctata Albescens',
-      'Retinoschisis',
-      'Rod-Cone Dystrophy',
-      'Rod Dystrophy',
-      'Rod Monochromacy',
-      'Stargardt Disease',
-      'Usher Syndrome',
+      "Eye Diseases Hereditary",
+      "Retinal Disease",
+      "Achromatopsia",
+      "Bardet-Biedl Syndrome",
+      "Bassen-Kornzweig Syndrome",
+      "Batten Disease",
+      "Best Disease",
+      "Choroidal Dystrophy",
+      "Choroideremia",
+      "Cone Dystrophy",
+      "Cone-Rod Dystrophy",
+      "Congenital Stationary Night Blindness",
+      "Enhanced S-Cone Syndrome",
+      "Fundus Albipunctatus",
+      "Goldmann-Favre Syndrome",
+      "Gyrate Atrophy",
+      "Juvenile Macular Degeneration",
+      "Kearns-Sayre Syndrome",
+      "Leber Congenital Amaurosis",
+      "Refsum Syndrome",
+      "Retinitis Pigmentosa",
+      "Retinitis Punctata Albescens",
+      "Retinoschisis",
+      "Rod-Cone Dystrophy",
+      "Rod Dystrophy",
+      "Rod Monochromacy",
+      "Stargardt Disease",
+      "Usher Syndrome",
       ], 
     "interventions": null, 
-    "url": 'https://ClinicalTrials.gov/show/NCT02435940',
+    "url": "https://ClinicalTrials.gov/show/NCT02435940",
     "min_age_req": 0,
     "max_age_req": 150,
     "questions": [
@@ -346,15 +345,15 @@ var trials = [
 
   {
     "id": 5,
-    "status": 'Recruiting',
-    "name": 'Rod and Cone Mediated Function in Retinal Disease',
+    "status": "Recruiting",
+    "name": "Rod and Cone Mediated Function in Retinal Disease",
     "conditionsDisease": [
-      'Retinal Degeneration',
-      'Retinitis Pigmentosa',
-      'Stargardt\'s Disease'
+      "Retinal Degeneration",
+      "Retinitis Pigmentosa",
+      "Stargardt\"s Disease"
       ], 
-    "interventions": 'Procedure: Subretinal transplantation', 
-    "url": 'https://ClinicalTrials.gov/show/NCT02617966',
+    "interventions": "Procedure: Subretinal transplantation", 
+    "url": "https://ClinicalTrials.gov/show/NCT02617966",
     "min_age_req": 5,
     "max_age_req": 150,
     "questions": [
@@ -378,35 +377,35 @@ var trials = [
 
   {
     "id": 6,
-    "status": 'Recruiting',
-    "name": 'High Resolution Retinal Imaging Recruiting',
+    "status": "Recruiting",
+    "name": "High Resolution Retinal Imaging Recruiting",
     "conditionsDisease": [
-      'Stargardts',
-      'Retinitis Pigmentosa',
-      'Age-related Macular Degeneration',
-      'Choroideremia',
-      'Geographic Atrophy'
+      "Stargardts",
+      "Retinitis Pigmentosa",
+      "Age-related Macular Degeneration",
+      "Choroideremia",
+      "Geographic Atrophy"
       ], 
-    "interventions": 'Procedure: Retinal imaging', 
-    "url": 'https://ClinicalTrials.gov/show/NCT01866371',
+    "interventions": "Procedure: Retinal imaging", 
+    "url": "https://ClinicalTrials.gov/show/NCT01866371",
     "min_age_req": 7,
     "max_age_req": 150,
     "questions": [null]
   },
   {
     "id": 7,
-    "status": 'Recruiting',
-    "name": 'Stem Cell Ophthalmology Treatment Study',
+    "status": "Recruiting",
+    "name": "Stem Cell Ophthalmology Treatment Study",
     "conditionsDisease": [
-      'Optic Nerve Disease',
-      'Hereditary Retinal Dystrophy',
-      'Age-related Macular Degeneration',
-      'Macular Degeneration',
-      'Retinal Disease',
-      'Glaucoma'
+      "Optic Nerve Disease",
+      "Hereditary Retinal Dystrophy",
+      "Age-related Macular Degeneration",
+      "Macular Degeneration",
+      "Retinal Disease",
+      "Glaucoma"
       ], 
-    "interventions": 'Procedure: IV (Intravenous)|Procedure: IVIT (Intravitreal)|Procedure: IO (Intraocular)', 
-    "url": 'https://ClinicalTrials.gov/show/NCT01920867',
+    "interventions": "Procedure: IV (Intravenous)|Procedure: IVIT (Intravitreal)|Procedure: IO (Intraocular)", 
+    "url": "https://ClinicalTrials.gov/show/NCT01920867",
     "min_age_req": 18,
     "max_age_req": 150,
     "questions": [
@@ -485,14 +484,14 @@ var trials = [
   },
   {
     "id": 8,
-    "status": 'Recruiting',
-    "name": 'Natural History of Eye Diseases Related to ABCA4 Mutations',
+    "status": "Recruiting",
+    "name": "Natural History of Eye Diseases Related to ABCA4 Mutations",
     "conditionsDisease": [
-      'Retinal Degeneration',
-      'ABCA4-Related Retinopathies'
+      "Retinal Degeneration",
+      "ABCA4-Related Retinopathies"
       ], 
-    "interventions": 'Procedure: IV (Intravenous)|Procedure: IVIT (Intravitreal)|Procedure: IO (Intraocular)', 
-    "url": 'https://ClinicalTrials.gov/show/NCT01736293',
+    "interventions": "Procedure: IV (Intravenous)|Procedure: IVIT (Intravitreal)|Procedure: IO (Intraocular)", 
+    "url": "https://ClinicalTrials.gov/show/NCT01736293",
     "min_age_req": 12,
     "max_age_req": 150,
     "questions": [
@@ -542,4 +541,3 @@ var trials = [
   },
 ];
 
-module.exports = trials;
