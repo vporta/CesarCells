@@ -14,4 +14,3 @@
 
 // module.exports = helpers;
 
-result.data[3].questions[3].one, result.data[3].questions[3].two, result.data[3].questions[3].three, result.data[3].questions[3].four, result.data[3].questions[3].five, result.data[3].questions[3].six
