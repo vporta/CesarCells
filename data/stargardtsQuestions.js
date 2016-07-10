@@ -108,5 +108,4 @@ var stargardtsQuestions = {
 
 
 
-
  module.exports = stargardtsQuestions;

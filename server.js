@@ -11,12 +11,11 @@ var cookieParser = require('cookie-parser');
 var requirejs = require('requirejs');
 var favicon = require('serve-favicon');
 var models = require('./models')
-
 //Serve static content for the app from the "public" directory in the application directory.
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 // app.use(bodyParser.text());
-// app.use(bodyParser.json({type:'application/vnd.api+json'}));
+app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 
 
@@ -32,8 +31,8 @@ app.engine('handlebars', exphbs({
     defaultLayout: 'main'
 }));
 app.set('view engine', 'handlebars');
-app.use(express.static('public'));
 app.set('views', path.join(__dirname, 'views'));
+app.use(express.static('public'));
 
 
 
@@ -64,5 +63,6 @@ app.use(function(err, req, res, next) {
 app.listen(port, function() {
   console.log("Let's do this! On port:", + port);
 });
+
 
 

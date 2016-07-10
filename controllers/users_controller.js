@@ -8,19 +8,9 @@ var bcrypt = require('bcryptjs');
 //<--home begins-->
 
 router.get('/', function (req, res) {
-  // router.get('/', function(req, res) {
-  //   models.User.findAll({
-  //     include: [ models.Trial ]
-  //   }).then(function(user) {
-  //     res.render('index', {
-  //       user_id: req.session.user_id,
-  //       email: req.session.user_email,
-  //       logged_in: req.session.logged_in,
-  //       user: user
-  //     });
-  //   });
-  // })
-  res.render('index');
+ 
+  res.render('index', {layout: 'main'});
+    // res.sendFile('./public/index.html');
 })
 
 //<--home ends-->

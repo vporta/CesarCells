@@ -80,6 +80,15 @@ CREATE TABLE user_trials
   PRIMARY KEY(id)
 );
 
+CREATE TABLE categories
+(
+  id int NOT NULL AUTO_INCREMENT,
+  user_id int NOT NULL,
+  trial_id int NOT NULL,
+  type varchar(255) NOT NULL,
+  PRIMARY KEY(id)
+);
+
 -- CREATE TABLE details
 -- (
 --   id int NOT NULL AUTO_INCREMENT,

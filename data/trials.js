@@ -25,7 +25,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       },
@@ -39,7 +39,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       },
@@ -53,7 +53,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       },
@@ -67,7 +67,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       },
@@ -81,7 +81,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       },
@@ -95,7 +95,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       }
@@ -125,7 +125,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       },
@@ -139,7 +139,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       },
@@ -153,7 +153,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       },
@@ -167,7 +167,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       },
@@ -181,7 +181,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       },
@@ -195,7 +195,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "N"
       },
@@ -209,7 +209,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "N"
       },
@@ -223,7 +223,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "N"
       }
@@ -253,7 +253,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       },
@@ -267,7 +267,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       },
@@ -281,7 +281,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       },
@@ -337,7 +337,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       }
@@ -369,7 +369,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       }
@@ -421,7 +421,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       },
@@ -435,7 +435,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       },
@@ -449,7 +449,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       },
@@ -463,7 +463,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       },
@@ -477,7 +477,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       },
@@ -506,7 +506,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       },
@@ -520,7 +520,7 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       },
@@ -534,12 +534,13 @@ var trials = [
           {
             "ans": "N",
             "label": "No"
-          },
+          }
         ],
         "correct": "Y"
       }
     ]
-  },
-];
+  }
+]
 
 module.exports = trials;
+
