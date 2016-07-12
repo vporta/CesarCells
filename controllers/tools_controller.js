@@ -2,9 +2,8 @@ var express = require('express');
 var session = require('express-session');
 var router = express.Router();
 var bcrypt = require('bcryptjs');
-var Trial = require('../models/Trial.js');
-var User = require('../models/User.js');
-var sequelize = require('../models/Index.js');
+
+var User = require('../models/UserModel.js');
 
 router.get('/tools/start-health-assessment', function (req, res) {
   res.render('tools/start_assessment', {layout: 'dash'});

@@ -1,3 +1,54 @@
+.myButton {
+   
+    border-radius:5px;
+    border:1px solid #f2f6f6;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:35px;
+    font-weight:bold;
+    padding:11px 23px;
+    text-decoration:none;
+    text-shadow:0px -1px 0px #f2f6f6;
+    width: 200px;
+    margin-left: 240px;
+    vertical-align: center;
+}
+.myButton:hover {
+    background-color:#005470;
+    color: white;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+.myButton {
+    background-color:#f2f6f6;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    border:1px solid #566963;
+    display:inline-block;
+    cursor:pointer;
+    color: black;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:11px 23px;
+    text-decoration:none;
+    text-shadow:0px -1px 0px #2b665e;
+}
+.myButton:hover {
+    background-color: #005470;
+    color: white;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+
 /*react #app div*/
 #app {
     margin-top: 225px;

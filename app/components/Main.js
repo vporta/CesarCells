@@ -1,8 +1,8 @@
 // Include React 
 var React = require('react');
+var axios = require('axios');
 
 var Quiz = require('./QuizBox/Quiz');
-var QuestionForm = require('./QuizBox/QuestionForm');
 
 var Main = React.createClass({
 
@@ -12,10 +12,7 @@ var Main = React.createClass({
 
           <div className="row">
 
-            <div className="jumbotron">
-              <h2><em>Stargardts Assessment</em></h2>
-            </div>
-
+            
 
             {/*This represents the "Parent"*/}
             <Quiz />

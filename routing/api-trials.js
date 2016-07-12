@@ -8,6 +8,10 @@ var stargardtsQuestions = require('../data/stargardtsQuestions.js');
     res.json(trials);
   });
 
+  // router.post('/api/trials', function(req, res) {
+    
+  // })
+
   router.get('/api/stargardtsQuestions', function(req, res){
     res.json(stargardtsQuestions);
   });

@@ -1,17 +1,20 @@
 var express = require('express');
 var session = require('express-session');
-var router = express.Router();
 var bcrypt = require('bcryptjs');
-
+var passport = require('passport');
+var router = express.Router();
+var LocalStrategy = require('passport-local').Strategy;
+var User = require('../models/UserModel.js');
 
 
 //<--home begins-->
+
 
 router.get('/', function (req, res) {
  
   res.render('index', {layout: 'main'});
     // res.sendFile('./public/index.html');
-})
+});
 
 //<--home ends-->
 
@@ -19,16 +22,28 @@ router.get('/', function (req, res) {
 //<--sign up begins -->
 
 router.get('/users/sign_up', function (req, res) {
-  res.render('users/sign_up');
+    res.render('users/sign_up');
 });
 
-router.post('/users/sign_up', function(req, res) {
-  //logic to input in database
-  res.redirect('/users/details_new');
-});
+router.post('/users/sign_up', passport.authenticate('local.signup', {
+  successRedirect: '/users/details_new',
+  failureRedirect: '/users/sign_up',
+  failureFlash: true
+}));
+  
+  // res.redirect('/users/details_new');
+
 
 //<--sign up ends-->
 
+
+router.get('/users/dashboard', function (req, res) {
+  res.render('users/dashboard', {layout: 'dash'});
+});
+
+router.post('/users/dashboard', function (req, res) {
+  res.render('users/dashboard', {layout: 'dash'});
+});
 
 //<--details form begins-->
 
@@ -38,27 +53,18 @@ router.get('/users/details_new', function(req, res) {
 
 router.post('/users/details_new', function(req, res) {
   //logic to input in database
-  res.redirect('/');
+  res.redirect('/users/dashboard');
 });
 
 //<--details form ends-->
 
 
-//<--login form begins-->
-
-router.get('/users/dashboard', function (req, res) {
-  res.render('users/dashboard', {layout: 'dash'});
-});
-
-router.post('/users/dashboard', function (req, res) {
-  res.render('users/dashboard', {layout: 'dash'});
-});
-//<--login form ends-->
 
 
 //<--sign out begins-->
 
 router.get('/users/sign-out', function(req, res) {
+  req.logout();
   res.redirect('/');
 });
 
@@ -82,6 +88,11 @@ router.post('/users/password_new', function(req, res) {
 router.get('/users/sign-in', function(req, res) {
   res.render('users/sign_in');
 });
+
+
+//<-- home page sign in ends-->
+
+
 
 
 
