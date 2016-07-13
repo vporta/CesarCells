@@ -1,9 +1,61 @@
+body {
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    /*line-height: 26.4px;*/
+    color: black;
+    background-color: #e8efef;
+    /*font-size: 20px;*/
+}
+h1 {
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26.4px;
+}
+h3 {
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 15.4px;
+}
+/*p {
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+}*/
+blockquote {
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    font-size: 21px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+pre {
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 18.5714px;
+}
+
 /*results circle shape*/
 .circle-shape-results {
     width: 100%;
     height: 300px;
     /*background: white;*/
-    border-radius: 20%;
+    border-radius: 30%;
     padding: 25.5px;
     margin-top: 75px;
     border-style: solid;
@@ -99,11 +151,96 @@
     border: 5px solid white;
     /*border-right: 1px solid white;*/
 }
-.jumbotron {
+/*main page*/
+.jumbotron-main {
 
-    background-image: url("https://stream.org/wp-content/uploads/Embryonic-Stem-Cells-900.jpg");
+    background-image: url("https://static.pexels.com/photos/30763/pexels-photo-30763-large.jpg");
     background-size: cover;
-    height: 75%;
+    height: 85%;
+}
+.jumbotron-whatis {
+
+    background-image: url("https://static.pexels.com/photos/47446/pexels-photo-47446-large.jpeg");
+    background-size: cover;
+    height: 85%;
+}
+.main-h1 {
+    padding-top: 250px;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+
+    font-size: 55px;
+    text-align: center;
+    line-height: 3;
+    color: white;
+    width: 100%;
+    font-weight: bold;
+}
+/*main page*/
+
+/*What is section*/
+
+.what-is {
+    font-size: 34px;
+    /*color: #6e6e6e;*/
+    font-weight: 100;
+    margin-bottom: 40px;
+    padding: 15px;
+    margin: 10px;
+}
+.what-is-sci {
+    font-size: 24px;
+    /*color: #6e6e6e;*/
+    font-weight: 300;
+    margin-bottom: 40px;
+    padding: 5px;
+    margin: 10px;
+    text-transform: uppercase;
+}
+.what-is-h2 {
+
+font-size: 55px;
+font-weight: 300;
+}
+.what-is-header {
+    margin-bottom: 10px;
+}
+#intro {
+    padding: 75px 0;
+    background: #e8efef;
+    text-align: center;
+    margin-bottom: 200px;
+}
+.img-spans-main {
+    width: 13.2%;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    height: 75px;
+    width: 75px;
+    margin-left: 135px;
+    margin-top: 10px;  
+    background-color:  white;
+}
+#main-btn {
+    width: 400px;
+    height: 80px;
+    padding: 28px;
+    position: relative;
+}
+
+#how-it-works {
+    padding: 20px 0 20px 0;
+}
+#dod-how-it-works_left {
+    position: relative;
+    z-index: 8;
+}
+.how-it-works-svg {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto 10px auto;
 }
 /*all trials_page ends*/
 #userRegister {
@@ -150,6 +287,8 @@ h3 {
     /*left: 0;*/
     top: 100px;
     width: 100%;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+
 }
  h3 span {
     color: white; 
@@ -158,6 +297,8 @@ h3 {
     background: rgb(0, 0, 0); /* fallback color */
     background: rgba(0, 0, 0, 0.7);
     padding: 10px;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+
  }
 #top-right-h3 {
     position: absolute;
@@ -167,9 +308,12 @@ h3 {
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.7);
     color: white;
-    font: bold 24px/45px Helvetica, Sans-Serif;
+    font: bold 24px/45px;
     letter-spacing: -1px;
     padding: 4px;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+
+
     /* padding-left: 3px; */
     /*height: 50px;*/
 }
@@ -186,6 +330,7 @@ h3 {
     background-color: #005470;
     margin-top: 25px; 
     border-radius: 7px;
+    border-bottom: solid 2px #D1E2E5;
 }
 #a-dash {
     color: white;
@@ -238,7 +383,8 @@ div.container-fluid.bg-info {
     background-color: transparent;
 }
 nav.navbar.navbar-default.navbar-fixed-top {
-    background-color: #ffffff;
+    background-color: #005470;
+    
 }
 .panel-default {
     background-color: #f7f9fa;
@@ -249,13 +395,13 @@ nav.navbar.navbar-default.navbar-fixed-top {
   /*background-color: green;*/
   /*text-align: center;*/
 }
-body {
+/*body {
   color: black;
   background-color: #e8efef;
   font-size: 20px;
- /* line-height:1;
-  font:normal 0.9em/1em"Helvetica Neue", Helvetica, Arial, sans-serif;*/
-}
+  line-height:1;
+  font:normal 0.9em/1em"Helvetica Neue", Helvetica, Arial, sans-serif;
+}*/
 #header-details-form {
   margin-top: 120px;
 }
@@ -284,14 +430,14 @@ strong {
   margin:3px;
 }
 h1 {
-    font:normal bold 2em/1.8em"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font:normal bold 2em/1.8em;
     text-align:left;
     /*border-bottom:1px solid #999;*/
     padding:0;
     width:auto
 }
 h2 {
-    font:italic bold 1.3em/1.2em"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font:italic bold 1.3em/1.2em;
     padding:0;
     text-align:center;
     margin:20px 0;
@@ -713,7 +859,7 @@ li,ul{
 }
 
 header {
-    background: #ffffff none repeat scroll 0 0;
+    background: none repeat scroll 0 0;
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.04);
     display: inline-block !important;
     line-height: 23px;

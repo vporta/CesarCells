@@ -3,7 +3,7 @@ var Draggable = require('react-draggable');
 var DraggableCore = Draggable.DraggableCore;
 
 var Results = React.createClass({
-  
+
   render: function() {
 
     return (
@@ -12,11 +12,11 @@ var Results = React.createClass({
 
           <div className="circle-shape-results">
 
-            <h2>Trial Name: {this.props.name} </h2> 
+            {/*<h2>Trial Name: {this.props.name} </h2> 
 
             <p> Conditions Treated: {this.props.conditions} </p>
 
-            <strong><p> Your Qualified Percentage: {this.props.score} </p></strong>
+            <strong><p> Your Qualified Percentage: {this.props.score} </p></strong>*/}
           
           </div>
 

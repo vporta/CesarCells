@@ -7,12 +7,12 @@ var TrialOne = React.createClass({
 
   getInitialState: function() {
     return {
-      quiz: [],
-      current: 0,
-      current_quiz: [],
-      user_choice: "",
-      score: 0,
-      verifying_answer: false
+      // quiz: [],
+      // current: 0,
+      // current_quiz: [],
+      // user_choice: "",
+      // score: 0,
+      // verifying_answer: false
     };
   },
   // On each click save the click count
@@ -31,37 +31,37 @@ var TrialOne = React.createClass({
   // },
   componentDidMount: function() {
 
-    this.setState({
+    // this.setState({
 
-      quiz: [
-        {
-          "question": this.props.trialOneQs[0],
-          "choices": ["Y", "N"],
-          "answer": this.props.trialOneAnswers[0]
-        }, {
-          "question": this.props.trialOneQs[1],
-          "choices": ["Y", "N"],
-          "answer": this.props.trialOneAnswers[1]
-        }, {
-          "question": this.props.trialOneQs[2],
-          "choices": ["Y", "N"],
-          "answer": this.props.trialOneAnswers[2]
-        }, {
-          "question": this.props.trialOneQs[3],
-          "choices": ["Y", "N"],
-          "answer": this.props.trialOneAnswers[3]
-        }, {
-          "question": this.props.trialOneQs[4],
-          "choices": ["Y", "N"],
-          "answer": this.props.trialOneAnswers[4]
-        }, {
-          "question": this.props.trialOneQs[5],
-          "choices": ["Y", "N"],
-          "answer": this.props.trialOneAnswers[5]
-        }
-      ]
+    //   quiz: [
+    //     {
+    //       "question": this.props.trialOneQs[0],
+    //       "choices": ["Y", "N"],
+    //       "answer": this.props.trialOneAnswers[0]
+    //     }, {
+    //       "question": this.props.trialOneQs[1],
+    //       "choices": ["Y", "N"],
+    //       "answer": this.props.trialOneAnswers[1]
+    //     }, {
+    //       "question": this.props.trialOneQs[2],
+    //       "choices": ["Y", "N"],
+    //       "answer": this.props.trialOneAnswers[2]
+    //     }, {
+    //       "question": this.props.trialOneQs[3],
+    //       "choices": ["Y", "N"],
+    //       "answer": this.props.trialOneAnswers[3]
+    //     }, {
+    //       "question": this.props.trialOneQs[4],
+    //       "choices": ["Y", "N"],
+    //       "answer": this.props.trialOneAnswers[4]
+    //     }, {
+    //       "question": this.props.trialOneQs[5],
+    //       "choices": ["Y", "N"],
+    //       "answer": this.props.trialOneAnswers[5]
+    //     }
+    //   ]
 
-    });
+    // });
 
     console.log(this);
   },
@@ -112,7 +112,7 @@ var TrialOne = React.createClass({
         <div className="panel panel-default">
           <div className="panel-body">
             <div className="quizContainer">
-              <h2 id="whatup">{this.props.trialOneQs[0]}</h2>
+              <h2 id="whatup">{}</h2>
             </div>
          
           </div>
@@ -121,7 +121,7 @@ var TrialOne = React.createClass({
         </div>
         </form>
         <div>
-          <small className="text-center">By taking this screening tool, you acknowledge that it is not a diagnostic instrument, is informational only, does not constitute medical or treatment advice, and is only to be used if you are 18 years or older. You are encouraged to share your results with a mental health provider or physician.</small>
+          <small className="text-center">By taking this screening tool, you acknowledge that it is not a diagnostic instrument, is informational only, does not constitute medical or treatment advice, and is only to be used if you are 18 years or older. You are encouraged to share your results with a health provider or physician.</small>
         </div>
       </div>
     );
