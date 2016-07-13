@@ -2,11 +2,21 @@ var React = require('react');
 // var helpers = require('../utils/helpers.js');
 var axios = require('axios');
 var TrialOne = require('./TrialOne');
-
+var Results = require('./Results');
+var Draggable = require('react-draggable');
+var DraggableCore = Draggable.DraggableCore;
 
 var Quiz = React.createClass({
   getInitialState: function() {
     return {
+      trialOne: {},
+      trialTwo: {},
+      trialThree: {},
+      trialFour: {},
+      trialFive: {},
+      trialSix: {},
+      trialSeven: {},
+      trialEight: {},
       trialOneUrl: '',
       trialTwoUrl: '',
       trialThreeUrl: '',
@@ -46,19 +56,35 @@ var Quiz = React.createClass({
       answersTrialFive: [],
       answersTrialSix: [],
       answersTrialSeven: [],
-      answersTrialEight: []
-    }
+      answersTrialEight: [],
+      trialOneScore: 0,
+      trialTwoScore: 0,
+      trialThreeScore: 0,
+      trialFourScore: 0,
+      trialFiveScore: 0,
+      trialSixScore: 0,
+      trialSevenScore: 0,
+      trialEightScore: 0
+    };
   },
-  componentDidMount: function() {
+  componentDidMount: function() {    
     var _this = this;
     this.serverRequest = 
       axios
         .get('/api/trials')
         .then(function(result) {   
-           
+        
         console.log(result); 
-
+        console.log('trialOne questions: ' + result.data[0].questions[0]);
           _this.setState({
+            trialOne: result.data[0].questions[0],
+            trialTwo: result.data[1].questions[1],
+            trialThree: result.data[2].questions[2],
+            trialFour: result.data[3].questions[3],
+            trialFive: result.data[4].questions[4],
+            trialSix: result.data[5].questions[5],
+            trialSeven: result.data[6].questions[6],
+            trialEight: result.data[7].questions[7],
             trialOneUrl: result.data[0].url,
             trialTwoUrl: result.data[1].url,
             trialThreeUrl: result.data[2].url,
@@ -102,23 +128,93 @@ var Quiz = React.createClass({
           });
       })
   },
+
   componentWillUnmount: function() {
     this.serverRequest.abort();
   },
+  somefx: function() {
+  
+  }, 
   render: function() {
+
+   
 
     return (
       <div>
-      <h2>Stargardts Clinical Trial Assessment</h2>
+    
+        <div>
+        <TrialOne trialOneQs={this.state.questionsTrialOne} trialOneAnswers={this.state.answersTrialOne} />
+        </div>
 
-        
-       
-        <TrialOne trialOneQs={this.state.questionsTrialOne} trialOneAnswers={this.state.answersTrialOne} /> 
 
         {/*trialTwoQs={this.state.questionsTrialTwo} trialThreeQs={this.state.questionsTrialThree} trialFourQs={this.state.questionsTrialFour} trialFiveQs={this.state.questionsTrialFive} trialSixQs={null} trialSevenQs={this.state.questionsTrialSeven} trialEightQs={this.state.questionsTrialEight}/>*/}
 
         {/*<Answers trialOneAnswers={this.state.answersTrialOne} trialTwoAnswers={this.state.answersTrialTwo} trialThreeAnswers={this.state.answersTrialThree} trialFourAnswers={this.state.answersTrialFour} trialFiveAnswers={this.state.answersTrialFive} trialSixAnswers={this.state.answersTrialSix} trialSevenAnswers={this.state.answersTrialSeven} trialEightAnswers={this.state.answersTrialEight} />*/}
-      
+
+        <div className="row">
+          <div className="col-lg-12">
+
+            <Results name={this.state.trialOneName} conditions={this.state.trialOneConditionsDisease} score={this.state.trialOneScore}> 
+             
+            </Results>
+          </div>
+
+          <div className="col-lg-12">
+
+            <Results name={this.state.trialTwoName} conditions={this.state.trialTwoConditionsDisease} score={this.state.trialTwoScore}>
+            
+            </Results>
+          </div>
+
+          <div className="col-lg-12">
+
+            <Results name={this.state.trialThreeName} conditions={this.state.trialThreeConditionsDisease} score={this.state.trialThreeScore}>
+            
+            </Results>
+
+          </div>
+          <div className="col-lg-12">
+
+            <Results name={this.state.trialFourName} conditions={this.state.trialFourConditionsDisease} score={this.state.trialFourScore}>
+                        
+            </Results>
+
+          </div>
+        </div>
+        <div className="row">
+
+          <div className="col-lg-12">
+
+            <Results name={this.state.trialFiveName} conditions={this.state.trialFiveConditionsDisease} score={this.state.trialFiveScore}>
+            
+            </Results>
+          </div>
+
+          <div className="col-lg-12">
+
+            <Results name={this.state.trialSixName} conditions={this.state.trialSixConditionsDisease} score={this.state.trialSixScore}>
+            
+            </Results>
+          </div>
+
+          <div className="col-lg-12">
+
+            <Results name={this.state.trialSevenName} conditions={this.state.trialSevenConditionsDisease} score={this.state.trialSevenScore}>
+            
+            </Results>
+
+          </div>
+          <div className="col-lg-12">
+
+            <Results name={this.state.trialEightName} conditions={this.state.trialEightConditionsDisease} score={this.state.trialEightScore}>
+            
+            </Results>
+
+          </div>
+        
+        </div>
+        
+        
       </div>
     );
   }

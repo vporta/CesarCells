@@ -1,33 +1,24 @@
 
-  {
-    "id": 1,
-    "status": "Recruiting",
-    "name": "Phase 2 Tolerability and Effects of ALK-001 on Stargardt Disease",
-    "conditionsDisease": [
-      "Stargardt Disease",
-      "Stargardt Macular Degeneration", 
-      "Stargardt Macular Dystrophy",
-      "Autosomal Recessive Stargardt Disease 1 (ABCA4-related)"
-      ], 
-    "interventions": "Drug: ALK-001|Drug: Placebo", 
-    "url": "https://ClinicalTrials.gov/show/NCT02402660",
-    "min_age_req": 12,
-    "max_age_req": 60,
-    "questions": [
+  [
     
       {
         "one": "Can you provide a genetic report indicating at least two ABCA4 disease-causing mutations? (When only one ABCA4 disease-causing mutation is reported, sponsors permission will be required.)?",
-        "answers": [
-          {
-            "ans": "Y",
-            "label": "Yes"
-          },
-          {
-            "ans": "N",
-            "label": "No"
-          },
-        ],
-        "correct": "Y"
+        "correct": "Y",
+        trial: trial1,
+        "id": 1,
+        "status": "Recruiting",
+        "name": "Phase 2 Tolerability and Effects of ALK-001 on Stargardt Disease",
+        "conditionsDisease": [
+          "Stargardt Disease",
+          "Stargardt Macular Degeneration", 
+          "Stargardt Macular Dystrophy",
+          "Autosomal Recessive Stargardt Disease 1 (ABCA4-related)"
+          ], 
+        "interventions": "Drug: ALK-001|Drug: Placebo", 
+        "url": "https://ClinicalTrials.gov/show/NCT02402660",
+        "min_age_req": 12,
+        "max_age_req": 60,
+
       },
       {
         "two": "Is at least one eye (called the primary study eye) must have at least one well-demarcated area of significantly reduced autofluorescence as imaged by fundus autofluorescence (FAF)?",
@@ -41,7 +32,20 @@
             "label": "No"
           },
         ],
-        "correct": "Y"
+        "correct": "Y",
+        "id": 1,
+        "status": "Recruiting",
+        "name": "Phase 2 Tolerability and Effects of ALK-001 on Stargardt Disease",
+        "conditionsDisease": [
+          "Stargardt Disease",
+          "Stargardt Macular Degeneration", 
+          "Stargardt Macular Dystrophy",
+          "Autosomal Recessive Stargardt Disease 1 (ABCA4-related)"
+          ], 
+        "interventions": "Drug: ALK-001|Drug: Placebo", 
+        "url": "https://ClinicalTrials.gov/show/NCT02402660",
+        "min_age_req": 12,
+        "max_age_req": 60,
       },
       {
         "three": "Primary study eye must have clear ocular media and adequate pupillary dilation, including no allergy to dilating eyedrops, to permit good quality retinal imaging. Can you provide good quality retinal imaging?",
@@ -99,6 +103,8 @@
         ],
         "correct": "Y"
       }
+  }
+  }
     ],
   },
 

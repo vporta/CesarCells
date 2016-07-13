@@ -1,11 +1,13 @@
 var React = require('react');
-var RadioInput = require('./RadioInput');
+var Draggable = require('react-draggable');
+var DraggableCore = Draggable.DraggableCore;
 var ScoreBox = require('./ScoreBox');
 
 var TrialOne = React.createClass({
 
   getInitialState: function() {
     return {
+      quiz: [],
       current: 0,
       current_quiz: [],
       user_choice: "",
@@ -13,9 +15,25 @@ var TrialOne = React.createClass({
       verifying_answer: false
     };
   },
-  render: function() {
-    
-    var quiz = [
+  // On each click save the click count
+  // componentDidUpdate: function(prevProps, prevState){
+  //   console.log("COMPONENT UPDATED");
+
+  //   // We will check if the click count has changed...
+  //   if (prevState.clicks != this.state.clicks){
+
+  //     // If it does, then update the clickcount in MongoDB
+  //     axios.post('/api', {clickID: this.state.clickID, clicks: this.state.clicks})
+  //       .then(function(results){
+  //         console.log("Posted to MongoDB");
+  //       })
+  //   }
+  // },
+  componentDidMount: function() {
+
+    this.setState({
+
+      quiz: [
         {
           "question": this.props.trialOneQs[0],
           "choices": ["Y", "N"],
@@ -41,13 +59,56 @@ var TrialOne = React.createClass({
           "choices": ["Y", "N"],
           "answer": this.props.trialOneAnswers[5]
         }
-      ];
+      ]
 
-      console.log('hey this is question # 1 as quiz[0].question: ' + quiz[0].question);
+    });
+
+    console.log(this);
+  },
+  nextQuestion: function (index) {
+
+  },
+  checkAnswer: function() {
+
+  },
+  render: function() {
+    
+    // var quiz = [
+    //     {
+    //       "question": this.props.trialOneQs[0],
+    //       "choices": ["Y", "N"],
+    //       "answer": this.props.trialOneAnswers[0]
+    //     }, {
+    //       "question": this.props.trialOneQs[1],
+    //       "choices": ["Y", "N"],
+    //       "answer": this.props.trialOneAnswers[1]
+    //     }, {
+    //       "question": this.props.trialOneQs[2],
+    //       "choices": ["Y", "N"],
+    //       "answer": this.props.trialOneAnswers[2]
+    //     }, {
+    //       "question": this.props.trialOneQs[3],
+    //       "choices": ["Y", "N"],
+    //       "answer": this.props.trialOneAnswers[3]
+    //     }, {
+    //       "question": this.props.trialOneQs[4],
+    //       "choices": ["Y", "N"],
+    //       "answer": this.props.trialOneAnswers[4]
+    //     }, {
+    //       "question": this.props.trialOneQs[5],
+    //       "choices": ["Y", "N"],
+    //       "answer": this.props.trialOneAnswers[5]
+    //     }
+    //   ];
+
+      // console.log('hey this is question # 1 as quiz[0].question: ' + quiz[0].question);
         
     return(
-      <div>
-        <form className="">
+      <div ref="dragform">
+
+      <h2>Stargardts Clinical Trial Assessment</h2>
+
+        <form className="form">
         <div className="panel panel-default">
           <div className="panel-body">
             <div className="quizContainer">

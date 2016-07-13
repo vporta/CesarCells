@@ -7,10 +7,10 @@ var UserSchema = new Schema({
  
   local: {
     email: String,
-    password: String
+    password: String //,
+    // trials: [{ type: Schema.Types.ObjectId, ref: 'Trial' }],
+    // topics: [{ type: Schema.Types.ObjectId, ref: 'Topic' }]
   }
-    
-
   // facebook: {
   //   id:String,
   //   token:String,

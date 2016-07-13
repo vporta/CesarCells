@@ -53,6 +53,7 @@
     "react": "^15.2.0",
     "react-bootstrap": "^0.29.5",
     "react-dom": "^15.2.0",
+    "react-draggable": "^2.1.2",
     "react-router": "^2.5.2",
     "request": "^2.72.0",
     "webpack": "^1.13.1"
