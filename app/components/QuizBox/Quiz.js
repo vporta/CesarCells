@@ -159,6 +159,7 @@ var Quiz = React.createClass({
   // resetQuiz: function() {
   //    this.setState({score: 0, progress: 0});
   //  },
+},
   render: function() {
 
    

@@ -17,7 +17,7 @@ var TrialSchema = new Schema({
   },
   dateCreated: Date,
   takenBy: { type: Schema.Types.ObjectId, ref: 'User' },
-  topic: { type: Schema.Types.ObjectId, ref: 'Topic' },
+  // topic: { type: Schema.Types.ObjectId, ref: 'Topic' },
   
   // Ideally, I would use [QuestionSchema] here, instead of [Schema.Types.Mixed]. However, that
   // results in not saving any fields that are only present in one of the derived question types

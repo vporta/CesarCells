@@ -151,7 +151,7 @@ pre {
     border: 5px solid white;
     /*border-right: 1px solid white;*/
 }
-/*main page*/
+/*main page begins*/
 .jumbotron-main {
 
     background-image: url("https://static.pexels.com/photos/30763/pexels-photo-30763-large.jpg");
@@ -164,18 +164,28 @@ pre {
     background-size: cover;
     height: 85%;
 }
+.jumbotron-clinical-trial {
+    background-image: url('https://static.pexels.com/photos/4154/clinic-doctor-health-hospital-large.jpg');
+    background-size: cover;
+    height: 85%;
+}   
 .main-h1 {
-    padding-top: 250px;
+    padding-top: 120px;
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
 
-    font-size: 55px;
+    font-size: 75px;
     text-align: center;
-    line-height: 3;
+    line-height: 1.5;
     color: white;
     width: 100%;
     font-weight: bold;
 }
-/*main page*/
+#main-row-sect {
+    background-color: white;
+    border-radius: 10%;
+    margin-top: 30px;
+}
+/*main page ends*/
 
 /*What is section*/
 
@@ -209,6 +219,30 @@ font-weight: 300;
     background: #e8efef;
     text-align: center;
     margin-bottom: 200px;
+    /*border-radius: 30%;*/
+    margin-top: 20px;
+}
+.intro-clinics {
+    padding: 75px 0;
+    background: white;
+    text-align: center;
+    margin-bottom: 200px;
+    /*border-radius: 30%;*/
+    margin-top: 20px;
+}
+#intro-stargardts-defined {
+    padding: 75px 0;
+    background: #e8efef;
+    text-align: center;
+    margin-bottom: 200px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/*what is ends*/
+
+#why-register {
+    margin-top: 100px;
 }
 .img-spans-main {
     width: 13.2%;
@@ -378,14 +412,16 @@ ul.dropdown-menu {
 /*home page sign-in form*/
 form#sign-in-form.form-horizontal {
     margin-top: 150px;
+    margin-bottom: 600px;
 }
 div.container-fluid.bg-info {
     background-color: transparent;
 }
 nav.navbar.navbar-default.navbar-fixed-top {
     background-color: #005470;
-    
+    /*color: white;*/ 
 }
+
 .panel-default {
     background-color: #f7f9fa;
 }
@@ -486,6 +522,7 @@ img.question-image {
 .panel-footer {
   height: 700px;
   background-color: #005470;
+  margin-top:  20px;
 }
 #start-panel-head {
   text-align: center;
@@ -920,7 +957,7 @@ header {
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #0e1a35;
+    background-color: #005470;
 }
 
 .circle-logo {
@@ -1037,6 +1074,9 @@ header {
     padding: 9px 10px;
     width: 100%;
     color: #8492af;
+}
+.navbar-brand {
+    color: white;
 }
 .modal-header.login-header h4 {
     color: #ffffff;
