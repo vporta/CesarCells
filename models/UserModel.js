@@ -7,16 +7,24 @@ var UserSchema = new Schema({
  
   local: {
     email: String,
-    password: String //,
-    // trials: [{ type: Schema.Types.ObjectId, ref: 'Trial' }],
+    password: String, 
+    trials: [{ type: Schema.Types.ObjectId, ref: 'Trial' }],
     // topics: [{ type: Schema.Types.ObjectId, ref: 'Topic' }]
-  }
-  // facebook: {
-  //   id:String,
-  //   token:String,
-  //   email:String,
-  //   name:String
-  // },
+  },
+  age: Number,
+  birth_day: Date,
+  firstname: String,
+  lastname: String,
+  sex: String,
+  stargardtsDiagnosis: Boolean,
+  informedConsent: Boolean,
+  country: String,
+  facebook: {
+    id:String,
+    token:String,
+    email:String,
+    name:String
+  },
   // twitter: {
   //   id:String,
   //   token:String,
@@ -31,7 +39,6 @@ var UserSchema = new Schema({
   // }
 });
 
-// methods ======================
 // generating a hash
 UserSchema.methods.encryptPassword = function(password) {
     return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
