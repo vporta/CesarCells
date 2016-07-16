@@ -4,26 +4,28 @@ var Schema = mongoose.Schema;
 
 // Create a Schema for capturing clicks. We'll use clickID to update the same clickCounter
 var TrialSchema = new Schema({
+  _id: Number,
   name: String,
   status: String,
-  "conditionsDisease": [], 
+  "conditionsDisease": Array, 
   "interventions": String, 
   "url": String,
   "min_age_req": {
     type: Number
-  }
+  },
   "max_age_req": {
     type: Number,
   },
   dateCreated: Date,
-  takenBy: { type: Schema.Types.ObjectId, ref: 'User' },
-  // topic: { type: Schema.Types.ObjectId, ref: 'Topic' },
-  
-  // Ideally, I would use [QuestionSchema] here, instead of [Schema.Types.Mixed]. However, that
-  // results in not saving any fields that are only present in one of the derived question types
-  // (FillInQuestionSchema, etc.), but aren't present in the base (QuestionSchema). This may
-  // have something to do with it: http://stackoverflow.com/a/16513323/393005
-  questions: [Schema.Types.Mixed]
+  questions: {
+    
+      questionId: _id, 
+      type: String, 
+      answer: String
+  },
+
+  takenBy: [{ type: Schema.Types.ObjectId, ref: 'User' }],
+
 });
 
 // Create the Model

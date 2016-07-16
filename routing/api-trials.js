@@ -16,4 +16,26 @@ var stargardtsQuestions = require('../data/stargardtsQuestions.js');
     res.json(stargardtsQuestions);
   });
 
+  router.post('/api/save-answers', function(req, res){
+    var newClick = new Click(req.body);
+    console.log(req.body);
+
+    var clickID = req.body.clickID;
+    var clicks = parseInt(req.body.clicks);
+
+    // Note how this route utilizes the findOneAndUpdate function to update the clickCount.
+    Click.findOneAndUpdate({"clickID": clickID}, {$set: {"clicks": clicks}}, {upsert: true}).exec(function(err){
+
+      if(err){
+        console.log(err);
+      }
+
+      else{
+          res.send("Updated Click Count!");
+      }
+    });
+
+  });
+
+
 module.exports = router;

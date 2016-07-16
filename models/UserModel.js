@@ -8,7 +8,6 @@ var UserSchema = new Schema({
   local: {
     email: String,
     password: String, 
-    trials: [{ type: Schema.Types.ObjectId, ref: 'Trial' }],
     // topics: [{ type: Schema.Types.ObjectId, ref: 'Topic' }]
   },
   age: Number,
@@ -25,6 +24,14 @@ var UserSchema = new Schema({
     email:String,
     name:String
   },
+  qualified_trials: [{ type: Schema.Types.ObjectId, ref: 'Trial' }],
+  user_answers: [
+    {
+      trial: Schema.Types.ObjectId,
+      answers: Array
+    }
+  ]
+  //
   // twitter: {
   //   id:String,
   //   token:String,

@@ -77,13 +77,13 @@ var stargardtsQuestions = {
   ],
   "studySix": [
    {
-     "one" : false,
+     "one" : null,
    },
    {
      "two" : null,
    },
    {
-     "three" : false,
+     "three" : null,
    },
   ],
   "studySeven": [

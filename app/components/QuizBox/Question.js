@@ -13,7 +13,7 @@ var Question = React.createClass({
        
       <div className="question-assessment">
 
-        <h2>Question goes here </h2>
+        <h2>Question goes here</h2>
       
       </div>
 
@@ -22,3 +22,4 @@ var Question = React.createClass({
 });
 
 module.exports = Question;
+

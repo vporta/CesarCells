@@ -30,10 +30,10 @@ var Form = React.createClass({
   
   render: function() {
     
+      // <h2>Stargardts Clinical Trial Assessment</h2>
     return(
       <div className="container">
 
-      <h2>Stargardts Clinical Trial Assessment</h2>
 
         <form className="form">
         <div className="panel panel-default">
