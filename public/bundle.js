@@ -22213,12 +22213,13 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
-	// var helpers = require('../utils/helpers.js');
 	var axios = __webpack_require__(171);
-	var TrialOne = __webpack_require__(191);
-	var Results = __webpack_require__(195);
-	var Draggable = __webpack_require__(192);
+	var Draggable = __webpack_require__(191);
 	var DraggableCore = Draggable.DraggableCore;
+
+	var Form = __webpack_require__(193);
+	var Question = __webpack_require__(195);
+	var Results = __webpack_require__(196);
 
 	var Quiz = React.createClass({
 	  displayName: 'Quiz',
@@ -22226,156 +22227,105 @@
 	  getInitialState: function getInitialState() {
 	    return {
 	      data: [],
-	      progress: 0,
+	      user_answers: [],
+	      step: 0,
 	      score: 0
-	      // trialOne: {},
-	      // trialTwo: {},
-	      // trialThree: {},
-	      // trialFour: {},
-	      // trialFive: {},
-	      // trialSix: {},
-	      // trialSeven: {},
-	      // trialEight: {},
-	      // trialOneUrl: '',
-	      // trialTwoUrl: '',
-	      // trialThreeUrl: '',
-	      // trialFourUrl: '',
-	      // trialFiveUrl: '',
-	      // trialSixUrl: '',
-	      // trialSevenUrl: '',
-	      // trialEightUrl: '',
-	      // trialOneName: '',
-	      // trialTwoName: '',
-	      // trialThreeName: '',
-	      // trialFourName: '',
-	      // trialFiveName: '',
-	      // trialSixName: '',
-	      // trialSevenName: '',
-	      // trialEightName: '',
-	      // trialOneConditionsDisease: '',
-	      // trialTwoConditionsDisease: '',
-	      // trialThreeConditionsDisease: '',
-	      // trialFourConditionsDisease: '',
-	      // trialFiveConditionsDisease: '',
-	      // trialSixConditionsDisease: '',
-	      // trialSevenConditionsDisease: '',
-	      // trialEightConditionsDisease: '',
-	      // questionsTrialOne: [],
-	      // questionsTrialTwo: [],
-	      // questionsTrialThree: [],
-	      // questionsTrialFour: [],
-	      // questionsTrialFive: [],
-	      // questionsTrialSix: [],
-	      // questionsTrialSeven: [],
-	      // questionsTrialEight: [],
-	      // answersTrialOne: [],
-	      // answersTrialTwo: [],
-	      // answersTrialThree: [],
-	      // answersTrialFour: [],
-	      // answersTrialFive: [],
-	      // answersTrialSix: [],
-	      // answersTrialSeven: [],
-	      // answersTrialEight: [],
-	      // trialOneScore: 0,
-	      // trialTwoScore: 0,
-	      // trialThreeScore: 0,
-	      // trialFourScore: 0,
-	      // trialFiveScore: 0,
-	      // trialSixScore: 0,
-	      // trialSevenScore: 0,
-	      // trialEightScore: 0
+
 	    };
 	  },
+	  nextStep: function nextStep() {
+	    this.setState({ step: this.state.step + 1 });
+	  },
+	  setAnswer: function setAnswer(event) {
+	    this.state.user_answers[this.state.step] = this.state.user_answers[this.state.step] || [];
+	    this.state.user_answers[this.state.step][parseInt(event.target.value)] = event.target.checked;
+	  },
+	  getAllQuestions: function getAllQuestions(Qs) {
+
+	    for (var i = 0; i < Qs.length; i++) {
+	      for (var j = 0; j < Qs[i].questions.length; j++) {
+	        console.log('all questions: ' + Qs[i].questions[j].one);
+	      }
+	    }
+	  },
+	  checkAnswer: function checkAnswer() {},
 	  componentDidMount: function componentDidMount() {
 	    var _this = this;
 	    this.serverRequest = axios.get('/api/trials').then(function (result) {
 
 	      console.log(result);
-	      console.log('trialOne questions: ' + result.data);
+	      // console.log('trialOne questions: ' + result.data);
 	      _this.setState({
 	        data: result.data
-	        // trialOne: result.data[0].questions[0],
-	        // trialTwo: result.data[1].questions[1],
-	        // trialThree: result.data[2].questions[2],
-	        // trialFour: result.data[3].questions[3],
-	        // trialFive: result.data[4].questions[4],
-	        // trialSix: result.data[5].questions[5],
-	        // trialSeven: result.data[6].questions[6],
-	        // trialEight: result.data[7].questions[7],
-	        // trialOneUrl: result.data[0].url,
-	        // trialTwoUrl: result.data[1].url,
-	        // trialThreeUrl: result.data[2].url,
-	        // trialFourUrl: result.data[3].url,
-	        // trialFiveUrl: result.data[4].url,
-	        // trialSixUrl: result.data[5].url,
-	        // trialSevenUrl: result.data[6].url,
-	        // trialEightUrl: result.data[7].url,
-	        // trialOneName: result.data[0].name,
-	        // trialTwoName: result.data[1].name,
-	        // trialThreeName: result.data[2].name,
-	        // trialFourName: result.data[3].name,
-	        // trialFiveName: result.data[4].name,
-	        // trialSixName: result.data[5].name,
-	        // trialSevenName: result.data[6].name,
-	        // trialEightName: result.data[7].name,
-	        // trialOneConditionsDisease: result.data[0].conditionsDisease.join(" and "),
-	        // trialTwoConditionsDisease: result.data[1].conditionsDisease.join(" and "),
-	        // trialThreeConditionsDisease: result.data[2].conditionsDisease.join(" and "),
-	        // trialFourConditionsDisease: result.data[3].conditionsDisease.join(" and "),
-	        // trialFiveConditionsDisease: result.data[4].conditionsDisease.join(" and "),
-	        // trialSixConditionsDisease: result.data[5].conditionsDisease.join(" and "),
-	        // trialSevenConditionsDisease: result.data[6].conditionsDisease.join(" and "),
-	        // trialEightConditionsDisease: result.data[7].conditionsDisease.join(" and "),
-	        // questionsTrialOne: [result.data[0].questions[0].one, result.data[0].questions[1].two, result.data[0].questions[2].three, result.data[0].questions[3].four, result.data[0].questions[4].five, result.data[0].questions[5].six],
-	        // questionsTrialTwo: [result.data[1].questions[0].one, result.data[1].questions[1].two, result.data[1].questions[2].three, result.data[1].questions[3].four, result.data[1].questions[4].five, result.data[1].questions[5].six, result.data[1].questions[6].seven, result.data[1].questions[7].eight],
-	        // questionsTrialThree: [result.data[2].questions[0].one, result.data[2].questions[1].two, result.data[2].questions[2].three],
-	        // questionsTrialFour: [result.data[3].questions[0].one],
-	        // questionsTrialFive: [result.data[4].questions[0].one],
-	        // questionsTrialSix: null,
-	        // questionsTrialSeven: [result.data[6].questions[0].one, result.data[6].questions[1].two, result.data[6].questions[2].three, result.data[6].questions[3].four, result.data[6].questions[4].five],
-	        // questionsTrialEight: [result.data[7].questions[0].one, result.data[7].questions[1].two, result.data[7].questions[2].three],
-	        // answersTrialOne: [result.data[0].questions[0].correct, result.data[0].questions[1].correct, result.data[0].questions[2].correct, result.data[0].questions[3].correct, result.data[0].questions[4].correct, result.data[0].questions[5].correct],
-	        // answersTrialTwo: [result.data[1].questions[1].correct, result.data[1].questions[1].correct, result.data[1].questions[2].correct, result.data[1].questions[3].correct, result.data[1].questions[4].correct, result.data[1].questions[5].correct, result.data[1].questions[6].correct, result.data[1].questions[7].correct],
-	        // answersTrialThree: [result.data[2].questions[0].correct, result.data[2].questions[1].correct, result.data[2].questions[2].correct],
-	        // answersTrialFour: [result.data[3].questions[0].correct],
-	        // answersTrialFive: [result.data[4].questions[0].correct],
-	        // answersTrialSix: null,
-	        // answersTrialSeven: [result.data[6].questions[0].correct, result.data[6].questions[1].correct, result.data[6].questions[2].correct, result.data[6].questions[3].correct, result.data[6].questions[4].correct],
-	        // answersTrialEight: [result.data[7].questions[0].correct, result.data[7].questions[1].correct, result.data[7].questions[2].correct],
 	      });
 	    });
 	  },
-
 	  componentWillUnmount: function componentWillUnmount() {
 	    this.serverRequest.abort();
 	  },
-	  checkAnswer: function checkAnswer(index) {
-
-	    //   for(var i = 0; i < result.data.length) {
-
-	    //     for(var j = 0; j < result.data[i].questions) {
-
-	    //     }
-	    //   }
-	    //   var correct = this.state.questionData[this.state.progress].correct;
-	    //       var newScore = 0, newProgress = 0;
-	    //       if (correct === index) {
-	    //         newScore = this.state.score + 1;
-	    //         this.setState({score: newScore});
-	    //         newProgress = this.state.progress + 1;
-	    //         this.setState({progress: newProgress});
-	    //       } else {
-	    //         newProgress = this.state.progress + 1;
-	    //         this.setState({progress: newProgress});
-	    //       }
-	    // },
-	    // resetQuiz: function() {
-	    //    this.setState({score: 0, progress: 0});
-	    //  },
+	  componentDidUpdate: function componentDidUpdate(prevProps, prevState) {
+	    console.log("COMPONENT UPDATED");
 	  },
 	  render: function render() {
-
-	    return React.createElement('div', null);
+	    this.getAllQuestions(this.state.data);
+	    return React.createElement(
+	      'div',
+	      { className: 'container' },
+	      React.createElement(
+	        'div',
+	        null,
+	        React.createElement(Form, null),
+	        React.createElement(Question, null)
+	      ),
+	      React.createElement(
+	        'div',
+	        { className: 'row' },
+	        React.createElement(
+	          'div',
+	          { className: 'col-lg-12' },
+	          React.createElement(Results, null)
+	        ),
+	        React.createElement(
+	          'div',
+	          { className: 'col-lg-12' },
+	          React.createElement(Results, null)
+	        ),
+	        React.createElement(
+	          'div',
+	          { className: 'col-lg-12' },
+	          React.createElement(Results, null)
+	        ),
+	        React.createElement(
+	          'div',
+	          { className: 'col-lg-12' },
+	          React.createElement(Results, null)
+	        )
+	      ),
+	      React.createElement(
+	        'div',
+	        { className: 'row' },
+	        React.createElement(
+	          'div',
+	          { className: 'col-lg-12' },
+	          React.createElement(Results, null)
+	        ),
+	        React.createElement(
+	          'div',
+	          { className: 'col-lg-12' },
+	          React.createElement(Results, null)
+	        ),
+	        React.createElement(
+	          'div',
+	          { className: 'col-lg-12' },
+	          React.createElement(Results, null)
+	        ),
+	        React.createElement(
+	          'div',
+	          { className: 'col-lg-12' },
+	          React.createElement(Results, null)
+	        )
+	      )
+	    );
 	  }
 	});
 
@@ -22383,135 +22333,6 @@
 
 /***/ },
 /* 191 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(1);
-	var Draggable = __webpack_require__(192);
-	var DraggableCore = Draggable.DraggableCore;
-	var ScoreBox = __webpack_require__(194);
-
-	var TrialOne = React.createClass({
-	  displayName: 'TrialOne',
-
-
-	  getInitialState: function getInitialState() {
-	    return {
-	      // quiz: [],
-	      // current: 0,
-	      // current_quiz: [],
-	      // user_choice: "",
-	      // score: 0,
-	      // verifying_answer: false
-	    };
-	  },
-	  // On each click save the click count
-	  // componentDidUpdate: function(prevProps, prevState){
-	  //   console.log("COMPONENT UPDATED");
-
-	  //   // We will check if the click count has changed...
-	  //   if (prevState.clicks != this.state.clicks){
-
-	  //     // If it does, then update the clickcount in MongoDB
-	  //     axios.post('/api', {clickID: this.state.clickID, clicks: this.state.clicks})
-	  //       .then(function(results){
-	  //         console.log("Posted to MongoDB");
-	  //       })
-	  //   }
-	  // },
-	  componentDidMount: function componentDidMount() {
-
-	    // this.setState({
-
-	    //   quiz: [
-	    //     {
-	    //       "question": this.props.trialOneQs[0],
-	    //       "choices": ["Y", "N"],
-	    //       "answer": this.props.trialOneAnswers[0]
-	    //     }, {
-	    //       "question": this.props.trialOneQs[1],
-	    //       "choices": ["Y", "N"],
-	    //       "answer": this.props.trialOneAnswers[1]
-	    //     }, {
-	    //       "question": this.props.trialOneQs[2],
-	    //       "choices": ["Y", "N"],
-	    //       "answer": this.props.trialOneAnswers[2]
-	    //     }, {
-	    //       "question": this.props.trialOneQs[3],
-	    //       "choices": ["Y", "N"],
-	    //       "answer": this.props.trialOneAnswers[3]
-	    //     }, {
-	    //       "question": this.props.trialOneQs[4],
-	    //       "choices": ["Y", "N"],
-	    //       "answer": this.props.trialOneAnswers[4]
-	    //     }, {
-	    //       "question": this.props.trialOneQs[5],
-	    //       "choices": ["Y", "N"],
-	    //       "answer": this.props.trialOneAnswers[5]
-	    //     }
-	    //   ]
-
-	    // });
-
-	    console.log(this);
-	  },
-	  nextQuestion: function nextQuestion(index) {},
-	  checkAnswer: function checkAnswer() {},
-	  render: function render() {
-
-	    return React.createElement(
-	      'div',
-	      { ref: 'dragform' },
-	      React.createElement(
-	        'h2',
-	        null,
-	        'Stargardts Clinical Trial Assessment'
-	      ),
-	      React.createElement(
-	        'form',
-	        { className: 'form' },
-	        React.createElement(
-	          'div',
-	          { className: 'panel panel-default' },
-	          React.createElement(
-	            'div',
-	            { className: 'panel-body' },
-	            React.createElement(
-	              'div',
-	              { className: 'quizContainer' },
-	              React.createElement('h2', { id: 'whatup' })
-	            )
-	          ),
-	          React.createElement(
-	            'button',
-	            { href: '#', type: 'submit', className: 'myButton' },
-	            'YES'
-	          ),
-	          React.createElement(
-	            'button',
-	            { href: '#', type: 'submit', className: 'myButton' },
-	            'NO'
-	          )
-	        )
-	      ),
-	      React.createElement(
-	        'div',
-	        null,
-	        React.createElement(
-	          'small',
-	          { className: 'text-center' },
-	          'By taking this screening tool, you acknowledge that it is not a diagnostic instrument, is informational only, does not constitute medical or treatment advice, and is only to be used if you are 18 years or older. You are encouraged to share your results with a health provider or physician.'
-	        )
-	      )
-	    );
-	  }
-	});
-
-	module.exports = TrialOne;
-
-/***/ },
-/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module) {'use strict';
@@ -24015,10 +23836,10 @@
 	});
 	;
 	//# sourceMappingURL=react-draggable.js.map
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(193)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(192)(module)))
 
 /***/ },
-/* 193 */
+/* 192 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -24033,6 +23854,86 @@
 		}
 		return module;
 	};
+
+/***/ },
+/* 193 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Draggable = __webpack_require__(191);
+	var DraggableCore = Draggable.DraggableCore;
+	var ScoreBox = __webpack_require__(194);
+	var Question = __webpack_require__(195);
+
+	var Form = React.createClass({
+	  displayName: 'Form',
+
+
+	  getInitialState: function getInitialState() {
+	    return {
+	      answer: ''
+	    };
+	  },
+
+	  componentDidMount: function componentDidMount() {},
+	  // When a user submits...
+	  handleClick: function handleClick() {
+
+	    console.log("CLICK");
+	    // console.log(this.state.term);
+	    // Set the parent to have the search term
+	    // this.props.setTerm(this.state.answer);
+	  },
+
+	  render: function render() {
+
+	    return React.createElement(
+	      'div',
+	      { className: 'container' },
+	      React.createElement(
+	        'h2',
+	        null,
+	        'Stargardts Clinical Trial Assessment'
+	      ),
+	      React.createElement(
+	        'form',
+	        { className: 'form' },
+	        React.createElement(
+	          'div',
+	          { className: 'panel panel-default' },
+	          React.createElement(
+	            'div',
+	            { className: 'panel-body' },
+	            React.createElement('div', { className: 'quizContainer' })
+	          ),
+	          React.createElement(
+	            'button',
+	            { href: '#', type: 'submit', value: 'Y', className: 'myButton', onClick: this.handleClick },
+	            'YES'
+	          ),
+	          React.createElement(
+	            'button',
+	            { href: '#', type: 'submit', value: 'N', className: 'myButton', onClick: this.handleClick },
+	            'NO'
+	          )
+	        )
+	      ),
+	      React.createElement(
+	        'div',
+	        null,
+	        React.createElement(
+	          'small',
+	          { className: 'text-center' },
+	          'By taking this screening tool, you acknowledge that it is not a diagnostic instrument, is informational only, does not constitute medical or treatment advice, and is only to be used if you are 18 years or older. You are encouraged to share your results with a health provider or physician.'
+	        )
+	      )
+	    );
+	  }
+	});
+
+	module.exports = Form;
 
 /***/ },
 /* 194 */
@@ -24059,7 +23960,38 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Draggable = __webpack_require__(192);
+	var Draggable = __webpack_require__(191);
+	var DraggableCore = Draggable.DraggableCore;
+
+	var Question = React.createClass({
+	  displayName: 'Question',
+
+
+	  displayQuestions: function displayQuestions() {},
+	  render: function render() {
+
+	    return React.createElement(
+	      'div',
+	      { className: 'question-assessment' },
+	      React.createElement(
+	        'h2',
+	        null,
+	        'Question goes here '
+	      )
+	    );
+	  }
+	});
+
+	module.exports = Question;
+
+/***/ },
+/* 196 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Draggable = __webpack_require__(191);
 	var DraggableCore = Draggable.DraggableCore;
 
 	var Results = React.createClass({
@@ -24068,11 +24000,70 @@
 
 	  render: function render() {
 
-	    return React.createElement('div', { className: 'circle-shape-results' });
+	    return React.createElement(
+	      'div',
+	      { className: 'circle-shape-results' },
+	      React.createElement(
+	        'h2',
+	        null,
+	        'Trial Name:'
+	      ),
+	      React.createElement(
+	        'p',
+	        null,
+	        ' Conditions Treated:'
+	      ),
+	      React.createElement(
+	        'strong',
+	        null,
+	        React.createElement(
+	          'p',
+	          null,
+	          ' Your Qualified Percentage:'
+	        )
+	      )
+	    );
 	  }
 	});
 
 	module.exports = Results;
+
+	// <table id="gene-table" class="table table-striped">
+	//   <thead>
+	//     <tr>
+	//       <th>Gene</th>
+	//       <th>Marker (SNP)</th>
+	//       <th>Genomic Position</th>
+	//       <th>Variants</th>
+	//       <th>Your Genotype</th>
+	//     </tr>
+	//   </thead>
+	//   <tbody>
+	//     <tr>
+	//       <th scope="row">1</th>
+	//       <td>Mark</td>
+	//       <td>Otto</td>
+	//       <td>@mdo</td>
+	//       <td>@mdo</td>
+	//     </tr>
+	//     <tr>
+	//       <th scope="row">2</th>
+	//       <td>Jacob</td>
+	//       <td>Thornton</td>
+	//       <td>@fat</td>
+	//       <td>@mdo</td>
+
+	//     </tr>
+	//     <tr>
+	//       <th scope="row">3</th>
+	//       <td>Larry</td>
+	//       <td>the Bird</td>
+	//       <td>@twitter</td>
+	//       <td>@mdo</td>
+
+	//     </tr>
+	//   </tbody>
+	// </table>
 
 /***/ }
 /******/ ]);

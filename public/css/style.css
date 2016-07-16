@@ -33,6 +33,11 @@ h3 {
     font-weight: 400;
     line-height: 20px;
 }*/
+/*main navbar text*/
+#cesar-logo, #resources-nav-text, #howitworks-nav-text, #tools-nav-text, #treatments-nav-text, #login-nav-text, #signup-nav-text{
+    color: white;
+}
+
 blockquote {
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
     font-size: 21px;
@@ -445,7 +450,7 @@ h3 {
     height: 220px;
 }
 .nav.navbar-nav.navbar-right {
-    background-color: #005470;
+    background-color: #58b8fe;
     margin-top: 25px; 
     border-radius: 7px;
     border-bottom: solid 2px #D1E2E5;
@@ -701,6 +706,8 @@ li,ul{
 .login-header .navbar-right {
     margin-right: 0px;
 }
+
+
 
 .login-header .nav-tabs > li.active > a,
 .login-header .nav-tabs > li.active > a:focus,
@@ -1133,6 +1140,7 @@ header {
 .sales .btn-group.open .dropdown-toggle, .btn.active, .btn:active{
     box-shadow: none;
 }
+
 .sales .dropdown-menu > a {
     color: #0e1a35;
     display: inline-block;
@@ -1363,5 +1371,6 @@ header {
     width: 100%;
 }
 }
+
 /*dashbaord ends*/
 

@@ -12,11 +12,11 @@ var Results = React.createClass({
 
           <div className="circle-shape-results">
 
-            {/*<h2>Trial Name: {this.props.name} </h2> 
+            <h2>Trial Name:</h2> 
 
-            <p> Conditions Treated: {this.props.conditions} </p>
+            <p> Conditions Treated:</p>
 
-            <strong><p> Your Qualified Percentage: {this.props.score} </p></strong>*/}
+            <strong><p> Your Qualified Percentage:</p></strong>
           
           </div>
 
@@ -25,3 +25,41 @@ var Results = React.createClass({
 });
 
 module.exports = Results;
+
+
+// <table id="gene-table" class="table table-striped">
+//   <thead>
+//     <tr>
+//       <th>Gene</th>
+//       <th>Marker (SNP)</th>
+//       <th>Genomic Position</th>
+//       <th>Variants</th>
+//       <th>Your Genotype</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//       <th scope="row">1</th>
+//       <td>Mark</td>
+//       <td>Otto</td>
+//       <td>@mdo</td>
+//       <td>@mdo</td>
+//     </tr>
+//     <tr>
+//       <th scope="row">2</th>
+//       <td>Jacob</td>
+//       <td>Thornton</td>
+//       <td>@fat</td>
+//       <td>@mdo</td>
+
+//     </tr>
+//     <tr>
+//       <th scope="row">3</th>
+//       <td>Larry</td>
+//       <td>the Bird</td>
+//       <td>@twitter</td>
+//       <td>@mdo</td>
+
+//     </tr>
+//   </tbody>
+// </table>

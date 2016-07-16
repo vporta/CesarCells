@@ -38,10 +38,21 @@ router.post('/users/dashboard', passport.authenticate('local.login', {
     failureRedirect : '/users/sign-in', // redirect back to the signup page if there is an error
     failureFlash : true // allow flash messages
   }));
+// // Redirect the user to Facebook for authentication.  When complete,
+// // Facebook will redirect the user back to the application at
+// //     /auth/facebook/callback
+// app.get('/auth/facebook', passport.authenticate('facebook'));
 
+// // Facebook will redirect the user to this URL after approval.  Finish the
+// // authentication process by attempting to obtain an access token.  If
+// // access was granted, the user will be logged in.  Otherwise,
+// // authentication has failed.
+// app.get('/auth/facebook/callback',
+//   passport.authenticate('facebook', { successRedirect: '/',
+//                                       failureRedirect: '/login' }));
 // ==== FACEBOOK AUTH ==== 
 // route for facebook authentication and login
-router.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
+router.get('/auth/facebook', passport.authenticate('facebook'));
 
 // handle the callback after facebook has authenticated the user
 router.get('/auth/facebook/callback',
@@ -64,16 +75,16 @@ router.get('/users/details_new', function(req, res) {
 });
 
 router.post('/users/details_new', function(req, res) {
-
   var firstname = req.body.fname;
-  var lastname = req.body.lname
+  var lastname = req.body.lname;
+  var age = req.body.userage;
   var sex = req.body.sexselectpicker;
   var dob = req.body.bday;
   var diagnosedStarg = req.body.diagnosedSelect;
 
 console.log(req.user);
-
-  User.update({'_id': req.user._id}, {$set: {"firstname": firstname, "lastname": lastname, "sex": sex, "birth_day": dob, "stargardtsDiagnosis": diagnosedStarg}}, {upsert: true}).exec(function(err){
+//qualify users for certain studies now. 
+  User.findOneAndUpdate({'_id': req.user._id}, {$set: {"firstname": firstname, "lastname": lastname, "age": age, "sex": sex, "birth_day": dob, "stargardtsDiagnosis": diagnosedStarg}}, {upsert: true}).exec(function(err){
 
     if(err){
       console.log(err);
@@ -86,18 +97,13 @@ console.log(req.user);
   
 });
 
-
 // ==== SIGNOUT ====
-
 router.get('/users/sign-out', function(req, res) {
   req.logout();
   res.redirect('/');
 });
 
-
-
 // ==== RESET PASSWORD ====
-
 router.get('/users/password_new', function(req, res) {
   res.render('users/password_new');
 });
