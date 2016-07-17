@@ -211,11 +211,24 @@ pre {
     margin: 10px;
     text-transform: uppercase;
 }
+.what-are-trials-h2 {
+
+    font-size: 70px;
+    font-weight: 300;
+    color: white;
+}
 .what-is-h2 {
 
-font-size: 55px;
+font-size: 70px;
+font-weight: 300;
+color: #58b8fe;
+}
+.how-it-works-h2 {
+
+font-size: 70px;
 font-weight: 300;
 color: white;
+margin-bottom: 69px;
 }
 .tool-main-h2 {
     position: absolute; 
@@ -224,14 +237,14 @@ color: white;
     width: 100%; 
     font-size: 55px;
     
-    color: white;
+    color: #58b8fe;
 }
 .trial-main-h2 {
     position: absolute; 
     top: 20px; 
     left: 0; 
     width: 100%; 
-    font-size: 55px;
+    font-size: 70px;
     
     color: white;
 }
@@ -271,9 +284,18 @@ color: white;
 .what-is-header {
     margin-bottom: 10px;
 }
-#intro {
+#how-it-works {
     padding: 75px 0;
     background: #58b8fe;
+    text-align: center;
+    margin-bottom: 200px;
+    /*border-radius: 30%;*/
+    margin-top: 20px;
+    height: 720px;
+}
+#intro {
+    padding: 75px 0;
+    /*background: #58b8fe;*/
     text-align: center;
     margin-bottom: 200px;
     /*border-radius: 30%;*/
@@ -281,7 +303,7 @@ color: white;
 }
 #tools {
     padding: 75px 0;
-    background: #e8efef;
+    /*background: #e8efef;*/
     text-align: center;
     margin-bottom: 200px;
     /*border-radius: 30%;*/
@@ -302,6 +324,7 @@ color: white;
     margin-bottom: 200px;
     /*border-radius: 30%;*/
     margin-top: 20px;
+    height: 720px;
 }
 .treatments-section {
     padding: 75px 0;

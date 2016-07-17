@@ -17,14 +17,9 @@ var TrialSchema = new Schema({
     type: Number,
   },
   dateCreated: Date,
-  questions: {
-    
-      questionId: _id, 
-      type: String, 
-      answer: String
-  },
+  questions: Object,
 
-  takenBy: [{ type: Schema.Types.ObjectId, ref: 'User' }],
+  takenBy: [{ type: Schema.Types.ObjectId, ref: 'User' }]
 
 });
 

@@ -14,7 +14,10 @@ var path = require('path'),
     LocalStrategy = require('passport-local'),
     TwitterStrategy = require('passport-twitter'),
     GoogleStrategy = require('passport-google-oauth'),
-    FacebookStrategy = require('passport-facebook');
+    FacebookStrategy = require('passport-facebook'),
+    _ = require('underscore');
+    Trial = require('./models/Trial'),
+    User = require('./models/UserModel');
 
 //======Express========
 var app = express();

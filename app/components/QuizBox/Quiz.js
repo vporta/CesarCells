@@ -13,13 +13,18 @@ var Quiz = React.createClass({
       data: [],
       progress: 0,
       score: 0
+    }
   },
-  checkAnswer: function(index) {
-    
-  },
-  resetQuiz: function() {
-  },
-  componentWillUnmount: function() {
+  componentDidMount: function() {    
+    var _this = this;
+    this.serverRequest = 
+      axios.get('/api/trials')
+        .then(function(result) {   
+          console.log(result); 
+          _this.setState({
+            data: result.data
+          })
+        })
   },
   componentDidUpdate: function(prevProps, prevState){
     console.log("COMPONENT UPDATED");

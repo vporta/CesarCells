@@ -3,6 +3,7 @@ var Draggable = require('react-draggable');
 var DraggableCore = Draggable.DraggableCore;
 var ScoreBox = require('./ScoreBox');
 var Question = require('./Question');
+// var Trial = require('./models/Trial');
 
 
 var Form = React.createClass({

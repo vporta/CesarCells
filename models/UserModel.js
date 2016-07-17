@@ -24,13 +24,16 @@ var UserSchema = new Schema({
     email:String,
     name:String
   },
-  qualified_trials: [{ type: Schema.Types.ObjectId, ref: 'Trial' }],
-  user_answers: [
-    {
-      trial: Schema.Types.ObjectId,
+  qualifiedtrials: [{ 
+    type: Number, 
+    ref: 'Trial' 
+  }],
+  user_answers: 
+    [{
+      trialID: Number,
       answers: Array
-    }
-  ]
+    }]
+  
   //
   // twitter: {
   //   id:String,
@@ -45,6 +48,7 @@ var UserSchema = new Schema({
   //   name:String
   // }
 });
+
 
 // generating a hash
 UserSchema.methods.encryptPassword = function(password) {
