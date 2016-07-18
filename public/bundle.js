@@ -23854,22 +23854,22 @@
 	        { className: 'row' },
 	        React.createElement(
 	          'div',
-	          { className: 'col-lg-12' },
+	          { className: 'col-lg-6' },
 	          React.createElement(Results, null)
 	        ),
 	        React.createElement(
 	          'div',
-	          { className: 'col-lg-12' },
+	          { className: 'col-lg-6' },
 	          React.createElement(Results, null)
 	        ),
 	        React.createElement(
 	          'div',
-	          { className: 'col-lg-12' },
+	          { className: 'col-lg-6' },
 	          React.createElement(Results, null)
 	        ),
 	        React.createElement(
 	          'div',
-	          { className: 'col-lg-12' },
+	          { className: 'col-lg-6' },
 	          React.createElement(Results, null)
 	        )
 	      ),
@@ -23878,22 +23878,22 @@
 	        { className: 'row' },
 	        React.createElement(
 	          'div',
-	          { className: 'col-lg-12' },
+	          { className: 'col-lg-6' },
 	          React.createElement(Results, null)
 	        ),
 	        React.createElement(
 	          'div',
-	          { className: 'col-lg-12' },
+	          { className: 'col-lg-6' },
 	          React.createElement(Results, null)
 	        ),
 	        React.createElement(
 	          'div',
-	          { className: 'col-lg-12' },
+	          { className: 'col-lg-6' },
 	          React.createElement(Results, null)
 	        ),
 	        React.createElement(
 	          'div',
-	          { className: 'col-lg-12' },
+	          { className: 'col-lg-6' },
 	          React.createElement(Results, null)
 	        )
 	      )
@@ -25554,25 +25554,48 @@
 	  getInitialState: function getInitialState() {
 	    return {
 	      questions: [],
-	      trialID: ''
+	      trialID: '',
+	      currentQuestion: null,
+	      progress: 0
 	    };
 	  },
 	  componentWillMount: function componentWillMount() {},
-	  handleClick: function handleClick() {},
+	  handleClick: function handleClick() {
+	    this.setState({
+	      progress: this.state.progress + 1
+	    });
+	  },
+	  getCurrentQuestion: function getCurrentQuestion() {},
+	  setCurrentQuestion: function setCurrentQuestion(q) {
+	    this.state.currentQuestion = question;
+	  },
+	  nextQuestion: function nextQuestion() {},
 	  render: function render() {
+
+	    var question, elem, i, j, trial;
 	    var trials = this.props.data;
+
 	    for (var i = 0; i < trials.length; i++) {
+
 	      for (var j = 0; j < trials[i].questions.length; j++) {
 
-	        console.log(trials[0].questions[0].question);
+	        // console.log(trials[0].questions[0].question);
+	        question = trials[i].questions[this.state.progress];
+	        trial = trials[j];
+	        console.log(question);
 
 	        return React.createElement(
 	          'div',
 	          { className: 'question-assessment' },
 	          React.createElement(
 	            'h1',
-	            null,
-	            trials[0].questions[0].question
+	            { key: i },
+	            question.question
+	          ),
+	          React.createElement(
+	            'button',
+	            { href: '#', id: 'Y', type: 'submit', onClick: this.handleClick, className: 'myButton' },
+	            'Click Me'
 	          )
 	        );
 	      }

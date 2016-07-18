@@ -61,28 +61,28 @@ var Quiz = React.createClass({
         </div>
 
         <div className="row">
-          <div className="col-lg-12">
+          <div className="col-lg-6">
 
             <Results /> 
              
             
           </div>
 
-          <div className="col-lg-12">
+          <div className="col-lg-6">
 
             <Results />
             
             
           </div>
 
-          <div className="col-lg-12">
+          <div className="col-lg-6">
 
             <Results />
             
             
 
           </div>
-          <div className="col-lg-12">
+          <div className="col-lg-6">
 
             <Results />
                         
@@ -92,26 +92,26 @@ var Quiz = React.createClass({
         </div>
         <div className="row">
 
-          <div className="col-lg-12">
+          <div className="col-lg-6">
 
             <Results />
             
             
           </div>
 
-          <div className="col-lg-12">
+          <div className="col-lg-6">
 
             <Results />
             
             
           </div>
 
-          <div className="col-lg-12">
+          <div className="col-lg-6">
 
             <Results />
             
           </div>
-          <div className="col-lg-12">
+          <div className="col-lg-6">
 
             <Results />
             
