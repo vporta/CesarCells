@@ -25612,8 +25612,11 @@
 	      }
 	    }
 	    if (this.state.trialNumberIndex === 3) {
+
 	      this.setState({
+
 	        progress: this.state.progress + 1
+
 	      });
 	    }if (this.state.progress === 0) {
 
@@ -25626,15 +25629,51 @@
 	      }
 	    }
 	    if (this.state.trialNumberIndex === 4) {
+
 	      this.setState({
+
 	        progress: this.state.progress + 1
+
 	      });
-	    }if (this.state.progress === 'undefined') {
+	    }if (this.state.progress === 0) {
 
 	      if (this.state.trialNumberIndex === 4) {
 
 	        this.setState({
+
+	          trialNumberIndex: this.state.trialNumberIndex + 2,
+	          progress: 0
+
+	        });
+	      }
+	    }
+	    if (this.state.trialNumberIndex === 6) {
+
+	      this.setState({
+
+	        progress: this.state.progress + 1
+
+	      });
+	    }if (this.state.progress === 4) {
+
+	      if (this.state.trialNumberIndex === 6) {
+
+	        this.setState({
+
 	          trialNumberIndex: this.state.trialNumberIndex + 1,
+	          progress: 0
+
+	        });
+	      }
+	    }
+	    if (this.state.trialNumberIndex === 7) {
+	      this.setState({
+	        progress: this.state.progress + 1
+	      });
+	    }if (this.state.progress === 2) {
+	      if (this.state.trialNumberIndex === 7) {
+	        this.setState({
+	          trialNumberIndex: 0,
 	          progress: 0
 	        });
 	      }
