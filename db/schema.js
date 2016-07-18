@@ -222,7 +222,7 @@ db.trials.insert(
   url: "https://ClinicalTrials.gov/show/NCT01866371",
   min_age_req: 7,
   max_age_req: 150,
-  questions: null
+  questions: 'KEEP GOING - YOU ARE ALMOST DONE!'
   }
 )
 db.trials.insert(

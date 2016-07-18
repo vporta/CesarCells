@@ -25570,9 +25570,7 @@
 	      if (this.state.progress < 5) {
 
 	        this.setState({
-
 	          progress: this.state.progress + 1
-
 	        });
 	      }
 	    }if (this.state.progress === 5) {
@@ -25580,19 +25578,64 @@
 	      if (this.state.trialNumberIndex === 0) {
 
 	        this.setState({
-
 	          trialNumberIndex: this.state.trialNumberIndex + 1,
 	          progress: 0
-
 	        });
 	      }
 	    }
 	    if (this.state.trialNumberIndex === 1) {
+	      this.setState({
+	        progress: this.state.progress + 1
+	      });
+	    }if (this.state.progress === 7) {
 
-	      if (this.state.progress) {
+	      if (this.state.trialNumberIndex === 1) {
 
 	        this.setState({
-	          progress: this.state.progress + 1
+	          trialNumberIndex: this.state.trialNumberIndex + 1,
+	          progress: 0
+	        });
+	      }
+	    }
+	    if (this.state.trialNumberIndex === 2) {
+	      this.setState({
+	        progress: this.state.progress + 1
+	      });
+	    }if (this.state.progress === 2) {
+
+	      if (this.state.trialNumberIndex === 2) {
+
+	        this.setState({
+	          trialNumberIndex: this.state.trialNumberIndex + 1,
+	          progress: 0
+	        });
+	      }
+	    }
+	    if (this.state.trialNumberIndex === 3) {
+	      this.setState({
+	        progress: this.state.progress + 1
+	      });
+	    }if (this.state.progress === 0) {
+
+	      if (this.state.trialNumberIndex === 3) {
+
+	        this.setState({
+	          trialNumberIndex: this.state.trialNumberIndex + 1,
+	          progress: 0
+	        });
+	      }
+	    }
+	    if (this.state.trialNumberIndex === 4) {
+	      this.setState({
+	        progress: this.state.progress + 1
+	      });
+	    }if (this.state.progress === 'undefined') {
+
+	      if (this.state.trialNumberIndex === 4) {
+
+	        this.setState({
+	          trialNumberIndex: this.state.trialNumberIndex + 1,
+	          progress: 0
 	        });
 	      }
 	    }
