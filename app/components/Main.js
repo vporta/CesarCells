@@ -1,7 +1,7 @@
 // Include React 
 var React = require('react');
 var axios = require('axios');
-
+var _ = require('underscore');
 var Quiz = require('./QuizBox/Quiz');
 
 var Main = React.createClass({

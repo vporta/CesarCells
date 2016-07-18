@@ -1,6 +1,7 @@
 var React = require('react');
 var Draggable = require('react-draggable');
 var DraggableCore = Draggable.DraggableCore;
+var _ = require('underscore');
 
 var Results = React.createClass({
 

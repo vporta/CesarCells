@@ -14,7 +14,7 @@ var TrialSchema = new Schema({
     type: Number
   },
   "max_age_req": {
-    type: Number,
+    type: Number
   },
   dateCreated: Date,
   questions: Object,

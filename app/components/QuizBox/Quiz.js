@@ -2,8 +2,8 @@ var React = require('react');
 var axios = require('axios');
 var Draggable = require('react-draggable');
 var DraggableCore = Draggable.DraggableCore;
-
-var Form = require('./Form');
+var _ = require('underscore');
+var QuestionForm = require('./QuestionForm');
 var Question = require('./Question');
 var Results = require('./Results');
 
@@ -11,34 +11,54 @@ var Quiz = React.createClass({
   getInitialState: function() {
     return {
       data: [],
-      progress: 0,
-      score: 0
+      step: 0,
+      score: 0,
+      trialID: '',
+      answers: '',
+      questions: []
     }
   },
-  componentDidMount: function() {    
+  componentWillMount: function() {    
     var _this = this;
     this.serverRequest = 
       axios.get('/api/trials')
         .then(function(result) {   
           console.log(result); 
+          
           _this.setState({
-            data: result.data
+            data: result.data,
           })
         })
+
+  },
+  handleUserAnswerSubmit: function () {
+
+    axios.post('/api/trials-answers', {trialID: this.state.trialID, answers: this.state.answers})
+      .then(function(results){
+        console.log("Posted to MongoDB" +results);
+      })
+
   },
   componentDidUpdate: function(prevProps, prevState){
     console.log("COMPONENT UPDATED");
   },
   render: function() {
+    // var trials = this.state.data;
+    // var questions;
+    // for(var i =0; i < trials.length; i++) {
+    //   for(var j=0; j <trials[i].questions.length; j++) {
+    //     questions = trials[i].questions[j].question;
+    //   console.log(questions);
+    //   }
+    // }
+
     return (
       <div className="container">
     
         <div>
-        <Question />
-        <Form />
-
+        <Question data={this.state.data} />
+        <QuestionForm onUserSubmit={this.state.handleUserAnswerSubmit} />
         </div>
-
 
         <div className="row">
           <div className="col-lg-12">
