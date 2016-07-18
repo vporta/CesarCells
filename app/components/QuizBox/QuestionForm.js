@@ -47,7 +47,6 @@ var QuestionForm = React.createClass({
     // this.props.onUserSubmit({yes: userAnswerYes, no: userAnswerNo});
 
   },
-  
   render: function() {
  
     return(

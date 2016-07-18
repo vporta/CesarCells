@@ -23794,6 +23794,7 @@
 	var Draggable = __webpack_require__(192);
 	var DraggableCore = Draggable.DraggableCore;
 	var _ = __webpack_require__(190);
+	// var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 	var QuestionForm = __webpack_require__(194);
 	var Question = __webpack_require__(196);
 	var Results = __webpack_require__(197);
@@ -25478,7 +25479,6 @@
 	    // Set the parent to have the search term
 	    // this.props.onUserSubmit({yes: userAnswerYes, no: userAnswerNo});
 	  },
-
 	  render: function render() {
 
 	    return React.createElement(
@@ -25558,32 +25558,66 @@
 	      currentQuestion: null,
 	      currentTrial: null,
 	      progress: 0,
-	      trialNumber: 0
+	      trialNumberIndex: 0,
+	      completed: false
 	    };
 	  },
 	  componentWillMount: function componentWillMount() {},
 	  handleClick: function handleClick() {
 
-	    if (this.state.progress <= 4) {
+	    if (this.state.trialNumberIndex === 0) {
 
-	      this.setState({
-	        progress: this.state.progress + 1
-	      });
-	    } else {
-	      this.setState({
-	        trialNumber: this.state.trialNumber + 1,
-	        progress: 0
-	      });
+	      if (this.state.progress < 5) {
+
+	        this.setState({
+
+	          progress: this.state.progress + 1
+
+	        });
+	      }
+	    }if (this.state.progress === 5) {
+
+	      if (this.state.trialNumberIndex === 0) {
+
+	        this.setState({
+
+	          trialNumberIndex: this.state.trialNumberIndex + 1,
+	          progress: 0
+
+	        });
+	      }
 	    }
+	    if (this.state.trialNumberIndex === 1) {
+
+	      if (this.state.progress) {
+
+	        this.setState({
+	          progress: this.state.progress + 1
+	        });
+	      }
+	    }
+
+	    console.log('hello world');
+	    console.log('progress: ' + this.state.progress);
+	    console.log('trialNumberIndex: ' + this.state.trialNumberIndex);
+
+	    console.log('progress: ' + this.state.progress);
+	    console.log('trialNumberIndex: ' + this.state.trialNumberIndex);
 	  },
 	  getCurrentQuestion: function getCurrentQuestion() {},
 	  setCurrentQuestion: function setCurrentQuestion(q) {
 	    this.state.currentQuestion = question;
+	    console.log(question);
 	  },
-	  nextQuestion: function nextQuestion() {},
+	  nextQuiz: function nextQuiz() {
+	    this.setState({
+	      trialNumberIndex: this.state.trialNumberIndex + 1
+	    });
+	  },
 	  render: function render() {
 
 	    var question, elem, i, j, trial;
+	    var _id = this.state.trialNumberIndex;
 	    var trials = this.props.data;
 
 	    for (var i = 0; i < trials.length; i++) {
@@ -25591,17 +25625,17 @@
 	      for (var j = 0; j < trials[i].questions.length; j++) {
 
 	        // console.log(trials[0].questions[0].question);
-	        question = trials[this.state.trialNumber].questions[this.state.progress];
+	        question = trials[this.state.trialNumberIndex].questions[this.state.progress];
 	        trial = trials[j];
 	        console.log(question);
-	        // console.log(trial);
+	        // console.log(trial._id);
 
 	        return React.createElement(
 	          'div',
 	          { className: 'question-assessment' },
 	          React.createElement(
 	            'h1',
-	            { key: i },
+	            { key: i, onChange: this.setCurrentQuestion },
 	            question.question
 	          ),
 	          React.createElement(
