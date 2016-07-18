@@ -9,16 +9,27 @@ var Question = React.createClass({
       questions: [],
       trialID: '',
       currentQuestion: null,
-      progress: 0
+      currentTrial: null,
+      progress: 0,
+      trialNumber: 0
     }
   },
   componentWillMount: function() {
   
   },
   handleClick: function() {
+
+    if(this.state.progress <=4) {
+
     this.setState({
-      progress: this.state.progress + 1
+      progress: this.state.progress + 1,
     })
+    } else {
+      this.setState({
+        trialNumber: this.state.trialNumber + 1,
+        progress: 0
+      })
+    } 
   },
   getCurrentQuestion: function () {
 
@@ -31,7 +42,6 @@ var Question = React.createClass({
   },
   render: function() {
 
-
     var question, elem, i, j, trial;
     var trials = this.props.data;
     
@@ -40,9 +50,11 @@ var Question = React.createClass({
       for(var j=0; j < trials[i].questions.length; j++) {
 
       // console.log(trials[0].questions[0].question);
-      question = trials[i].questions[this.state.progress];
+      question = trials[this.state.trialNumber].questions[this.state.progress];
       trial = trials[j];
       console.log(question);
+      // console.log(trial);
+
 
       return (
         <div className="question-assessment">
