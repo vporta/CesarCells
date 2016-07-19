@@ -33,7 +33,19 @@ h3 {
     font-weight: 400;
     line-height: 20px;
 }*/
+#inputEmail {
+    margin-left: 20px;
+    margin-top: 15px;
 
+}
+#inputPass {
+    margin-left: 90px;
+    margin-top: 15px;
+    width: 342px;
+}
+#priv-policy {
+    padding-left: 30px;
+}
 /*glossary*/
 .glossary-h2 {
     font-size: 80px;
@@ -151,8 +163,8 @@ pre {
    
 }
 .inner {
-    height: 310px;
-    width: 260px;
+    height: 600px;
+    width: 600px;
     padding: 1em .25em 1.5em;
     position: relative;
     top: 50%;
@@ -161,6 +173,7 @@ pre {
     _xtransform: translateY(-50%);
     border: 5px solid white;
     /*border-right: 1px solid white;*/
+    margin-left: 30px;
 }
 /*main page begins*/
 .jumbotron-main {
@@ -187,7 +200,7 @@ pre {
     height: 85%;
 }   
 .main-h1 {
-    padding-top: 180px;
+    padding-top: 300px;
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
 
     font-size: 75px;

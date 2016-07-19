@@ -204,8 +204,6 @@ var Question = React.createClass({
            <div className="panel panel-default">
              <div className="panel-body">
                  
-               
-
              </div>
              <button href="#" id="Y" name="Y" ref='Y' type="submit" onClick={this.handleClick} className="myButton">YES</button>
              <button href="#" name="N" ref='N' type="submit" onClick={this.handleClick} id="N" className="myButton">NO</button>
@@ -215,7 +213,7 @@ var Question = React.createClass({
         </div>
         )
       }
-    }
+    } // End loops
       return (
        
       <div className="question-assessment">

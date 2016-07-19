@@ -24,11 +24,19 @@ require('../config/passport');
 
   router.post('/api/trials-answers', function(req, res){
     console.log('hit line 25',req.body);
-    var answers = 'hey';
+    var answers = 'hey, hi, me, you, tree, they';
 
     console.log(req.user, req.session.passport);
     
-    User.findOneAndUpdate({_id: req.user._id}, {$push: {user_answers: {answers: answers}}}).exec(function(err, doc){
+    User.findOneAndUpdate({
+      _id: req.user._id
+    }, { 
+      $push: {
+        user_answers: {
+          answers: answers
+        }
+      }
+    }).exec(function(err, doc){
       console.log(req.user);
         if(err){
           console.log(err);

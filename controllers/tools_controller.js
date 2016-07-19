@@ -28,6 +28,10 @@ router.get('/tools/all-trials', function (req, res) {
   res.render('tools/all_trials', {layout: 'dash'});
 });
 
+router.get('/tools/amsler-test', function (req, res) {
+  res.render('tools/amsler_test_page', {layout: 'dash'});
+});
+
 // router.get('/tools/all-tools', function (req, res) {
 //   res.render('tools/all_tools', {layout: 'dash'});
 // });

@@ -25734,7 +25734,7 @@
 	          )
 	        );
 	      }
-	    }
+	    } // End loops
 	    return React.createElement(
 	      'div',
 	      { className: 'question-assessment' },
