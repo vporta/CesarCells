@@ -7,6 +7,7 @@ var router = express.Router();
 var LocalStrategy = require('passport-local').Strategy;
 var Trial = require('../models/Trial');
 var User = require('../models/UserModel');
+require('../config/passport');
 
   router.get('/api/trials', function(req, res){
     Trial.find({}).exec(function(err, doc){
@@ -22,10 +23,12 @@ var User = require('../models/UserModel');
   });
 
   router.post('/api/trials-answers', function(req, res){
-    var trialID = parseInt(req.body.trialID);
-    var answers = req.body.useranswers;
-    console.log(req.user);
-    User.findOneAndUpdate({'_id': req.user._id}, {$push: {user_answers: {trialID: trialID, answers: answers}}}).exec(function(err, doc){
+    console.log('hit line 25',req.body);
+    var answers = 'hey';
+
+    console.log(req.user, req.session.passport);
+    
+    User.findOneAndUpdate({_id: req.user._id}, {$push: {user_answers: {$push: {answers: answers}}}}).exec(function(err, doc){
       console.log(req.user);
         if(err){
           console.log(err);

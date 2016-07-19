@@ -23824,22 +23824,16 @@
 	  },
 	  handleUserAnswerSubmit: function handleUserAnswerSubmit() {
 
-	    axios.post('/api/trials-answers', { trialID: this.state.trialID, answers: this.state.answers }).then(function (results) {
-	      console.log("Posted to MongoDB" + results);
-	    });
+	    // axios.post('/api/trials-answers', {trialID: this.state.trialID, answers: this.state.answers})
+	    //   .then(function(results){
+	    //     console.log("Posted to MongoDB" +results);
+	    //   })
+
 	  },
 	  componentDidUpdate: function componentDidUpdate(prevProps, prevState) {
 	    console.log("COMPONENT UPDATED");
 	  },
 	  render: function render() {
-	    // var trials = this.state.data;
-	    // var questions;
-	    // for(var i =0; i < trials.length; i++) {
-	    //   for(var j=0; j <trials[i].questions.length; j++) {
-	    //     questions = trials[i].questions[j].question;
-	    //   console.log(questions);
-	    //   }
-	    // }
 
 	    return React.createElement(
 	      'div',
@@ -23847,8 +23841,7 @@
 	      React.createElement(
 	        'div',
 	        null,
-	        React.createElement(Question, { data: this.state.data }),
-	        React.createElement(QuestionForm, { onUserSubmit: this.state.handleUserAnswerSubmit })
+	        React.createElement(Question, { data: this.state.data, onUserSubmit: this.state.handleUserAnswerSubmit })
 	      ),
 	      React.createElement(
 	        'div',
@@ -25456,63 +25449,46 @@
 	  componentDidMount: function componentDidMount() {},
 	  // When a user submits...
 	  handleYesSubmit: function handleYesSubmit(e) {
+	    e.preventDefault();
 	    var userAnswerYes = this.state.yes;
 	    var userAnswerNo = this.state.no;
 	    //unshift now
 	    //then hit api to save answer
 	    console.log(userAnswerYes);
 	    // console.log(userAnswerNo);
-	    e.preventDefault();
 	    // console.log(this.state.term);
 	    // Set the parent to have the search term
 	    // this.props.onUserSubmit({yes: userAnswerYes, no: userAnswerNo});
 	  },
 	  handleNoSubmit: function handleNoSubmit(e) {
+	    e.preventDefault();
 	    var userAnswerYes = this.state.yes;
 	    var userAnswerNo = this.state.no;
 	    //unshift now
 	    //then hit api to save answer
 	    // console.log(userAnswerYes);
 	    console.log(userAnswerNo);
-	    e.preventDefault();
 	    // console.log(this.state.term);
 	    // Set the parent to have the search term
 	    // this.props.onUserSubmit({yes: userAnswerYes, no: userAnswerNo});
 	  },
 	  render: function render() {
 
-	    return React.createElement(
-	      'div',
-	      { className: 'container' },
-	      React.createElement(
-	        'form',
-	        { className: 'questionForm' },
-	        React.createElement(
-	          'div',
-	          { className: 'panel panel-default' },
-	          React.createElement('div', { className: 'panel-body' }),
-	          React.createElement(
-	            'button',
-	            { href: '#', id: 'Y', type: 'submit', onClick: this.handleSubmit, className: 'myButton' },
-	            'YES'
-	          ),
-	          React.createElement(
-	            'button',
-	            { href: '#', type: 'submit', onClick: this.handleSubmit, id: 'N', className: 'myButton' },
-	            'NO'
-	          )
-	        )
-	      ),
-	      React.createElement(
-	        'div',
-	        null,
-	        React.createElement(
-	          'small',
-	          { className: 'text-center' },
-	          'By taking this screening tool, you acknowledge that it is not a diagnostic instrument, is informational only, does not constitute medical or treatment advice, and is only to be used if you are 18 years or older. You are encouraged to share your results with a health provider or physician.'
-	        )
-	      )
-	    );
+	    return {/*<div className="container">
+	             <form className="questionForm">
+	               <div className="panel panel-default">
+	                 <div className="panel-body">
+	                     
+	                   
+	                  </div>
+	                 <button href="#" id="Y" type="submit" onClick={this.handleYesSubmit} className="myButton">YES</button>
+	                 <button href="#" type="submit" onClick={this.handleNoSubmit} id="N" className="myButton">NO</button>
+	               </div>
+	             </form>
+	             <div>
+	               <small className="text-center">By taking this screening tool, you acknowledge that it is not a diagnostic instrument, is informational only, does not constitute medical or treatment advice, and is only to be used if you are 18 years or older. You are encouraged to share your results with a health provider or physician.</small>
+	             </div>
+	            </div>*/};
 	  }
 	});
 
@@ -25547,9 +25523,11 @@
 	var Draggable = __webpack_require__(192);
 	var DraggableCore = Draggable.DraggableCore;
 	var _ = __webpack_require__(190);
+	var axios = __webpack_require__(171);
 
 	var Question = React.createClass({
 	  displayName: 'Question',
+
 
 	  getInitialState: function getInitialState() {
 	    return {
@@ -25559,11 +25537,14 @@
 	      currentTrial: null,
 	      progress: 0,
 	      trialNumberIndex: 0,
-	      completed: false
+	      completed: false,
+	      yes: 'Y',
+	      no: 'N'
 	    };
 	  },
 	  componentWillMount: function componentWillMount() {},
-	  handleClick: function handleClick() {
+	  handleClick: function handleClick(e) {
+	    e.preventDefault();
 
 	    if (this.state.trialNumberIndex === 0) {
 
@@ -25678,15 +25659,11 @@
 	        });
 	      }
 	    }
-
-	    console.log('hello world');
+	    console.log('----hello world----');
 	    console.log('progress: ' + this.state.progress);
 	    console.log('trialNumberIndex: ' + this.state.trialNumberIndex);
-
-	    console.log('progress: ' + this.state.progress);
-	    console.log('trialNumberIndex: ' + this.state.trialNumberIndex);
+	    this.handleSubmit(e);
 	  },
-	  getCurrentQuestion: function getCurrentQuestion() {},
 	  setCurrentQuestion: function setCurrentQuestion(q) {
 	    this.state.currentQuestion = question;
 	    console.log(question);
@@ -25695,6 +25672,18 @@
 	    this.setState({
 	      trialNumberIndex: this.state.trialNumberIndex + 1
 	    });
+	  },
+	  handleSubmit: function handleSubmit(e) {
+	    console.log('hey now onsubmit fired');
+	    e.preventDefault();
+	    // /var form = e.target;
+	    //must change these values otherwise it would not
+	    var yes = this.refs.Y.name;
+	    var no = this.refs.N.name;
+
+	    axios.post('/api/trials-answers').then(function (results) {
+	      console.log("Posted to MongoDB" + results);
+	    }.bind(this));
 	  },
 	  render: function render() {
 
@@ -25707,9 +25696,13 @@
 	      for (var j = 0; j < trials[i].questions.length; j++) {
 
 	        // console.log(trials[0].questions[0].question);
+
 	        question = trials[this.state.trialNumberIndex].questions[this.state.progress];
+
 	        trial = trials[j];
+
 	        console.log(question);
+
 	        // console.log(trial._id);
 
 	        return React.createElement(
@@ -25721,15 +25714,36 @@
 	            question.question
 	          ),
 	          React.createElement(
-	            'button',
-	            { href: '#', id: 'Y', type: 'submit', onClick: this.handleClick, className: 'myButton' },
-	            'Click Me'
+	            'form',
+	            { className: 'questionForm' },
+	            React.createElement(
+	              'div',
+	              { className: 'panel panel-default' },
+	              React.createElement('div', { className: 'panel-body' }),
+	              React.createElement(
+	                'button',
+	                { href: '#', id: 'Y', name: 'Y', ref: 'Y', type: 'submit', onClick: this.handleClick, className: 'myButton' },
+	                'YES'
+	              ),
+	              React.createElement(
+	                'button',
+	                { href: '#', name: 'N', ref: 'N', type: 'submit', onClick: this.handleClick, id: 'N', className: 'myButton' },
+	                'NO'
+	              )
+	            )
 	          )
 	        );
 	      }
 	    }
-
-	    return React.createElement('div', { className: 'question-assessment' });
+	    return React.createElement(
+	      'div',
+	      { className: 'question-assessment' },
+	      React.createElement(
+	        'button',
+	        { href: '#', id: 'Y', type: 'submit', onClick: this.handleClick, className: 'myButton' },
+	        'Click Me'
+	      )
+	    );
 	  }
 	});
 

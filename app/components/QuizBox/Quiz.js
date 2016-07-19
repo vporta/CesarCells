@@ -34,10 +34,10 @@ var Quiz = React.createClass({
   },
   handleUserAnswerSubmit: function () {
 
-    axios.post('/api/trials-answers', {trialID: this.state.trialID, answers: this.state.answers})
-      .then(function(results){
-        console.log("Posted to MongoDB" +results);
-      })
+    // axios.post('/api/trials-answers', {trialID: this.state.trialID, answers: this.state.answers})
+    //   .then(function(results){
+    //     console.log("Posted to MongoDB" +results);
+    //   })
 
   },
   componentDidUpdate: function(prevProps, prevState){
@@ -57,8 +57,8 @@ var Quiz = React.createClass({
       <div className="container">
     
         <div>
-        <Question data={this.state.data} />
-        <QuestionForm onUserSubmit={this.state.handleUserAnswerSubmit} />
+        <Question data={this.state.data} onUserSubmit={this.state.handleUserAnswerSubmit} />
+        {/*<QuestionForm onUserSubmit={this.state.handleUserAnswerSubmit} />*/}
         </div>
 
         <div className="row">

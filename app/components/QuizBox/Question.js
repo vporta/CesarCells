@@ -2,8 +2,10 @@ var React = require('react');
 var Draggable = require('react-draggable');
 var DraggableCore = Draggable.DraggableCore;
 var _ = require('underscore');
+var axios = require('axios');
 
 var Question = React.createClass({
+
   getInitialState: function () {
     return {
       questions: [],
@@ -12,13 +14,16 @@ var Question = React.createClass({
       currentTrial: null,
       progress: 0,
       trialNumberIndex: 0,
-      completed: false
+      completed: false,
+      yes: 'Y',
+      no: 'N'
     }
   },
   componentWillMount: function() {
   
   },
-  handleClick: function() {
+  handleClick: function(e) {
+    e.preventDefault();
 
     if (this.state.trialNumberIndex === 0) {
       
@@ -142,20 +147,10 @@ var Question = React.createClass({
                           })
                         }
                       }
-
-
-
-
-            console.log('hello world');
-            console.log('progress: ' + this.state.progress);
-            console.log('trialNumberIndex: ' + this.state.trialNumberIndex);
-
-      
-      console.log('progress: ' + this.state.progress);
-      console.log('trialNumberIndex: ' + this.state.trialNumberIndex);
-  },
-  getCurrentQuestion: function () {
-
+  console.log('----hello world----');
+  console.log('progress: ' + this.state.progress);
+  console.log('trialNumberIndex: ' + this.state.trialNumberIndex);  
+  this.handleSubmit(e);  
   },
   setCurrentQuestion: function(q) {
     this.state.currentQuestion = question;
@@ -165,6 +160,19 @@ var Question = React.createClass({
     this.setState({
       trialNumberIndex: this.state.trialNumberIndex + 1
     })
+  },
+  handleSubmit: function(e) {
+    console.log('hey now onsubmit fired')
+    e.preventDefault();
+    // /var form = e.target;
+    //must change these values otherwise it would not 
+    var yes = this.refs.Y.name;
+    var no = this.refs.N.name;
+
+    axios.post('/api/trials-answers')
+      .then(function(results){
+        console.log("Posted to MongoDB" +results);
+      }.bind(this))
   },
   render: function() {
 
@@ -177,29 +185,42 @@ var Question = React.createClass({
       for(var j=0; j < trials[i].questions.length; j++) {
 
       // console.log(trials[0].questions[0].question);
+
       question = trials[this.state.trialNumberIndex].questions[this.state.progress];
+      
       trial = trials[j];
+
       console.log(question);
+
       // console.log(trial._id);
 
-
       return (
+
         <div className="question-assessment">
 
-        
-        <h1 key={i} onChange={this.setCurrentQuestion}>{question.question}</h1>
-         <button href="#" id="Y" type="submit" onClick={this.handleClick} className="myButton">Click Me</button>
+          <h1 key={i} onChange={this.setCurrentQuestion}>{question.question}</h1>
+            {/*<button href="#" id="Y" type="submit" onClick={this.handleClick} className="myButton">Click Me</button>*/}
+         <form className="questionForm">
+           <div className="panel panel-default">
+             <div className="panel-body">
+                 
+               
+
+             </div>
+             <button href="#" id="Y" name="Y" ref='Y' type="submit" onClick={this.handleClick} className="myButton">YES</button>
+             <button href="#" name="N" ref='N' type="submit" onClick={this.handleClick} id="N" className="myButton">NO</button>
+           </div>
+         </form>
+
         </div>
         )
       }
     }
-
-
       return (
        
       <div className="question-assessment">
 
-      
+      <button href="#" id="Y" type="submit" onClick={this.handleClick} className="myButton">Click Me</button>
       </div>
 
     );
