@@ -28,7 +28,7 @@ require('../config/passport');
 
     console.log(req.user, req.session.passport);
     
-    User.findOneAndUpdate({_id: req.user._id}, {$push: {user_answers: {$push: {answers: answers}}}}).exec(function(err, doc){
+    User.findOneAndUpdate({_id: req.user._id}, {$push: {user_answers: {answers: answers}}}).exec(function(err, doc){
       console.log(req.user);
         if(err){
           console.log(err);

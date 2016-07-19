@@ -1,11 +1,11 @@
 body {
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
-    font-size: 24px;
+    font-size: 34px;
     font-style: normal;
     font-variant: normal;
     font-weight: 500;
     /*line-height: 26.4px;*/
-    color: black;
+    color: midnightblue;
     background-color: #e8efef;
     /*font-size: 20px;*/
 }
@@ -33,6 +33,12 @@ h3 {
     font-weight: 400;
     line-height: 20px;
 }*/
+
+/*glossary*/
+.glossary-h2 {
+    font-size: 80px;
+    text-align: left;
+}
 /*main navbar text*/
 #cesar-logo, #resources-nav-text, #howitworks-nav-text, #tools-nav-text, #treatments-nav-text, #login-nav-text, #signup-nav-text{
     color: white;
@@ -161,7 +167,13 @@ pre {
 
     background-image: url("https://static.pexels.com/photos/30763/pexels-photo-30763-large.jpg");
     background-size: cover;
-    height: 100%;
+    height: 90%;
+}
+.jumbotron-glossary {
+
+    background-image: url("https://static.pexels.com/photos/30763/pexels-photo-30763-large.jpg");
+    background-size: cover;
+    height: 60%;
 }
 .jumbotron-whatis {
 
@@ -175,7 +187,7 @@ pre {
     height: 85%;
 }   
 .main-h1 {
-    padding-top: 120px;
+    padding-top: 180px;
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
 
     font-size: 75px;
