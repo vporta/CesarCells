@@ -27,12 +27,8 @@ var UserSchema = new Schema({
   qualifiedtrials: [{ 
     type: Number, 
     ref: 'Trial' 
-  }],
-  user_answers: 
-    [{
-      trialID: Number,
-      answers: Array
-    }]
+  }]
+  
   
   //
   // twitter: {

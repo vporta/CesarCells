@@ -25543,8 +25543,9 @@
 	    };
 	  },
 	  componentWillMount: function componentWillMount() {},
-	  handleClick: function handleClick(e) {
+	  handleYesClick: function handleYesClick(e) {
 	    e.preventDefault();
+	    console.log('these are props' + this.props);
 
 	    if (this.state.trialNumberIndex === 0) {
 
@@ -25659,10 +25660,135 @@
 	        });
 	      }
 	    }
+
 	    console.log('----hello world----');
 	    console.log('progress: ' + this.state.progress);
 	    console.log('trialNumberIndex: ' + this.state.trialNumberIndex);
-	    this.handleSubmit(e);
+	    this.handleSubmit(e, 'Y');
+	  },
+	  handleNoClick: function handleNoClick(e) {
+	    e.preventDefault();
+	    console.log('these are props' + this.props);
+
+	    if (this.state.trialNumberIndex === 0) {
+
+	      if (this.state.progress < 5) {
+
+	        this.setState({
+	          progress: this.state.progress + 1
+	        });
+	      }
+	    }if (this.state.progress === 5) {
+
+	      if (this.state.trialNumberIndex === 0) {
+
+	        this.setState({
+	          trialNumberIndex: this.state.trialNumberIndex + 1,
+	          progress: 0
+	        });
+	      }
+	    }
+	    if (this.state.trialNumberIndex === 1) {
+	      this.setState({
+	        progress: this.state.progress + 1
+	      });
+	    }if (this.state.progress === 7) {
+
+	      if (this.state.trialNumberIndex === 1) {
+
+	        this.setState({
+	          trialNumberIndex: this.state.trialNumberIndex + 1,
+	          progress: 0
+	        });
+	      }
+	    }
+	    if (this.state.trialNumberIndex === 2) {
+	      this.setState({
+	        progress: this.state.progress + 1
+	      });
+	    }if (this.state.progress === 2) {
+
+	      if (this.state.trialNumberIndex === 2) {
+
+	        this.setState({
+	          trialNumberIndex: this.state.trialNumberIndex + 1,
+	          progress: 0
+	        });
+	      }
+	    }
+	    if (this.state.trialNumberIndex === 3) {
+
+	      this.setState({
+
+	        progress: this.state.progress + 1
+
+	      });
+	    }if (this.state.progress === 0) {
+
+	      if (this.state.trialNumberIndex === 3) {
+
+	        this.setState({
+	          trialNumberIndex: this.state.trialNumberIndex + 1,
+	          progress: 0
+	        });
+	      }
+	    }
+	    if (this.state.trialNumberIndex === 4) {
+
+	      this.setState({
+
+	        progress: this.state.progress + 1
+
+	      });
+	    }if (this.state.progress === 0) {
+
+	      if (this.state.trialNumberIndex === 4) {
+
+	        this.setState({
+
+	          trialNumberIndex: this.state.trialNumberIndex + 2,
+	          progress: 0
+
+	        });
+	      }
+	    }
+	    if (this.state.trialNumberIndex === 6) {
+
+	      this.setState({
+
+	        progress: this.state.progress + 1
+
+	      });
+	    }if (this.state.progress === 4) {
+
+	      if (this.state.trialNumberIndex === 6) {
+
+	        this.setState({
+
+	          trialNumberIndex: this.state.trialNumberIndex + 1,
+	          progress: 0
+
+	        });
+	      }
+	    }
+	    if (this.state.trialNumberIndex === 7) {
+	      this.setState({
+	        progress: this.state.progress + 1
+	      });
+	    }if (this.state.progress === 2) {
+	      if (this.state.trialNumberIndex === 7) {
+	        this.setState({
+	          trialNumberIndex: 0,
+	          progress: 0
+	        });
+	      }
+	    }
+
+	    console.log('----hello world----');
+	    console.log('progress: ' + this.state.progress);
+	    console.log('trialNumberIndex: ' + this.state.trialNumberIndex);
+
+	    this.handleSubmit(e, 'N');
 	  },
 	  setCurrentQuestion: function setCurrentQuestion(q) {
 	    this.state.currentQuestion = question;
@@ -25673,15 +25799,22 @@
 	      trialNumberIndex: this.state.trialNumberIndex + 1
 	    });
 	  },
-	  handleSubmit: function handleSubmit(e) {
+	  handleSubmit: function handleSubmit(e, ans) {
 	    console.log('hey now onsubmit fired');
 	    e.preventDefault();
 	    // /var form = e.target;
 	    //must change these values otherwise it would not
-	    var yes = this.refs.Y.name;
-	    var no = this.refs.N.name;
+	    var answer = {
+	      user_answer: ans,
+	      question_id: this.state.progress,
+	      trial_id: this.state.trialNumberIndex
+	    };
+	    // console.log(yes + no);
+	    // console.log(e);
+	    console.log(this.state.trialNumberIndex);
+	    console.log(this.state.progress);
 
-	    axios.post('/api/trials-answers').then(function (results) {
+	    axios.post('/api/trials-answers', answer).then(function (results) {
 	      console.log("Posted to MongoDB" + results);
 	    }.bind(this));
 	  },
@@ -25722,12 +25855,12 @@
 	              React.createElement('div', { className: 'panel-body' }),
 	              React.createElement(
 	                'button',
-	                { href: '#', id: 'Y', name: 'Y', ref: 'Y', type: 'submit', onClick: this.handleClick, className: 'myButton' },
+	                { href: '#', id: 'Y', 'data-value': 'Y', name: 'Y', ref: 'Y', type: 'submit', onClick: this.handleYesClick, className: 'myButton' },
 	                'YES'
 	              ),
 	              React.createElement(
 	                'button',
-	                { href: '#', name: 'N', ref: 'N', type: 'submit', onClick: this.handleClick, id: 'N', className: 'myButton' },
+	                { href: '#', name: 'N', ref: 'N', type: 'submit', onClick: this.handleNoClick, id: 'N', className: 'myButton' },
 	                'NO'
 	              )
 	            )
