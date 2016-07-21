@@ -1,5 +1,3 @@
-
-
     <div class="row" id="row-top-dash-images">
         <div class="col-md-6" >
 
@@ -8,12 +6,12 @@
             <div class="col-xs-9">
                 <h2 id="h1-images">What you can do</h2>
             </div>
-            <a href="/tools/all-trials">
+            <a href="/tools/start-health-assessment">
             <img src="/assets/images/stemcells-purple.png" class="img-rounded" alt="Cinque Terre" width="304" height="206" id="img-dash"/>
-            <h3><span>Find a Clinical Trial</span></h3>
+            <h3><span>Take The Clinical Trial <br>Assessment</span></h3>
             </a>
 
-            <a href="/">
+            <a href="/tools/genetic">
             <img src="http://www.stemcellactionnetwork.org/stemcellaction.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="206" id="img-dash2">
             <h3 id="top-right-h3"><spanid="top-right-span">Import Your Genetic Data</span></h3>
             </a>
@@ -24,15 +22,15 @@
         
         </div>
         <div class="col-md-6" id="col-two-dash-images"> 
-            <a href="/">
+            <a href="/tools/amsler-test">
 
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9pXf3XJcjOr23rpmE1guhcS8XU05WPE0UN2MCLzAXQ6dQiS96" class="img-rounded" alt="Cinque Terre" width="304" height="206" id="img-dash3"/>
             <h3><span>Take the Amsler Test</span></h3>
             </a>
 
-            <a href="/">
+            <a href="/tools/all-trials">
             <img src="http://flexogenix.com/wp-content/uploads/2015/01/16.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="206" id="img-dash4"/>
-            <h3 id="top-right-h3"><spanid="top-right-span">Treatments</span></h3>
+            <h3 id="top-right-h3"><spanid="top-right-span">Browse Treatments</span></h3>
             </a>
         </div>
     </div>
@@ -43,7 +41,9 @@
    <div>
     <div class="row">
         <div class="col-md-9">
-            <h1 class="what-is-h2" style="text-align: center; color: midnightblue">SEE ALL TRIALS</h1>
+            <h1 class="what-is-h2" style="text-align: center; color: midnightblue; margin-top: 50px">ALL TRIALS</h1><br>
+            <label style="margin-left: 100px">Quick Search: <input id="search" type="text"></label>
+
                 {{#each data.trials}}
                 <table id="gene-table" class="table table-striped gene">
                   <thead>
@@ -70,4 +70,18 @@
                 {{/each}}
           </div>
       </div>
+
+      <script>
+          var $rows = $("tr");
+
+          $("#search").keyup(function() {
+              var val = $.trim(this.value);
+              if (val === "")
+                  $rows.show();
+              else {
+                  $rows.hide();
+                  $rows.has("td:contains(" + val + ")").show();
+              }
+          });
+      </script>
 

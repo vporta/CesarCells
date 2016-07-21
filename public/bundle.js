@@ -25658,6 +25658,8 @@
 	    console.log('----hello world----');
 	    console.log('progress: ' + this.state.progress);
 	    console.log('trialNumberIndex: ' + this.state.trialNumberIndex);
+
+	    // INVOKE HANDLESUBMIT AND POST USER ANSWERS TO MONGODB
 	    this.handleSubmit(e, 1);
 	  },
 	  handleNoClick: function handleNoClick(e) {

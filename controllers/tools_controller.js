@@ -14,8 +14,6 @@ router.get('/tools/stemcell-assessment', function (req, res) {
     res.render('tools/stemcell_assessment', {
       layout: 'dash' 
     });
-    // res.sendFile('indexOne');
-
 });
 
 
@@ -25,7 +23,24 @@ router.get('/tools/genetic', function (req, res) {
 });
 
 router.get('/tools/all-trials', function (req, res) {
-  res.render('tools/all_trials', {layout: 'dash'});
+  
+  var data = {};
+  
+  Trial.find({
+  }).then(function(result) {
+    
+    data.trials = result;
+   
+   User.find({ 
+   }).then(function(result) {
+
+    data.users = result;
+    res.render('tools/all_trials', {
+      data: data,
+      layout: 'dash'
+    });
+   })
+  })
 });
 
 router.get('/tools/amsler-test', function (req, res) {
