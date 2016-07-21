@@ -5,14 +5,13 @@ var passport = require('passport');
 var router = express.Router();
 var LocalStrategy = require('passport-local').Strategy;
 var User = require('../models/UserModel.js');
+var Trial = require('../models/Trial.js');
 
 
 // === HOME PAGE ======
 router.get('/', function (req, res) {
   res.render('index', {layout: 'main'});
 });
-
-
 
 // ==== SIGN_UP BEGINS ====
 router.get('/users/sign_up', function (req, res) {
@@ -32,26 +31,14 @@ router.post('/users/sign_up', passport.authenticate('local.signup', {
   failureRedirect: '/users/sign_up',
   failureFlash: true
 }));
+
 router.post('/users/dashboard', passport.authenticate('local.login', {
 
     successRedirect : '/users/dashboard', // redirect to the secure profile section
     failureRedirect : '/users/sign-in', // redirect back to the signup page if there is an error
     failureFlash : true // allow flash messages
-  }));
-// // Redirect the user to Facebook for authentication.  When complete,
-// // Facebook will redirect the user back to the application at
-// //     /auth/facebook/callback
-// app.get('/auth/facebook', passport.authenticate('facebook'));
+}));
 
-// // Facebook will redirect the user to this URL after approval.  Finish the
-// // authentication process by attempting to obtain an access token.  If
-// // access was granted, the user will be logged in.  Otherwise,
-// // authentication has failed.
-// app.get('/auth/facebook/callback',
-//   passport.authenticate('facebook', { successRedirect: '/',
-//                                       failureRedirect: '/login' }));
-// ==== FACEBOOK AUTH ==== 
-// route for facebook authentication and login
 router.get('/auth/facebook', passport.authenticate('facebook'));
 
 // handle the callback after facebook has authenticated the user
@@ -61,12 +48,27 @@ router.get('/auth/facebook/callback',
         failureRedirect : '/users/sign-in'
     }));
 
-
 // ==== PERSONAL USER DASHBOARD ====
 router.get('/users/dashboard', function (req, res) {
-  res.render('users/dashboard', {layout: 'dash'});
-});
+console.log(req.user);
+var data = {};
+  Trial.find({
+  }).then(function(result) {
+    console.log('-------HEY NO------------------------' + result)
+    data.trials = result;
+   User.find({ 
+   }).then(function(result) {
 
+    data.users = result;
+  console.log('-------HEY NO--------------------------' + result)
+    res.render('users/dashboard', {
+      data: data,
+      layout: 'dash'
+    });
+
+   })
+  })
+});
 
 // ==== SECOND SIGNUP FORM USER DETAILS FORM ====
 router.get('/users/details_new', function(req, res) {
@@ -113,21 +115,4 @@ router.post('/users/password_new', function(req, res) {
 });
 
 
-// router.get('/whats-stargardts-disease', function(req, res) {
-//   res.render('resources/whats_stargardts');
-// });
-
-// router.get('/stargardts-clinical-trials', function(req, res) {
-//   res.render('resources/clinical_trial_descr');
-// });
-
-// router.get('/stargardts-glossary', function(req, res) {
-//   res.render('resources/glossary');
-// });
-
-// router.get('/stargardts-stemcell-story', function(req, res) {
-//   res.render('resources/story_cesar');
-// });
-
 module.exports = router;
-

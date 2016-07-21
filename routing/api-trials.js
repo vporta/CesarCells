@@ -1,4 +1,4 @@
-var express = require('express');
+ var express = require('express');
 var router = express.Router();
 var session = require('express-session');
 var bcrypt = require('bcryptjs');
@@ -18,7 +18,6 @@ require('../config/passport');
           console.log(err);
         }
         else {
-          // res.send(doc);
           res.json(doc);
         }
       })
@@ -48,17 +47,12 @@ require('../config/passport');
     console.log(Answer);
 
   });
- 
-// retreive user answers: db.users.update({_id: ObjectId('578847fcdc29d8b37900a16d')}, {$push: {user_answers: {trialID:1, answers: ['Y', 'N', 'Y']}}})
+
 
 
 module.exports = router;
 
-// [{
-//   trial:1,
-//   questionNumber:1,
-//   question:question
-// }]
+
 
 
 //within onclick, unshift first, hit api to save answer, 

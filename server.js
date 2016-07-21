@@ -64,6 +64,7 @@ app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'));
 
+
 //Require Controllers
 var users_controller = require('./controllers/users_controller.js');
 app.use('/', users_controller);

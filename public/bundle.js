@@ -23822,14 +23822,6 @@
 	      });
 	    });
 	  },
-	  handleUserAnswerSubmit: function handleUserAnswerSubmit() {
-
-	    // axios.post('/api/trials-answers', {trialID: this.state.trialID, answers: this.state.answers})
-	    //   .then(function(results){
-	    //     console.log("Posted to MongoDB" +results);
-	    //   })
-
-	  },
 	  componentDidUpdate: function componentDidUpdate(prevProps, prevState) {
 	    console.log("COMPONENT UPDATED");
 	  },
@@ -25654,17 +25646,19 @@
 	      });
 	    }if (this.state.progress === 2) {
 	      if (this.state.trialNumberIndex === 7) {
-	        this.setState({
-	          trialNumberIndex: 0,
-	          progress: 0
-	        });
+	        this.endQuiz();
+
+	        // this.setState({
+	        //   trialNumberIndex: 0,
+	        //   progress: 0
+	        // })
 	      }
 	    }
 
 	    console.log('----hello world----');
 	    console.log('progress: ' + this.state.progress);
 	    console.log('trialNumberIndex: ' + this.state.trialNumberIndex);
-	    this.handleSubmit(e, 'Y');
+	    this.handleSubmit(e, 1);
 	  },
 	  handleNoClick: function handleNoClick(e) {
 	    e.preventDefault();
@@ -25777,10 +25771,12 @@
 	      });
 	    }if (this.state.progress === 2) {
 	      if (this.state.trialNumberIndex === 7) {
-	        this.setState({
-	          trialNumberIndex: 0,
-	          progress: 0
-	        });
+	        this.endQuiz();
+
+	        // this.setState({
+	        //   trialNumberIndex: 0,
+	        //   progress: 0
+	        // })
 	      }
 	    }
 
@@ -25788,16 +25784,22 @@
 	    console.log('progress: ' + this.state.progress);
 	    console.log('trialNumberIndex: ' + this.state.trialNumberIndex);
 
-	    this.handleSubmit(e, 'N');
+	    this.handleSubmit(e, 0);
 	  },
 	  setCurrentQuestion: function setCurrentQuestion(q) {
 	    this.state.currentQuestion = question;
 	    console.log(question);
 	  },
-	  nextQuiz: function nextQuiz() {
-	    this.setState({
-	      trialNumberIndex: this.state.trialNumberIndex + 1
-	    });
+	  endQuiz: function endQuiz() {
+	    if (this.state.trialNumberIndex === 7) {
+
+	      if (this.state.progress === 2) {
+
+	        alert('GAME OVER!');
+
+	        window.location = window.location.origin + "/users/dashboard";
+	      }
+	    }
 	  },
 	  handleSubmit: function handleSubmit(e, ans) {
 	    console.log('hey now onsubmit fired');

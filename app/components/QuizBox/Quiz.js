@@ -32,33 +32,16 @@ var Quiz = React.createClass({
         })
 
   },
-  handleUserAnswerSubmit: function () {
-
-    // axios.post('/api/trials-answers', {trialID: this.state.trialID, answers: this.state.answers})
-    //   .then(function(results){
-    //     console.log("Posted to MongoDB" +results);
-    //   })
-
-  },
   componentDidUpdate: function(prevProps, prevState){
     console.log("COMPONENT UPDATED");
   },
   render: function() {
-    // var trials = this.state.data;
-    // var questions;
-    // for(var i =0; i < trials.length; i++) {
-    //   for(var j=0; j <trials[i].questions.length; j++) {
-    //     questions = trials[i].questions[j].question;
-    //   console.log(questions);
-    //   }
-    // }
 
     return (
       <div className="container">
     
         <div>
         <Question data={this.state.data} onUserSubmit={this.state.handleUserAnswerSubmit} />
-        {/*<QuestionForm onUserSubmit={this.state.handleUserAnswerSubmit} />*/}
         </div>
 
         <div className="row">

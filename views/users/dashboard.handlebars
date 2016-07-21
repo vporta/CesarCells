@@ -1,8 +1,8 @@
 
-    
+
     <div class="row" id="row-top-dash-images">
         <div class="col-md-6" >
-        
+
         </div>
         <div class="col-md-6" id="col-one-dash-images">
             <div class="col-xs-9">
@@ -32,9 +32,42 @@
 
             <a href="/">
             <img src="http://flexogenix.com/wp-content/uploads/2015/01/16.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="206" id="img-dash4"/>
-            <h3 id="top-right-h3"><spanid="top-right-span">Upload Documents</span></h3>
+            <h3 id="top-right-h3"><spanid="top-right-span">Treatments</span></h3>
             </a>
         </div>
     </div>
-
+   <div class="row" id="main-row-sect">
+       <div class="container-lg">
+           
+       <div>
+   <div>
+    <div class="row">
+        <div class="col-md-9">
+            <h1 class="what-is-h2" style="text-align: center; color: midnightblue">SEE ALL TRIALS</h1>
+                {{#each data.trials}}
+                <table id="gene-table" class="table table-striped gene">
+                  <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th>Interventions</th>
+                        <th>Minimum Age Requirement</th>
+                        <th>Maximum Age Requirement</th>
+                        <th>Conditions Disease</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td class="td-trials">{{name}}</td>
+                        <td class="td-trials">{{status}}</td>
+                        <td class="td-trials">{{interventions}}</td>
+                        <td class="td-trials">{{min_age_req}}</td>
+                        <td class="td-trials">{{max_age_req}}</td>
+                        <td class="td-trials">{{conditionsDisease}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                {{/each}}
+          </div>
+      </div>
 

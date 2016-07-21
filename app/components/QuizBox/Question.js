@@ -142,10 +142,12 @@ var Question = React.createClass({
                       })
                     } if (this.state.progress === 2) {
                         if (this.state.trialNumberIndex === 7) {
-                          this.setState({
-                            trialNumberIndex: 0,
-                            progress: 0
-                          })
+                            this.endQuiz();  
+
+                          // this.setState({
+                          //   trialNumberIndex: 0,
+                          //   progress: 0
+                          // })
                         }
                       }
 
@@ -274,10 +276,12 @@ var Question = React.createClass({
                       })
                     } if (this.state.progress === 2) {
                         if (this.state.trialNumberIndex === 7) {
-                          this.setState({
-                            trialNumberIndex: 0,
-                            progress: 0
-                          })
+                            this.endQuiz();  
+
+                          // this.setState({
+                          //   trialNumberIndex: 0,
+                          //   progress: 0
+                          // })
                         }
                       }
 
@@ -285,16 +289,22 @@ var Question = React.createClass({
   console.log('progress: ' + this.state.progress);
   console.log('trialNumberIndex: ' + this.state.trialNumberIndex);  
 
-  this.handleSubmit(e, 0);  
+  this.handleSubmit(e, 0);
   },
   setCurrentQuestion: function(q) {
     this.state.currentQuestion = question;
     console.log(question);
   },
-  nextQuiz: function() {
-    this.setState({
-      trialNumberIndex: this.state.trialNumberIndex + 1
-    })
+  endQuiz: function() {
+    if (this.state.trialNumberIndex === 7) {
+
+      if (this.state.progress === 2) {
+
+        alert('GAME OVER!');
+
+        window.location = window.location.origin + "/users/dashboard";
+      }
+    }
   },
   handleSubmit: function(e, ans) {
     console.log('hey now onsubmit fired')
