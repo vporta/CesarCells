@@ -50,24 +50,24 @@ router.get('/auth/facebook/callback',
 
 // ==== PERSONAL USER DASHBOARD ====
 router.get('/users/dashboard', function (req, res) {
-console.log(req.user);
-var data = {};
+  console.log(req.user);
+  var data = {};
+  
   Trial.find({
   }).then(function(result) {
     console.log('-------HEY NO------------------------' + result)
     data.trials = result;
-   User.find({ 
-   }).then(function(result) {
-
+  User.find({ 
+  }).then(function(result) {
     data.users = result;
-  console.log('-------HEY NO--------------------------' + result)
+    console.log('-------HEY NO--------------------------' + result)
+    
     res.render('users/dashboard', {
       data: data,
       layout: 'dash'
     });
-
-   })
-  })
+   });
+  });
 });
 
 // ==== SECOND SIGNUP FORM USER DETAILS FORM ====

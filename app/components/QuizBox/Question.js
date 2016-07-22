@@ -16,7 +16,8 @@ var Question = React.createClass({
       trialNumberIndex: 0,
       completed: false,
       yes: 'Y',
-      no: 'N'
+      no: 'N',
+      trial_one_score: 0
     }
   },
   componentWillMount: function() {
@@ -174,6 +175,7 @@ var Question = React.createClass({
 
         if (this.state.trialNumberIndex === 0) {
 
+
           this.setState({
             trialNumberIndex: this.state.trialNumberIndex + 1,
             progress: 0 
@@ -304,7 +306,7 @@ var Question = React.createClass({
 
         alert('GAME OVER!');
 
-        window.location = window.location.origin + "/users/dashboard";
+        window.location = window.location.origin + "/after-test";
       }
     }
   },
@@ -323,10 +325,12 @@ var Question = React.createClass({
     console.log(this.state.trialNumberIndex);
     console.log(this.state.progress);
 
+ 
     axios.post('/api/trials-answers',answer)
       .then(function(results){
         console.log("Posted to MongoDB" + results);
       }.bind(this))
+
   },
   render: function() {
 
@@ -345,8 +349,6 @@ var Question = React.createClass({
       trial = trials[j];
 
       console.log(question);
-
-      // console.log(trial._id);
 
       return (
 
@@ -367,7 +369,7 @@ var Question = React.createClass({
         </div>
         )
       }
-    } // End loops
+    } // End for loop
       return (
        
       <div className="question-assessment">

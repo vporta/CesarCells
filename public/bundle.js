@@ -25531,7 +25531,8 @@
 	      trialNumberIndex: 0,
 	      completed: false,
 	      yes: 'Y',
-	      no: 'N'
+	      no: 'N',
+	      trial_one_score: 0
 	    };
 	  },
 	  componentWillMount: function componentWillMount() {},
@@ -25799,7 +25800,7 @@
 
 	        alert('GAME OVER!');
 
-	        window.location = window.location.origin + "/users/dashboard";
+	        window.location = window.location.origin + "/after-test";
 	      }
 	    }
 	  },
@@ -25840,8 +25841,6 @@
 
 	        console.log(question);
 
-	        // console.log(trial._id);
-
 	        return React.createElement(
 	          'div',
 	          { className: 'question-assessment' },
@@ -25871,7 +25870,7 @@
 	          )
 	        );
 	      }
-	    } // End loops
+	    } // End for loop
 	    return React.createElement(
 	      'div',
 	      { className: 'question-assessment' },
