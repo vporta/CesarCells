@@ -47,140 +47,142 @@ require('../config/passport');
       });
     // console.log(Answer);
   });
-  // hit line 25 { user_answer: 1, question_id: 4, trial_id: 1 }
 
-// db.users.find( { status: "A", age: { $lt: 30 } } )
 
 router.get('/after-test', function(req, res) {
   
   var scores = [];
 
-  Answer.find({user_id: req.user._id, trial_id: 0}, function(err, doc) {
-    console.log('============================RESPONSE===========================');
-
-    var arr = _.reduce(doc, function(total, num) { 
-      return total + num.user_answer; 
-    }, 0);
-
-    var object = {
-      trial_id:0,
-      points: arr
-    };
-    scores.push(object); 
-  }).then(function(result) {
-
-  Answer.find({user_id: req.user._id, trial_id: 1}, function(err, doc) {
-    console.log('============================RESPONSE===========================');
-
-    var arr = _.reduce(doc, function(total, num) { 
-      return total + num.user_answer; 
-    }, 0);
-
-    var object = {
-      trial_id:1,
-      points: arr
-    };
-    scores.push(object); 
-  })
-  }).then(function(result) {
-
-    Answer.find({user_id: req.user._id, trial_id: 2}, function(err, doc) {
-      console.log('============================RESPONSE===========================');
+    Answer.find({user_id: req.user._id, trial_id: 0}, function(err, doc) {
 
       var arr = _.reduce(doc, function(total, num) { 
         return total + num.user_answer; 
       }, 0);
 
       var object = {
-        trial_id:2,
+        trial_id:0,
         points: arr
       };
-      scores.push(object); 
-})
-  }).then(function(result) {
+      scores.push(object);
 
-    Answer.find({user_id: req.user._id, trial_id: 3}, function(err, doc) {
-      console.log('============================RESPONSE===========================');
+  }).then(function(doc) {
 
-      var arr = _.reduce(doc, function(total, num) { 
-        return total + num.user_answer; 
-      }, 0);
+      Answer.find({user_id: req.user._id, trial_id: 1}, function(err, doc) {
+      
+        var arr = _.reduce(doc, function(total, num) { 
+          return total + num.user_answer; 
+        }, 0);
 
-      var object = {
-        trial_id:3,
-        points: arr
-      };
-      scores.push(object); 
-})
-  }).then(function(result) {
+        var object = {
+          trial_id:1,
+          points: arr
+        };
 
-    Answer.find({user_id: req.user._id, trial_id: 4}, function(err, doc) {
-      console.log('============================RESPONSE===========================');
+      scores.push(object);
+      // console.log('======== These are scores ==========='+ scores +'================');
+    }).then(function(doc) {
 
-      var arr = _.reduce(doc, function(total, num) { 
-        return total + num.user_answer; 
-      }, 0);
+      Answer.find({user_id: req.user._id, trial_id: 2}, function(err, doc) {
 
-      var object = {
-        trial_id:4,
-        points: arr
-      };
-      scores.push(object); 
-})
-  }).then(function(result) {
+          var arr = _.reduce(doc, function(total, num) { 
+            return total + num.user_answer; 
+          }, 0);
 
-    Answer.find({user_id: req.user._id, trial_id: 5}, function(err, doc) {
-      console.log('============================RESPONSE===========================');
+          var object = {
+            trial_id:2,
+            points: arr
+          };
 
-      var arr = _.reduce(doc, function(total, num) { 
-        return total + num.user_answer; 
-      }, 0);
+        scores.push(object);
 
-      var object = {
-        trial_id:5,
-        points: arr
-      };
-      scores.push(object); 
-})
-  }).then(function(result) {
+      }).then(function(doc) {
 
-    Answer.find({user_id: req.user._id, trial_id: 6}, function(err, doc) {
-      console.log('============================RESPONSE===========================');
+        Answer.find({user_id: req.user._id, trial_id: 3}, function(err, doc) {
 
-      var arr = _.reduce(doc, function(total, num) { 
-        return total + num.user_answer; 
-      }, 0);
+            var arr = _.reduce(doc, function(total, num) { 
+              return total + num.user_answer; 
+            }, 0);
 
-      var object = {
-        trial_id:6,
-        points: arr
-      };
-      scores.push(object); 
-   })
-  }).then(function(result) {
+            var object = {
+              trial_id:3,
+              points: arr
+            };
 
-  Answer.find({user_id: req.user._id, trial_id: 7}, function(err, doc) {
-    console.log('============================RESPONSE===========================');
+          scores.push(object);
 
-    var arr = _.reduce(doc, function(total, num) { 
-      return total + num.user_answer; 
-    }, 0);
+        }).then(function(doc) {
 
-    var object = {
-      trial_id:7,
-      points: arr
-    };
-    scores.push(object); 
-  })
-  })
-  // res.render('users/dashboard', {
-  //   scores: scores,
-  //   layout: 'dash'
-  // });
-  res.json(scores);
-  });
+          Answer.find({user_id: req.user._id, trial_id: 4}, function(err, doc) {
 
+              var arr = _.reduce(doc, function(total, num) { 
+                return total + num.user_answer; 
+              }, 0);
 
+              var object = {
+                trial_id:4,
+                points: arr
+              };
+
+            scores.push(object);
+
+          }).then(function(doc) {
+
+            Answer.find({user_id: req.user._id, trial_id: 6}, function(err, doc) {
+
+                var arr = _.reduce(doc, function(total, num) { 
+                  return total + num.user_answer; 
+                }, 0);
+
+                var object = {
+                  trial_id:6,
+                  points: arr
+                };
+
+              scores.push(object);
+
+            }).then(function(doc) {
+
+              Answer.find({user_id: req.user._id, trial_id: 7}, function(err, doc) {
+
+                  var arr = _.reduce(doc, function(total, num) { 
+                    return total + num.user_answer; 
+                  }, 0);
+
+                  var object = {
+                    trial_id:7,
+                    points: arr
+                  };
+
+                scores.push(object);
+
+                // res.json(scores);
+                res.render('users/dashboard', {
+                  scores: scores,
+                  layout: 'dash'
+                });
+            });
+          });
+        })
+      });
+    });
+  }); //first one
+}); 
+});//router ends
+ 
+ // user_id: { type: Schema.Types.ObjectId, ref: 'User' },
+ //  trial_id: { type: Number, ref: 'Trial' },
+ //  user_answer: Number,
+ //  question_id: Number
+
+// User.find({})
+//     .populate('notes')
+//     .exec(function(err, doc) {
+//       if (err) {
+//         res.send(err);
+//       } else {
+//         res.send(doc);
+//       }
+//     });
 module.exports = router;
 
 

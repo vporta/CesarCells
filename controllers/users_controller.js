@@ -41,7 +41,7 @@ router.post('/users/dashboard', passport.authenticate('local.login', {
 
 router.get('/auth/facebook', passport.authenticate('facebook'));
 
-// handle the callback after facebook has authenticated the user
+// CALLBACK FB AUTH
 router.get('/auth/facebook/callback',
     passport.authenticate('facebook', {
         successRedirect : '/users/dashboard',
