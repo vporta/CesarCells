@@ -1,6 +1,10 @@
     <div class="row" id="row-top-dash-images">
         <div class="col-md-6" >
+        <a href="/users/view-results">
 
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9pXf3XJcjOr23rpmE1guhcS8XU05WPE0UN2MCLzAXQ6dQiS96" class="img-rounded" alt="Cinque Terre" width="500" height="298" id="img-dash3"/>
+        <h3><span>YOUR RESULTS</span></h3>
+        </a>
         </div>
         <div class="col-md-6" id="col-one-dash-images">
             <div class="col-xs-9">
@@ -30,7 +34,7 @@
 
             <a href="/tools/all-trials">
             <img src="http://flexogenix.com/wp-content/uploads/2015/01/16.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="206" id="img-dash4"/>
-            <h3 id="top-right-h3"><spanid="top-right-span">Browse Treatments</span></h3>
+            <h3 id="top-right-h3"><spanid="top-right-span">Search For Trials</span></h3>
             </a>
         </div>
     </div>
@@ -39,49 +43,4 @@
            
        <div>
    <div>
-    <div class="row">
-        <div class="col-md-9">
-            <h1 class="what-is-h2" style="text-align: center; color: midnightblue; margin-top: 50px">ALL TRIALS</h1><br>
-            <label style="margin-left: 100px">Quick Search: <input id="search" type="text"></label>
-
-                {{#each data.trials}}
-                <table id="gene-table" class="table table-striped gene">
-                  <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Status</th>
-                        <th>Interventions</th>
-                        <th>Minimum Age Requirement</th>
-                        <th>Maximum Age Requirement</th>
-                        <th>Conditions Disease</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                        <td class="td-trials">{{name}}</td>
-                        <td class="td-trials">{{status}}</td>
-                        <td class="td-trials">{{interventions}}</td>
-                        <td class="td-trials">{{min_age_req}}</td>
-                        <td class="td-trials">{{max_age_req}}</td>
-                        <td class="td-trials">{{conditionsDisease}}</td>
-                    </tr>
-                  </tbody>
-                </table>
-                {{/each}}
-          </div>
-      </div>
-
-      <script>
-          var $rows = $("tr");
-
-          $("#search").keyup(function() {
-              var val = $.trim(this.value);
-              if (val === "")
-                  $rows.show();
-              else {
-                  $rows.hide();
-                  $rows.has("td:contains(" + val + ")").show();
-              }
-          });
-      </script>
-
+    

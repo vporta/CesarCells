@@ -4,8 +4,10 @@ var bcrypt = require('bcryptjs');
 var passport = require('passport');
 var router = express.Router();
 var LocalStrategy = require('passport-local').Strategy;
+var _ = require('underscore');
 var User = require('../models/UserModel.js');
 var Trial = require('../models/Trial.js');
+var Answer = require('../models/Answers.js');
 
 
 // === HOME PAGE ======
@@ -112,6 +114,126 @@ router.get('/users/password_new', function(req, res) {
 
 router.post('/users/password_new', function(req, res) {
   res.redirect('/');
+});
+
+// ==== VIEW RESULTS ====
+router.get('/users/view-results', function (req, res) {
+    var scores = [];
+
+      Answer.find({user_id: req.user._id, trial_id: 0}, function(err, doc) {
+
+        var arr = _.reduce(doc, function(total, num) { 
+          return total + num.user_answer; 
+        }, 0);
+
+        var object = {
+          trial_id:0,
+          points: arr
+        };
+        scores.push(object);
+
+    }).then(function(doc) {
+
+        Answer.find({user_id: req.user._id, trial_id: 1}, function(err, doc) {
+        
+          var arr = _.reduce(doc, function(total, num) { 
+            return total + num.user_answer; 
+          }, 0);
+
+          var object = {
+            trial_id:1,
+            points: arr
+          };
+
+        scores.push(object);
+        // console.log('======== These are scores ==========='+ scores +'================');
+      }).then(function(doc) {
+
+        Answer.find({user_id: req.user._id, trial_id: 2}, function(err, doc) {
+
+            var arr = _.reduce(doc, function(total, num) { 
+              return total + num.user_answer; 
+            }, 0);
+
+            var object = {
+              trial_id:2,
+              points: arr
+            };
+
+          scores.push(object);
+
+        }).then(function(doc) {
+
+          Answer.find({user_id: req.user._id, trial_id: 3}, function(err, doc) {
+
+              var arr = _.reduce(doc, function(total, num) { 
+                return total + num.user_answer; 
+              }, 0);
+
+              var object = {
+                trial_id:3,
+                points: arr
+              };
+
+            scores.push(object);
+
+          }).then(function(doc) {
+
+            Answer.find({user_id: req.user._id, trial_id: 4}, function(err, doc) {
+
+                var arr = _.reduce(doc, function(total, num) { 
+                  return total + num.user_answer; 
+                }, 0);
+
+                var object = {
+                  trial_id:4,
+                  points: arr
+                };
+
+              scores.push(object);
+
+            }).then(function(doc) {
+
+              Answer.find({user_id: req.user._id, trial_id: 6}, function(err, doc) {
+
+                  var arr = _.reduce(doc, function(total, num) { 
+                    return total + num.user_answer; 
+                  }, 0);
+
+                  var object = {
+                    trial_id:6,
+                    points: arr
+                  };
+
+                scores.push(object);
+
+              }).then(function(doc) {
+
+                Answer.find({user_id: req.user._id, trial_id: 7}, function(err, doc) {
+
+                    var arr = _.reduce(doc, function(total, num) { 
+                      return total + num.user_answer; 
+                    }, 0);
+
+                    var object = {
+                      trial_id:7,
+                      points: arr
+                    };
+
+                  scores.push(object);
+  // render a new users/results hbs page that will display the results of the assessment and tell the user if they have qualified or not. 
+                  // res.json(scores);
+                  res.render('users/assessment_results', {
+                    scores: scores,
+                    layout: 'dash'
+                  });
+              });
+            });
+          });
+        });
+      });
+    }); //first one
+  }); 
 });
 
 

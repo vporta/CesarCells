@@ -4,15 +4,43 @@
 <br>
 <br>
 
-<a href="https://api.23andme.com/authorize/?redirect_uri=http://localhost:3000/receive_code/&response_type=code&client_id=dd6b7f51cb19ee4bd93bfe59438f7956&scope=basic rs2476601"><img src="/assets/images/23andMe.png"/> </a>
+<a href="https://api.23andme.com/authorize/?redirect_uri=https://localhost:3000/receive_code/&response_type=code&client_id=8c5bc3cd41932f405c80612248b7ae43&scope=basic rs121909205 rs62645958"><img src="/assets/images/23andMe.png"/> </a>
 
 <script src="https://api.23andme.com/res/js/ttam-0.3.js"></script>
-<div id="wrapper"></div>
+
+
 <script>
-    window.onload = function () {
-        var ttam = TTAM('dd6b7f51cb19ee4bd93bfe59438f7956');
-        ttam.connectButton('wrapper', ["basic", "rs2476601"]);
-    };
+
+
+    if (!req.query.code) {
+        res.render('error', {
+            client_id: process.env.CLIENT_ID,
+            scope: scope,
+            redirect_uri: process.env.REDIRECT_URI
+        });
+    } else {
+        // Exchange the code for a token,
+        // store it in the session, and redirect.
+        request.post({
+            url: 'https://api.23andme.com/token/',
+            form: {
+                client_id: process.env.CLIENT_ID,
+                client_secret: process.env.CLIENT_SECRET,
+                grant_type: 'authorization_code',
+                code: req.query.code,
+                redirect_uri: process.env.REDIRECT_URI,
+                scope: scope
+            },
+            json: true }, function(e, r, body) {
+                if (!e && r.statusCode == 200) {
+                    res.cookie('access_token', body.access_token, {signed: true});
+                    res.redirect('/');
+                } else {
+                    res.send(body);
+                }
+            });
+    }
+
 </script>
 
 

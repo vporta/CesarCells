@@ -25798,8 +25798,6 @@
 
 	      if (this.state.progress === 2) {
 
-	        alert('GAME OVER!');
-
 	        window.location = window.location.origin + "/after-test";
 	      }
 	    }

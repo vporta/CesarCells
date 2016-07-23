@@ -50,7 +50,6 @@ require('../config/passport');
 
 
 router.get('/after-test', function(req, res) {
-  
   var scores = [];
 
     Answer.find({user_id: req.user._id, trial_id: 0}, function(err, doc) {
@@ -154,9 +153,9 @@ router.get('/after-test', function(req, res) {
                   };
 
                 scores.push(object);
-
+// render a new users/results hbs page that will display the results of the assessment and tell the user if they have qualified or not. 
                 // res.json(scores);
-                res.render('users/dashboard', {
+                res.render('users/assessment_results', {
                   scores: scores,
                   layout: 'dash'
                 });

@@ -15,7 +15,7 @@ var path = require('path'),
     TwitterStrategy = require('passport-twitter'),
     GoogleStrategy = require('passport-google-oauth'),
     FacebookStrategy = require('passport-facebook'),
-    _ = require('underscore');
+    _ = require('underscore'),
     Trial = require('./models/Trial'),
     User = require('./models/UserModel');
 

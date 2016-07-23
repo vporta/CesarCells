@@ -204,6 +204,14 @@ pre {
     background-size: cover;
     height: 45%;
 }  
+#results-h1 {
+    margin-top: 200px;
+    text-align: center;
+    font-size: 75px;
+    font-weight: bold;
+
+
+}
 .main-h1 {
     padding-top: 300px;
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;

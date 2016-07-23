@@ -1,0 +1,72 @@
+<div class="row">
+<h1 id="results-h1"> Your Assessment Results </h1>
+    <div class="col-md-6" >
+      <table id="gene-table" class="table table-striped gene">
+        <thead>
+          <tr>
+              <th>Trial ID</th>
+              <th>Your Points</th>
+              <th>Qualifying Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <td class="td-trials">{{scores.0.trial_id}}</td>
+              <td class="td-trials">{{scores.0.points}}</td>
+              <td class="td-trials">6</td>
+
+          </tr>
+          <tr>
+              <td class="td-trials">{{scores.1.trial_id}}</td>
+              <td class="td-trials">{{scores.1.points}}</td>
+              <td class="td-trials">5</td>
+             
+          </tr>
+          <tr>
+              <td class="td-trials">{{scores.2.trial_id}}</td>
+              <td class="td-trials">{{scores.2.points}}</td>
+              <td class="td-trials">3</td>
+
+          </tr>
+          <tr>
+              <td class="td-trials">{{scores.3.trial_id}}</td>
+              <td class="td-trials">{{scores.3.points}}</td>
+              <td class="td-trials">1</td>
+
+          </tr>
+          <tr>
+              <td class="td-trials">{{scores.4.trial_id}}</td>
+              <td class="td-trials">{{scores.4.points}}</td>
+              <td class="td-trials">1</td>
+
+          </tr>
+          <tr>
+              <td class="td-trials">5</td>
+              <td class="td-trials">0</td>
+              <td class="td-trials">0</td>
+
+          </tr>
+          <tr>
+              <td class="td-trials">{{scores.5.trial_id}}</td>
+              <td class="td-trials">{{scores.5.points}}</td>
+              <td class="td-trials">5</td>
+
+          </tr>
+          <tr>
+              <td class="td-trials">{{scores.6.trial_id}}</td>
+              <td class="td-trials">{{scores.6.points}}</td>
+              <td class="td-trials">3</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div><br>
+    <div class="col-md-5">
+    <h2 style="margin-top: 65px"> DID YOU QUALIFY? </h2>
+      <p class="lead" style="line-height: 2.4; font-size: 24px; margin-left: 100px; width: 150">If the total points in the Your Points field, match the total points in the Qualifying Points field, then you've qualified for that trial. It's that simple! </p>
+      <div class="col-sm-12">
+      <a href="/users/dashboard" type="submit" class="btn btn-primary" style="width: 200px; height: 60px; padding: 18px; margin-left: 150px"> Back To Dashboard</a><br>
+     
+      </div>
+    </div>
+</div>
