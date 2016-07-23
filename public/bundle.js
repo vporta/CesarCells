@@ -23835,54 +23835,7 @@
 	        null,
 	        React.createElement(Question, { data: this.state.data, onUserSubmit: this.state.handleUserAnswerSubmit })
 	      ),
-	      React.createElement(
-	        'div',
-	        { className: 'row' },
-	        React.createElement(
-	          'div',
-	          { className: 'col-lg-6' },
-	          React.createElement(Results, null)
-	        ),
-	        React.createElement(
-	          'div',
-	          { className: 'col-lg-6' },
-	          React.createElement(Results, null)
-	        ),
-	        React.createElement(
-	          'div',
-	          { className: 'col-lg-6' },
-	          React.createElement(Results, null)
-	        ),
-	        React.createElement(
-	          'div',
-	          { className: 'col-lg-6' },
-	          React.createElement(Results, null)
-	        )
-	      ),
-	      React.createElement(
-	        'div',
-	        { className: 'row' },
-	        React.createElement(
-	          'div',
-	          { className: 'col-lg-6' },
-	          React.createElement(Results, null)
-	        ),
-	        React.createElement(
-	          'div',
-	          { className: 'col-lg-6' },
-	          React.createElement(Results, null)
-	        ),
-	        React.createElement(
-	          'div',
-	          { className: 'col-lg-6' },
-	          React.createElement(Results, null)
-	        ),
-	        React.createElement(
-	          'div',
-	          { className: 'col-lg-6' },
-	          React.createElement(Results, null)
-	        )
-	      )
+	      React.createElement('div', { className: 'row' })
 	    );
 	  }
 	});

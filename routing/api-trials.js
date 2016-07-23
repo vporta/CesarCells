@@ -6,6 +6,7 @@ var passport = require('passport');
 var router = express.Router();
 var LocalStrategy = require('passport-local').Strategy;
 var _ = require('underscore');
+var axios = require('axios');
 var Trial = require('../models/Trial');
 var User = require('../models/UserModel');
 var Answer = require('../models/Answers');
@@ -168,23 +169,38 @@ router.get('/after-test', function(req, res) {
 }); 
 });//router ends
  
- // user_id: { type: Schema.Types.ObjectId, ref: 'User' },
- //  trial_id: { type: Number, ref: 'Trial' },
- //  user_answer: Number,
- //  question_id: Number
+var uri = "https://api.23andme.com/authorize/";
+var client_id = "dd6b7f51cb19ee4bd93bfe59438f7956";
+var client_secret = "56d48e1817b9efd9b94db085a3f54164";
+var redirect_uri = "http://localhost:3000/receive_code/";
+'https://api.23andme.com/authorize/?redirect_uri=http://localhost:3000/receive_code/&response_type=code&client_id=dd6b7f51cb19ee4bd93bfe59438f7956&scope=basic rs121909205 rs62645958 analyses'
 
-// User.find({})
-//     .populate('notes')
-//     .exec(function(err, doc) {
-//       if (err) {
-//         res.send(err);
-//       } else {
-//         res.send(doc);
-//       }
-//     });
+router.get('/receive_code', function(req, res) {
+
+  // axios.post('https://api.23andme.com/token/&client_id=dd6b7f51cb19ee4bd93bfe59438f7956&client_secret=56d48e1817b9efd9b94db085a3f54164&grant_type=authorization_code&code=zzz&redirect_uri=http://localhost:3000/receive_code&scope=rs3094315');
+  
+// axios({
+//   method: 'post',
+//   url: 'https://api.23andme.com/token/',
+//   data: {
+//    client_id: client_id,
+//     client_secret: client_secret,
+//     grant_type: 'authorization_code',
+//     code: 'zzz',
+//     redirect_uri: 'http://localhost:3000/receive_code',
+//     scope: 'rs3094315'
+//   }
+// }).then(function(result) {
+
+//   res.json(result);
+// })
+
+
+  res.render('tools/genetic_report', {layout: 'dash'});
+});
+
+
+
+
+
 module.exports = router;
-
-
-
-
-//within onclick, unshift first, hit api to save answer, 

@@ -2,6 +2,7 @@ var express = require('express');
 var session = require('express-session');
 var router = express.Router();
 var bcrypt = require('bcryptjs');
+var Trial = require('../models/Trial.js');
 
 var User = require('../models/UserModel.js');
 
