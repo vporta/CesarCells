@@ -30,7 +30,6 @@ var Quiz = React.createClass({
             data: result.data,
           })
         })
-
   },
   componentDidUpdate: function(prevProps, prevState){
     console.log("COMPONENT UPDATED");

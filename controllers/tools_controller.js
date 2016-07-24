@@ -2,8 +2,9 @@ var express = require('express');
 var session = require('express-session');
 var router = express.Router();
 var bcrypt = require('bcryptjs');
+var passport = require('passport');
 var Trial = require('../models/Trial.js');
-
+var Amsler = require('../models/Amsler.js');
 var User = require('../models/UserModel.js');
 
 router.get('/tools/start-health-assessment', function (req, res) {
@@ -44,11 +45,40 @@ router.get('/tools/all-trials', function (req, res) {
   })
 });
 
+// AMSLER PAGE ROUTES
 router.get('/tools/amsler-test', function (req, res) {
-  res.render('tools/amsler_test_page', {layout: 'dash'});
+  var data = {};
+  Amsler.find({user_id: req.user._id}).then(function(result) {
+    data.notes = result;
+    console.log('==========================000000====================' + result);
+  })
+  res.render('tools/amsler_test_page', {
+    data: data,
+    layout: 'dash'
+  });
 });
 
-// router.get('/tools/all-tools', function (req, res) {
-//   res.render('tools/all_tools', {layout: 'dash'});
-// });
+router.post('/tools/amsler-grid-results', function(req, res) {
+  
+  var usernote = req.body.textfield;
+  var dateCreated = req.body.datefield;
+
+
+  var newAmsler = new Amsler({ usernote: usernote, dateCreated: dateCreated, user_id: req.user._id});
+
+  newAmsler.save(function(err) {
+
+    if(err){
+      console.log(err);
+    }
+
+    else {
+      res.redirect('/tools/amsler-test');
+    }
+  });
+});
+
+router.delete('/tools/all-tools', function (req, res) {
+  res.render('tools/all_tools', {layout: 'dash'});
+});
 module.exports = router;

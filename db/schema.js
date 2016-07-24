@@ -85,19 +85,19 @@ db.trials.insert(
       answer_five: "Y"
     },
     {
-      question: "Do you have Abnormal full-field electroretinogram responses?",
+      question: "Do you not have Abnormal full-field electroretinogram responses?",
       
-      answer_six: "N"
+      answer_six: "Y"
     },
     {
-      question: "Have you ever participated in an ocular gene transfer therapy study? no excludes?",
+      question: "Have you never participated in an ocular gene transfer therapy study? no excludes?",
       
-      answer_seven: "N"
+      answer_seven: "Y"
     },
     {
-      question: "Do you have a past medical history of human immunodeficiency virus (HIV) or hepatitis A, B, or C infection?",
+      question: "Do you not have a past medical history of human immunodeficiency virus (HIV) or hepatitis A, B, or C infection?",
       
-      answer_eight: "N"
+      answer_eight: "Y"
     } 
     ], 
   }

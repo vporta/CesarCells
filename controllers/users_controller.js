@@ -52,17 +52,17 @@ router.get('/auth/facebook/callback',
 
 // ==== PERSONAL USER DASHBOARD ====
 router.get('/users/dashboard', function (req, res) {
-  console.log(req.user);
+  // console.log(req.user);
   var data = {};
   
   Trial.find({
   }).then(function(result) {
-    console.log('-------HEY NO------------------------' + result)
+    // console.log('-------HEY NO------------------------' + result)
     data.trials = result;
   User.find({ 
   }).then(function(result) {
     data.users = result;
-    console.log('-------HEY NO--------------------------' + result)
+    // console.log('-------HEY NO--------------------------' + result)
     
     res.render('users/dashboard', {
       data: data,
@@ -74,7 +74,7 @@ router.get('/users/dashboard', function (req, res) {
 
 // ==== SECOND SIGNUP FORM USER DETAILS FORM ====
 router.get('/users/details_new', function(req, res) {
-  console.log('This is req.user: '+req.user);
+  // console.log('This is req.user: '+req.user);
   res.render('users/details_new');
 });
 
@@ -86,7 +86,7 @@ router.post('/users/details_new', function(req, res) {
   var dob = req.body.bday;
   var diagnosedStarg = req.body.diagnosedSelect;
 
-console.log(req.user);
+// console.log(req.user);
 //qualify users for certain studies now. 
   User.findOneAndUpdate({'_id': req.user._id}, {$set: {"firstname": firstname, "lastname": lastname, "age": age, "sex": sex, "birth_day": dob, "stargardtsDiagnosis": diagnosedStarg}}, {upsert: true}).exec(function(err){
 

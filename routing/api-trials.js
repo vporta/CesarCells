@@ -195,8 +195,8 @@ router.get('/receive_code', function(req, res) {
 //   res.json(result);
 // })
 
-
   res.render('tools/genetic_report', {layout: 'dash'});
+
 });
 
 

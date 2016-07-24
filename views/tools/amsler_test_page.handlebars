@@ -1,1 +1,102 @@
-<img src="./public/assets/images/amslergrid.png"/>
+<div class="row">
+  <h1 id="amsler-grid-h1">AMSLER GRID TEST</h1>
+
+  <div class="col-md-12">
+
+    <p style="margin-top: 40px; margin-left: 80px">The Amsler grid is a tool that eye doctors use to detect vision problems resulting from damage to the macula (the central part of the retina) or the optic nerve.</p>
+
+    <p style="margin-top: 80px; margin-left: 80px">The damage may be caused by macular degeneration or other eye diseases, so the Amsler grid is useful in detecting these problems.</p>
+
+    <p style="margin-top: 80px; margin-left: 80px">An early diagnosis means early treatment, so it may help to limit or at least slow the vision loss you experience.</p>
+
+    <p style="margin-top: 80px; margin-left: 80px">If you are at risk for macular degeneration or other eye diseases, you can use this chart at home to monitor your vision. But using the chart doesn't mean you should skip regular visits to your eye doctor, because you can easily miss signs that only a trained eye care practitioner will find.</p>
+
+    <p style="margin-top: 80px; margin-left: 80px">The chart below is an approximation of the printed chart used by eye doctors. For more accurate detection of macular damage, you will need a complete eye exam.</p>
+  </div>
+</div>
+
+<div class="row"> 
+  <div class="col-md-6">
+    <img id="amsler-grid-img" src="/assets/images/amslergrid.png"/>
+  </div>
+  <div class="col-md-6">
+  <div class="tabs-container">
+      <ul class="nav nav-tabs">
+          <li class="active"><a id="new-entry" data-toggle="tab" href="#active_order_categories" aria-expanded="true">New Entry</a>
+          </li>
+          <li class=""><a id="new-entry" data-toggle="tab" href="#passive_order_categories" aria-expanded="false">Previous Entry</a>
+          </li>
+      </ul>
+      <div class="tab-content">
+          <div id="active_order_categories" class="tab-pane active">
+              <div class="panel-body">
+                <div id="form-amsler-one">
+
+                  <form class="amsler-form" style="width: 65%; margin-left: 100px" action="/tools/amsler-grid-results" method="post">
+                    <br>
+
+                    Date<br>
+                    <input type="date" name="datefield" id="inputBirthday" class="form-control" required=" true"><br>
+
+                    What did you see?<br>
+                    <textarea class="form-control" name="textfield" rows="7" placeholder="Blurred lines 1st quadrant..."></textarea>
+                
+                 
+                    <input type="submit" value="Submit" class="btn btn-default"><br>
+                  </form>
+                </div>
+              </div>
+          </div>
+          <div id="passive_order_categories" class="tab-pane">
+              <div class="panel-body">
+
+                        {{#each data.notes}}
+              <table id="myTable" class="table table-striped gene">
+                  <thead>
+                    <tr>
+
+                        <th>Date</th>
+                        <th>What You Saw</th>
+
+                        <th>Delete</th>
+                      
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+
+                        <td class="info .sr-only">{{dateCreated}}</td>
+                        <td class="info .sr-only">{{usernote}}</td>
+                        <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-target="#delete" id="delete-note"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                    </tr>
+                  </tbody>
+                </table>
+                        {{/each}}
+
+              </div>
+          </div>
+      </div>
+  </div>
+    
+  </div>
+</div>
+
+
+<h1 id="amsler-grid-h1">How to Test Yourself with the Amsler Grid</h1>
+
+<p style="margin-top: 80px; margin-left: 80px">If you need reading glasses, please wear them while you use the Amsler grid. The grid should be at about the same distance from your eyes that any other reading material would be.</p>
+
+<p style="margin-top: 40px; margin-left: 80px">If you would like to have a copy of this chart, please open and print the PDF file.</p>
+
+<p style="margin-top: 40px; margin-left: 80px">Cover one eye, then focus on the dot in the center.</p>
+
+<p style="margin-top: 40px; margin-left: 80px">Do any of the lines look wavy, blurred or distorted? (All lines should be straight, all intersections should form right angles and all the squares should be the same size.)</p>
+<p style="margin-top: 40px; margin-left: 80px">Are there any missing areas or dark areas in the grid?</p>
+<p style="margin-top: 40px; margin-left: 80px">Can you see all corners and sides of the grid?</p>
+<p style="margin-top: 40px; margin-left: 80px">Don't forget to test both eyes.</p>
+<p style="margin-top: 40px; margin-left: 80px">VERY IMPORTANT: Report any irregularity to your eye doctor immediately.</p>
+
+<p style="margin-top: 40px; margin-left: 80px">You can mark areas of the chart that you're not seeing properly and then bring it with you to your eye exam.</p>
+
+
+

@@ -1,3 +1,5 @@
+// config/auth.js
+
 module.exports = {
 
   'facebookAuth' : {

@@ -1,12 +1,13 @@
 body {
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
-    font-size: 30px;
+    font-size: 24px;
     font-style: normal;
     font-variant: normal;
     font-weight: 500;
     /*line-height: 26.4px;*/
     color: midnightblue;
-    background-color: #e8efef;
+    background-color: white;
+    padding: 30px;
     /*font-size: 20px;*/
 }
 h1 {
@@ -45,6 +46,15 @@ h3 {
 }
 #priv-policy {
     padding-left: 30px;
+    font-size: 15px;
+}
+#terms-conditions {
+    font-size: 15px;
+}
+#tabs-amsler {
+    margin-left: 100px;
+    font-size: 24px;
+    margin-top: 42px;
 }
 /*glossary*/
 .glossary-h2 {
@@ -53,7 +63,7 @@ h3 {
 }
 /*main navbar text*/
 #cesar-logo, #resources-nav-text, #howitworks-nav-text, #tools-nav-text, #treatments-nav-text, #login-nav-text, #signup-nav-text{
-    color: white;
+    color: midnightblue;
 }
 
 blockquote {
@@ -136,7 +146,16 @@ pre {
     top:1px;
 }
 
-
+#amsler-grid-img {
+    margin-top: 50px;
+    margin-left: 200px;
+    height: 500px;
+}
+#amsler-grid-h1 {
+    margin-top: 200px;
+    font-size: 75px;
+    text-align: center;
+}
 /*react #app div*/
 #app {
     margin-top: 170px;
@@ -180,7 +199,7 @@ pre {
 
     background-image: url("https://static.pexels.com/photos/30763/pexels-photo-30763-large.jpg");
     background-size: cover;
-    height: 90%;
+    height: 70%;
 }
 .jumbotron-glossary {
 
@@ -209,24 +228,41 @@ pre {
     text-align: center;
     font-size: 75px;
     font-weight: bold;
-
-
+}
+#speaker-homepage {
+    height: 20px;
+    margin-left: 22px;
+    margin-top: 5px;
+}
+#speaker-homepage:hover #span-element{
+    display: block;
+}
+#span-element {
+    border: 1px solid #ccc;
+    display: none;
+    font-size: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    text-transform: uppercase;
 }
 .main-h1 {
-    padding-top: 235px;
+    padding-top: 75px;
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
 
-    font-size: 75px;
+    font-size: 115px;
     text-align: center;
-    line-height: 1.5;
+    line-height: 2;
     color: white;
     width: 100%;
     font-weight: bold;
 }
 #main-row-sect {
     background-color: white;
-    border-radius: 10%;
-    margin-top: 200px;
+    /*border-radius: 10%;*/
+    /*background-image:  url('http://www.u3aonline.org.au/sites/default/files/picture_for_home_page.png');*/
+    background-size: cover;
+    margin-top: 100px;
+
 }
 /*main page ends*/
 
@@ -259,13 +295,13 @@ pre {
 
 font-size: 70px;
 font-weight: 300;
-color: #58b8fe;
+color: midnightblue;
 }
 .how-it-works-h2 {
 
 font-size: 70px;
 font-weight: 300;
-color: white;
+color: midnightblue;
 margin-bottom: 69px;
 }
 .tools-h2 {
@@ -291,7 +327,7 @@ margin-bottom: 135px;
     width: 100%; 
     font-size: 70px;
     
-    color: white;
+    color: midnightblue;
 }
 .tool-main-h2-CTQ {
     position: absolute; 
@@ -361,12 +397,12 @@ margin-bottom: 135px;
 }
 #how-it-works {
     padding: 75px 0;
-    background: #58b8fe;
+    background: white;
     text-align: center;
     margin-bottom: 200px;
     /*border-radius: 30%;*/
     margin-top: 20px;
-    height: 720px;
+    height: 520px;
 }
 #intro {
     padding: 75px 0;
@@ -382,7 +418,7 @@ margin-bottom: 135px;
     text-align: center;
     margin-bottom: 200px;
     /*border-radius: 30%;*/
-    margin-top: 20px;
+    margin-top: 100px;
 }
 .tools-section {
     padding: 75px 0;
@@ -394,7 +430,7 @@ margin-bottom: 135px;
 }
 #treatments {
     padding: 98px 0;
-    background: #58b8fe;
+    background: white;
     text-align: center;
     margin-bottom: 200px;
     /*border-radius: 30%;*/
@@ -419,7 +455,7 @@ margin-bottom: 135px;
 }
 #intro-stargardts-defined {
     padding: 75px 0;
-    background: #e8efef;
+    background: lightslategray;
     text-align: center;
     margin-bottom: 200px;
     margin-top: 20px;
@@ -443,11 +479,32 @@ margin-bottom: 135px;
     margin-top: 10px;  
     background-color:  white;
 }
+#learn-more {
+    background-color:  white;
+    color: midnightblue;
+}
+#learn-more:hover {
+    background-color:  midnightblue;
+    color: white;
+}
 #main-btn {
     width: 400px;
-    height: 80px;
-    padding: 28px;
+    height: 95px;
+    font-size: 22px;
+    padding: 38px;
     position: relative;
+    color: midnightblue;
+    background-color: white;
+}
+#main-btn:hover {
+    width: 400px;
+    height: 95px;
+    font-size: 22px;
+    padding: 38px;
+    position: relative;
+    color: white;
+
+    background-color: midnightblue;
 }
 
 #how-it-works {
@@ -549,7 +606,8 @@ h3 {
     height: 220px;
 }
 .nav.navbar-nav.navbar-right {
-    background-color: #58b8fe;
+    background-color: #58b8fe
+    ;
     margin-top: 25px; 
     border-radius: 7px;
     border-bottom: solid 2px #D1E2E5;
@@ -580,7 +638,8 @@ h3 {
 }
 ul.dropdown-menu {
     font-size: 20px;
-    background-color: #e8efef;
+    color: midnightblue;
+    /*background-color: #e8efef;*/
 }
 .panel-body {
     border-top: #58b8fe;
@@ -611,8 +670,9 @@ div.container-fluid.bg-info {
     background-color: transparent;
 }
 nav.navbar.navbar-default.navbar-fixed-top {
-    background-color: #58b8fe;
+    background-color: white;
     /*color: white;*/ 
+    height: 75px;
 }
 
 .panel-default {
@@ -714,7 +774,7 @@ img.question-image {
 }
 .panel-footer {
   height: 250px;
-  background-color: #58b8fe;
+  background-color: gray;
   margin-top:  20px;
  }
 #start-panel-head {
@@ -996,6 +1056,8 @@ li,ul{
 }
 
 .header-top img {
+    
+
     border-radius: 50%;
     max-width: 48px !important;
     width: 100%;
