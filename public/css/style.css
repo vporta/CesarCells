@@ -606,7 +606,7 @@ h3 {
     height: 220px;
 }
 .nav.navbar-nav.navbar-right {
-    background-color: #58b8fe
+    background-color: midnightblue;
     ;
     margin-top: 25px; 
     border-radius: 7px;
@@ -642,7 +642,7 @@ ul.dropdown-menu {
     /*background-color: #e8efef;*/
 }
 .panel-body {
-    border-top: #58b8fe;
+    border-top: midnightblue;
     border-top-style: solid;
 }
 /*dashboard home ends*/

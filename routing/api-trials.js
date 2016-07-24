@@ -26,15 +26,12 @@ require('../config/passport');
   });
 
   router.post('/api/trials-answers', function(req, res){
-    console.log('hit line 25',req.body);
 
     var answers = req.body;
     answers.user_id = req.user._id;
-    console.log(Answer);
     var newAnswer = new Answer(answers);
     console.log('//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////');
     console.log(newAnswer)
-    // console.log(req.user, req.session.passport);
     
     newAnswer.save(function(err, doc){
       console.log(req.user);
@@ -42,11 +39,9 @@ require('../config/passport');
           console.log(err);
         }
         else {
-          // res.send(doc);
           res.json(doc);
         }
       });
-    // console.log(Answer);
   });
 
 
@@ -169,11 +164,11 @@ router.get('/after-test', function(req, res) {
 }); 
 });//router ends
  
-var uri = "https://api.23andme.com/authorize/";
-var client_id = "dd6b7f51cb19ee4bd93bfe59438f7956";
-var client_secret = "56d48e1817b9efd9b94db085a3f54164";
-var redirect_uri = "http://localhost:3000/receive_code/";
-'https://api.23andme.com/authorize/?redirect_uri=http://localhost:3000/receive_code/&response_type=code&client_id=dd6b7f51cb19ee4bd93bfe59438f7956&scope=basic rs121909205 rs62645958 analyses'
+// var uri = "https://api.23andme.com/authorize/";
+// var client_id = "dd6b7f51cb19ee4bd93bfe59438f7956";
+// var client_secret = "56d48e1817b9efd9b94db085a3f54164";
+// var redirect_uri = "http://localhost:3000/receive_code/";
+// 'https://api.23andme.com/authorize/?redirect_uri=http://localhost:3000/receive_code/&response_type=code&client_id=dd6b7f51cb19ee4bd93bfe59438f7956&scope=basic rs121909205 rs62645958 analyses'
 
 router.get('/receive_code', function(req, res) {
 

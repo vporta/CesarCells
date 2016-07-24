@@ -8,6 +8,7 @@ var Amsler = require('../models/Amsler.js');
 var User = require('../models/UserModel.js');
 
 router.get('/tools/start-health-assessment', function (req, res) {
+  
   res.render('tools/start_assessment', {layout: 'dash'});
 });
 
@@ -78,7 +79,29 @@ router.post('/tools/amsler-grid-results', function(req, res) {
   });
 });
 
-router.delete('/tools/all-tools', function (req, res) {
-  res.render('tools/all_tools', {layout: 'dash'});
+router.delete('/delete-note/:_id', function (req, res) {
+var deleteNote = req.params._id;
+  if (req.user) {
+
+
+  Amsler.find({user_id: req.user._id, _id: deleteNote}).then(function(notes) {
+    console.log('-=-=-=-=--==--=--=-=---=------=-- notes' + notes);
+
+    debugger;
+    Amsler.remove({_id: deleteNote}, function(err, removed) {
+      if(err) {
+        throw err;
+      } else {
+          console.log('NOTE REMOVED');
+        res.redirect('/tools/amsler-test');
+      }
+    });
+  });
+  } else {
+    res.send("Sorry You Can't Do That. You Must Be Logged In.");
+  }
 });
+
+  // res.render('tools/all_tools', {layout: 'dash'});
+
 module.exports = router;

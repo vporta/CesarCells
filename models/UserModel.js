@@ -24,10 +24,10 @@ var UserSchema = new Schema({
     email:String,
     name:String
   },
-  qualifiedtrials: [{ 
+  qualifiedtrials: { 
     type: Number, 
     ref: 'Trial' 
-  }]
+  }
   
   
   //

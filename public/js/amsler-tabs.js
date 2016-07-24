@@ -7,10 +7,4 @@ $(document).ready(function() {
      //$('ul.nav-tabs li:eq(1)').tab('show');
   });
 
-  // $("#delete-note").click(function () {
-         
-  //    $('tr').empty();
-
-  // });
-
 });

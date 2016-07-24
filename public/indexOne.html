@@ -30,6 +30,7 @@
 <script src="/js/scrolling-nav.js"></script>
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 <script src="https://api.23andme.com/res/js/ttam-0.3.js"></script>
+<script src="http://code.responsivevoice.org/responsivevoice.js"></script>
 
 </head>
 <body>
@@ -127,5 +128,24 @@
 
   <!-- All of our JS code will be transpiled into this bundle.js file -->
   <script src="bundle.js"></script>
+  <script> 
+  function getSelectionText() {
+      var text = "";
+      if (window.getSelection) {
+          text = window.getSelection().toString();
+      } else if (document.selection && document.selection.type != "Control") { // for Internet Explorer 8 and below
+          text = document.selection.createRange().text;
+      }
+      return text;
+  }
+  $(document).ready(function (){ // when the document has completed loading
+     $(document).mouseup(function (e){ // attach the mouseup event for the document
+      responsiveVoice.cancel(); // stop anything currently being spoken
+      responsiveVoice.speak(getSelectionText()); //speak the text as returned by getSelectionText
+     })
+
+
+  });
+  </script>
 </body>
 </html>
