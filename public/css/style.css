@@ -262,7 +262,15 @@ pre {
 
 }
 /*main page ends*/
-
+.title-trials {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 68px;
+    padding-bottom: 30px;
+    border-color: gray;
+    border-width: thin;
+    border-style: solid;
+}
 /*What is section*/
 
 .what-is {
@@ -497,6 +505,15 @@ margin-bottom: 135px;
     height: 95px;
     font-size: 22px;
     padding: 38px;
+    position: relative;
+    color: midnightblue;
+    background-color: white;
+}
+.ask {
+    width: 250px;
+    height: 45px;
+    font-size: 22px;
+    padding: 8px;
     position: relative;
     color: midnightblue;
     background-color: white;

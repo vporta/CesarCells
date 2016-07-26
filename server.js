@@ -9,8 +9,8 @@ var path = require('path'),
     cookieParser = require('cookie-parser'),
     favicon = require('serve-favicon'),
     mongoose = require('mongoose'),
-    passport = require('passport'),
     flash = require('connect-flash'),
+    passport = require('passport'),
     LocalStrategy = require('passport-local'),
     TwitterStrategy = require('passport-twitter'),
     GoogleStrategy = require('passport-google-oauth'),
@@ -30,10 +30,10 @@ app.use(cookieParser());
 
 //======Passport========
 app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
+app.use(flash()); // use connect-flash for flash messages stored in session
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 //app.use(app.router);
-app.use(flash()); // use connect-flash for flash messages stored in session
 
 
 // Session-persisted message middleware
@@ -73,8 +73,14 @@ app.use('/', users_controller);
 var tools_controller = require('./controllers/tools_controller.js');
 app.use('/', tools_controller);
 
+var contact_us_controller = require('./controllers/contact_us_controller.js');
+app.use('/', contact_us_controller);
+
 var resources_controller = require('./controllers/resources_controller.js');
 app.use('/', resources_controller);
+
+var trials_controller = require('./controllers/trials_controller.js');
+app.use('/', trials_controller);
 
 // ==== APIs ====
 var routing = require('./routing/api-trials');

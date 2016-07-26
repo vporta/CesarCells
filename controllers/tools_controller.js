@@ -7,6 +7,8 @@ var passport = require('passport');
 var Trial = require('../models/Trial.js');
 var Amsler = require('../models/Amsler.js');
 var User = require('../models/UserModel.js');
+var flash = require('connect-flash');
+var helpers = require('../helpers/mail.js');
 
 
 router.get('/tools/start-health-assessment', function (req, res) {
@@ -14,7 +16,7 @@ router.get('/tools/start-health-assessment', function (req, res) {
   if (req.user && req.user.assessmentTaken) {
     res.redirect('/users/dashboard');
   } else {
-    res.render('tools/start_assessment', {layout: 'dash'}); // or whatever you call it
+    res.render('tools/start_assessment', {layout: 'dash'}); 
   }
       
 });

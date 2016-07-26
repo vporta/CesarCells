@@ -1,13 +1,18 @@
 var express = require('express');
 var session = require('express-session');
 var bcrypt = require('bcryptjs');
+var flash = require('connect-flash');
 var passport = require('passport');
 var router = express.Router();
 var LocalStrategy = require('passport-local').Strategy;
+var FacebookStrategy = require('passport-facebook').Strategy;
 var _ = require('underscore');
 var User = require('../models/UserModel.js');
 var Trial = require('../models/Trial.js');
 var Answer = require('../models/Answers.js');
+var sg = require('sendgrid').SendGrid(process.env.SENDGRID_API_KEY)
+var helper = require('sendgrid').mail
+var helpers = require('../helpers/mail');
 
 
 // === HOME PAGE ======
@@ -28,6 +33,7 @@ router.get('/users/sign-in', function(req, res) {
 });
 
 
+
 // ==== SIGN_UP & SIGN-IN PASSPORT AUTH ====
 router.post('/users/sign_up', passport.authenticate('local.signup', {
   successRedirect: '/users/details_new',
@@ -46,14 +52,16 @@ router.get('/auth/facebook', passport.authenticate('facebook'));
 
 // CALLBACK FB AUTH
 router.get('/auth/facebook/callback',
-    passport.authenticate('facebook', {
-        successRedirect : '/users/dashboard',
-        failureRedirect : '/users/sign-in'
-    }));
+  passport.authenticate('facebook', {
+      successRedirect : '/users/dashboard',
+      failureRedirect : '/users/sign-in'
+  })
+);
 
 // ==== PERSONAL USER DASHBOARD ====
 router.get('/users/dashboard', function (req, res) {
-  // console.log(req.user);
+  console.log(req.user.local.email);
+  // console.log(req.user)
   var data = {};
   
   Trial.find({
@@ -75,7 +83,6 @@ router.get('/users/dashboard', function (req, res) {
 
 // ==== SECOND SIGNUP FORM USER DETAILS FORM ====
 router.get('/users/details_new', function(req, res) {
-  // console.log('This is req.user: '+req.user);
   res.render('users/details_new');
 });
 
@@ -88,7 +95,6 @@ router.post('/users/details_new', function(req, res) {
   var diagnosedStarg = req.body.diagnosedSelect;
 
 // console.log(req.user);
-//qualify users for certain studies now. 
   User.findOneAndUpdate({'_id': req.user._id}, {$set: {"firstname": firstname, "lastname": lastname, "age": age, "sex": sex, "birth_day": dob, "stargardtsDiagnosis": diagnosedStarg}}, {upsert: true}).exec(function(err){
 
     if(err){
@@ -96,6 +102,7 @@ router.post('/users/details_new', function(req, res) {
     }
 
     else{
+      // helpers.send(helloEmail());
       res.redirect('/users/dashboard');
     }
   });
