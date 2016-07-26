@@ -151,10 +151,24 @@ router.get('/after-test', function(req, res) {
                 scores.push(object);
 // render a new users/results hbs page that will display the results of the assessment and tell the user if they have qualified or not. 
                 // res.json(scores);
-                res.render('users/assessment_results', {
-                  scores: scores,
-                  layout: 'dash'
-                });
+                // res.render('users/assessment_results', {
+                //   scores: scores,
+                //   layout: 'dash'
+                // });
+            }).then(function() {
+              var istrue = true;
+              
+              User.findOneAndUpdate({_id: req.user._id}, {$set: {"assessmentTaken":istrue}}).exec(function(err) {
+                
+                if(err) {
+                  throw err;
+                } else {
+                  res.render('users/assessment_results', {
+                    scores: scores,
+                    layout: 'dash'
+                  });
+                }
+              });
             });
           });
         })
@@ -164,34 +178,40 @@ router.get('/after-test', function(req, res) {
 }); 
 });//router ends
  
-// var uri = "https://api.23andme.com/authorize/";
-// var client_id = "dd6b7f51cb19ee4bd93bfe59438f7956";
-// var client_secret = "56d48e1817b9efd9b94db085a3f54164";
+
 // var redirect_uri = "http://localhost:3000/receive_code/";
 // 'https://api.23andme.com/authorize/?redirect_uri=http://localhost:3000/receive_code/&response_type=code&client_id=dd6b7f51cb19ee4bd93bfe59438f7956&scope=basic rs121909205 rs62645958 analyses'
 
+  // ====== 23ANDME RECEIVE CODE ======
 router.get('/receive_code', function(req, res) {
-
-  // axios.post('https://api.23andme.com/token/&client_id=dd6b7f51cb19ee4bd93bfe59438f7956&client_secret=56d48e1817b9efd9b94db085a3f54164&grant_type=authorization_code&code=zzz&redirect_uri=http://localhost:3000/receive_code&scope=rs3094315');
+  // // var snpsObj = {};
+  // var client_id = "dd6b7f51cb19ee4bd93bfe59438f7956";
+  // var client_secret = "56d48e1817b9efd9b94db085a3f54164";
+  // var scope = 'rs2476601';
   
-// axios({
-//   method: 'post',
-//   url: 'https://api.23andme.com/token/',
-//   data: {
-//    client_id: client_id,
-//     client_secret: client_secret,
-//     grant_type: 'authorization_code',
-//     code: 'zzz',
-//     redirect_uri: 'http://localhost:3000/receive_code',
-//     scope: 'rs3094315'
-//   }
-// }).then(function(result) {
-
-//   res.json(result);
-// })
+  // axios({
+  //   url: 'https://api.23andme.com/token/',
+  //   method: 'post',
+  //   data: {
+  //     client_id: client_id,
+  //     client_secret: client_secret,
+  //     grant_type: 'authorization_code',
+  //     code: req.query.code,
+  //     redirect_uri: "http://localhost:3000/receive_code/",
+  //     scope: scope
+  //   }
+  // })
+  // .then(function (response) {
+  //   // snpsObj.snps = response;
+  //   console.log(response);
+  //   res.json(response);
+  // })
+  // .catch(function (error) {
+  //   console.log(error);
+  //   res.redirect('/');
+  // });
 
   res.render('tools/genetic_report', {layout: 'dash'});
-
 });
 
 

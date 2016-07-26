@@ -12,6 +12,7 @@ var Answer = require('../models/Answers.js');
 
 // === HOME PAGE ======
 router.get('/', function (req, res) {
+
   res.render('index', {layout: 'main'});
 });
 

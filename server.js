@@ -17,7 +17,8 @@ var path = require('path'),
     FacebookStrategy = require('passport-facebook'),
     _ = require('underscore'),
     Trial = require('./models/Trial'),
-    User = require('./models/UserModel');
+    User = require('./models/UserModel'),
+    sendgrid = require('./helpers/mail');
 
 //======Express========
 var app = express();

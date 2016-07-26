@@ -199,7 +199,7 @@ pre {
 
     background-image: url("https://static.pexels.com/photos/30763/pexels-photo-30763-large.jpg");
     background-size: cover;
-    height: 70%;
+    height: 75%;
 }
 .jumbotron-glossary {
 
@@ -246,10 +246,10 @@ pre {
     text-transform: uppercase;
 }
 .main-h1 {
-    padding-top: 75px;
+    padding-top: 155px;
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
 
-    font-size: 115px;
+    font-size: 85px;
     text-align: center;
     line-height: 2;
     color: white;
@@ -258,10 +258,7 @@ pre {
 }
 #main-row-sect {
     background-color: white;
-    /*border-radius: 10%;*/
-    /*background-image:  url('http://www.u3aonline.org.au/sites/default/files/picture_for_home_page.png');*/
     background-size: cover;
-    margin-top: 100px;
 
 }
 /*main page ends*/
@@ -289,15 +286,23 @@ pre {
 
     font-size: 70px;
     font-weight: 300;
-    color: white;
+    color: midnightblue;
 }
 .what-is-h2 {
 
 font-size: 70px;
 font-weight: 300;
 color: midnightblue;
+
 }
 .how-it-works-h2 {
+
+font-size: 55px;
+font-weight: 300;
+color: midnightblue;
+margin-bottom: 69px;
+}
+.how-it-works-h2-top {
 
 font-size: 70px;
 font-weight: 300;
@@ -321,7 +326,7 @@ margin-bottom: 135px;
     color: #58b8fe;
 }
 .trial-main-h2 {
-    position: absolute; 
+    /*position: absolute; */
     top: 244px; 
     left: 0; 
     width: 100%; 
@@ -402,23 +407,23 @@ margin-bottom: 135px;
     margin-bottom: 200px;
     /*border-radius: 30%;*/
     margin-top: 20px;
-    height: 520px;
+    height: 720px;
 }
 #intro {
     padding: 75px 0;
     /*background: #58b8fe;*/
     text-align: center;
-    margin-bottom: 200px;
+    /*margin-bottom: 200px;*/
     /*border-radius: 30%;*/
     margin-top: 20px;
 }
 #tools {
     padding: 75px 0;
-    /*background: #e8efef;*/
+    background-color: whitesmoke;
     text-align: center;
     margin-bottom: 200px;
-    /*border-radius: 30%;*/
     margin-top: 100px;
+    height: 720px;
 }
 .tools-section {
     padding: 75px 0;
@@ -430,11 +435,11 @@ margin-bottom: 135px;
 }
 #treatments {
     padding: 98px 0;
-    background: white;
+    background: whitesmoke;
     text-align: center;
     margin-bottom: 200px;
     /*border-radius: 30%;*/
-    margin-top: 244px;
+    /*margin-top: 244px;*/
     height: 720px;
 }
 .treatments-section {
@@ -447,7 +452,7 @@ margin-bottom: 135px;
 }
 .intro-clinics {
     padding: 75px 0;
-    background: #58b8fe;
+    background: white;
     text-align: center;
     margin-bottom: 200px;
     /*border-radius: 30%;*/
@@ -455,7 +460,7 @@ margin-bottom: 135px;
 }
 #intro-stargardts-defined {
     padding: 75px 0;
-    background: lightslategray;
+    background: whitesmoke;
     text-align: center;
     margin-bottom: 200px;
     margin-top: 20px;
@@ -496,7 +501,26 @@ margin-bottom: 135px;
     color: midnightblue;
     background-color: white;
 }
+#cesar-btn {
+    width: 400px;
+    height: 95px;
+    font-size: 22px;
+    padding: 38px;
+    position: relative;
+    color: midnightblue;
+    background-color: white;
+}
 #main-btn:hover {
+    width: 400px;
+    height: 95px;
+    font-size: 22px;
+    padding: 38px;
+    position: relative;
+    color: white;
+
+    background-color: midnightblue;
+}
+#cesar-btn:hover {
     width: 400px;
     height: 95px;
     font-size: 22px;
@@ -509,6 +533,7 @@ margin-bottom: 135px;
 
 #how-it-works {
     padding: 20px 0 20px 0;
+    background-color:   whitesmoke;
 }
 #dod-how-it-works_left {
     position: relative;
@@ -651,9 +676,11 @@ ul.dropdown-menu {
 
 /*gene report table begins*/
 #gene-table {
-margin-top: 100px;
-margin-left: 65px;
-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 100px;
+    margin-left: 65px;
+    width: 100%;
 }
 .td-trials {
     font-size: 23px;
@@ -673,6 +700,8 @@ nav.navbar.navbar-default.navbar-fixed-top {
     background-color: white;
     /*color: white;*/ 
     height: 75px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .panel-default {

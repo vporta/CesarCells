@@ -27,7 +27,8 @@ var UserSchema = new Schema({
   qualifiedtrials: { 
     type: Number, 
     ref: 'Trial' 
-  }
+  },
+  assessmentTaken: Boolean
   
   
   //
