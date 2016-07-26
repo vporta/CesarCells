@@ -219,7 +219,7 @@ router.post('/clinical-trials/contact/one', function (req, res) {
     
     var helper  = require('sendgrid').mail;
     from_email = new helper.Email(email)
-    to_email = new helper.Email("vporta7@gmail.com")
+    to_email = new helper.Email("vporta7@gmail.com") //Contact-Us@40sanofi.com
     subject = mailsubject;
     content = new helper.Content("text/plain", usercomment)
     mail = new helper.Mail(from_email, subject, to_email, content)
@@ -254,7 +254,7 @@ router.post('/clinical-trials/contact/two', function (req, res) {
       
       var helper  = require('sendgrid').mail;
       from_email = new helper.Email(email)
-      to_email = new helper.Email("vporta7@gmail.com")
+      to_email = new helper.Email("vporta7@gmail.com") //shiying_li@40126.com
       subject = mailsubject;
       content = new helper.Content("text/plain", usercomment)
       mail = new helper.Mail(from_email, subject, to_email, content)
@@ -288,7 +288,7 @@ router.post('/clinical-trials/contact/three', function (req, res) {
     
     var helper  = require('sendgrid').mail;
     from_email = new helper.Email(email)
-    to_email = new helper.Email("vporta7@gmail.com")
+    to_email = new helper.Email("vporta7@gmail.com") //Coordinator@40MyRetinaTracker.org
     subject = mailsubject;
     content = new helper.Content("text/plain", usercomment)
     mail = new helper.Mail(from_email, subject, to_email, content)
@@ -322,7 +322,7 @@ router.post('/clinical-trials/contact/four', function (req, res) {
     
     var helper  = require('sendgrid').mail;
     from_email = new helper.Email(email)
-    to_email = new helper.Email("vporta7@gmail.com")
+    to_email = new helper.Email("vporta7@gmail.com") //bamjia@40nei.nih.gov
     subject = mailsubject;
     content = new helper.Content("text/plain", usercomment)
     mail = new helper.Mail(from_email, subject, to_email, content)
@@ -356,7 +356,7 @@ router.post('/clinical-trials/contact/five', function (req, res) {
     
     var helper  = require('sendgrid').mail;
     from_email = new helper.Email(email)
-    to_email = new helper.Email("vporta7@gmail.com")
+    to_email = new helper.Email("vporta7@gmail.com") //jwmorgan@40mail.med.upenn.edu
     subject = mailsubject;
     content = new helper.Content("text/plain", usercomment)
     mail = new helper.Mail(from_email, subject, to_email, content)
@@ -390,7 +390,7 @@ router.post('/clinical-trials/contact/six', function (req, res) {
     
     var helper  = require('sendgrid').mail;
     from_email = new helper.Email(email)
-    to_email = new helper.Email("vporta7@gmail.com")
+    to_email = new helper.Email("vporta7@gmail.com") //stevenlevy@40mdstemcells.com
     subject = mailsubject;
     content = new helper.Content("text/plain", usercomment)
     mail = new helper.Mail(from_email, subject, to_email, content)
@@ -424,7 +424,7 @@ router.post('/clinical-trials/contact/seven', function (req, res) {
     
     var helper  = require('sendgrid').mail;
     from_email = new helper.Email(email)
-    to_email = new helper.Email("vporta7@gmail.com")
+    to_email = new helper.Email("vporta7@gmail.com") //bamjia@40nei.nih.gov brooksb@40mail.nih.gov
     subject = mailsubject;
     content = new helper.Content("text/plain", usercomment)
     mail = new helper.Mail(from_email, subject, to_email, content)

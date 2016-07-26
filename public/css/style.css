@@ -723,6 +723,7 @@ nav.navbar.navbar-default.navbar-fixed-top {
 
 .panel-default {
     background-color: #f7f9fa;
+    margin-top: 130px;
 }
 .details-new-form {
   margin-top: 30px;
@@ -821,7 +822,7 @@ img.question-image {
 .panel-footer {
   height: 250px;
   background-color: gray;
-  margin-top:  20px;
+  margin-top:  0px;
  }
 #start-panel-head {
   text-align: center;
