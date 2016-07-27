@@ -114,7 +114,7 @@ pre {
     vertical-align: center;
 }
 .myButton:hover {
-    background-color:#005470;
+    background-color: midnightblue;
     color: white;
 }
 .myButton:active {
@@ -138,7 +138,7 @@ pre {
     text-shadow:0px -1px 0px #2b665e;
 }
 .myButton:hover {
-    background-color: #58b8fe;
+    background-color: midnightblue;
     color: white;
 }
 .myButton:active {
@@ -234,8 +234,9 @@ pre {
     margin-left: 22px;
     margin-top: 5px;
 }
-#speaker-homepage:hover #span-element{
+#speaker-homepage:hover {
     display: block;
+    cursor: pointer;
 }
 #span-element {
     border: 1px solid #ccc;
@@ -407,16 +408,21 @@ margin-bottom: 135px;
 
 .what-is-header {
     margin-bottom: 10px;
+    /*background-color: whitesmoke;*/
 }
 #how-it-works {
     padding: 75px 0;
     background: white;
     text-align: center;
-    margin-bottom: 200px;
+    /*margin-bottom: 200px;*/
     /*border-radius: 30%;*/
-    margin-top: 20px;
-    height: 720px;
+    /*margin-top: 20px;*/
+    height: 1058px;
+    background-size: cover;
+    background-image: url('');
+
 }
+
 #intro {
     padding: 75px 0;
     /*background: #58b8fe;*/
@@ -424,39 +430,56 @@ margin-bottom: 135px;
     /*margin-bottom: 200px;*/
     /*border-radius: 30%;*/
     margin-top: 20px;
+    background-size: cover;
+    /*background-color: whitesmoke;*/
+    /*background-image: url('http://feelgrafix.com/data_images/out/20/930465-dna.jpg');*/
+
 }
 #tools {
     padding: 75px 0;
-    background-color: whitesmoke;
+    background-color: tomato;
     text-align: center;
-    margin-bottom: 200px;
-    margin-top: 100px;
-    height: 720px;
+    /*margin-bottom: 200px;*/
+    /*margin-top: 100px;*/
+    height: 844px;
+    /*background-image: url('http://feelgrafix.com/data_images/out/20/930465-dna.jpg');*/
+    background-size: cover;
 }
 .tools-section {
     padding: 75px 0;
     background: white;
     text-align: center;
-    margin-bottom: 200px;
+    /*margin-bottom: 200px;*/
     /*border-radius: 30%;*/
-    margin-top: 20px;
+    /*margin-top: 20px;*/
 }
 #treatments {
     padding: 98px 0;
-    background: whitesmoke;
+    background: mediumturquoise;
+    /*background-image: url('http://feelgrafix.com/data_images/out/20/930465-dna.jpg');*/
+    background-size: cover;
     text-align: center;
-    margin-bottom: 200px;
+    /*margin-bottom: 200px;*/
     /*border-radius: 30%;*/
     /*margin-top: 244px;*/
-    height: 720px;
+    height: 1051px;
+  /*  -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);*/
+   /* -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);*/
+   /* filter: FlipH;
+    -ms-filter: "FlipH";*/
+
+
+    
 }
 .treatments-section {
     padding: 75px 0;
     background: white;
     text-align: center;
-    margin-bottom: 200px;
+    /*margin-bottom: 200px;*/
     /*border-radius: 30%;*/
-    margin-top: 20px;
+    /*margin-top: 20px;*/
 }
 .intro-clinics {
     padding: 75px 0;
@@ -550,8 +573,20 @@ margin-bottom: 135px;
 
 #how-it-works {
     padding: 20px 0 20px 0;
-    background-color:   whitesmoke;
+    background-color:   mediumaquamarine;
+    /*background-image: url('http://feelgrafix.com/data_images/out/20/930465-dna.jpg');*/
+    background-size: cover;
+    /*-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, right bottom, from(transparent), color-stop(20%, transparent), to(rgba(255, 255, 255, 0.5)));*/
+    
 }
+/*#how-it-works:hover {
+    padding: 20px 0 20px 0;
+    background-color:   white;
+    background-image: url('http://feelgrafix.com/data_images/out/20/930465-dna.jpg');
+    background-size: cover;
+    /*-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, right bottom, from(transparent), color-stop(20%, transparent), to(rgba(255, 255, 255, 0.5)));*/
+    
+/*}*/
 #dod-how-it-works_left {
     position: relative;
     z-index: 8;
@@ -585,6 +620,7 @@ margin-bottom: 135px;
 }
 #img-dash3 {
     margin-left: 10px;
+    background-color: whitesmoke;
 }
 #img-dash4 {
     margin-left: 10px;
@@ -594,9 +630,10 @@ margin-bottom: 135px;
 }
 #row-btm-dash-images {
     height: 50%;
+
 }
 #col-one-dash-images {
-    background-color: white;
+    background-color: whitesmoke;
     width: 680px;
     border-radius: 10px;
     position: relative;
@@ -642,36 +679,35 @@ h3 {
  }
 
 #col-two-dash-images {
-    background-color: white;
+    background-color: whitesmoke;
     width: 680px;
     border-radius: 10px;
     height: 220px;
 }
 .nav.navbar-nav.navbar-right {
-    background-color: midnightblue;
+    background-color: whitesmoke;
     ;
     margin-top: 25px; 
     border-radius: 7px;
     border-bottom: solid 2px #D1E2E5;
 }
 #a-dash {
-    color: white;
+    color: midnightblue;
 }
 #a-dash-one {
-    color: white;
+    color: midnightblue;
 }
 #a-dash-two {
-    color: white;
+    color: midnightblue;
 }
 #a-dash-three {
-    color: white;
+    color: midnightblue;
 }
 #a-dash-four {
-    color: white;
+    color: midnightblue;
 }
 #h1-images {
     font-size: 20px;
-    background-color: white;
     text-align: center;
     margin-left: 150px;
 }
@@ -703,7 +739,22 @@ ul.dropdown-menu {
     font-size: 23px;
 }
 
-
+#spopup{
+    background:#f3f3f3;
+    border-radius:9px;
+    -moz-border-radius:9px;
+    -webkit-border-radius:9px;
+    -moz-box-shadow:inset 0 0 3px #333;
+    -webkit-box-shadow:inset 0 0 3px #333;
+    box-shadow:inner 0 0 3px #333;
+    padding:12px 14px 12px 14px;
+    width:300px;
+    position:fixed;
+    bottom:13px;
+    right:2px;
+    display:none;
+    z-index:90;
+}
 
 /*home page sign-in form*/
 form#sign-in-form.form-horizontal {
