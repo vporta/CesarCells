@@ -66,6 +66,26 @@ h3 {
     color: midnightblue;
 }
 
+#login-nav-text {
+    /*background-color: whitesmoke;*/
+    border-radius: 7%;
+}
+#login-nav-text:hover {
+    background-color: whitesmoke;
+    color: midnightblue;
+    border-radius: 7%;
+    opacity: 7px;
+}
+#signup-nav-text {
+    background-color: mediumaquamarine;
+    border-radius: 7%;
+}
+#signup-nav-text:hover {
+    background-color: whitesmoke;
+    border-radius: 7%;
+    opacity: 4;
+}
+
 blockquote {
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
     font-size: 21px;
@@ -197,9 +217,11 @@ pre {
 /*main page begins*/
 .jumbotron-main {
 
-    background-image: url("https://static.pexels.com/photos/30763/pexels-photo-30763-large.jpg");
+    /*background-image: url("https://static.pexels.com/photos/30763/pexels-photo-30763-large.jpg");*/
     background-size: cover;
     height: 75%;
+    background-color: mediumaquamarine; 
+
 }
 .jumbotron-glossary {
 
@@ -315,14 +337,14 @@ margin-bottom: 69px;
 
 font-size: 70px;
 font-weight: 300;
-color: midnightblue;
+color: white;
 margin-bottom: 69px;
 }
 .tools-h2 {
 
 font-size: 70px;
 font-weight: 300;
-color: midnightblue;
+color: white;
 margin-bottom: 135px;
 }
 .tool-main-h2 {
@@ -332,7 +354,7 @@ margin-bottom: 135px;
     width: 100%; 
     font-size: 55px;
     
-    color: #58b8fe;
+    color: white;
 }
 .trial-main-h2 {
     /*position: absolute; */
@@ -341,7 +363,7 @@ margin-bottom: 135px;
     width: 100%; 
     font-size: 70px;
     
-    color: midnightblue;
+    color: white;
 }
 .tool-main-h2-CTQ {
     position: absolute; 
@@ -431,7 +453,9 @@ margin-bottom: 135px;
     /*border-radius: 30%;*/
     margin-top: 20px;
     background-size: cover;
-    /*background-color: whitesmoke;*/
+    background-color: tomato;
+    margin-left: 15px;
+    margin-right: 15px;
     /*background-image: url('http://feelgrafix.com/data_images/out/20/930465-dna.jpg');*/
 
 }
@@ -449,6 +473,8 @@ margin-bottom: 135px;
     padding: 75px 0;
     background: white;
     text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
     /*margin-bottom: 200px;*/
     /*border-radius: 30%;*/
     /*margin-top: 20px;*/
@@ -477,6 +503,8 @@ margin-bottom: 135px;
     padding: 75px 0;
     background: white;
     text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
     /*margin-bottom: 200px;*/
     /*border-radius: 30%;*/
     /*margin-top: 20px;*/
@@ -576,6 +604,8 @@ margin-bottom: 135px;
     background-color:   mediumaquamarine;
     /*background-image: url('http://feelgrafix.com/data_images/out/20/930465-dna.jpg');*/
     background-size: cover;
+    margin-left: 15px;
+    margin-right: 15px;
     /*-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, right bottom, from(transparent), color-stop(20%, transparent), to(rgba(255, 255, 255, 0.5)));*/
     
 }
@@ -871,8 +901,8 @@ img.question-image {
     border-radius: 5px;
 }
 .panel-footer {
-  height: 250px;
-  background-color: gray;
+  height: 400px;
+  background-color: darkslategray;
   margin-top:  0px;
  }
 #start-panel-head {

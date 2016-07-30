@@ -82,6 +82,9 @@ app.use('/', resources_controller);
 var trials_controller = require('./controllers/trials_controller.js');
 app.use('/', trials_controller);
 
+var accounts_controller = require('./controllers/accounts_controller.js');
+app.use('/', accounts_controller);
+
 // ==== APIs ====
 var routing = require('./routing/api-trials');
 app.use('/', routing);

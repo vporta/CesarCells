@@ -50,7 +50,6 @@
           <div id="passive_order_categories" class="tab-pane">
               <div class="panel-body">
 
-                        {{#each data.notes}}
               <table id="myTable" class="table table-striped gene">
                   <thead>
                     <tr>
@@ -63,19 +62,20 @@
                     </tr>
                   </thead>
                   <tbody>
+                        {{#each data.notes}}
                     <tr>
 
-                      <td class="info .sr-only">{{dateCreated}}</td>
-                      <td class="info .sr-only">{{usernote}}</td>
+                      <td style="font-size: 18px" class="info .sr-only">{{dateCreated}}</td>
+                      <td style="font-size: 18px" class="info .sr-only">{{usernote}}</td>
                       
                       <form action="/delete-note/{{this._id}}?_method=DELETE" method="POST">
 
                         <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-target="#delete" id="delete-note"><span class="glyphicon glyphicon-trash"></span></button></p></td>
                       </form>
                     </tr>
+                        {{/each}}
                   </tbody>
                 </table>
-                        {{/each}}
 
               </div>
           </div>

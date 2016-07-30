@@ -1,8 +1,8 @@
 var express = require('express');
 var session = require('express-session');
 var bcrypt = require('bcryptjs');
-var flash = require('connect-flash');
 var passport = require('passport');
+var flash = require('connect-flash');
 var router = express.Router();
 var LocalStrategy = require('passport-local').Strategy;
 var FacebookStrategy = require('passport-facebook').Strategy;
@@ -18,18 +18,25 @@ var helpers = require('../helpers/mail');
 // === HOME PAGE ======
 router.get('/', function (req, res) {
 
-  res.render('index', {layout: 'main'});
+  res.render('index', {
+    layout: 'main',
+    user: req.user
+  });
 });
 
 // ==== SIGN_UP BEGINS ====
 router.get('/users/sign_up', function (req, res) {
-    res.render('users/sign_up');
+    res.render('users/sign_up', {
+      user: req.user
+    });
 });
 
 
 // ==== SIGN-IN FORM ====
 router.get('/users/sign-in', function(req, res) {
-  res.render('users/sign_in');
+  res.render('users/sign_in', {
+    user: req.user
+  });
 });
 
 
@@ -39,6 +46,7 @@ router.post('/users/sign_up', passport.authenticate('local.signup', {
   successRedirect: '/users/details_new',
   failureRedirect: '/users/sign_up',
   failureFlash: true
+  // req.flash('signup', 'Thank You for Signing Up. You\'re almost there. Check your email inbox to confirm your email address!');
 }));
 
 router.post('/users/dashboard', passport.authenticate('local.login', {
@@ -61,7 +69,7 @@ router.get('/auth/facebook/callback',
 // ==== PERSONAL USER DASHBOARD ====
 router.get('/users/dashboard', function (req, res) {
   console.log(req.user.local.email);
-  // console.log(req.user)
+  console.log('req.user: ' + req.user)
   var data = {};
   
   Trial.find({
@@ -75,7 +83,10 @@ router.get('/users/dashboard', function (req, res) {
     
     res.render('users/dashboard', {
       data: data,
-      layout: 'dash'
+      layout: 'dash',
+      user: req.user,
+      messages: req.flash('info') 
+
     });
    });
   });
@@ -83,6 +94,7 @@ router.get('/users/dashboard', function (req, res) {
 
 // ==== SECOND SIGNUP FORM USER DETAILS FORM ====
 router.get('/users/details_new', function(req, res) {
+  
   res.render('users/details_new');
 });
 
@@ -242,6 +254,23 @@ router.get('/users/view-results', function (req, res) {
       });
     }); //first one
   }); 
+});
+
+// ==== STARGARDT DISEASE REGISTRY FORM ====
+router.get('/users/stargardt-disease-registry', function (req, res) {
+
+  res.render('users/star_disease_reg', {
+    layout: 'dash',
+    user: req.user
+  });
+});
+
+router.post('/users/submit-stargardt-disease-registry', function (req, res) {
+
+  res.render('users/star_disease_reg', {
+    layout: 'dash',
+    user: req.user
+  });
 });
 
 

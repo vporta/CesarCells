@@ -14,17 +14,24 @@ var helpers = require('../helpers/mail.js');
 router.get('/tools/start-health-assessment', function (req, res) {
 
   if (req.user && req.user.assessmentTaken) {
-    res.redirect('/users/dashboard');
+    // window.alert = null;
+    // alert('test'); // fail
+    // delete window.alert; // true
+    // alert("You've already taken the assessment!");
+    req.flash('info', 'You\'ve already taken the assessment. Please contact support with any questions about your assessment.')
+
+    res.redirect('/flash-already-taken');
   } else {
     res.render('tools/start_assessment', {layout: 'dash'}); 
   }
       
 });
 
+
 router.get('/tools/stemcell-assessment', function (req, res) {
  
     res.render('tools/stemcell_assessment', {
-      layout: 'dash' 
+      layout: 'dash'
     });
 });
 

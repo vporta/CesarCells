@@ -1,5 +1,18 @@
     <div class="row" id="row-top-dash-images">
+    <strong>Welcome, 
+    {{#if user}}
+    {{user.local.email}} !</strong>
+    {{/if}}
+    {{!-- <div class="alert alert-warning alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <strong></strong>  --}}
+    {{#if messages}}
+    {{messages}}
+    {{/if}}
+    
+    </div>
         <div class="col-md-6" >
+
         <a href="/users/view-results">
 
         <img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/12/121/121104/flaticons15-pr-f.jpg?1401654621" class="img-rounded" alt="Cinque Terre" width="500" height="298" id="img-dash3"/>
