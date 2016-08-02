@@ -1,5 +1,7 @@
 <div style="margin-top: 150px" class="row">
-
+{{#if success}}
+<div class="alert alert-success">{{success}}</div>
+{{/if}}
 <div class="col-lg-8">
 <h2>STARGARDT DISEASE REGISTRY</h2>
 
@@ -44,7 +46,7 @@
   </div>
   <div class="form-group">
     <label for="opto phone and email">Contact information of your ophthalmologist (phone, email or both</label>
-    <input type="text" name="opthaemail" placeholder="" class="form-control" >
+    <input type="text" name="opthaemail" placeholder="info@gmail.com 212-111-1111" class="form-control" >
   </div>
   <div class="form-group">
     <label for="Under 18 legal guardian">If you are under 18 years old, please enter the name of a parent or legal representative:</label>

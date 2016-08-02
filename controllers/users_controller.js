@@ -10,6 +10,7 @@ var _ = require('underscore');
 var User = require('../models/UserModel.js');
 var Trial = require('../models/Trial.js');
 var Answer = require('../models/Answers.js');
+var StargReg = require('../models/StargReg.js');
 var sg = require('sendgrid').SendGrid(process.env.SENDGRID_API_KEY)
 var helper = require('sendgrid').mail
 var helpers = require('../helpers/mail');
@@ -277,12 +278,62 @@ router.get('/users/stargardt-disease-registry', function (req, res) {
     user: req.user
   });
 });
+// var usernote = req.body.textfield;
+// var dateCreated = req.body.datefield;
 
+
+// var newAmsler = new Amsler({ usernote: usernote, dateCreated: dateCreated, user_id: req.user._id});
+
+// newAmsler.save(function(err) {
+
+//   if(err){
+//     console.log(err);
+//   }
+
+//   else {
+//     res.redirect('/tools/amsler-test');
+//   }
+// });
 router.post('/users/submit-stargardt-disease-registry', function (req, res) {
 
-  res.render('users/star_disease_reg', {
-    layout: 'dash',
-    user: req.user
+var newStargReg = new StargReg ({
+  visualtrouble: req.body.visualtrouble,
+  besteyevision: req.body.besteyevision,
+  visiontoday: req.body.visiontoday,
+  stargeneticallyconfirm: req.body.stargeneticallyconfirm,
+  genemutation: req.body.genemutation,
+  opthaname: req.body.opthaname,
+  opthaemail: req.body.opthaemail,
+  underlegalguardian: req.body.underlegalguardian,
+  filledoutform: req.body.filledoutform,
+  user_id: req.user._id
+});
+
+  newStargReg.save(function(err) {
+
+    if(err){
+      console.log(err);
+    }
+
+    else {
+      var istrue = true;
+      
+      User.findOneAndUpdate({_id: req.user._id}, {$set: {"stargRegTaken":istrue}}).exec(function(err) {
+        
+        if(err) {
+          throw err;
+        } else {
+          req.flash('success', 'Thank you for submitting the form.');
+
+          res.render('users/star_disease_reg', {
+            layout: 'dash',
+            user: req.user,
+            success: req.flash('success')
+          });
+        }
+      });
+      
+    }
   });
 });
 

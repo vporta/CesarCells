@@ -34,7 +34,8 @@ var UserSchema = new Schema({
   city: String,
   address: String,
   state: String,
-  zip: Number
+  zip: Number,
+  stargFormTaken: Boolean
   
   //
   // twitter: {
