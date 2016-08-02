@@ -28,7 +28,9 @@ router.get('/', function (req, res) {
 // ==== SIGN_UP BEGINS ====
 router.get('/users/sign_up', function (req, res) {
     res.render('users/sign_up', {
-      user: req.user
+      user: req.user,
+      successFlash: 'You are now signed up!',
+      failureFlash: 'Invalid email or password!'
     });
 });
 
@@ -36,7 +38,10 @@ router.get('/users/sign_up', function (req, res) {
 // ==== SIGN-IN FORM ====
 router.get('/users/sign-in', function(req, res) {
   res.render('users/sign_in', {
-    user: req.user
+    user: req.user,
+    successFlash: 'You are now signed in!',
+    failureFlash: 'Invalid email or password!'
+
   });
 });
 
@@ -46,7 +51,9 @@ router.get('/users/sign-in', function(req, res) {
 router.post('/users/sign_up', passport.authenticate('local.signup', {
   successRedirect: '/users/details_new',
   failureRedirect: '/users/sign_up',
-  failureFlash: true
+  failureFlash: true,
+  successFlash: true
+
   // req.flash('signup', 'Thank You for Signing Up. You\'re almost there. Check your email inbox to confirm your email address!');
 }));
 
@@ -54,7 +61,9 @@ router.post('/users/dashboard', passport.authenticate('local.login', {
 
     successRedirect : '/users/dashboard', // redirect to the secure profile section
     failureRedirect : '/users/sign-in', // redirect back to the signup page if there is an error
-    failureFlash : true // allow flash messages
+    failureFlash : true, // allow flash messages
+    successFlash: true
+
 }));
 
 router.get('/auth/facebook', passport.authenticate('facebook'));
@@ -69,24 +78,23 @@ router.get('/auth/facebook/callback',
 
 // ==== PERSONAL USER DASHBOARD ====
 router.get('/users/dashboard', function (req, res) {
-  console.log(req.user.local.email);
+  // console.log(req.user.local.email);
   console.log('req.user: ' + req.user)
   var data = {};
   
   Trial.find({
   }).then(function(result) {
-    // console.log('-------HEY NO------------------------' + result)
     data.trials = result;
   User.find({ 
   }).then(function(result) {
     data.users = result;
-    // console.log('-------HEY NO--------------------------' + result)
-    
+    // req.flash('success', 'Welcome back, ' + req.user.firstname)
     res.render('users/dashboard', {
       data: data,
       layout: 'dash',
       user: req.user,
-      messages: req.flash('info') 
+      successFlash: 'Howdy, ' + req.user.firstname,
+      failureFlash: 'Invalid email or password!'
 
     });
    });
@@ -96,7 +104,10 @@ router.get('/users/dashboard', function (req, res) {
 // ==== SECOND SIGNUP FORM USER DETAILS FORM ====
 router.get('/users/details_new', function(req, res) {
   
-  res.render('users/details_new');
+  res.render('users/details_new', {
+    successFlash: 'You are now signed up!',
+    failureFlash: 'Invalid email or password!'
+  });
 });
 
 router.post('/users/details_new', function(req, res) {

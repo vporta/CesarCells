@@ -1,16 +1,11 @@
     <div class="row" id="row-top-dash-images">
-    <strong>Welcome, 
-    {{#if user}}
-    {{user.local.email}} !</strong>
-    {{/if}}
-    <div class="alert alert-success" role="alert"></div>
+ 
+        {{#if successFlash}}
+        <h2 >{{successFlash}}</h2>
+        {{/if}}
    
-    {{#if messages}}
-    {{messages}}
-    {{/if}}
-    
     </div>
-        <div class="col-md-6" >
+    <div class="col-md-6" >
 
         <a href="/users/view-results">
 
