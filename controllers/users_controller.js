@@ -13,6 +13,7 @@ var Answer = require('../models/Answers.js');
 var sg = require('sendgrid').SendGrid(process.env.SENDGRID_API_KEY)
 var helper = require('sendgrid').mail
 var helpers = require('../helpers/mail');
+var async = require('async');
 
 
 // === HOME PAGE ======
@@ -133,6 +134,7 @@ router.get('/users/password_new', function(req, res) {
 });
 
 router.post('/users/password_new', function(req, res) {
+
   res.redirect('/');
 });
 
@@ -268,6 +270,14 @@ router.get('/users/stargardt-disease-registry', function (req, res) {
 router.post('/users/submit-stargardt-disease-registry', function (req, res) {
 
   res.render('users/star_disease_reg', {
+    layout: 'dash',
+    user: req.user
+  });
+});
+
+router.get('/users/my-appointments', function (req, res) {
+
+  res.render('users/appointments', {
     layout: 'dash',
     user: req.user
   });

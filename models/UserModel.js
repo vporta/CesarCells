@@ -10,6 +10,8 @@ var UserSchema = new Schema({
     password: String, 
     // topics: [{ type: Schema.Types.ObjectId, ref: 'Topic' }]
   },
+  resetPasswordToken: String,
+  resetPasswordExpires: Date,
   age: Number,
   birth_day: Date,
   firstname: String,
@@ -28,8 +30,11 @@ var UserSchema = new Schema({
     type: Number, 
     ref: 'Trial' 
   },
-  assessmentTaken: Boolean
-  
+  assessmentTaken: Boolean,
+  city: String,
+  address: String,
+  state: String,
+  zip: Number
   
   //
   // twitter: {
@@ -45,6 +50,7 @@ var UserSchema = new Schema({
   //   name:String
   // }
 });
+
 
 
 // generating a hash
