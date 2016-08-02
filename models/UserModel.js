@@ -8,7 +8,6 @@ var UserSchema = new Schema({
   local: {
     email: String,
     password: String, 
-    // topics: [{ type: Schema.Types.ObjectId, ref: 'Topic' }]
   },
   resetPasswordToken: String,
   resetPasswordExpires: Date,
@@ -35,21 +34,7 @@ var UserSchema = new Schema({
   address: String,
   state: String,
   zip: Number,
-  stargFormTaken: Boolean
-  
-  //
-  // twitter: {
-  //   id:String,
-  //   token:String,
-  //   displ:String,
-  //   usern:String
-  // },
-  // google: {
-  //   id:String,
-  //   token:String,
-  //   email:String,
-  //   name:String
-  // }
+  stargRegTaken: Boolean
 });
 
 

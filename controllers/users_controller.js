@@ -309,6 +309,16 @@ var newStargReg = new StargReg ({
   user_id: req.user._id
 });
 
+if (req.user && req.user.stargRegTaken) {
+  req.flash('info', 'Form has already been submitted, ' + req.user.firstname + '!');
+
+  res.render('users/star_disease_reg', {
+    layout: 'dash',
+    user: req.user,
+    info: req.flash('info')
+  });
+}else {
+
   newStargReg.save(function(err) {
 
     if(err){
@@ -335,6 +345,7 @@ var newStargReg = new StargReg ({
       
     }
   });
+}
 });
 
 router.get('/users/my-appointments', function (req, res) {
