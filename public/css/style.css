@@ -1,6 +1,6 @@
 body {
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     font-style: normal;
     font-variant: normal;
     font-weight: 500;
@@ -39,6 +39,10 @@ h3 {
     margin-top: 15px;
 
 }
+ul.shortcuts li {
+    display: inline-block;
+    margin: 0.5em;
+}
 #inputPass {
     margin-left: 90px;
     margin-top: 15px;
@@ -53,12 +57,12 @@ h3 {
 }
 #tabs-amsler {
     margin-left: 100px;
-    font-size: 24px;
+    font-size: 18px;
     margin-top: 42px;
 }
 /*glossary*/
 .glossary-h2 {
-    font-size: 80px;
+    font-size: 50px;
     text-align: left;
 }
 /*main navbar text*/
@@ -88,7 +92,7 @@ h3 {
 
 blockquote {
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
-    font-size: 21px;
+    font-size: 18px;
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
@@ -124,7 +128,7 @@ pre {
     cursor:pointer;
     color:#ffffff;
     font-family:Arial;
-    font-size:35px;
+    font-size:25px;
     font-weight:bold;
     padding:11px 23px;
     text-decoration:none;
@@ -173,7 +177,7 @@ pre {
 }
 #amsler-grid-h1 {
     margin-top: 200px;
-    font-size: 75px;
+    font-size: 55px;
     text-align: center;
 }
 /*react #app div*/
@@ -248,7 +252,7 @@ pre {
 #results-h1 {
     margin-top: 200px;
     text-align: center;
-    font-size: 75px;
+    font-size: 55px;
     font-weight: bold;
 }
 #speaker-homepage {
@@ -272,7 +276,7 @@ pre {
     padding-top: 155px;
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
 
-    font-size: 85px;
+    font-size: 65px;
     text-align: center;
     line-height: 2;
     color: white;
@@ -286,7 +290,7 @@ pre {
 }
 /*main page ends*/
 .title-trials {
-    font-size: 40px;
+    font-size: 25px;
     text-align: center;
     margin-top: 68px;
     padding-bottom: 30px;
@@ -315,34 +319,34 @@ pre {
 }
 .what-are-trials-h2 {
 
-    font-size: 70px;
+    font-size: 50px;
     font-weight: 300;
     color: midnightblue;
 }
 .what-is-h2 {
 
-font-size: 70px;
+font-size: 50px;
 font-weight: 300;
 color: midnightblue;
 
 }
 .how-it-works-h2 {
 
-font-size: 55px;
+font-size: 50px;
 font-weight: 300;
 color: midnightblue;
 margin-bottom: 69px;
 }
 .how-it-works-h2-top {
 
-font-size: 70px;
+font-size: 50px;
 font-weight: 300;
 color: white;
 margin-bottom: 69px;
 }
 .tools-h2 {
 
-font-size: 70px;
+font-size: 50px;
 font-weight: 300;
 color: white;
 margin-bottom: 135px;
@@ -352,7 +356,7 @@ margin-bottom: 135px;
     top: -100px; 
     left: 0; 
     width: 100%; 
-    font-size: 55px;
+    font-size: 50px;
     
     color: white;
 }
@@ -361,7 +365,7 @@ margin-bottom: 135px;
     top: 244px; 
     left: 0; 
     width: 100%; 
-    font-size: 70px;
+    font-size: 50px;
     
     color: white;
 }
@@ -759,14 +763,19 @@ ul.dropdown-menu {
 
 /*gene report table begins*/
 #gene-table {
-    padding-left: 20px;
+   /* padding-left: 20px;
     padding-right: 20px;
-    margin-top: 100px;
-    margin-left: 65px;
-    width: 100%;
+    margin-top: 100px;*/
+    /*margin-left: 65px;
+    margin-right: 65px;*/
+
+    width: 80%;
 }
 .td-trials {
-    font-size: 23px;
+    font-size: 17px;
+}
+.td-trials-head {
+    font-size: 19px;
 }
 
 #spopup{
@@ -959,6 +968,7 @@ div.col-xs-6.col-md-3 {
 a {
     outline:none;
     text-decoration: none;
+    font-size: 18px;
 }
 li,ul{
     list-style: none;
@@ -1230,7 +1240,7 @@ li,ul{
     position: relative;
 }
 .navi i {
-    font-size: 20px;
+    font-size: 18px;
 }
 .label.label-primary {
     border-radius: 50%;

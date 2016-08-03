@@ -127,7 +127,7 @@ router.post('/users/details_new', function(req, res) {
     }
 
     else{
-      // helpers.send(helloEmail());
+      // SEND WELCOME EMAIL HERE;
       res.redirect('/users/dashboard');
     }
   });
@@ -146,7 +146,7 @@ router.get('/users/password_new', function(req, res) {
 });
 
 router.post('/users/password_new', function(req, res) {
-
+// SEND RESET PASSWORD EMAIL HERE
   res.redirect('/');
 });
 

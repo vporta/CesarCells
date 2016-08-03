@@ -3,6 +3,10 @@
         {{#if successFlash}}
         <h2 >{{successFlash}}</h2>
         {{/if}}
+        {{#if taken}}
+
+        <p class="alert alert-danger">{{taken}}</p>
+        {{/if}}
    
     </div>
     <div class="col-md-6" >
@@ -17,10 +21,20 @@
             <div class="col-xs-9">
                 <h2 id="h1-images">What you can do</h2>
             </div>
+            {{#unless assessmentTaken}}
             <a href="/tools/start-health-assessment">
             <img src="http://feelgrafix.com/data_images/out/20/930465-dna.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="206" id="img-dash"/>
             <h3><span>Take The Clinical Trial <br>Assessment</span></h3>
             </a>
+            {{/unless}}
+            
+            {{#if assessmentTaken}}
+
+            <a href="#">
+            <img src="http://feelgrafix.com/data_images/out/20/930465-dna.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="206" id="img-dash" style="-webkit-filter: grayscale(100%); filter: grayscale(100%)" />
+            <h3><span>Take The Clinical Trial <br>Assessment</span></h3>
+            </a>
+            {{/if}}
 
             <a href="/tools/genetic">
             <img src="http://p6.zdassets.com/hc/settings_assets/110137/200071170/BRAvBoNT6M0Je9RDM5XioQ-B8RxjraWdnSXCzvGLrn68Q-icn_logo_retina.png" class="img-rounded" alt="Cinque Terre" width="304" height="206" id="img-dash2">

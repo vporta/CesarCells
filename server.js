@@ -117,7 +117,14 @@ require('./config/passport');
 
 
 
-
+//NOTE: To deploy, you must: follow homework19 server.js file
+//1. Remove the start script in package.json, and replace it with node server.js
+//2. See Homeworkwk18 for DB connection information in server.js, if that doesn't work, follow homework19
+//3. Heroku Login. Heroku Create. Push up to origin and heroku master. (Eventually Purchase a production version of mongodb_URI) 
+//4. Provision mLab. 
+//5. Navigate to config vars in heroku dashboard. 
+//6. export MONGODB_URI=config var. 
+//7. 
 app.listen(port, function() {
   console.log("Let's do this! On port:", + port);
 });

@@ -100,7 +100,7 @@ var newpassword = req.body.newpassword;
   }else {
 
     if (bcrypt.compareSync(password, req.user.local.password)) {
-
+      // SEND EMAIL TO CONFIRM PASSWORD CHANGE
       _newpassword = bcrypt.hashSync(newpassword);
 
       User.findOneAndUpdate({'_id': req.user._id}, {$set: {'local.password': _newpassword}}).then(function(user) {

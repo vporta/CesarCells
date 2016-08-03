@@ -158,7 +158,7 @@ router.get('/after-test', function(req, res) {
             }).then(function() {
               var istrue = true;
               
-              User.findOneAndUpdate({_id: req.user._id}, {$set: {"filledoutform":istrue}}).exec(function(err) {
+              User.findOneAndUpdate({_id: req.user._id}, {$set: {"assessmentTaken":istrue}}).exec(function(err) {
                 
                 if(err) {
                   throw err;

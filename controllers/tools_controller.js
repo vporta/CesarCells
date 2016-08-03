@@ -12,15 +12,19 @@ var helpers = require('../helpers/mail.js');
 
 
 router.get('/tools/start-health-assessment', function (req, res) {
-
+console.log('assessmentTaken: '+ req.user.assessmentTaken);
   if (req.user && req.user.assessmentTaken) {
     // window.alert = null;
     // alert('test'); // fail
     // delete window.alert; // true
     // alert("You've already taken the assessment!");
-    req.flash('info', 'You\'ve already taken the assessment. Please contact support with any questions about your assessment.')
+    req.flash('taken', 'You\'ve already taken the assessment.')
 
-    res.redirect('/flash-already-taken');
+    res.render('users/dashboard', {
+      layout: 'dash',
+      taken: req.flash('taken'),
+      assessmentTaken: req.user.assessmentTaken
+    });
   } else {
     res.render('tools/start_assessment', {layout: 'dash'}); 
   }

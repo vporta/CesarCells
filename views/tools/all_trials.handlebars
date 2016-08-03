@@ -6,24 +6,24 @@
  <div class="row">
      <div class="col-md-9">
          <h1 class="what-is-h2" style="text-align: center; color: midnightblue; margin-top: 80px">BROWSE TRIALS</h1><br>
-         <label style="margin-left: 100px; color: midnightblue 
-">Search <input id="search" type="text" style="width: 700px; height: 45px; border-color: midnightblue; margin-top: 100px"></label>
-
-             {{#each data.trials}}
-             <table id="gene-table" class="table table-striped gene">
+             <table id="gene-table" class="table table-hover" cellspacing="1">
                <thead>
                  <tr>
-                     <th>ID</th>
-                     <th>Name</th>
-                     <th>Status</th>
-                     <th>Interventions</th>
-                     <th>Minimum Age Requirement</th>
-                     <th>Maximum Age Requirement</th>
-                     <th>Conditions Disease</th>
+                     <th class="td-trials-head">ID</th>
+                     <th class="td-trials-head">Name</th>
+                     <th class="td-trials-head">Status</th>
+                     <th class="td-trials-head">Interventions</th>
+                     <th class="td-trials-head">Minimum Age Requirement</th>
+                     <th class="td-trials-head">Maximum Age Requirement</th>
+                     <th class="td-trials-head">Conditions Treated</th>
+                     <th class="td-trials-head">URL</th>
                  </tr>
                </thead>
+              
                <tbody>
+             {{#each data.trials}}
                  <tr>
+                   
                      <td class="td-trials">{{_id}}</td>
                      <td class="td-trials">{{name}}</td>
                      <td class="td-trials">{{status}}</td>
@@ -31,23 +31,20 @@
                      <td class="td-trials">{{min_age_req}}</td>
                      <td class="td-trials">{{max_age_req}}</td>
                      <td class="td-trials">{{conditionsDisease}}</td>
+                     <td class="td-trials"><a href="{{url}}">ClinicalTrials.gov</a></td>
+
                  </tr>
+             {{/each}}
                </tbody>
              </table>
-             {{/each}}
        </div>
    </div>
 
    <script>
-       var $rows = $("tr");
-
-       $("#search").keyup(function() {
-           var val = $.trim(this.value);
-           if (val === "")
-               $rows.show();
-           else {
-               $rows.hide();
-               $rows.has("td:contains(" + val + ")").show();
-           }
-       });
+    $(document).ready(function() {
+      $('#gene-table').DataTable( {
+        "order": [[ 3, "desc" ]]
+           
+      });
+    });
    </script>
