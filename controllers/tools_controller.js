@@ -9,7 +9,10 @@ var Amsler = require('../models/Amsler.js');
 var User = require('../models/UserModel.js');
 var flash = require('connect-flash');
 var helpers = require('../helpers/mail.js');
-
+var axios = require('axios');
+// var $ = require("jquery");
+var cheerio = require('cheerio');
+var request = require('request');
 
 router.get('/tools/start-health-assessment', function (req, res) {
 console.log('assessmentTaken: '+ req.user.assessmentTaken);
@@ -42,9 +45,51 @@ router.get('/tools/stemcell-assessment', function (req, res) {
 
 
 router.get('/tools/genetic', function (req, res) {
+
   res.render('tools/genetic_report', {layout: 'dash'});
 });
 
+
+// grant_type=authorization_code&code=[CODE_FROM_STEP1]
+//     &client_id=[APP_KEY]&client_secret=[APP_SECRET]
+//     &redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb
+router.get('/receive_code/', function(req, res) {
+  
+  var client_id = "dd6b7f51cb19ee4bd93bfe59438f7956";
+  var client_secret = "56d48e1817b9efd9b94db085a3f54164";
+  var scope = 'rs2476601';
+  var redirect_uri = 'http://localhost:3000/receive_code/';
+  // var base_uri = 'https://api.23andme.com/1';
+  var code = req.query.code;
+  console.log('=======================' + code);
+
+
+  axios.post('https://api.23andme.com/token/', {
+    form: {
+      client_id: client_id,
+      client_secret: client_secret, 
+      grant_type: 'authorization_code',
+      code: req.query.code
+    },
+    redirect_uri: 'http://localhost:3000/receive_code/',
+    scope: "=basic%20rs3094315"
+    }).then(function (response) {
+      console.log(response);
+
+      res.send(response);
+    }).catch(function (error) {
+      console.log(error);
+    });
+      // res.render('tools/genetic_report', {layout: 'dash'});
+});
+
+// curl https://api.23andme.com/token/
+//          -d client_id='dd6b7f51cb19ee4bd93bfe59438f7956' \
+//          -d client_secret='56d48e1817b9efd9b94db085a3f54164' \
+//          -d grant_type='authorization_code' \
+//          -d code=99dc66d57e6f11d2bb8b48f233ebfc8e \
+//          -d "redirect_uri=http://localhost:3000/receive_code/"
+//          -d "scope=basic%20rs3094315"
 router.get('/tools/all-trials', function (req, res) {
   
   var data = {};

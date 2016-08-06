@@ -18,7 +18,8 @@ var path = require('path'),
     _ = require('underscore'),
     Trial = require('./models/Trial'),
     User = require('./models/UserModel'),
-    sendgrid = require('./helpers/mail');
+    sendgrid = require('./helpers/mail'),
+    $ = require("jquery");
 
 //======Express========
 var app = express();
@@ -84,6 +85,9 @@ app.use('/', trials_controller);
 
 var accounts_controller = require('./controllers/accounts_controller.js');
 app.use('/', accounts_controller);
+
+var about_us_controller = require('./controllers/about_us_controller.js');
+app.use('/', about_us_controller);
 
 // ==== APIs ====
 var routing = require('./routing/api-trials');

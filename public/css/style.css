@@ -1,17 +1,18 @@
 body {
-    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
-    font-size: 18px;
+    font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
     font-style: normal;
     font-variant: normal;
     font-weight: 500;
     /*line-height: 26.4px;*/
-    color: midnightblue;
+    color: darkslategray 
+;
     background-color: white;
-    padding: 30px;
-    /*font-size: 20px;*/
+    padding: 5px;
+    font-size: 23px;
+    /*line-height: .6;*/
 }
 h1 {
-    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 24px;
     font-style: normal;
     font-variant: normal;
@@ -19,7 +20,7 @@ h1 {
     line-height: 26.4px;
 }
 h3 {
-    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 25px;
     font-style: normal;
     font-variant: normal;
@@ -34,6 +35,61 @@ h3 {
     font-weight: 400;
     line-height: 20px;
 }*/
+.parallax {
+    /* The image used */
+    background-image: url("https://static.pexels.com/photos/47446/pexels-photo-47446-large.jpeg");
+
+    /* Set a specific height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax-2 {
+    /* The image used */
+    background-image: url("http://www.stemcentrx.com/img/home_clinical_trials.jpg");
+
+    /* Set a specific height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax-3 {
+    /* The image used */
+    background-image: url("http://www.stemcentrx.com/img/home_science.png");
+
+    /* Set a specific height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax-4 {
+    /* The image used */ 
+
+    background-image: url("https://static.pexels.com/photos/30763/pexels-photo-30763-large.jpg");
+
+    /* Set a specific height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*http://www.stemcentrx.com/img/home_science.png*/
+/*http://www.stemcentrx.com/img/clinical-bg.png*/
 #inputEmail {
     margin-left: 20px;
     margin-top: 15px;
@@ -64,28 +120,47 @@ ul.shortcuts li {
 .glossary-h2 {
     font-size: 50px;
     text-align: left;
+    color: deeppink;
 }
 /*main navbar text*/
 #cesar-logo, #resources-nav-text, #howitworks-nav-text, #tools-nav-text, #treatments-nav-text, #login-nav-text, #signup-nav-text{
-    color: midnightblue;
+    color: darkslategray;
 }
+#treatments-nav-text:hover {
+    color: deeppink;
+}
+#tools-nav-text:hover {
+    color: deeppink;
+}
+#howitworks-nav-text:hover {
+    color: deeppink;
+}
+#resources-nav-text:hover {
+    color: deeppink;
+}
+#signup-nav-text:hover{
+    color: deeppink;
+}
+
 
 #login-nav-text {
     /*background-color: whitesmoke;*/
     border-radius: 7%;
 }
 #login-nav-text:hover {
-    background-color: whitesmoke;
-    color: midnightblue;
+    /*background-color: whitesmoke;*/
+    color: deeppink;
     border-radius: 7%;
     opacity: 7px;
 }
 #signup-nav-text {
-    background-color: mediumaquamarine;
+    background-color: whitesmoke;
     border-radius: 7%;
+    color: deeppink;
 }
 #signup-nav-text:hover {
-    background-color: whitesmoke;
+    background-color: transparent;
+    color: darkslategray;
     border-radius: 7%;
     opacity: 4;
 }
@@ -138,7 +213,7 @@ pre {
     vertical-align: center;
 }
 .myButton:hover {
-    background-color: midnightblue;
+    background-color: darkslategray;
     color: white;
 }
 .myButton:active {
@@ -162,7 +237,7 @@ pre {
     text-shadow:0px -1px 0px #2b665e;
 }
 .myButton:hover {
-    background-color: midnightblue;
+    background-color: darkslategray;
     color: white;
 }
 .myButton:active {
@@ -221,15 +296,21 @@ pre {
 /*main page begins*/
 .jumbotron-main {
 
-    /*background-image: url("https://static.pexels.com/photos/30763/pexels-photo-30763-large.jpg");*/
+    background-image: url("http://www.hdwallpaperspulse.com/wp-content/uploads/2014/05/07/53353.jpeg");
     background-size: cover;
-    height: 75%;
+    height: 100%;
     background-color: mediumaquamarine; 
 
 }
 .jumbotron-glossary {
 
-    background-image: url("https://static.pexels.com/photos/30763/pexels-photo-30763-large.jpg");
+    background-image: url("http://www.stemcentrx.com/img/header_our_science.png");
+    background-size: cover;
+    height: 60%;
+}
+.jumbotron-assist-tech {
+
+    background-image: url("http://www.stemcentrx.com/img/clinical-bg.png");
     background-size: cover;
     height: 60%;
 }
@@ -237,12 +318,12 @@ pre {
 
     background-image: url("https://static.pexels.com/photos/47446/pexels-photo-47446-large.jpeg");
     background-size: cover;
-    height: 85%;
+    height: 60%;
 }
 .jumbotron-clinical-trial {
     background-image: url('https://static.pexels.com/photos/4154/clinic-doctor-health-hospital-large.jpg');
     background-size: cover;
-    height: 85%;
+    height: 60%;
 }  
 .jumbotron-gene-data {
     background-image: url('https://static.pexels.com/photos/4154/clinic-doctor-health-hospital-large.jpg');
@@ -274,8 +355,7 @@ pre {
 }
 .main-h1 {
     padding-top: 155px;
-    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
-
+    font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 65px;
     text-align: center;
     line-height: 2;
@@ -307,6 +387,15 @@ pre {
     margin-bottom: 40px;
     padding: 15px;
     margin: 10px;
+
+}
+.browse-trials-h2 {
+    font-size: 34px;
+    /*color: #6e6e6e;*/
+    font-weight: 100;
+    margin-bottom: 40px;
+    padding: 15px;
+    margin: 10px;
 }
 .what-is-sci {
     font-size: 24px;
@@ -321,27 +410,28 @@ pre {
 
     font-size: 50px;
     font-weight: 300;
-    color: midnightblue;
+    color: deeppink;
 }
 .what-is-h2 {
 
-font-size: 50px;
-font-weight: 300;
-color: midnightblue;
+    font-size: 60px;
+    font-weight: 600;
+    color: darkslategray;
+    margin-bottom: 69px;
 
 }
 .how-it-works-h2 {
 
 font-size: 50px;
 font-weight: 300;
-color: midnightblue;
+color: darkslategray;
 margin-bottom: 69px;
 }
 .how-it-works-h2-top {
 
-font-size: 50px;
-font-weight: 300;
-color: white;
+font-size: 60px;
+font-weight: 600;
+color: darkslategray;
 margin-bottom: 69px;
 }
 .tools-h2 {
@@ -349,7 +439,36 @@ margin-bottom: 69px;
 font-size: 50px;
 font-weight: 300;
 color: white;
-margin-bottom: 135px;
+/*border-radius: 50%; */
+/*margin-top: 100px;*/
+/*background-color: white;*/
+background: rgba(255, 255, 255, 0.9);
+/*opacity: 1;*/
+z-index: 7;
+/*position: fixed;*/
+width: 100%;
+height: 50%;
+/*margin: 0;*/
+box-sizing: border-box;
+float: left;
+z-index: 100;
+color: #433F4E;
+text-align: center;
+}
+.page-trials {
+    /*width: 50%;
+    height: 100%;*/
+}
+.pages-tools {
+    height: 100%;
+}
+.page-whatis {
+    /*width: 50%;*/
+    height: 100%;
+}
+.space-taker {
+    width: 50%;
+    
 }
 .tool-main-h2 {
     position: absolute; 
@@ -423,19 +542,80 @@ margin-bottom: 135px;
     margin-left: 95px;
     color: midnightblue;
 }
+.icon-test {
+    color: blue;
+}
 .tools-image {
     position: relative; 
     width: 100%;
 }
+.main-tools-title {
+    /*padding: 100px;*/
+    /*margin-left: 50px;*/
+    /*width: 100%;*/
+}
 
 .avail-trials-h2 {
-    font-size: 50px;
+    font-size: 32px;
 }
 
 .what-is-header {
-    margin-bottom: 10px;
+
+    /*margin-bottom: 10px;*/
+    /*margin-top: 100px;*/
     /*background-color: whitesmoke;*/
+    background: rgba(255, 255, 255, 0.9);
+    opacity: 1;
+    z-index: 7;
+    /*border-radius: 50%; */
+    /*position: fixed;*/
+    width: 100%;
+    height: 50%;
+    /*margin: 0;*/
+    box-sizing: border-box;
+    /*float: left;*/
+    z-index: 100;
+    color: #433F4E;
+    text-align: center;
 }
+.how-it-header {
+    /*margin-bottom: 10px;*/
+    /*margin-top: 100px;*/
+    /*background-color: whitesmoke;*/
+    background: rgba(255, 255, 255, 0.9);
+    opacity: 1;
+    z-index: 7;
+    /*border-radius: 50%; */
+    /*position: fixed;*/
+    width: 100%;
+    height: 50%;
+    /*margin: 0;*/
+    box-sizing: border-box;
+    /*float: left;*/
+    z-index: 100;
+    color: #433F4E;
+    text-align: center;
+}
+.trials-header {
+
+    margin-bottom: 10px;
+    margin-top: 100px;
+    /*background-color: whitesmoke;*/
+    background: rgba(255, 255, 255, 0.9);
+    opacity: 1;
+    z-index: 7;
+    /*border-radius: 50%; */
+    /*position: fixed;*/
+    width: 100%;
+    height: 100%;
+    /*margin: 0;*/
+    box-sizing: border-box;
+    /*float: left;*/
+    z-index: 100;
+    color: #433F4E;
+    text-align: center;
+}
+
 #how-it-works {
     padding: 75px 0;
     background: white;
@@ -457,7 +637,7 @@ margin-bottom: 135px;
     /*border-radius: 30%;*/
     margin-top: 20px;
     background-size: cover;
-    background-color: tomato;
+    background-color: whitesmoke;
     margin-left: 15px;
     margin-right: 15px;
     /*background-image: url('http://feelgrafix.com/data_images/out/20/930465-dna.jpg');*/
@@ -548,21 +728,23 @@ margin-bottom: 135px;
     background-color:  white;
 }
 #learn-more {
-    background-color:  white;
-    color: midnightblue;
+    background-color:  whitesmoke;
+    color: deeppink;
+    border-color: transparent;
 }
 #learn-more:hover {
-    background-color:  midnightblue;
-    color: white;
+    background-color:  transparent;
+    color: darkslategray;
 }
-#main-btn {
-    width: 400px;
-    height: 95px;
+#main-btn{
+   /* width: 400px;
+    height: 95px;*/
     font-size: 22px;
-    padding: 38px;
+    /*padding: 38px;*/
     position: relative;
-    color: midnightblue;
-    background-color: white;
+    color: white;
+    background-color: deeppink;
+    border-color: deeppink;
 }
 .ask {
     width: 250px;
@@ -583,14 +765,16 @@ margin-bottom: 135px;
     background-color: white;
 }
 #main-btn:hover {
-    width: 400px;
-    height: 95px;
+    /*width: 400px;
+    height: 95px;*/
     font-size: 22px;
-    padding: 38px;
+    /*padding: 38px;*/
     position: relative;
-    color: white;
-
-    background-color: midnightblue;
+    color: deeppink;
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: solid;
+    background-color: transparent;
 }
 #cesar-btn:hover {
     width: 400px;
@@ -606,7 +790,7 @@ margin-bottom: 135px;
 #how-it-works {
     padding: 20px 0 20px 0;
     background-color:   mediumaquamarine;
-    /*background-image: url('http://feelgrafix.com/data_images/out/20/930465-dna.jpg');*/
+    /*background-image: url('http://feelgrafix.com/data_images/out/20/930465-dna.jpg');
     background-size: cover;
     margin-left: 15px;
     margin-right: 15px;
@@ -768,7 +952,7 @@ ul.dropdown-menu {
     margin-top: 100px;*/
     /*margin-left: 65px;
     margin-right: 65px;*/
-
+    margin-left: 100px;
     width: 80%;
 }
 .td-trials {
@@ -806,14 +990,14 @@ div.container-fluid.bg-info {
 nav.navbar.navbar-default.navbar-fixed-top {
     background-color: white;
     /*color: white;*/ 
-    height: 75px;
+    height: 100px;
     padding-left: 20px;
     padding-right: 20px;
 }
 
 .panel-default {
     background-color: #f7f9fa;
-    margin-top: 130px;
+    /*margin-top: 130px;*/
 }
 .details-new-form {
   margin-top: 30px;
@@ -911,7 +1095,7 @@ img.question-image {
 }
 .panel-footer {
   height: 400px;
-  background-color: darkslategray;
+  background-color: white;
   margin-top:  0px;
  }
 #start-panel-head {
@@ -950,6 +1134,7 @@ div.col-xs-6.col-md-3 {
 .page-header {
   margin-top: 150px;
 }
+
 #assessment-header {
   font:normal bold 2em/1.8em"Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
@@ -969,6 +1154,7 @@ a {
     outline:none;
     text-decoration: none;
     font-size: 18px;
+    color: darkslategray;
 }
 li,ul{
     list-style: none;
