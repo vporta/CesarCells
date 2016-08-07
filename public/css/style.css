@@ -53,7 +53,7 @@ h3 {
     background-image: url("http://www.stemcentrx.com/img/home_clinical_trials.jpg");
 
     /* Set a specific height */
-    height: 100%;
+    height: 50%;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -88,6 +88,21 @@ h3 {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.parallax-5 {
+    /* The image used */ 
+
+    background-image: url("http://www.hdwallpaperspulse.com/wp-content/uploads/2014/05/07/53353.jpeg");
+
+    /* Set a specific height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /*http://www.stemcentrx.com/img/home_science.png*/
 /*http://www.stemcentrx.com/img/clinical-bg.png*/
 #inputEmail {
@@ -154,7 +169,7 @@ ul.shortcuts li {
     opacity: 7px;
 }
 #signup-nav-text {
-    background-color: whitesmoke;
+    background-color: transparent;
     border-radius: 7%;
     color: deeppink;
 }
@@ -461,7 +476,7 @@ color: white;
 /*margin-top: 100px;*/
 /*background-color: white;*/
 background: rgba(255, 255, 255, 0.9);
-/*opacity: 1;*/
+opacity: .7;
 z-index: 7;
 /*position: fixed;*/
 width: 100%;
@@ -477,6 +492,7 @@ text-align: center;
     /*width: 50%;
     height: 100%;*/
 }
+
 .pages-tools {
     height: 100%;
 }
@@ -600,12 +616,12 @@ text-align: center;
     /*margin-top: 100px;*/
     /*background-color: whitesmoke;*/
     background: rgba(255, 255, 255, 0.9);
-    opacity: 1;
+    opacity: .7;
     z-index: 7;
     /*border-radius: 50%; */
     /*position: fixed;*/
     width: 100%;
-    height: 50%;
+    height: 100%;
     /*margin: 0;*/
     box-sizing: border-box;
     /*float: left;*/
@@ -618,12 +634,12 @@ text-align: center;
     /*margin-top: 100px;*/
     /*background-color: whitesmoke;*/
     background: rgba(255, 255, 255, 0.9);
-    opacity: 1;
+    opacity: .7;
     z-index: 7;
     /*border-radius: 50%; */
     /*position: fixed;*/
     width: 100%;
-    height: 50%;
+    height: 100%;
     /*margin: 0;*/
     box-sizing: border-box;
     /*float: left;*/
@@ -1012,11 +1028,6 @@ ul.dropdown-menu {
 
 /*gene report table begins*/
 #gene-table {
-   /* padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 100px;*/
-    /*margin-left: 65px;
-    margin-right: 65px;*/
     margin-left: 100px;
     width: 80%;
 }
@@ -1053,7 +1064,8 @@ div.container-fluid.bg-info {
     background-color: transparent;
 }
 nav.navbar.navbar-default.navbar-fixed-top {
-    background-color: white;
+    background-color: transparent;
+    border-color: transparent;
     
 }
 
