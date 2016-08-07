@@ -14,13 +14,10 @@ router.get('/contact_us/contact', function(req, res) {
   res.render('contact_us/contact');
 });
 
-router.get('/about_us/mission', function(req, res) {
-  res.render('aboutus/mission');
+router.get('/about_us/aboutus', function(req, res) {
+  res.render('aboutus/aboutus');
 });
 
-router.get('/about_us/team', function(req, res) {
-  res.render('aboutus/team');
-});
 
 
 
