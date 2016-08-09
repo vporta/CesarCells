@@ -1,10 +1,12 @@
 var express = require('express');
 var session = require('express-session');
 var router = express.Router();
+var request = require('request');
 var bcrypt = require('bcryptjs');
 var path = require('path');
 var passport = require('passport');
 var Trial = require('../models/Trial.js');
+var oauth2 = require('simple-oauth2');
 var Amsler = require('../models/Amsler.js');
 var User = require('../models/UserModel.js');
 var flash = require('connect-flash');
@@ -12,7 +14,7 @@ var helpers = require('../helpers/mail.js');
 var axios = require('axios');
 // var $ = require("jquery");
 var cheerio = require('cheerio');
-var request = require('request');
+var querystring = require('querystring');
 
 router.get('/tools/start-health-assessment', function (req, res) {
 console.log('assessmentTaken: '+ req.user.assessmentTaken);
@@ -47,38 +49,61 @@ router.get('/tools/genetic', function (req, res) {
 });
 
 
-// // grant_type=authorization_code&code=[CODE_FROM_STEP1]
-// //     &client_id=[APP_KEY]&client_secret=[APP_SECRET]
-// //     &redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb
-// router.get('/receive_code/', function(req, res) {
+// **********23ANDME OAUTH2************
+  var oauth2 = require('simple-oauth2')({
+    clientID: 'dd6b7f51cb19ee4bd93bfe59438f7956',
+    clientSecret: '56d48e1817b9efd9b94db085a3f54164',
+    site: 'https://api.23andme.com',
+    tokenPath: '/token',
+    authorizationPath: '/authorize'
+  });
+
+
+
+  var authorization_uri = oauth2.authCode.authorizeURL({
+    redirect_uri: 'http://localhost:3000/receive_code/',
+    scope: 'basic  analyses rs3094315',
+    state: 'angie1'
+  });
+
+
+router.get('/auth', function (req, res) {
   
-//   var client_id = "dd6b7f51cb19ee4bd93bfe59438f7956";
-//   var client_secret = "56d48e1817b9efd9b94db085a3f54164";
-//   var scope = 'rs2476601';
-//   var redirect_uri = 'http://localhost:3000/receive_code/';
-//   // var base_uri = 'https://api.23andme.com/1';
-//   var code = req.query.code;
-//   console.log('=======================' + code);
+    res.redirect(authorization_uri);
+});
 
+router.get('/receive_code', function(req, res) {
+ 
+ var code = req.query.code;
 
-//   axios.post('https://api.23andme.com/token/', {
-//     form: {
-//       client_id: client_id,
-//       client_secret: client_secret, 
-//       grant_type: 'authorization_code',
-//       code: req.query.code
-//     },
-//     redirect_uri: 'http://localhost:3000/receive_code/',
-//     scope: "=basic%20rs3094315"
-//     }).then(function (response) {
-//       console.log(response);
+ if (!code) {
+   res.send('Error!!')
+ } else {
+    console.log('running');
 
-//       res.send(response);
-//     }).catch(function (error) {
-//       console.log(error);
-//     });
-//       // res.render('tools/genetic_report', {layout: 'dash'});
-// });
+    oauth2.authCode.getToken({
+        code: code,
+        redirect_uri: 'http://localhost:3000/receive_code/'
+      }, saveToken);
+     
+      function saveToken(error, result) {
+        if (error) { 
+          console.log('Access Token Error', error.message); 
+        } else {
+          token = oauth2.accessToken.create(result);
+          console.log(token);
+        }
+
+      };
+
+      res.render('tools/genetic_report', {layout: 'dash'});
+   
+   }
+      
+    
+  
+});
+
 
 
 router.get('/tools/all-trials', function (req, res) {

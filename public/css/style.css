@@ -40,7 +40,7 @@ h3 {
     background-image: url("https://static.pexels.com/photos/47446/pexels-photo-47446-large.jpeg");
 
     /* Set a specific height */
-    height: 100%;
+    height: 75%;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -53,7 +53,7 @@ h3 {
     background-image: url("http://www.stemcentrx.com/img/home_clinical_trials.jpg");
 
     /* Set a specific height */
-    height: 50%;
+    height: 75%;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -66,7 +66,7 @@ h3 {
     background-image: url("http://www.stemcentrx.com/img/home_science.png");
 
     /* Set a specific height */
-    height: 100%;
+    height: 75%;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -80,7 +80,7 @@ h3 {
     background-image: url("https://static.pexels.com/photos/30763/pexels-photo-30763-large.jpg");
 
     /* Set a specific height */
-    height: 100%;
+    height: 60%;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -422,6 +422,7 @@ pre {
     margin: 10px;
 
 }
+
 .browse-trials-h2 {
     font-size: 34px;
     /*color: #6e6e6e;*/
@@ -476,11 +477,11 @@ color: white;
 /*margin-top: 100px;*/
 /*background-color: white;*/
 background: rgba(255, 255, 255, 0.9);
-opacity: .7;
+opacity: .8;
 z-index: 7;
 /*position: fixed;*/
 width: 100%;
-height: 50%;
+height: 100%;
 /*margin: 0;*/
 box-sizing: border-box;
 float: left;
@@ -616,7 +617,7 @@ text-align: center;
     /*margin-top: 100px;*/
     /*background-color: whitesmoke;*/
     background: rgba(255, 255, 255, 0.9);
-    opacity: .7;
+    opacity: .8;
     z-index: 7;
     /*border-radius: 50%; */
     /*position: fixed;*/
@@ -629,20 +630,26 @@ text-align: center;
     color: #433F4E;
     text-align: center;
 }
+.avail-header {
+    
+    background: rgba(255, 255, 255, 0.9);
+    opacity: .8;
+    z-index: 7;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    z-index: 100;
+    color: #433F4E;
+    text-align: center;
+}
 .how-it-header {
-    /*margin-bottom: 10px;*/
-    /*margin-top: 100px;*/
-    /*background-color: whitesmoke;*/
+    
     background: rgba(255, 255, 255, 0.9);
     opacity: .7;
     z-index: 7;
-    /*border-radius: 50%; */
-    /*position: fixed;*/
     width: 100%;
     height: 100%;
-    /*margin: 0;*/
     box-sizing: border-box;
-    /*float: left;*/
     z-index: 100;
     color: #433F4E;
     text-align: center;

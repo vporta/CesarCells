@@ -1,5 +1,6 @@
 var path = require('path'),
     express = require('express'),
+    sm = require('sitemap'),
     logger = require('morgan'),
     bodyParser = require('body-parser'),
     methodOverride = require('method-override'),
@@ -9,6 +10,7 @@ var path = require('path'),
     cookieParser = require('cookie-parser'),
     favicon = require('serve-favicon'),
     mongoose = require('mongoose'),
+    oauth2 = require('simple-oauth2'),
     flash = require('connect-flash'),
     passport = require('passport'),
     LocalStrategy = require('passport-local'),
@@ -19,13 +21,16 @@ var path = require('path'),
     Trial = require('./models/Trial'),
     User = require('./models/UserModel'),
     sendgrid = require('./helpers/mail'),
-    $ = require("jquery");
+    $ = require("jquery"),
+    querystring = require('querystring'),
+    sendbird = require('sendbird');
+   
 
 //======Express========
 var app = express();
 
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 app.use(cookieParser());
 
@@ -88,6 +93,12 @@ app.use('/', accounts_controller);
 
 var about_us_controller = require('./controllers/about_us_controller.js');
 app.use('/', about_us_controller);
+
+var chats_controller = require('./controllers/chats_controller.js');
+app.use('/', chats_controller);
+
+var sitemap_controller = require('./controllers/sitemap_controller.js');
+app.use('/', sitemap_controller);
 
 // ==== APIs ====
 var routing = require('./routing/api-trials');

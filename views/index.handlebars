@@ -14,19 +14,30 @@
            </div>
          
 </section>
-<div class="row" style="background-color: white; opacity: 1">
-    <div class="col-md-4" style="text-align: center; opacity: 1; height: 50%">
-    <br>
-    <img src="http://www.med.unc.edu/psych/images/pubmed.png/@@images/b85fdbbf-a467-4280-8441-4b13c8c9f82d.png" style="height: 150px; width: 250px; padding-top: 20px; margin-top: 30px">    
+<div style="background-color: transparent; opacity: 1; width: 100%; height: 5%">
+    <div class="col-md-12" style="text-align: center; opacity: 1">
+    {{!-- <br> --}}
+    <img src="http://www.med.unc.edu/psych/images/pubmed.png/@@images/b85fdbbf-a467-4280-8441-4b13c8c9f82d.png" style="height: 80px; width: 150px; padding-top: 20px; margin-left: 30px margin-top: 30px"> 
+
+    <img src="http://aboutclinicaltrialsgov.lillycoi.com/img/NLM.svg" style="height: 110px; width: 150px; padding-top: 20px; margin-left: 30px; margin-top: 20px">    
+
+    <img src="https://clinicaltrials.gov/apple-touch-icon-144x144.png" style="height: 110px; width: 150px; padding-top: 20px; margin-left: 30px;  margin-top: 20px"> 
+
+    <img src=" https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/23andMe_logo.svg/2000px-23andMe_logo.svg.png" style="height: 110px; width: 150px; padding-top: 20px; margin-left: 30px;  margin-top: 20px">
+
     </div>
-    <div class="col-md-4" style="text-align: center; opacity: 1; height: 50%">
+
+{{!-- 
+    <div class="col-md-4" style="text-align: center; opacity: 1">
+    <img src="http://aboutclinicaltrialsgov.lillycoi.com/img/NLM.svg" style="height: 110px; width: 150px; padding-top: 20px; margin-left: 30px; margin-top: 20px">     
     <br>
-    <img src="https://clinicaltrials.gov/apple-touch-icon-144x144.png" style="height: 150px; width: 250px; padding-top: 20px; margin-top: 30px">    
+        
     </div>
-    <div class="col-md-4" style="text-align: center; opacity: 1; height: 50%">
+    <div class="col-md-4" style="text-align: center; opacity: 1">
+    <img src="https://clinicaltrials.gov/apple-touch-icon-144x144.png" style="height: 110px; width: 150px; padding-top: 20px; margin-left: 30px;  margin-top: 20px"> 
     <br>
-    <img src="http://aboutclinicaltrialsgov.lillycoi.com/img/NLM.svg" style="height: 150px; width: 250px; padding-top: 20px; margin-top: 30px">    
-    </div>
+        
+    </div> --}}
     
     
     
@@ -41,6 +52,7 @@
                          </div>
                            <div class="page-whatis">
                              <header class="what-is-header">
+
                              <h2 class="what-is-h2">What is Cesarcells.com?</h2>
                                  <p class="lead">
                                  Cesarcells.com helps you find cutting edge clinical trials. 
@@ -73,7 +85,7 @@
                           
                         </div>
                         
-                        
+           <img src="assets/images/mac-cesar.png" style=" padding-top: 20px; margin-left: 30px;  margin-top: 20px">             
                         
                     </div><br><br><br>
     <A name="how-it-work-main"></A>
@@ -102,11 +114,12 @@
         <div class="space-taker"></div>
 
     </section>
-    <div class="row" style="background-color: white; opacity: 1">
-        <div class="col-md-4" style="text-align: center; opacity: 1; height: 50%">
-        <br>
+    {{!-- <div class="row" style="background-color: white; opacity: 1">
+        <div class="col-md-12" style="text-align: center; opacity: 1; height: 50%">
+        <h2 >Easy access to cutting edge medical studies and information<h2>
+        <br> --}}
         
-        </div>
+        {{!-- </div>
         <div class="col-md-4" style="text-align: center; opacity: 1; height: 50%">
         <br>
            
@@ -114,11 +127,11 @@
         <div class="col-md-4" style="text-align: center; opacity: 1; height: 50%">
         <br>
           
-        </div>
+        </div> --}}
         
         
         
-    </div><br><br><br>
+    {{!-- </div><br><br><br> --}}
 <div id="spopup" style="display: none;">
     <!--close button-->
     <a style="position:absolute;top:14px;right:10px;color:#555;font-size:10px;font-weight:bold;" href="javascript:void(0);" onclick="return closeSPopup();">
@@ -195,10 +208,10 @@
   <section id="cta" class="parallax-4">
          
              <div class="page-trials">
-                 <header class="what-is-header">
-                             <h2 class="how-it-works-h2-top">Available Trials</h2>
+                 <header class="avail-header">
+                        <h2 class="how-it-works-h2-top">Clinical Trials</h2>
                          
-                         <div class="row">
+                        <div class="row">
                              <div class="col-md-3">
                              <h2 class="avail-trials-h2">STEMCELL</h2>
                              <img src="https://www.osc-ortho.com/wp-content/uploads/2016/02/stem-cells-icon.png">
@@ -215,35 +228,22 @@
                              <h2 class="avail-trials-h2">GENETIC</h2>
                              <img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/biotech.png" style="height: 250px; width: 250px">
                              </div>
-                         </div><br><br><br>
+                        </div>
                          
-                         <p class="what-is-sci"><strong>Register to find a trial right for you. It's completely free!</strong></p>
+                         {{!-- <p class="what-is-sci"><strong>Register to find a trial right for you. It's completely free!</strong></p> --}}
                          {{!--   <a href="/users/sign-in" type="submit" class="btn btn-primary" id="main-btn"> <span class="glyphicon glyphicon-arrow-right icon-arrow"> </span>       Register Now</a> --}}
            
                 </header>
             </div>
     </section>
-    {{!-- <div class="row">
-        <div class="col-md-6">
-        <h1 class="avail-trials-h1">STEMCELL</h1>
-        <img src="https://www.osc-ortho.com/wp-content/uploads/2016/02/stem-cells-icon.png">
-        </div>
-        
-        <div class="col-md-6">
-        <h2 class="avail-trials-h2">BIO-TECH</h2>
-        <img src="http://biotechprimer.com/wp-content/uploads/2014/10/Icon-Biotechnology.png" style="height: 250px; width: 250px">
-        </div>
-        
-    </div> --}}
+    
     <br><br><br>
-    <div class="row" style="background-color: white">
-        <div class="col-md-12" style="text-align: center; opacity: 1; height: 50%">
+    <div style="background-color: white; width: 100%; height: 2%">
+        <div style="text-align: center; opacity: 1; height: 10px">
         <h1 class="avail-trials-h1">Get Started Finding Your Treatment Now</h1>
-       <a href="/users/sign-in" type="submit" class="btn btn-primary" id="main-btn"> <span class="glyphicon glyphicon-arrow-right icon-arrow"> </span>       Register Now</a>
+            <a href="/users/sign-in" type="submit" class="btn btn-primary" id="main-btn"> <span class="glyphicon glyphicon-arrow-right icon-arrow"> </span>       Register Now</a>
       
         </div>
-        
-        
-        
+         
     </div><br><br><br>
 
