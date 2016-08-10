@@ -52,12 +52,22 @@ var oauth2 = require('simple-oauth2')({
   tokenPath: '/token',
   authorizationPath: '/authorize'
 });
+// *Declaration of all necessary variables needed to perform 23AndMe API Call
+var STARGARDT_SNPs = ['rs28938473', 'rs61753033', 'rs61753034'].join(' ');
+var LCA_SNPs = ['rs281865192'].join(' ');
+var MACD_SNPs = ['rs11200638', 'rs1061170', 'rs800292', 'rs2230199', 'rs3775291'].join(' ');
+var RETPIG_SNPs = ['rs104893775'].join(' ');
+var USHER_SNPs = ['rs104894651'].join(' ');
+var GLAUCOMA_SNPs = ['rs28936694', 'rs1048661', 'rs3825942'].join(' ');
+var DEFAULT_SCOPE = 'user ancestry analyses relatives genomes ' + STARGARDT_SNPs;
+
 var authorization_uri = oauth2.authCode.authorizeURL({
   redirect_uri: 'http://localhost:3000/receive_code/',
-  scope: 'basic  analyses rs3094315 rs1801133',
+  scope: DEFAULT_SCOPE,
   state: 'angie1'
 });
-// *************************************
+
+
 
 router.get('/auth', function (req, res) {
   
@@ -146,7 +156,7 @@ router.get('/tools/genetic-data-retinal-diseases', function(req, res) {
 
           axios({
             
-            url: base_uri + '/genotypes/'+ user.profiles[0].id +'/?locations=rs1801133', 
+            url: base_uri + '/genotypes/'+ user.profiles[0].id +'/?locations=' + , 
             
             headers: headers
 
