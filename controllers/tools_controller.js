@@ -54,7 +54,7 @@ var oauth2 = require('simple-oauth2')({
 });
 var authorization_uri = oauth2.authCode.authorizeURL({
   redirect_uri: 'http://localhost:3000/receive_code/',
-  scope: 'basic  analyses rs3094315',
+  scope: 'basic  analyses rs3094315 rs1801133',
   state: 'angie1'
 });
 // *************************************
@@ -86,7 +86,9 @@ router.get('/receive_code', function(req, res) {
     }, saveToken);
      
     function saveToken(error, result) {
+      
       console.log(result);
+      
       if (error) { 
         
         console.log('Access Token Error', error.message); 
@@ -95,82 +97,99 @@ router.get('/receive_code', function(req, res) {
         
         token = oauth2.accessToken.create(result);
         
-        console.log('this is the token here: *********====&&**%&^R&^RR ' + token);
 
-        // res.cookie('access_token', token.access_token, {signed: true});
+        res.cookie('access_token', result.access_token, {signed: true});
         
-        res.render('tools/genetic_report', {layout: 'dash'});
+        res.redirect('/tools/genetic-data-retinal-diseases');
       }
     };
   }
 });
 
-// if (req.signedCookies.access_token) {
+router.get('/tools/genetic-data-retinal-diseases', function(req, res) {
+
+  var dataMediate = {}; // ==== MEDIATOR ====
+
+  if (req.signedCookies.access_token) {
+    console.log('its signed' + req.signedCookies.access_token);
+    
+    var genotypes, user;
+
+    var base_uri = 'https://api.23andme.com/1';
+    
+    var headers = {Authorization: 'Bearer ' + req.signedCookies.access_token};
+
+    axios({ 
+      
+      url: base_uri + '/user/', 
+      
+      headers: headers
+    
+    })
+    .then(function(response) {
+
+      if (response.status != 200) {
+        
+        // res.clearCookie('access_token');
+        res.redirect('/');
+      
+      } else {
+
+          user = response.data;
+          dataMediate.userId = user.profiles[0].id;
+
+          console.log('*********user profile id:  ' + user.profiles[0].id);
+
+          // for (var i = 0; i < names.profiles.length; i++) {
+          //   names_by_id[names.profiles[i].id] = names.profiles[i].first_name + ' ' + names.profiles[i].last_name;
+          // }
+
+          axios({
+            
+            url: base_uri + '/genotypes/'+ user.profiles[0].id +'/?locations=rs1801133', 
+            
+            headers: headers
+
+          })
+          .then(function(response) {
+
+            genotypes = response.data;
+
+            console.log('======genotypes:  ' + genotypes);
+
+            console.log('======SNP: ' + genotypes.rs3094315)
+
+            res.render('tools/gene_data', {
               
-//               var names, names_by_id = {}, genotypes;
-              
-//               var base_uri = 'https://api.23andme.com/1';
-              
-//               var headers = {Authorization: 'Bearer ' + req.signedCookies.access_token};
+              layout: 'dash',
+              genotypes: genotypes
 
-//               axios({ 
-                
-//                 url: base_uri + '/names/', 
-                
-//                 headers: headers
-              
-//               })
-//               .then(function(response) {
-//                 console.log('***********First axios get request: ' + response);
+            });
 
-//                 if (response.status != 200) {
-                  
-//                   res.clearCookie('access_token');
-                  
-//                   res.redirect('/');
-                
-//                 } else {
+          })
+          .catch(function(error) {
+            console.log(error);
+            //use req.flash here
+          })
+      }
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
 
-//                     names = response;
-//                     console.log('*********names:  ' + names);
+    // res.render('tools/gene_data', {
+    //   layout: 'dash'
 
-//                     for (var i = 0; i < names.profiles.length; i++) {
-//                       names_by_id[names.profiles[i].id] = names.profiles[i].first_name + ' ' + names.profiles[i].last_name;
-//                     }
+    // });
+  } else {
 
-//                     axios({
-                      
-//                       url: base_uri + '/genotype/?locations=rs3094315', 
-                      
-//                       headers: headers
+      console.log('Cookie is not signed!');
 
-//                     })
-//                     .then(function(response) {
-//                       console.log('======Second Axios get request ' + response);
-//                       genotypes = response;
-//                       console.log('======genotypes:  ' + genotypes);
+  }
+
+})
 
 
-//                       res.render('tools/genetic_report', {
-                        
-//                         layout: 'dash',
-//                         names: names_by_id,
-//                         genotypes: genotypes
-
-//                       });
-
-//                     })
-//                     .catch(function(error) {
-//                       console.log(error);
-//                       //use req.flash here
-//                     })
-//                 }
-//               })
-//               .catch(function(error) {
-//                 console.log(error);
-//               });
-
-//             }
 
 router.get('/tools/all-trials', function (req, res) {
   

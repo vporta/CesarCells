@@ -32,7 +32,7 @@ var app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
-app.use(cookieParser('IloveMom')); //create env variable
+app.use(cookieParser('ILovemom')); //create env variable
 
 //======Passport========      
 app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret create env variable

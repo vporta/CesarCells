@@ -1,0 +1,1053 @@
+{
+    "printrequests": [
+        {
+            "label": "",
+            "key": "",
+            "redi": "",
+            "typeid": "_wpg",
+            "mode": 2,
+            "format": false
+        },
+        {
+            "label": "Max Magnitude",
+            "key": "Max_Magnitude",
+            "redi": "",
+            "typeid": "_num",
+            "mode": 1,
+            "format": ""
+        },
+        {
+            "label": "Chromosome position",
+            "key": "Chromosome_position",
+            "redi": "",
+            "typeid": "_num",
+            "mode": 1,
+            "format": ""
+        },
+        {
+            "label": "Summary",
+            "key": "Summary",
+            "redi": "",
+            "typeid": "_txt",
+            "mode": 1,
+            "format": ""
+        }
+    ],
+    "results": {
+        "Rs121909203": {
+            "printouts": {
+                "Max Magnitude": [],
+                "Chromosome position": [
+                    94051698
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs121909203",
+            "fullurl": "https://www.snpedia.com/index.php/Rs121909203",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": ""
+        },
+        "Rs121909204": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94043443
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs121909204",
+            "fullurl": "https://www.snpedia.com/index.php/Rs121909204",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs121909204"
+        },
+        "Rs121909205": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94120994
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs121909205",
+            "fullurl": "https://www.snpedia.com/index.php/Rs121909205",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs121909205"
+        },
+        "Rs121909206": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94015766
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs121909206",
+            "fullurl": "https://www.snpedia.com/index.php/Rs121909206",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs121909206"
+        },
+        "Rs121909207": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94014665
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs121909207",
+            "fullurl": "https://www.snpedia.com/index.php/Rs121909207",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs121909207"
+        },
+        "Rs150774447": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94111579
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs150774447",
+            "fullurl": "https://www.snpedia.com/index.php/Rs150774447",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs150774447"
+        },
+        "Rs17110736": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    93997213
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs17110736",
+            "fullurl": "https://www.snpedia.com/index.php/Rs17110736",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs17110736"
+        },
+        "Rs1800553": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94008251
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs1800553",
+            "fullurl": "https://www.snpedia.com/index.php/Rs1800553",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs1800553"
+        },
+        "Rs1800555": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    93998061
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs1800555",
+            "fullurl": "https://www.snpedia.com/index.php/Rs1800555",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs1800555"
+        },
+        "Rs1800728": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94011395
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs1800728",
+            "fullurl": "https://www.snpedia.com/index.php/Rs1800728",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs1800728"
+        },
+        "Rs1801581": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94047009
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs1801581",
+            "fullurl": "https://www.snpedia.com/index.php/Rs1801581",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs1801581"
+        },
+        "Rs1931575": {
+            "printouts": {
+                "Max Magnitude": [],
+                "Chromosome position": [
+                    94067458
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs1931575",
+            "fullurl": "https://www.snpedia.com/index.php/Rs1931575",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs1931575"
+        },
+        "Rs200692438": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94060733
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs200692438",
+            "fullurl": "https://www.snpedia.com/index.php/Rs200692438",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs200692438"
+        },
+        "Rs281865379": {
+            "printouts": {
+                "Max Magnitude": [],
+                "Chromosome position": [
+                    94046951
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs281865379",
+            "fullurl": "https://www.snpedia.com/index.php/Rs281865379",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs281865379"
+        },
+        "Rs28938473": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94007731
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs28938473",
+            "fullurl": "https://www.snpedia.com/index.php/Rs28938473",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs28938473"
+        },
+        "Rs3112831": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94078678
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs3112831",
+            "fullurl": "https://www.snpedia.com/index.php/Rs3112831",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs3112831"
+        },
+        "Rs387906385": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94042877
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs387906385",
+            "fullurl": "https://www.snpedia.com/index.php/Rs387906385",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs387906385"
+        },
+        "Rs387906386": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94062666
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs387906386",
+            "fullurl": "https://www.snpedia.com/index.php/Rs387906386",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs387906386"
+        },
+        "Rs387906387": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94079336
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs387906387",
+            "fullurl": "https://www.snpedia.com/index.php/Rs387906387",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs387906387"
+        },
+        "Rs387906388": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94040096
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs387906388",
+            "fullurl": "https://www.snpedia.com/index.php/Rs387906388",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs387906388"
+        },
+        "Rs398123339": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94113068
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs398123339",
+            "fullurl": "https://www.snpedia.com/index.php/Rs398123339",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs398123339"
+        },
+        "Rs41292677": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94001992
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs41292677",
+            "fullurl": "https://www.snpedia.com/index.php/Rs41292677",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs41292677"
+        },
+        "Rs481931": {
+            "printouts": {
+                "Max Magnitude": [],
+                "Chromosome position": [
+                    94104460
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs481931",
+            "fullurl": "https://www.snpedia.com/index.php/Rs481931",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs481931"
+        },
+        "Rs527236129": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94047039
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs527236129",
+            "fullurl": "https://www.snpedia.com/index.php/Rs527236129",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs527236129"
+        },
+        "Rs560426": {
+            "printouts": {
+                "Max Magnitude": [],
+                "Chromosome position": [
+                    94087882
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs560426",
+            "fullurl": "https://www.snpedia.com/index.php/Rs560426",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs560426"
+        },
+        "Rs58331765": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94047046
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs58331765",
+            "fullurl": "https://www.snpedia.com/index.php/Rs58331765",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs58331765"
+        },
+        "Rs61748548": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94080559
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61748548",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61748548",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61748548"
+        },
+        "Rs61748550": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94079339
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61748550",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61748550",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61748550"
+        },
+        "Rs61748559": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94063157
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61748559",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61748559",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61748559"
+        },
+        "Rs61749438": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94055133
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61749438",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61749438",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61749438"
+        },
+        "Rs61750061": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94043420
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61750061",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61750061",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61750061"
+        },
+        "Rs61750064": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94042878
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61750064",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61750064",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61750064"
+        },
+        "Rs61750120": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94042767
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61750120",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61750120",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61750120"
+        },
+        "Rs61750126": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94040048
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61750126",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61750126",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61750126"
+        },
+        "Rs61750130": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94031110
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61750130",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61750130",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61750130"
+        },
+        "Rs61750152": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94025011
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61750152",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61750152",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61750152"
+        },
+        "Rs61750200": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94098928
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61750200",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61750200",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61750200"
+        },
+        "Rs61750641": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94005499
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61750641",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61750641",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61750641"
+        },
+        "Rs61750654": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94000870
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61750654",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61750654",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61750654"
+        },
+        "Rs61751374": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94043413
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61751374",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61751374",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61751374"
+        },
+        "Rs61751383": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94005500
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61751383",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61751383",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61751383"
+        },
+        "Rs61751385": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94063110
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61751385",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61751385",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61751385"
+        },
+        "Rs61751386": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94062667
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61751386",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61751386",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61751386"
+        },
+        "Rs61751392": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94063250
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61751392",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61751392",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61751392"
+        },
+        "Rs61751399": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94041367
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61751399",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61751399",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61751399"
+        },
+        "Rs61751402": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94029515
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61751402",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61751402",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61751402"
+        },
+        "Rs61751408": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94005509
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61751408",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61751408",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61751408"
+        },
+        "Rs61752410": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94046949
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61752410",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61752410",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61752410"
+        },
+        "Rs61752435": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94025050
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61752435",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61752435",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61752435"
+        },
+        "Rs61753033": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94008767
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61753033",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61753033",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61753033"
+        },
+        "Rs61753034": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94007727
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs61753034",
+            "fullurl": "https://www.snpedia.com/index.php/Rs61753034",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs61753034"
+        },
+        "Rs62642560": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94051669
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs62642560",
+            "fullurl": "https://www.snpedia.com/index.php/Rs62642560",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs62642560"
+        },
+        "Rs62642573": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94031054
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs62642573",
+            "fullurl": "https://www.snpedia.com/index.php/Rs62642573",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs62642573"
+        },
+        "Rs62642574": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94024994
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs62642574",
+            "fullurl": "https://www.snpedia.com/index.php/Rs62642574",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs62642574"
+        },
+        "Rs62645952": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94098799
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs62645952",
+            "fullurl": "https://www.snpedia.com/index.php/Rs62645952",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs62645952"
+        },
+        "Rs62654395": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94111546
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs62654395",
+            "fullurl": "https://www.snpedia.com/index.php/Rs62654395",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs62654395"
+        },
+        "Rs76157638": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94051698
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs76157638",
+            "fullurl": "https://www.snpedia.com/index.php/Rs76157638",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs76157638"
+        },
+        "Rs786205445": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94014611
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs786205445",
+            "fullurl": "https://www.snpedia.com/index.php/Rs786205445",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs786205445"
+        },
+        "Rs786205446": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94021406
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs786205446",
+            "fullurl": "https://www.snpedia.com/index.php/Rs786205446",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs786205446"
+        },
+        "Rs786205447": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94047022
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs786205447",
+            "fullurl": "https://www.snpedia.com/index.php/Rs786205447",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs786205447"
+        },
+        "Rs793888523": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94063238
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs793888523",
+            "fullurl": "https://www.snpedia.com/index.php/Rs793888523",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs793888523"
+        },
+        "Rs794727531": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94029555
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs794727531",
+            "fullurl": "https://www.snpedia.com/index.php/Rs794727531",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs794727531"
+        },
+        "Rs794727903": {
+            "printouts": {
+                "Max Magnitude": [
+                    0
+                ],
+                "Chromosome position": [
+                    94080697
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs794727903",
+            "fullurl": "https://www.snpedia.com/index.php/Rs794727903",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs794727903"
+        },
+        "Rs863223338": {
+            "printouts": {
+                "Max Magnitude": [],
+                "Chromosome position": [
+                    94044736
+                ],
+                "Summary": []
+            },
+            "fulltext": "Rs863223338",
+            "fullurl": "https://www.snpedia.com/index.php/Rs863223338",
+            "namespace": 0,
+            "exists": "1",
+            "displaytitle": "rs863223338"
+        }
+    },
+    "serializer": "SMW\\Serializers\\QueryResultSerializer",
+    "version": 0.11,
+    "rows": 64
+}
