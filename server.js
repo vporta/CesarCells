@@ -32,10 +32,10 @@ var app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
-app.use(cookieParser());
+app.use(cookieParser('IloveMom')); //create env variable
 
-//======Passport========
-app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
+//======Passport========      
+app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret create env variable
 app.use(flash()); // use connect-flash for flash messages stored in session
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
