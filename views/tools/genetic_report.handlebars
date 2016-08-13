@@ -3,8 +3,10 @@
 </div>
 <br>
 <br>
+{{#if info}}
+<div class="alert alert-info" style="margin-top: 100px">{{info}}</div>
+{{/if}}
 
-{{!-- <a href="https://api.23andme.com/authorize/?redirect_uri=http://localhost:3000/receive_code/&response_type=code&client_id=dd6b7f51cb19ee4bd93bfe59438f7956&scope=basic rs3094315"><img src="/assets/images/23andMe.png"/> </a> --}}
 
 {{#each genotypes}}
 <h1 style="margin-top: 200px">{{genotypes}}</h1>

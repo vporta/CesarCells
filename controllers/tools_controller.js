@@ -14,6 +14,7 @@ var flash = require('connect-flash');
 var helpers = require('../helpers/mail.js');
 var axios = require('axios');
 var cheerio = require('cheerio');
+var _ = require('underscore');
 var querystring = require('querystring');
 
 router.get('/tools/start-health-assessment', function (req, res) {
@@ -42,8 +43,10 @@ router.get('/tools/stemcell-assessment', function (req, res) {
 
 router.get('/tools/genetic', function (req, res) {
 
+  
   res.render('tools/genetic_report', {layout: 'dash'});
 });
+
 
 // **********23ANDME OAUTH2************
 var oauth2 = require('simple-oauth2')({
@@ -53,16 +56,6 @@ var oauth2 = require('simple-oauth2')({
   tokenPath: '/token',
   authorizationPath: '/authorize'
 });
-// *Declaration of all necessary variables needed to perform 23AndMe API Call
-// var STARGARDT_SNPs = ['doesnt work:rs28938473', 'rs61753033', 'rs61753034'].join(' ');
-// var LCA_SNPs = ['doesnt work: rs281865192'].join(' ');
-// var MACD_SNPs = ['rs11200638', 'rs1061170', 'rs800292', 'rs2230199', 'rs3775291'].join(' ');
-// var RETPIG_SNPs = ['doesnt work: rs104893775'].join(' ');
-// var USHER_SNPs = ['doesnt work: rs104894651'].join(' ');
-// var GLAUCOMA_SNPs = ['rs28936694', 'rs1048661', 'rs3825942'].join(' ');
-// var DEFAULT_SCOPE = 'basic names analyses rs28938473';
-
-// console.log(DEFAULT_SCOPE);
 
 var authorization_uri = oauth2.authCode.authorizeURL({
   redirect_uri: 'http://localhost:3000/receive_code/',
@@ -73,8 +66,18 @@ var authorization_uri = oauth2.authCode.authorizeURL({
 
 
 router.get('/auth', function (req, res) {
-  
-    res.redirect(authorization_uri);
+  if (req.user && req.user.geneticTestTaken) {
+    
+    req.flash('info', 'You\'ve already submitted your data, ' + req.user.firstname + '!');
+
+    res.render('tools/genetic_report', {layout: 'dash',
+      user: req.user,
+      info: req.flash('info')
+    });
+  } else {
+    
+      res.redirect(authorization_uri);
+  }
 });
 
 router.get('/receive_code', function(req, res) {
@@ -152,11 +155,7 @@ router.get('/tools/genetic-data-retinal-diseases', function(req, res) {
           // user = response.data;
           // dataMediate.userId = user.profiles[0].id;
 
-          console.log('*********user profile id:  ' + response.data.profiles[0].id);
-
-          // for (var i = 0; i < names.profiles.length; i++) {
-          //   names_by_id[names.profiles[i].id] = names.profiles[i].first_name + ' ' + names.profiles[i].last_name;
-          // }
+          //console.log('*********user profile id:  ' + response.data.profiles[0].id);
 
           axios({
             
@@ -167,30 +166,53 @@ router.get('/tools/genetic-data-retinal-diseases', function(req, res) {
           })
           .then(function(response) {
             
-
-            
             genotypes = response.data;
 
             console.log('======genotypes:  ' + JSON.stringify(genotypes));
 
             
-              var obj = genotypes;
+            var obj = genotypes;
 
-              // for(key in obj) {
-              //   if (obj.hasOwnProperty(key)) {
-              //       console.log(key + " -> " + obj[key]);
+            // Remove id from snps object
+            var objData = _.omit(obj, 'id');
+            
+           
+
+            var newSNPs = new SNPs({ 
+              genotypes: objData, 
+              user_id: req.user._id
+            });
+
+            console.log('new new snps here: ' + newSNPs);
+              
+              newSNPs.save(function(err) {
+
+                if(err){
+                  console.log(err);
+                }
+
+                else {
+                  var istrue = true;
+                  
+                  User.findOneAndUpdate({_id: req.user._id}, {$set: {"geneticTestTaken":istrue}}).exec(function(err) {
+                    
+                    if(err) {
+                      throw err;
+                    } else {
+                     
+
+                      res.render('tools/gene_postreport', {
+                        user: req.user,
+                        layout: 'dash',
+
+                      });
                       
-              //     }
-              // }
-              res.render('tools/gene_data', {
-                layout: 'dash',
-                obj: obj
+                    }
+                  });
+                  
+                }
 
-              });
-            
-
-
-            
+              })  
           })
           .catch(function(error) {
             console.log(error);
@@ -202,21 +224,41 @@ router.get('/tools/genetic-data-retinal-diseases', function(req, res) {
       console.log(error);
     });
 
-    // console.log('=====LOOK OVER HERE_____===genotypes:  ' + JSON.stringify(genotypes));
-
-    // res.render('tools/gene_data', {
-    //   layout: 'dash',
-    //   genotypes: genotypes
-
-    // });
   } else {
 
       console.log('Cookie is not signed!');
 
   }
 
-})
+});
 
+// *Declaration of all necessary variables needed to perform 23AndMe API Call
+// var STARGARDT_SNPs = ['doesnt work:rs28938473', 'rs61753033', 'rs61753034'].join(' ');
+// var LCA_SNPs = ['doesnt work: rs281865192'].join(' ');
+// var MACD_SNPs = ['rs11200638', 'rs1061170', 'rs800292', 'rs2230199', 'rs3775291'].join(' ');
+// var RETPIG_SNPs = ['doesnt work: rs104893775'].join(' ');
+// var USHER_SNPs = ['doesnt work: rs104894651'].join(' ');
+// var GLAUCOMA_SNPs = ['rs28936694', 'rs1048661', 'rs3825942'].join(' ');
+// var DEFAULT_SCOPE = 'basic names analyses rs28938473';
+
+// console.log(DEFAULT_SCOPE);
+
+router.get('/tools/my-genetics', function(req, res) {
+  var data = {};
+
+  SNPs.find({user_id: req.user._id}).then(function(result) {
+    // data.genotypes = result;
+    data.genes = result;
+  })
+  
+
+
+  res.render('tools/gene_data', {
+    data: data,
+    // diseases: diseases,
+    layout: 'dash'
+  });
+});
 
 
 router.get('/tools/all-trials', function (req, res) {
@@ -226,7 +268,7 @@ router.get('/tools/all-trials', function (req, res) {
   Trial.find({
   }).then(function(result) {
     
-    data.trials = result;
+  data.trials = result;
    
    User.find({ 
    }).then(function(result) {
@@ -236,8 +278,8 @@ router.get('/tools/all-trials', function (req, res) {
       data: data,
       layout: 'dash'
     });
-   })
-  })
+   });
+  });
 });
 
 // AMSLER PAGE ROUTES

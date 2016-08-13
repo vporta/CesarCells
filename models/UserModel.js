@@ -34,7 +34,8 @@ var UserSchema = new Schema({
   address: String,
   state: String,
   zip: Number,
-  stargRegTaken: Boolean
+  stargRegTaken: Boolean,
+  geneticTestTaken: Boolean
 });
 
 
