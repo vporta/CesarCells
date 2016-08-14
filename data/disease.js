@@ -1,4 +1,4 @@
-module.exports = diseases = [
+module.exports = [
   {
     diseasename: 'Glaucoma 1',
     diseasegenename: 'MYOC',
@@ -69,6 +69,6 @@ module.exports = diseases = [
     variants: 'C or T',
     risk: '(C;C) 3.2 5.9x risk for AMD; higher mortality among nonagenarians. (C;T) 2.5 2.5x risk for AMD; higher mortality among nonagenarians. (T;T) 0 common/normal',
     descr: ''
-  },
+  }
 
 ];

@@ -7,7 +7,6 @@ var LocalStrategy = require('passport-local').Strategy;
 var User = require('../models/UserModel.js');
 var flash = require('connect-flash');
 var helpers = require('../helpers/mail.js');
-var sendbird = require('sendbird');
 
 
 

@@ -16,6 +16,7 @@ var axios = require('axios');
 var cheerio = require('cheerio');
 var _ = require('underscore');
 var querystring = require('querystring');
+var diseases = require('../data/disease.js');
 
 router.get('/tools/start-health-assessment', function (req, res) {
 console.log('assessmentTaken: '+ req.user.assessmentTaken);
@@ -180,6 +181,7 @@ router.get('/tools/genetic-data-retinal-diseases', function(req, res) {
 
             var newSNPs = new SNPs({ 
               genotypes: objData, 
+              diseases: diseases,
               user_id: req.user._id
             });
 
@@ -247,15 +249,17 @@ router.get('/tools/my-genetics', function(req, res) {
   var data = {};
 
   SNPs.find({user_id: req.user._id}).then(function(result) {
-    // data.genotypes = result;
     data.genes = result;
-  })
-  
+    // console.log('===data inside here===: ' + data);
+    console.log('===result inside here===: ' + result);
 
+
+  })
+  // console.log('req.user here:------' + req.user);
 
   res.render('tools/gene_data', {
     data: data,
-    // diseases: diseases,
+    user: req.user.firstname,
     layout: 'dash'
   });
 });

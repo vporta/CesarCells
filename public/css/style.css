@@ -840,6 +840,7 @@ text-align: center;
     line-height: 1.5em;
         display: block;
         margin: 2em 0 0;
+
 }
 .modal-lg {
     height: 100%;
@@ -1030,26 +1031,44 @@ h3 {
     height: 220px;
 }
 .nav.navbar-nav.navbar-right {
-    background-color: whitesmoke;
+    background-color: white;
     ;
     margin-top: 25px; 
     border-radius: 7px;
     border-bottom: solid 2px #D1E2E5;
 }
 #a-dash {
-    color: midnightblue;
+    color: darkslategray;
+}
+#a-dash:hover {
+    color: deeppink;
 }
 #a-dash-one {
-    color: midnightblue;
+    color: darkslategray;
+}
+#a-dash-one:hover {
+    color: deeppink;
 }
 #a-dash-two {
-    color: midnightblue;
+    color: darkslategray;
+}
+#a-dash-two:hover {
+    color: deeppink;
 }
 #a-dash-three {
-    color: midnightblue;
+    color: darkslategray;
+}
+#a-dash-three:hover {
+    color: deeppink;
 }
 #a-dash-four {
-    color: midnightblue;
+    color: darkslategray;
+}
+#a-dash-four:hover {
+    color: deeppink;
+}
+li.a:hover {
+    color: deeppink;
 }
 #h1-images {
     font-size: 20px;
@@ -1071,17 +1090,91 @@ ul.dropdown-menu {
 /*dashboard home ends*/
 
 /****************************/
-
+#make-transparent {
+    background: transparent;
+}
 /*gene report table begins*/
 #gene-table {
     margin-left: 100px;
     width: 80%;
 }
+.list-group {
+    margin-bottom: 20px;
+    padding-right: 0;
+}
 #snps-table {
-    margin-top: 100px;
-    width: 100%;
+    margin-top: 30px;
+    width: 350px;
+    
     /*background-color: whitesmoke;*/
 
+}
+#genes-table {
+    margin-top: 30px;
+    width: 350px;
+}
+#a-glaucoma {
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: none none none solid;
+    background-color: transparent;
+    padding-left: 10px;
+    color: darkslategray;
+    text-decoration: none;
+}
+#a-glaucoma:hover {
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: none none none solid;
+    background-color: deeppink;
+    padding-left: 10px;
+    color: white;
+    text-decoration: none;
+
+}
+#snp-link:hover {
+    color: deeppink;
+}
+#a-stargardts {
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: none none none solid;
+    background-color: transparent;
+    padding-left: 10px;
+    color: darkslategray;
+}
+#a-stargardts:hover {
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: none none none solid;
+    background-color: deeppink;
+    padding-left: 10px;
+    color: white;
+    text-decoration: none;
+
+}
+#a-armd {
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: none none none solid;
+    background-color: transparent;
+    padding-left: 10px;
+    color: darkslategray;
+    text-decoration: none;
+
+}
+#a-armd:hover {
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: none none none solid;
+    background-color: deeppink;
+    padding-left: 10px;
+    color: white;
+    text-decoration: none;
+
+}
+.wrap-gene-results {
+    background-color: transparent;
 }
 /*#snps-table th td tr{
     color: gray;
@@ -1089,6 +1182,8 @@ ul.dropdown-menu {
 
 .wrap-snps {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 .td-trials {
     font-size: 17px;
@@ -1123,7 +1218,7 @@ div.container-fluid.bg-info {
     background-color: transparent;
 }
 nav.navbar.navbar-default.navbar-fixed-top {
-    background-color: transparent;
+    background-color: white;
     border-color: transparent;
     
 }
@@ -1852,7 +1947,7 @@ header {
     
 }
 .modal{
-    top: 20%; 
+    /*top: 20%; */
 }
 .modal-header .close {
     margin-top: 2px;

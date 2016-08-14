@@ -12,7 +12,7 @@ var path = require('path'),
     mongoose = require('mongoose'),
     oauth2 = require('simple-oauth2'),
     flash = require('connect-flash'),
-    passport = require('passport'),
+    passport = require('passport'), 
     LocalStrategy = require('passport-local'),
     TwitterStrategy = require('passport-twitter'),
     GoogleStrategy = require('passport-google-oauth'),
@@ -41,6 +41,7 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 //app.use(app.router);
+
 
 
 // Session-persisted message middleware
