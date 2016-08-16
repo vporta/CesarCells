@@ -253,23 +253,23 @@ pre {
     top:1px;
 }
 .myButton {
-    background-color:#f2f6f6;
+    background-color:white;
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
     border-radius:5px;
-    border:1px solid #566963;
+    /*border:1px solid deeppink;*/
     display:inline-block;
     cursor:pointer;
     color: black;
     font-family:Arial;
-    font-size:15px;
+    font-size:18px;
     font-weight:bold;
     padding:11px 23px;
     text-decoration:none;
     text-shadow:0px -1px 0px #2b665e;
 }
 .myButton:hover {
-    background-color: darkslategray;
+    background-color: deeppink;
     color: white;
 }
 .myButton:active {
@@ -980,7 +980,7 @@ text-align: center;
     margin: 0 auto;
 }
 .modal-body {
-    background-color: white;
+    background-color: whitesmoke;
 }
 #eye-diseases {
     color: deeppink;
@@ -995,6 +995,10 @@ text-align: center;
 #learn-more:hover {
     background-color:  transparent;
     color: darkslategray;
+}
+.new-window {
+    height: 130px;
+    width: 130px;
 }
 #main-btn{
    /* width: 400px;
@@ -1216,7 +1220,7 @@ ul.dropdown-menu {
     /*background-color: #e8efef;*/
 }
 .panel-body {
-    border-top: midnightblue;
+    border-top: deeppink;
     border-top-style: solid;
 }
 /*dashboard home ends*/
@@ -1224,7 +1228,7 @@ ul.dropdown-menu {
 /****************************/
 #make-transparent {
     background-color: whitesmoke;
-    height: 100%;
+    height: 75%;
 }
 /*gene report table begins*/
 #gene-table {
@@ -1383,8 +1387,9 @@ nav.navbar.navbar-default.navbar-fixed-top {
     /*margin-top: 130px;*/
 }
 .details-new-form {
-  margin-top: 30px;
-  width: 500px;
+
+background-color: whitesmoke;
+padding: 60px;
  
 }
 
