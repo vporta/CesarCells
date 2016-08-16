@@ -780,6 +780,135 @@ text-align: center;
 
     
 }
+
+#retinal-disease-icon:hover {
+    color: deeppink;
+    cursor: pointer;
+}
+
+#gene-icon:hover {
+    color: deeppink;
+    cursor: pointer;
+}
+#variant-icon:hover {
+    color: deeppink;
+    cursor: pointer;
+}
+#snps-icon:hover {
+    color: deeppink;
+    cursor: pointer;
+}
+#genotypes-icon:hover {
+    color: deeppink;
+    cursor: pointer;
+}
+
+
+.span-class-rd-popup {
+    height: 100px;
+    width: 400px;
+    background-color: white;
+    display: block;
+    top: 70px;
+    left: 50px;
+    /*display:none;*/
+    padding:0 20px;
+    border: 5px solid #DFDFDF;
+    color: darkslategray;
+    font-size: 16px;
+    /*height: 30px;*/
+    letter-spacing: 1px;
+    line-height: 30px;
+    position: absolute;
+    text-align: left;
+    text-transform: uppercase;
+    /*-moz-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    transform:rotate(45deg);
+    z-index: 1000;*/
+
+}
+.span-class-gene-popup {
+    height: 200px;
+    width: 800px;
+    background-color: white;
+    display: block;
+    top: -30px;
+    left: 350px;
+    /*display:none;*/
+    padding:0 20px;
+    border: 5px solid #DFDFDF;
+    color: darkslategray;
+    font-size: 16px;
+    /*height: 30px;*/
+    letter-spacing: 1px;
+    line-height: 30px;
+    position: absolute;
+    text-align: left;
+    text-transform: uppercase;
+   
+
+}
+.span-class-variant-popup {
+    height: 200px;
+    width: 800px;
+    background-color: white;
+    display: block;
+    top: -30px;
+    left: 350px;
+    /*display:none;*/
+    padding:0 20px;
+    border: 5px solid #DFDFDF;
+    color: darkslategray;
+    font-size: 16px;
+    /*height: 30px;*/
+    letter-spacing: 1px;
+    line-height: 30px;
+    position: absolute;
+    text-align: left;
+    text-transform: uppercase;
+    
+}
+.span-class-snps-popup {
+    height: 350px;
+    width: 800px;
+    background-color: white;
+    display: block;
+    top: -185px;
+    left: 390px;
+    /*display:none;*/
+    padding:0 20px;
+    border: 5px solid #DFDFDF;
+    color: darkslategray;
+    font-size: 16px;
+    /*height: 30px;*/
+    letter-spacing: 1px;
+    line-height: 30px;
+    position: absolute;
+    text-align: left;
+    text-transform: uppercase;
+    
+}
+.span-class-genotype-popup {
+    height: 190px;
+    width: 500px;
+    background-color: white;
+    display: block;
+    top: -35px;
+    left: 890px;
+    /*display:none;*/
+    padding:0 20px;
+    border: 5px solid #DFDFDF;
+    color: darkslategray;
+    font-size: 16px;
+    /*height: 30px;*/
+    letter-spacing: 1px;
+    line-height: 30px;
+    position: absolute;
+    text-align: left;
+    text-transform: uppercase;
+    
+}
 .genotypes-can-do {
     padding: 100px;
 }
@@ -1094,7 +1223,8 @@ ul.dropdown-menu {
 
 /****************************/
 #make-transparent {
-    background: transparent;
+    background-color: whitesmoke;
+    height: 100%;
 }
 /*gene report table begins*/
 #gene-table {
@@ -1206,7 +1336,7 @@ ul.dropdown-menu {
 }*/
 
 .wrap-snps {
-    position: relative;
+    /*position: relative;*/
     display: flex;
     align-items: center;
 }

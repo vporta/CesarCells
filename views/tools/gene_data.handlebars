@@ -1,4 +1,4 @@
-<h1 style="font-size: 50px; margin-top: 160px; text-align: center"> {{user}}'s Genetics 
+<h1 style="font-size: 50px; margin-top: 160px; text-align: center; margin-bottom: 45px"> {{user}}'s Genetics 
 {{!-- <canvas width="1600" height="500" style="">
 </canvas> --}}
 </h1>
@@ -271,10 +271,10 @@
       <table class="table table-hover" id="genes-table" cellspacing="0" cellpadding="0" border="0">
         <thead>
           <tr>
-              <th>Retinal Disease   <i class="fa fa-info-circle" aria-hidden="true"></i></th>
-              <th>Gene   <i class="fa fa-info-circle" aria-hidden="true"></i></th>
+              <th>Retinal Disease   <i class="fa fa-info-circle" id="retinal-disease-icon" aria-hidden="true"></i></th>
+              <th>Gene   <i class="fa fa-info-circle" id="gene-icon" aria-hidden="true"></i></th>
               {{!-- <th>SNP</th> --}}
-              <th>Variants   <i class="fa fa-info-circle" aria-hidden="true"></i></th>
+              <th>Variants   <i class="fa fa-info-circle" id="variant-icon" aria-hidden="true"></i></th>
               {{!-- <th>Your Genotype</th> --}}
         
           </tr>
@@ -303,9 +303,9 @@
           <tr>
 
               {{!-- <th class="td-trials-head">Genes</th> --}}
-              <th>SNP   <i class="fa fa-info-circle" aria-hidden="true"></i></th>
+              <th>SNP   <i class="fa fa-info-circle" id="snps-icon" aria-hidden="true"></i></th>
               {{!-- <th>Variants</th> --}}
-              <th>Your Genotype   <i class="fa fa-info-circle" aria-hidden="true"></i></th>
+              <th>Your Genotype   <i class="fa fa-info-circle" id="genotypes-icon" aria-hidden="true"></i></th>
         
           </tr>
         </thead>
