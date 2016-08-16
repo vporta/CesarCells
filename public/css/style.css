@@ -1104,14 +1104,14 @@ ul.dropdown-menu {
 }
 #snps-table {
     margin-top: 30px;
-    width: 350px;
+    width: 50%;
     
     /*background-color: whitesmoke;*/
 
 }
 #genes-table {
     margin-top: 30px;
-    width: 350px;
+    width: 50%;
 }
 #a-glaucoma {
     border-color: deeppink;
@@ -1135,6 +1135,9 @@ ul.dropdown-menu {
 #snp-link:hover {
     color: deeppink;
 }
+#genename-link:hover {
+    color: deeppink;
+}   
 #a-stargardts {
     border-color: deeppink;
     border-width: 5px;
@@ -1173,8 +1176,27 @@ ul.dropdown-menu {
     text-decoration: none;
 
 }
+.bigArrow {
+  display: block;
+  text-align: center;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #a0989d;
+  border: 2px solid rgba(255,255,255,0.4);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 29px;
+  left: 50%;
+  margin-left: -35px;
+  z-index: 100;
+  color: #fff;
+  font-size: 40px;
+}
 .wrap-gene-results {
     background-color: transparent;
+    margin: 20px 0 0 20px;
 }
 /*#snps-table th td tr{
     color: gray;

@@ -206,7 +206,12 @@ router.post('/clinical-trials/contact/zero', function (req, res) {
 
     res.redirect('/users/dashboard')
   } else {
-    res.send("Sorry You Can't Do That. You Must Take The Assessment First.");
+      req.flash('noTakeAssessment', 'Sorry You Can\'t Do That. You Must Take The Assessment First.');
+
+      res.render('users/dashboard', {
+        layout: 'dash',
+        noTakeAssessment: req.flash('noTakeAssessment')
+      });
   }
 });
 

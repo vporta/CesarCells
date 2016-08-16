@@ -1,15 +1,16 @@
 <h1 style="font-size: 50px; margin-top: 160px; text-align: center"> {{user}}'s Genetics </h1>
 <div class="row" id="make-transparent">
-{{!-- <div class="col-lg-1"></div> --}}
-  <div class="col-lg-5 wrap-gene-results">
+
+  <div class="col-lg-4 wrap-gene-results">
     <div class="list-group">
       <h2 style="margin-top: 30px">Understanding Your Results</h2>
-      <p class="lead">We tested your genome for 3 diseases. vnwjvwncnown</p>
+      <p class="lead">We tested your genome for 3 diseases. Your results for the conditions tested are below. Click on a tab for more information.</p>
       <a href="#" class="modal-trigger" data-toggle="modal" 
       data-target="#glaucomaModal" id="a-glaucoma">Glaucoma
       <br>
-      <p>You do not have Glaucoma</p>
+      <p>Learn more about your Glaucoma risks</p>
       </a>
+
       <div class="modal modal-fullreen fade" id="glaucomaModal" tabindex="-1" role="dialog" aria-labelledby="glaucomaModal" aria-hidden="true">
           <div class="modal-dialog modal-lg">
               <div class="modal-content">
@@ -18,42 +19,68 @@
                 <h2 class="modal-title" id="myModalLabel" style="text-align: center"></h2>
                 </div>
                 <div style="display: flex; align-items: center; justify-content: center">
-                <img style="" src="http://brandoneye.com/wp-content/uploads/2015/07/glaucoma.png">
+                {{!-- <img style="" src="http://brandoneye.com/wp-content/uploads/2015/07/glaucoma.png"> --}}
                 </div>
                 <div class="modal-header">
                 </div>
                 <div class="modal-body">
-                  
                   <h2>Your Results</h2>
-                  <p style="">Blah blah blah</p>
+                {{#each data.genes}}
+                  <p class="lead">We tested your genome for three SNPs (See Table Below) for Genes: {{diseases.0.diseasegenename}} and {{diseases.1.diseasegenename}} that have been shown to be associated with a risk of developing certain forms of Glaucoma, specifically: {{diseases.0.diseasename}} and {{diseases.8.diseasename}}. Your genotypes for Glaucoma are {{genotypes.rs28936694}} and {{genotypes.rs3825942}}, and {{genotypes.rs1048661}}. </p>
+
+                  <ul class="list-group">
+                    <li class="list-group-item lead">1. Genotype {{genotypes.rs28936694}} carries a {{diseases.0.risk}} {{diseases.0.descr}}
+                    </li>
+                    <li class="list-group-item lead">2. Genotype {{genotypes.rs3825942}} carries a {{diseases.1.risk}} {{diseases.1.descr}}
+                    </li> 
+                    <li class="list-group-item lead">
+                    3. Genotype {{genotypes.rs1048661}} carries a {{diseases.8.risk}} {{diseases.8.descr}}</li>
+                  </ul>
+                {{/each}}
                 </div>
                 <div class="modal-header">
                 </div>
                 <div class="modal-body">
                 <h2>About The Disease</h2>
 
-                    <p style="">Glaucoma is a group of eye diseases that damage the optic nerve (the bundle of nerve fibers that carries information from the eye to the brain) and can lead to vision loss and possibly blindness.</p>
+                    <p class="lead">Glaucoma is a group of eye diseases that damage the optic nerve (the bundle of nerve fibers that carries information from the eye to the brain) and can lead to vision loss and possibly blindness.</p>
                     <br>
                     
-                    <p>Vision experts believe that half of those affected by glaucoma may not know it, because it usually has no noticeable symptoms in its early stages. By the time people notice that something is wrong with their vision, the disease has already caused considerable damage.</p> <br>
-                    <p>Vision lost to glaucoma cannot be regained. If left untreated, glaucoma will lead to blindness. Although there is no cure, medications and surgery can help slow the disease's progression.</p>
+                    <p class="lead">Vision experts believe that half of those affected by glaucoma may not know it, because it usually has no noticeable symptoms in its early stages. By the time people notice that something is wrong with their vision, the disease has already caused considerable damage.</p> <br>
+                    <p class="lead">Vision lost to glaucoma cannot be regained. If left untreated, glaucoma will lead to blindness. Although there is no cure, medications and surgery can help slow the disease's progression.</p>
                     <br>
 
-                    <p>Glaucoma is the second leading cause of blindness worldwide, according to the World Health Organization, affecting 60.5 million in 2010. Given the aging of the world's population, this number may increase to almost 80 million by 2020. More than three million Americans are living with glaucoma, 2.7 million of whom—aged 40 and older—are affected by its most common type, open-angle glaucoma. In the United States, glaucoma is a leading cause of blindness among African Americans and Hispanics.</p>
+                    <p class="lead">Glaucoma is the second leading cause of blindness worldwide, according to the World Health Organization, affecting 60.5 million in 2010. Given the aging of the world's population, this number may increase to almost 80 million by 2020. More than three million Americans are living with glaucoma, 2.7 million of whom—aged 40 and older—are affected by its most common type, open-angle glaucoma. In the United States, glaucoma is a leading cause of blindness among African Americans and Hispanics.</p>
                     <br>
 
-                    <p>Open-angle glaucoma is three to four times more common in African Americans than in non-Hispanic whites. Between the ages of 45 and 64, glaucoma is fifteen times more likely to cause blindness in African Americans than in Caucasians.</p>
+                    <p class="lead">Open-angle glaucoma is three to four times more common in African Americans than in non-Hispanic whites. Between the ages of 45 and 64, glaucoma is fifteen times more likely to cause blindness in African Americans than in Caucasians.</p>
 
                 </div>
                 <div class="modal-header">
                 </div>
                 <div class="modal-body">
                 <h2>What You Can Do</h2>
-                    <p style="">Blah blah blah</p>
-                    
+
+                  <p class="lead">Individuals at high risk for glaucoma should have a dilated-pupil eye examination at least every two years. Eye doctors use several tests to detect glaucoma.</p>
+                  <p class="lead"> Tonometry measures the pressure inside the eye. Examples of tonometers include:</p>
+                  
+                  <ul class="list-group">
+                    <li class="list-group-item lead">1. The air-puff (noncontact) tonometer, which emits a puff of air. Eye pressure is measured by the eye's resistance to the air.
+                    The applanation tonometer, which touches the eye's surface after the eye has been numbed and measures the amount of pressure necessary to flatten the cornea. This is the most sensitive tonometer, but a clear, regularly-shaped cornea is needed for it to function properly.
+                    </li>
+                    <li class="list-group-item lead">2. The electronic indentation method, which measures pressure by directly contacting anesthetized eyes with a digital pen-like instrument.
+                    In pupil dilation, special drops temporarily enlarge the pupil so the doctor can better view the inside of the eye. Various instruments allow the doctor to determine the thickness of the cornea, to view the front and/or the interior of the eye, and to monitor optic nerve changes over time.
+                    </li> 
+                    <li class="list-group-item lead">3. Visual field testing measures the entire area seen by the forward-looking eye to document straight-ahead (central) and/or side (peripheral) vision.
+
+                    A visual acuity test uses an eye chart to measure sight at various distances.
+                    </li>
+                    <li class="list-group-item lead">4. Ge­net­ic coun­sel­ing can help you and fam­i­ly mem­bers to find an­swers for any ques­tions you have about Glaucoma. 
+                    </li>
+                  </ul>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" id="main-btn"data-dismiss="modal">Close</button>
                     
                 </div>
               </div>
@@ -62,10 +89,10 @@
       <a href="#" class="modal-trigger" data-toggle="modal" 
       data-target="#stargardtsModal" id="a-stargardts">Stargardt's Disease
       <br>
-      <p>You do not have Stargardts</p>
+      <p>Learn more about your Stargardts risks</p>
       </a>
       <div class="modal modal-fullreen fade" id="stargardtsModal" tabindex="-1" role="dialog" aria-labelledby="stargardtsModal" aria-hidden="true">
-          <div class="modal-dialog modal-md">
+          <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
@@ -78,19 +105,29 @@
                 </div>
                 <div class="modal-body">
                   <h2>Your Results</h2>
-                    <p style="">Blah blah blah</p>
+                  {{#each data.genes}}
+                    <p class="lead">We tested your genome for three SNPs (See Table Below) for the {{diseases.6.diseasegenename}} Gene. {{diseases.6.diseasegenename}} has been shown to be associated with a risk of developing certain forms of Stargardt's Disease, specifically: {{diseases.6.diseasename}}. Your genotypes for Stargardt's Disease are {{genotypes.rs61753034}} and {{genotypes.rs61753033}}.</p>
+
+                    <ul class="list-group">
+                      <li class="list-group-item lead">1. Genotype {{genotypes.rs61753034}} carries a {{diseases.6.risk}} {{diseases.6.descr}}
+                      </li>
+                      <li class="list-group-item lead">2. Genotype {{genotypes.rs61753033}} carries a {{diseases.7.risk}} {{diseases.7.descr}}
+                      </li> 
+                     
+                    </ul>
+                  {{/each}}
                     
                 </div>
                 <div class="modal-header">
                 </div>
                 <div class="modal-body">
                 <h2>About The Disease</h2>
-                    <p style="">The most common cause of Stargardt’s is an autosomal recessive mutation in a gene called ABCA4. This gene normally facilitates transport of a “used” form of vitamin A out of photoreceptors, the light sensitive cells in the retina. Without ABCA4, this material builds up in the retina and contributes to the formation of lipofuscin.</p>
+                    <p class="lead">The most common cause of Stargardt’s is an autosomal recessive mutation in a gene called ABCA4. This gene normally facilitates transport of a “used” form of vitamin A out of photoreceptors, the light sensitive cells in the retina. Without ABCA4, this material builds up in the retina and contributes to the formation of lipofuscin.</p>
                     <br>
                     
-                    <p>Patients usually inherit Stargardt disease from parents who are unaffected carriers of the disease where one of the two copies of the ABCA4 gene is each parent carries a mutation. In such families, each child has a 25 percent chance of developing Stargardt’s disease and a 50 percent chance of being an unaffected carrier.</p>
+                    <p class="lead">Patients usually inherit Stargardt disease from parents who are unaffected carriers of the disease where one of the two copies of the ABCA4 gene is each parent carries a mutation. In such families, each child has a 25 percent chance of developing Stargardt’s disease and a 50 percent chance of being an unaffected carrier.</p>
                     <br>
-                    <p>Rarely, Stargardt disease can be caused by an autosomal dominant mutation in a gene called ELOVL4. This gene is responsible for the synthesis of very long chain fatty acids. In families with this form of the disease, one parent has the disease and 50 percent of his/her children inherit one copy of a mutated version of the ELOVL4 gene and develop the disease.</p> <br>
+                    <p class="lead">Rarely, Stargardt disease can be caused by an autosomal dominant mutation in a gene called ELOVL4. This gene is responsible for the synthesis of very long chain fatty acids. In families with this form of the disease, one parent has the disease and 50 percent of his/her children inherit one copy of a mutated version of the ELOVL4 gene and develop the disease.</p> <br>
 
 
                 </div>
@@ -98,12 +135,25 @@
                 </div>
                 <div class="modal-body">
                 <h2>What You Can Do</h2>
-                    <p style="">Blah blah blah</p>
+                    <p class="lead">Individuals with a family history for Stargardt's Disease should try to obtain a clinical diagnosis through genetic testing. </p>
+                    <p class="lead"> </p>
+                    
+                    <ul class="list-group">
+                      <li class="list-group-item lead"> Genetic counseling is a great way to obtain a natural history of the condition. There are a number of genetic counselors that can help. 
+                      </li>
+                      <li class="list-group-item lead"> Resources include: <br>
+                      <a href="http://www.ncbi.nlm.nih.gov/variation/tools/1000genomes/?chr=NC_000001.10&from=94458392&to=94586704">1000 Genomes</a> <br>  <a href="http://www.ncbi.nlm.nih.gov/gtr/labs/279559/">The National Center for Biotechnology Information, U.S. National Library of Medicine</a> <br> 
+                      <a href="http://www.centogene.com/genetic-testing/genetic-statistics/genetic-insights-ophthalmology.html">Centogene AG</a> on their website as a genetic resource.
+                      </li> 
+                      <li class="list-group-item lead"> Cesarcells has several clinical trials that treat Stargardt's Disease. Click <a href="/tools/start-health-assessment">HERE</a> to see if you qualify.
+                      </li>
+                    
+                    </ul>
                     
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" id="main-btn" data-dismiss="modal">Close</button>
                     
                 </div>
               </div>
@@ -112,7 +162,7 @@
       <a href="#" class="modal-trigger" data-toggle="modal" 
       data-target="#armdModal" id="a-armd">Age Related Macular Dengeration (ARMD)
       <br>
-      <p>You do not have ARMD</p>
+      <p>Learn more about your ARMD risks</p>
       </a>
       <div class="modal modal-fullreen fade" id="armdModal" tabindex="-1" role="dialog" aria-labelledby="armdModal" aria-hidden="true">
           <div class="modal-dialog modal-lg">
@@ -128,19 +178,19 @@
                 <h2>Your Results</h2>
                 </div>
                 <div class="modal-body">
-                    <p style="">The most common cause of Stargardt’s is an autosomal recessive mutation in a gene called ABCA4. This gene normally facilitates transport of a “used” form of vitamin A out of photoreceptors, the light sensitive cells in the retina. Without ABCA4, this material builds up in the retina and contributes to the formation of lipofuscin.</p>
+                    <p class="lead">The most common cause of Stargardt’s is an autosomal recessive mutation in a gene called ABCA4. This gene normally facilitates transport of a “used” form of vitamin A out of photoreceptors, the light sensitive cells in the retina. Without ABCA4, this material builds up in the retina and contributes to the formation of lipofuscin.</p>
                     
                 </div>
                 <div class="modal-header">
                 <h2>About The Disease</h2>
                 </div>
                 <div class="modal-body">
-                    <p style="">The most common cause of Stargardt’s is an autosomal recessive mutation in a gene called ABCA4. This gene normally facilitates transport of a “used” form of vitamin A out of photoreceptors, the light sensitive cells in the retina. Without ABCA4, this material builds up in the retina and contributes to the formation of lipofuscin.</p>
+                    <p class="lead">The most common cause of Stargardt’s is an autosomal recessive mutation in a gene called ABCA4. This gene normally facilitates transport of a “used” form of vitamin A out of photoreceptors, the light sensitive cells in the retina. Without ABCA4, this material builds up in the retina and contributes to the formation of lipofuscin.</p>
                     <br>
                     
-                    <p>Patients usually inherit Stargardt disease from parents who are unaffected carriers of the disease where one of the two copies of the ABCA4 gene is each parent carries a mutation. In such families, each child has a 25 percent chance of developing Stargardt’s disease and a 50 percent chance of being an unaffected carrier.</p>
+                    <p class="lead">Patients usually inherit Stargardt disease from parents who are unaffected carriers of the disease where one of the two copies of the ABCA4 gene is each parent carries a mutation. In such families, each child has a 25 percent chance of developing Stargardt’s disease and a 50 percent chance of being an unaffected carrier.</p>
                     <br>
-                    <p>Rarely, Stargardt disease can be caused by an autosomal dominant mutation in a gene called ELOVL4. This gene is responsible for the synthesis of very long chain fatty acids. In families with this form of the disease, one parent has the disease and 50 percent of his/her children inherit one copy of a mutated version of the ELOVL4 gene and develop the disease.</p> <br>
+                    <p class="lead">Rarely, Stargardt disease can be caused by an autosomal dominant mutation in a gene called ELOVL4. This gene is responsible for the synthesis of very long chain fatty acids. In families with this form of the disease, one parent has the disease and 50 percent of his/her children inherit one copy of a mutated version of the ELOVL4 gene and develop the disease.</p> <br>
 
 
                 </div>
@@ -165,22 +215,24 @@
           </div>
       </div>
     </div>
-    <canvas width="1600" height="1000">
+    <canvas width="1600" height="500" style="">
   
     </canvas>
  
   </div>
-  <div class="col-lg-7">
-      <h2>Immediate attention required</h2>
-      <p class="lead">Your results for these tested conditions deviate significantly from the normal range. Your current and future health might be impacted.</p>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <h2>Your Genome</h2>
+    <p class="lead text-center">Your results for these tested conditions deviate significantly from the normal range. Your current and future health might be impacted.</p>
     <div class="wrap-snps table-responsive">
-      <table class="table" id="genes-table" cellspacing="0" cellpadding="0" border="0">
+      <table class="table table-hover" id="genes-table" cellspacing="0" cellpadding="0" border="0">
         <thead>
           <tr>
-
-              <th>Genes</th>
+              <th>Retinal Disease   <i class="fa fa-info-circle" aria-hidden="true"></i></th>
+              <th>Gene   <i class="fa fa-info-circle" aria-hidden="true"></i></th>
               {{!-- <th>SNP</th> --}}
-              <th>Variants</th>
+              <th>Variants   <i class="fa fa-info-circle" aria-hidden="true"></i></th>
               {{!-- <th>Your Genotype</th> --}}
         
           </tr>
@@ -191,10 +243,9 @@
           
           <tr>
               
-            <td>{{diseasegenename}}</td>
-            {{!-- <td><a target="_blank" href="http://www.ncbi.nlm.nih.gov/SNP/snp_ref.cgi?rs={{@key}}">{{@key}}</a></td> --}}
+            <td>{{diseasename}}</td>
+            <td><a id="genename-link" target="_blank" href="https://ghr.nlm.nih.gov/gene/{{diseasegenename}}#conditions">{{diseasegenename}}</a></td> 
             <td>{{variants}}</td>
-            {{!-- <td>{{this}}</td> --}}
           
           </tr>
         
@@ -210,9 +261,9 @@
           <tr>
 
               {{!-- <th class="td-trials-head">Genes</th> --}}
-              <th>SNP</th>
+              <th>SNP   <i class="fa fa-info-circle" aria-hidden="true"></i></th>
               {{!-- <th>Variants</th> --}}
-              <th>Your Genotype</th>
+              <th>Your Genotype   <i class="fa fa-info-circle" aria-hidden="true"></i></th>
         
           </tr>
         </thead>
@@ -222,7 +273,7 @@
           
         {{!-- {{#each ../diseases}} --}}
           <tr>
-              
+            
             {{!-- <td class="td-trials">{{diseasegenename}}</td> --}}
             <td><a id="snp-link" target="_blank" href="http://www.ncbi.nlm.nih.gov/SNP/snp_ref.cgi?rs={{@key}}">{{@key}}</a></td>
             {{!-- <td>{{variants}}</td> --}}
@@ -238,6 +289,7 @@
           
       </table>
     </div>
+  </div>
   </div>
 </div>
 {{!-- I want to display the gene name, variants in the corresponding field --}}

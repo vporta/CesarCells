@@ -1,9 +1,13 @@
 
     <div class="row" id="row-top-dash-images">
- 
+        {{#if noTakeAssessment}}
+        <p class="alert alert-danger">{{noTakeAssessment}}</p>
+        {{/if}}
+
         {{#if successFlash}}
         <h2 >{{successFlash}}</h2>
         {{/if}}
+
         {{#if taken}}
 
         <p class="alert alert-danger">{{taken}}</p>

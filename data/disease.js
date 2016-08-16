@@ -1,14 +1,14 @@
 module.exports = [
   {
-    diseasename: 'Glaucoma 1',
+    diseasename: 'Glaucoma',
     diseasegenename: 'MYOC',
     variants: 'A or C',
-    risk: 'Low Magnitude',
-    descr: ''
+    risk: 'Low Magnitude and Low Risk of developing Glaucoma.',
+    descr: 'Data suggest that MYOC overexpression is not a cause or an effect of intraocular pressure elevation and that MYOC itself is not associated with open-angle Glaucoma.'
     
   },
   {
-    diseasename: 'Glaucoma 1',
+    diseasename: 'Exfoliation Glaucoma',
     diseasegenename: 'LOXL1',
     variants: 'A or G',
     risk: '(C;C) 2.3 common but 10x higher glaucoma risk in most (but not all) populations. (C;T) 1.8 possibly lower glaucoma risk. (T;T) 2.5 10x to 27x lower risk of exfoliation glaucoma.',
