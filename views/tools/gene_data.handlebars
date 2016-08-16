@@ -1,4 +1,7 @@
-<h1 style="font-size: 50px; margin-top: 160px; text-align: center"> {{user}}'s Genetics </h1>
+<h1 style="font-size: 50px; margin-top: 160px; text-align: center"> {{user}}'s Genetics 
+{{!-- <canvas width="1600" height="500" style="">
+</canvas> --}}
+</h1>
 <div class="row" id="make-transparent">
 
   <div class="col-lg-4 wrap-gene-results">
@@ -16,15 +19,16 @@
               <div class="modal-content">
                 <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
-                <h2 class="modal-title" id="myModalLabel" style="text-align: center"></h2>
+                <h2 class="modal-title" id="myModalLabel" style="text-align: center">Glaucoma</h2>
                 </div>
                 <div style="display: flex; align-items: center; justify-content: center">
                 {{!-- <img style="" src="http://brandoneye.com/wp-content/uploads/2015/07/glaucoma.png"> --}}
                 </div>
                 <div class="modal-header">
+
                 </div>
-                <div class="modal-body">
-                  <h2>Your Results</h2>
+                <div class="modal-body genotypes-can-do">
+                  <h2 style="text-align: center">Your Results</h2>
                 {{#each data.genes}}
                   <p class="lead">We tested your genome for three SNPs (See Table Below) for Genes: {{diseases.0.diseasegenename}} and {{diseases.1.diseasegenename}} that have been shown to be associated with a risk of developing certain forms of Glaucoma, specifically: {{diseases.0.diseasename}} and {{diseases.8.diseasename}}. Your genotypes for Glaucoma are {{genotypes.rs28936694}} and {{genotypes.rs3825942}}, and {{genotypes.rs1048661}}. </p>
 
@@ -40,7 +44,7 @@
                 </div>
                 <div class="modal-header">
                 </div>
-                <div class="modal-body">
+                <div class="modal-body genotypes-can-do">
                 <h2>About The Disease</h2>
 
                     <p class="lead">Glaucoma is a group of eye diseases that damage the optic nerve (the bundle of nerve fibers that carries information from the eye to the brain) and can lead to vision loss and possibly blindness.</p>
@@ -58,7 +62,7 @@
                 </div>
                 <div class="modal-header">
                 </div>
-                <div class="modal-body">
+                <div class="modal-body genotypes-can-do">
                 <h2>What You Can Do</h2>
 
                   <p class="lead">Individuals at high risk for glaucoma should have a dilated-pupil eye examination at least every two years. Eye doctors use several tests to detect glaucoma.</p>
@@ -99,12 +103,12 @@
                 <h2 class="modal-title" id="myModalLabel" style="text-align: center">Stargardt's Disease</h2>
                 </div>
                 <div style="display: flex; align-items: center; justify-content: center">
-                <img style="width: 50%" src="https://www.visability.com.au/image.php?file=/art/rta/aboutvision/eyeanatomy.jpg&width=499&height=375">
+                {{!-- <img style="width: 50%" src="https://www.visability.com.au/image.php?file=/art/rta/aboutvision/eyeanatomy.jpg&width=499&height=375"> --}}
                 </div>
                 <div class="modal-header">
-                </div>
-                <div class="modal-body">
                   <h2>Your Results</h2>
+                </div>
+                <div class="modal-body genotypes-can-do">
                   {{#each data.genes}}
                     <p class="lead">We tested your genome for three SNPs (See Table Below) for the {{diseases.6.diseasegenename}} Gene. {{diseases.6.diseasegenename}} has been shown to be associated with a risk of developing certain forms of Stargardt's Disease, specifically: {{diseases.6.diseasename}}. Your genotypes for Stargardt's Disease are {{genotypes.rs61753034}} and {{genotypes.rs61753033}}.</p>
 
@@ -119,9 +123,9 @@
                     
                 </div>
                 <div class="modal-header">
-                </div>
-                <div class="modal-body">
                 <h2>About The Disease</h2>
+                </div>
+                <div class="modal-body genotypes-can-do">
                     <p class="lead">The most common cause of Stargardt’s is an autosomal recessive mutation in a gene called ABCA4. This gene normally facilitates transport of a “used” form of vitamin A out of photoreceptors, the light sensitive cells in the retina. Without ABCA4, this material builds up in the retina and contributes to the formation of lipofuscin.</p>
                     <br>
                     
@@ -132,9 +136,9 @@
 
                 </div>
                 <div class="modal-header">
-                </div>
-                <div class="modal-body">
                 <h2>What You Can Do</h2>
+                </div>
+                <div class="modal-body genotypes-can-do">
                     <p class="lead">Individuals with a family history for Stargardt's Disease should try to obtain a clinical diagnosis through genetic testing. </p>
                     <p class="lead"> </p>
                     
@@ -172,53 +176,91 @@
                 <h2 class="modal-title" id="myModalLabel" style="text-align: center">Age Related Macular Dengeration</h2>
                 </div>
                 <div style="display: flex; align-items: center; justify-content: center">
-                <img style="width: 50%" src="https://www.visability.com.au/image.php?file=/art/rta/aboutvision/eyeanatomy.jpg&width=499&height=375">
+                {{!-- <img style="width: 50%" src="https://www.visability.com.au/image.php?file=/art/rta/aboutvision/eyeanatomy.jpg&width=499&height=375"> --}}
                 </div>
                 <div class="modal-header">
                 <h2>Your Results</h2>
-                </div>
-                <div class="modal-body">
-                    <p class="lead">The most common cause of Stargardt’s is an autosomal recessive mutation in a gene called ABCA4. This gene normally facilitates transport of a “used” form of vitamin A out of photoreceptors, the light sensitive cells in the retina. Without ABCA4, this material builds up in the retina and contributes to the formation of lipofuscin.</p>
+
+                </div> 
+                <div class="modal-body genotypes-can-do">
+                    <p class="lead">{{#each data.genes}}
+                    <p class="lead">We tested your genome for five SNPs (See Table Below) for the {{diseases.2.diseasegenename}}, {{diseases.3.diseasegenename}}, {{diseases.4.diseasegenename}}, and {{diseases.5.diseasegenename}} Genes that have been shown to be associated with a risk of developing certain forms of ARMD, specifically: {{diseases.2.diseasename}}, {{diseases.4.diseasename}}, and {{diseases.5.diseasename}}. </p>
+
+                    <ul class="list-group">
+                      <li class="list-group-item lead">1. Genotype {{genotypes.rs2230199}} carries a {{diseases.2.risk}} {{diseases.2.descr}}
+                      </li>
+                      <li class="list-group-item lead">2. Genotype {{genotypes.rs800292}} carries a {{diseases.3.risk}} {{diseases.3.descr}}
+                      </li> 
+                      <li class="list-group-item lead">3. Genotype {{genotypes.rs3775291}} carries a {{diseases.4.risk}} {{diseases.4.descr}}
+                      </li> 
+                      <li class="list-group-item lead">4. Genotype {{genotypes.rs3775291}} carries a {{diseases.5.risk}} {{diseases.5.descr}}
+                      </li> 
+                      <li class="list-group-item lead">4. Genotype {{genotypes.rs1061170}} carries a {{diseases.9.risk}} {{diseases.9.descr}}
+                      </li>
+                     
+                    </ul>
+                  {{/each}}</p>
                     
                 </div>
                 <div class="modal-header">
                 <h2>About The Disease</h2>
                 </div>
-                <div class="modal-body">
-                    <p class="lead">The most common cause of Stargardt’s is an autosomal recessive mutation in a gene called ABCA4. This gene normally facilitates transport of a “used” form of vitamin A out of photoreceptors, the light sensitive cells in the retina. Without ABCA4, this material builds up in the retina and contributes to the formation of lipofuscin.</p>
+                <div class="modal-body genotypes-can-do">
+                    <p class="lead">There are two forms of AMD: dry and wet. It is possible for a person to suffer from both forms and for the disease to progress slowly or rapidly.</p>
                     <br>
-                    
-                    <p class="lead">Patients usually inherit Stargardt disease from parents who are unaffected carriers of the disease where one of the two copies of the ABCA4 gene is each parent carries a mutation. In such families, each child has a 25 percent chance of developing Stargardt’s disease and a 50 percent chance of being an unaffected carrier.</p>
+                    <p class="lead">Dry macular degeneration is the most common type of AMD. This form, in which the photosensitive cells of the macula slowly break down, is diagnosed in 85 to 90 percent of cases. Yellow deposits called drusen (waste products from metabolism) form and accumulate under the retina, between the retinal pigmented epithelium (RPE) layer and the Bruch's membrane, the blood-retina barrier which supports the retina.</p>
                     <br>
-                    <p class="lead">Rarely, Stargardt disease can be caused by an autosomal dominant mutation in a gene called ELOVL4. This gene is responsible for the synthesis of very long chain fatty acids. In families with this form of the disease, one parent has the disease and 50 percent of his/her children inherit one copy of a mutated version of the ELOVL4 gene and develop the disease.</p> <br>
+                    <p class="lead">Drusen are often found in the eyes of older people, but an increase in the size and number of these deposits is frequently the first sign of macular degeneration. Over time, drusen are associated with deterioration of the macula and the death of RPE and photoreceptor cells, resulting in blurring or a spotty loss of clear, straight-ahead vision.</p> <br>
+                    <p class="lead">Dry AMD may advance and cause loss of vision without turning into the wet form of the disease. It is also possible for early-stage dry AMD to change into the wet form of the disease.</p> <br>
+                    <p class="lead">Wet macular degeneration is usually preceded by the dry form of the disease. This wet form occurs when the Bruch's membrane begins to break down, usually near drusen deposits, and new blood vessels grow. This growth is called neovascularization. These vessels are very fragile and can leak fluid and blood, resulting in scarring of the macula and the potential for rapid, severe damage. </p> <br>
+                    <p class="lead">The neovascularization disturbs the natural organization of the light-detecting photoreceptor cells and their associated RPE cells, eventually leading to their death. Straight-ahead vision can become distorted or be lost entirely in a short period of time, sometimes within days or weeks. The wet form accounts for approximately 10 percent of all cases of AMD, but it results in 90 percent of the cases of legal blindness. All wet AMD is considered advanced.</p> <br>
 
 
                 </div>
                 <div class="modal-header">
                 <h2>What You Can Do</h2>
                 </div>
-                <div class="modal-body">
-                    <p style="">The most common cause of Stargardt’s is an autosomal recessive mutation in a gene called ABCA4. This gene normally facilitates transport of a “used” form of vitamin A out of photoreceptors, the light sensitive cells in the retina. Without ABCA4, this material builds up in the retina and contributes to the formation of lipofuscin.</p>
+                <div class="modal-body genotypes-can-do">
+                    <p class="lead">Several genes are believed to be strongly associated with the risk of developing AMD:</p>
                     <br>
                     
-                    <p>Patients usually inherit Stargardt disease from parents who are unaffected carriers of the disease where one of the two copies of the ABCA4 gene is each parent carries a mutation. In such families, each child has a 25 percent chance of developing Stargardt’s disease and a 50 percent chance of being an unaffected carrier.</p>
+                    <p class="lead">Factor H and Factor B genes are responsible for proteins that help regulate inflammation in the part of the immune system that attacks diseased and damaged cells. According to study results published in 2006 by Columbia University, 74 percent of AMD patients carry certain variants in one or both of these genes, and these may significantly increase their risk of developing it.</p>
                     <br>
-                    <p>Rarely, Stargardt disease can be caused by an autosomal dominant mutation in a gene called ELOVL4. This gene is responsible for the synthesis of very long chain fatty acids. In families with this form of the disease, one parent has the disease and 50 percent of his/her children inherit one copy of a mutated version of the ELOVL4 gene and develop the disease.</p> <br>
+                    <p class="lead">PLEKHA1 – a gene located on chromosome 10; researchers believe it may increase the risk of developing AMD. Like Factors H and B, PLEKHA1 appears to be involved in the cellular processes related to inflammation.</p> <br>
+                    <p class="lead">HTRA1 – Scientists have identified a link between a mutation in this gene and the development of AMD. Specifically, the HTRA1 mutation is thought to be associated with the formation of drusen (yellow deposits of waste products under the retina that are often a sign of dry AMD), and may also promote the growth of fragile new blood vessels typical of wet AMD.</p> <br>
+                    <p class="lead">Complement C3 – Researchers have found that a variant in this gene increases the risk of developing the wet and dry forms of AMD. This gene plays an important role in the immune system, leading scientists to believe that inflammation is a vital part of the AMD disease process.</p> <br>
+                    <p class="lead">Other gene candidates are being studied to determine their role in AMD. While there is definitely a strong genetic component to this disease, it is highly likely that its development is due to a combination of multiple factors including gene mutations or variations and environmental factors such as sunlight exposure, diet and smoking.</p> <br>
 
+
+                    
+                    <ul class="list-group">
+                      <li class="list-group-item lead"> Genetic counseling is a great way to obtain a natural history of the condition. There are a number of genetic counselors that can help. 
+                      </li>
+                      <li class="list-group-item lead"> Resources include: <br>
+                      <a href="http://www.ncbi.nlm.nih.gov/variation/tools/1000genomes/?chr=NC_000001.10&from=94458392&to=94586704">1000 Genomes</a> <br>  <a href="http://www.ncbi.nlm.nih.gov/gtr/labs/279559/">The National Center for Biotechnology Information, U.S. National Library of Medicine</a> <br> 
+                      <a href="http://www.centogene.com/genetic-testing/genetic-statistics/genetic-insights-ophthalmology.html">Centogene AG</a> on their website as a genetic resource.
+                      </li> 
+                      <li class="list-group-item lead"> Cesarcells has several clinical trials that treat ARMD. Click <a href="/tools/start-health-assessment">HERE</a> to see if you qualify.
+                      </li>
+                    
+                    </ul>
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" id="main-btn" data-dismiss="modal">Close</button>
                     
                 </div>
               </div>
           </div>
       </div>
     </div>
-    <canvas width="1600" height="500" style="">
-  
-    </canvas>
+    
  
+  </div>
+  <div class="col-lg-8">
+
+
+
   </div>
 </div>
 <div class="row">
