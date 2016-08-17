@@ -12,7 +12,7 @@ var Trial = require('../models/Trial.js');
 var Answer = require('../models/Answers.js');
 var sg = require('sendgrid').SendGrid(process.env.SENDGRID_API_KEY)
 var helper = require('sendgrid').mail
-var helpers = require('../helpers/mail');
+// var helpers = require('../helpers/mail');
 var async = require('async');
 
 

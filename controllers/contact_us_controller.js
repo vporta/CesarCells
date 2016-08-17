@@ -8,9 +8,9 @@ var _ = require('underscore');
 var User = require('../models/UserModel.js');
 var Trial = require('../models/Trial.js');
 var Answer = require('../models/Answers.js');
-var sendgrid = require('../helpers/mail');
+// var sendgrid = require('../helpers/mail');
 var flash = require('connect-flash');
-var helpers = require('../helpers/mail.js')
+// var helpers = require('../helpers/mail.js')
 
 // ==== CONTACT-US BEGINS ====
 router.get('/contact_us/contact', function (req, res) {
@@ -29,7 +29,7 @@ router.post('/contact_us/send', function (req, res) {
   content = new helper.Content("text/plain", contents)
   mail = new helper.Mail(from_email, subject, to_email, content)
 
-  var sg = require('sendgrid').SendGrid(process.env.SENDGRID_API_KEY)
+  var sg = require('sendgrid').SendGrid('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')
   var requestBody = mail.toJSON()
   var request = sg.emptyRequest()
   request.method = 'POST'

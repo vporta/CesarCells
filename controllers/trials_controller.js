@@ -9,7 +9,6 @@ var User = require('../models/UserModel.js');
 var Trial = require('../models/Trial.js');
 var Answer = require('../models/Answers.js');
 var flash = require('connect-flash');
-var helpers = require('../helpers/mail.js');
 
 
 

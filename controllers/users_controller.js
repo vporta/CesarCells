@@ -11,10 +11,10 @@ var User = require('../models/UserModel.js');
 var Trial = require('../models/Trial.js');
 var Answer = require('../models/Answers.js');
 var StargReg = require('../models/StargReg.js');
-var sg = require('sendgrid').SendGrid(process.env.SENDGRID_API_KEY)
+// var sg = require('sendgrid').SendGrid(process.env.SENDGRID_API_KEY)
 var helper = require('sendgrid').mail
-var helpers = require('../helpers/mail');
 var async = require('async');
+var crypto = require('crypto');
 
 
 // === HOME PAGE ======
@@ -88,17 +88,18 @@ router.get('/users/dashboard', function (req, res) {
     data.trials = result;
   User.find({ 
   }).then(function(result) {
-    data.users = result;
-    // req.flash('success', 'Welcome back, ' + req.user.firstname)
-    res.render('users/dashboard', {
+      
+      data.users = result;
+      // req.flash('success', 'Welcome back, ' + req.user.firstname)
+      res.render('users/dashboard', {
       data: data,
       layout: 'dash',
       user: req.user,
       successFlash: 'Howdy, ' + req.user.firstname,
       failureFlash: 'Invalid email or password!'
 
+      });
     });
-   });
   });
 });
 
@@ -142,12 +143,151 @@ router.get('/users/sign-out', function(req, res) {
 
 // ==== RESET PASSWORD ====
 router.get('/users/password_new', function(req, res) {
-  res.render('users/password_new');
+  res.render('users/password_new', {
+    layout: 'main',
+    user: req.user
+  });
 });
 
 router.post('/users/password_new', function(req, res) {
-// SEND RESET PASSWORD EMAIL HERE
-  res.redirect('/');
+  // SEND RESET PASSWORD EMAIL HERE
+  console.log(req.body.email);
+  var email = req.body.email;
+
+  // GENERATE RANDOM TOKEN
+  crypto.randomBytes(256, function(err, buf) {
+    
+    var token = buf.toString('hex');
+    
+    if (err) {
+      throw err;
+    }else {
+
+      // console.log(token);
+
+      User.findOne({'local.email': email}, function(err, user) {
+        // console.log('Hello' + user.local);
+        // console.log('Hello err' + err);
+
+        if(!user) {
+          req.flash('error', 'No account with that email address exists.');
+          res.render('users/password_new', {
+            layout: 'main',
+            error: req.flash('error')
+          })
+        }else {
+          user.resetPasswordToken = token;
+          user.resetPasswordExpires = Date.now() + 3600000; // 1 hour
+
+          user.save(function(err) {
+            
+          });
+          // console.log(user + " ===========two=============");
+
+        }
+      }).then(function(user) {
+          var name = 'CesarCells Password Reset';
+          var contents = 'Hi ' +user.firstname + ',\n\n' + 'You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n' +
+                'Please click on the following link, or paste this into your browser to complete the process:\n\n' +
+                'http://' + req.headers.host + '/reset/' + token + '\n\n' +
+                'If you did not request this, please ignore this email and your password will remain unchanged.\n';
+          
+          var helper  = require('sendgrid').mail;
+          from_email = new helper.Email('passwordreset@cesarcells.com')
+          to_email = new helper.Email(user.local.email)
+          subject = name;
+          content = new helper.Content("text/plain", contents)
+          mail = new helper.Mail(from_email, subject, to_email, content)
+
+          var sg = require('sendgrid').SendGrid('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')
+          var requestBody = mail.toJSON()
+          var request = sg.emptyRequest()
+          request.method = 'POST'
+          request.path = '/v3/mail/send'
+          request.body = requestBody
+
+          sg.API(request, function (response) {
+            console.log(response.statusCode)
+            console.log(response.body)
+            console.log(response.headers)
+            console.log(response)
+          });
+        }) //end promise
+          req.flash('success', 'An email has been sent to ' +email+ ' with further instructions.');
+
+          res.render('users/password_new', {
+            layout: 'main',
+            email: email,
+            success: req.flash('success')
+            
+          });
+    } //end first else statement
+  }); 
+});
+
+router.get('/passwordreset/:token', function(req, res) {
+  User.findOne({ resetPasswordToken: req.params.token, resetPasswordExpires: { $gt: Date.now() } }, function(err, user) {
+    if (!user) {
+      req.flash('error', 'Password reset token is invalid or has expired.');
+      return res.redirect('/users/password_new');
+    }
+    res.render('users/password_reset', {
+      user: req.user
+    });
+  });
+});
+
+router.post('/passwordreset/:token', function(req, res) {
+  
+  async.waterfall([
+
+    function(done) {
+      User.findOne({ resetPasswordToken: req.params.token, resetPasswordExpires: { $gt: Date.now() } }, function(err, user) {
+        if (!user) {
+          req.flash('error', 'Password reset token is invalid or has expired.');
+          return res.redirect('back');
+        }
+
+        user.password = req.body.password;
+        user.resetPasswordToken = undefined;
+        user.resetPasswordExpires = undefined;
+
+        user.save(function(err) {
+          req.logIn(user, function(err) {
+            done(err, user);
+          });
+        });
+      });
+    },
+    function(user, done) {
+      var name = 'Your password has been changed';
+      var contents = 'Hello,\n\n' +
+            'This is a confirmation that the password for your account ' + user.email + ' has just been changed.\n';
+      
+      var helper  = require('sendgrid').mail;
+      from_email = new helper.Email('passwordreset@cesarcells.com')
+      to_email = new helper.Email(user.email)
+      subject = name;
+      content = new helper.Content("text/plain", contents)
+      mail = new helper.Mail(from_email, subject, to_email, content)
+
+      var sg = require('sendgrid').SendGrid('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')
+      var requestBody = mail.toJSON()
+      var request = sg.emptyRequest()
+      request.method = 'POST'
+      request.path = '/v3/mail/send'
+      request.body = requestBody
+
+      sg.API(request, function (response) {
+        console.log(response.statusCode)
+        console.log(response.body)
+        console.log(response.headers)
+        console.log(response)
+      })
+    }
+  ], function(err) {
+      res.redirect('/');
+  });
 });
 
 // ==== VIEW RESULTS ====

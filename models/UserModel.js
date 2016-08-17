@@ -35,7 +35,7 @@ var UserSchema = new Schema({
   state: String,
   zip: Number,
   stargRegTaken: Boolean,
-  geneticTestTaken: Boolean
+  geneticTestTaken: Boolean,
 });
 
 
