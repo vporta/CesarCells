@@ -326,7 +326,6 @@ var deleteNote = req.params._id;
 
   Amsler.find({user_id: req.user._id, _id: deleteNote}).then(function(notes) {
 
-    debugger;
     Amsler.remove({_id: deleteNote}, function(err, removed) {
       if(err) {
         throw err;

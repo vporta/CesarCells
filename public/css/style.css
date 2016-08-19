@@ -197,6 +197,17 @@ ul.shortcuts li {
     opacity: 4;
 }
 
+th {
+    font-size: 20px;
+}
+td {
+    font-size: 16px;
+}
+#table-genes-disease {
+    width: 100%;
+    padding: 5 50 5 50px;
+    background-color: white;
+}
 blockquote {
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
     font-size: 18px;
@@ -444,11 +455,11 @@ pre {
 .title-trials {
     font-size: 25px;
     text-align: center;
-    margin-top: 68px;
+    margin-top: 98px;
     padding-bottom: 30px;
-    border-color: gray;
+   /* border-color: gray;
     border-width: thin;
-    border-style: solid;
+    border-style: solid;*/
 }
 /*What is section*/
 
@@ -478,12 +489,14 @@ pre {
     padding: 5px;
     margin: 10px;
     text-transform: uppercase;
+    text-align: center;
 }
 .what-are-trials-h2 {
 
-    font-size: 50px;
-    font-weight: 300;
-    color: deeppink;
+   font-size: 60px;
+       font-weight: 600;
+       color: deeppink;
+       margin-bottom: 69px;
 }
 .what-is-h2 {
 
@@ -492,6 +505,12 @@ pre {
     color: darkslategray;
     margin-bottom: 69px;
 
+}
+.what-is-h2-stargardt {
+    font-size: 60px;
+    font-weight: 600;
+    color: deeppink;
+    margin-bottom: 69px;
 }
 .how-it-works-h2 {
 
@@ -926,14 +945,14 @@ text-align: center;
     padding: 75px 0;
     background: white;
     text-align: center;
-    margin-bottom: 200px;
+    /*margin-bottom: 200px;*/
     /*border-radius: 30%;*/
     margin-top: 20px;
 }
 #intro-stargardts-defined {
     padding: 75px 0;
-    background: whitesmoke;
-    text-align: center;
+    background: transparent;
+    text-align: text;
     margin-bottom: 200px;
     margin-top: 20px;
     width: 100%;
@@ -944,6 +963,10 @@ text-align: center;
 #why-register {
     margin-top: 100px;
 }
+.img-genetics {
+    cursor: pointer;
+}
+
 .img-spans-main {
     width: 13.2%;
     display: inline-block;
@@ -960,6 +983,12 @@ text-align: center;
     background-color:  whitesmoke;
     color: deeppink;
     border-color: transparent;
+}
+.starg {
+    line-height: 1.7;
+    text-align: left;
+    font-size: 25px;
+
 }
 .about-p {
     line-height: 1.5em;
@@ -1009,6 +1038,58 @@ text-align: center;
     color: white;
     background-color: deeppink;
     border-color: deeppink;
+    transition: all 0.3s ease-out;
+}
+#get-started-btn {
+    /* width: 400px;
+    height: 95px;*/
+    font-size: 22px;
+    /*padding: 38px;*/
+    /*position: relative;*/
+    color: white;
+    background-color: deeppink;
+    border-color: deeppink;
+    transition: all 0.3s ease-out;   
+    margin:auto;
+    display:block;
+     
+}
+#get-started-btn:hover {
+    /* width: 400px;
+     height: 95px;*/
+     font-size: 22px;
+     /*padding: 38px;*/
+     /*position: relative;*/
+
+     transition: all 0.3s ease-out;   
+     color: deeppink;
+     border-color: deeppink;
+     border-width: 5px;
+     border-style: solid;
+     background-color: transparent;
+     
+}
+#back-to-dash-btn{
+   /* width: 400px;
+    height: 95px;*/
+    font-size: 22px;
+    /*padding: 38px;*/
+    position: relative;
+    color: white;
+    background-color: deeppink;
+    border-color: deeppink;
+    transition: all 0.3s ease-out;
+}
+#back-to-dash-btn:hover{
+   /* width: 400px;
+    height: 95px;*/
+    font-size: 22px;
+    /*padding: 38px;*/
+    position: relative;
+    color: deeppink;
+    background-color: transparent;
+    border-color: transparent;
+    transition: all 0.3s ease-out;
 }
 .ask {
     width: 250px;
@@ -1016,8 +1097,18 @@ text-align: center;
     font-size: 22px;
     padding: 8px;
     position: relative;
-    color: midnightblue;
+    color: darkslategray;
     background-color: white;
+    border-style: none;
+}
+.ask:hover {
+    width: 250px;
+    height: 45px;
+    font-size: 22px;
+    padding: 8px;
+    position: relative;
+    color: white;
+    background-color: deeppink;
 }
 #cesar-btn {
     width: 400px;
@@ -1178,30 +1269,40 @@ h3 {
 }
 #a-dash:hover {
     color: deeppink;
+    transition: all 1s ease-out;
+
 }
 #a-dash-one {
     color: darkslategray;
 }
 #a-dash-one:hover {
     color: deeppink;
+    transition: all 1s ease-out;
+
 }
 #a-dash-two {
     color: darkslategray;
 }
 #a-dash-two:hover {
     color: deeppink;
+    transition: all 1s ease-out;
+
 }
 #a-dash-three {
     color: darkslategray;
 }
 #a-dash-three:hover {
     color: deeppink;
+    transition: all 1s ease-out;
+
 }
 #a-dash-four {
     color: darkslategray;
 }
 #a-dash-four:hover {
     color: deeppink;
+    transition: all 1s ease-out;
+
 }
 li.a:hover {
     color: deeppink;
@@ -1227,7 +1328,7 @@ ul.dropdown-menu {
 
 /****************************/
 #make-transparent {
-    background-color: whitesmoke;
+    background-color: white;
     height: 75%;
 }
 /*gene report table begins*/
@@ -1267,6 +1368,29 @@ ul.dropdown-menu {
     padding-left: 10px;
     color: white;
     text-decoration: none;
+    transition: all 1s ease-out;
+
+}
+#a-genesDisease {
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: none none none solid;
+    background-color: transparent;
+    padding-left: 10px;
+    color: darkslategray;
+    text-decoration: none;
+}
+#a-genesDisease:hover {
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: none none none solid;
+    background-color: deeppink;
+    padding-left: 10px;
+    color: white;
+    text-decoration: none;
+    opacity: .8;
+    transition: all 1s ease-out;
+
 
 }
 #snp-link:hover {
@@ -1291,6 +1415,8 @@ ul.dropdown-menu {
     padding-left: 10px;
     color: white;
     text-decoration: none;
+    transition: all 1s ease-out;
+
 
 }
 #a-armd {
@@ -1311,6 +1437,8 @@ ul.dropdown-menu {
     padding-left: 10px;
     color: white;
     text-decoration: none;
+    transition: all 1s ease-out;
+
 
 }
 .bigArrow {
@@ -1351,22 +1479,7 @@ ul.dropdown-menu {
     font-size: 19px;
 }
 
-#spopup{
-    background:#f3f3f3;
-    border-radius:9px;
-    -moz-border-radius:9px;
-    -webkit-border-radius:9px;
-    -moz-box-shadow:inset 0 0 3px #333;
-    -webkit-box-shadow:inset 0 0 3px #333;
-    box-shadow:inner 0 0 3px #333;
-    padding:12px 14px 12px 14px;
-    width:300px;
-    position:fixed;
-    bottom:13px;
-    right:2px;
-    display:none;
-    z-index:90;
-}
+
 
 /*home page sign-in form*/
 form#sign-in-form.form-horizontal {
@@ -1395,6 +1508,7 @@ padding: 60px;
 
 #header-details-form {
   margin-top: 120px;
+  text-align: center;
 }
 #header-passreset-form {
   margin-top: 120px;
@@ -1575,7 +1689,14 @@ li,ul{
 .login-header .navbar-right {
     margin-right: 0px;
 }
+.wrap-updateinfo {
+    display: flex;
+    align-content: center;
+    margin-top: 100px;
+}
+.form-updateinfo {
 
+}
 
 
 .login-header .nav-tabs > li.active > a,

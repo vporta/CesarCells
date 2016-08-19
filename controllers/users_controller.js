@@ -155,7 +155,7 @@ router.post('/users/password_new', function(req, res) {
   var email = req.body.email;
 
   // GENERATE RANDOM TOKEN
-  crypto.randomBytes(256, function(err, buf) {
+  crypto.randomBytes(30, function(err, buf) {
     
     var token = buf.toString('hex');
     
@@ -213,19 +213,20 @@ router.post('/users/password_new', function(req, res) {
             console.log(response)
           });
         }) //end promise
-          req.flash('success', 'An email has been sent to ' +email+ ' with further instructions.');
 
-          res.render('users/password_new', {
-            layout: 'main',
-            email: email,
-            success: req.flash('success')
-            
-          });
+        req.flash('success', 'An email has been sent to ' +email+ ' with further instructions.');
+
+        res.render('users/password_new', {
+          layout: 'main',
+          email: email,
+          success: req.flash('success')
+          
+        });
     } //end first else statement
   }); 
 });
 
-router.get('/passwordreset/:token', function(req, res) {
+router.get('/reset/:token', function(req, res) {
   User.findOne({ resetPasswordToken: req.params.token, resetPasswordExpires: { $gt: Date.now() } }, function(err, user) {
     if (!user) {
       req.flash('error', 'Password reset token is invalid or has expired.');
@@ -237,57 +238,42 @@ router.get('/passwordreset/:token', function(req, res) {
   });
 });
 
-router.post('/passwordreset/:token', function(req, res) {
+router.post('/reset', function(req, res) {
+  var token = req.params.token;
+  var newpassword = req.body.password;
+  _newpassword = encryptPassword(newpassword);
+  console.log(_newpassword);
   
-  async.waterfall([
+  User.findOneAndUpdate({ resetPasswordToken: token, resetPasswordExpires: { $gt: Date.now() }}, {$set: {'local.password': _newpassword, resetPasswordToken: undefined, resetPasswordExpires: undefined}}).then(function(user) {
+    
+    console.log("This is a user: " + user); 
+    // var name = 'Your password has been changed';
+    // var contents = 'Hello,\n\n' + 'This is a confirmation that the password for your account ' + user.email + ' has just been changed.\n';
 
-    function(done) {
-      User.findOne({ resetPasswordToken: req.params.token, resetPasswordExpires: { $gt: Date.now() } }, function(err, user) {
-        if (!user) {
-          req.flash('error', 'Password reset token is invalid or has expired.');
-          return res.redirect('back');
-        }
+    // var helper  = require('sendgrid').mail;
+    // from_email = new helper.Email('passwordreset@cesarcells.com')
+    // to_email = new helper.Email(user.local.email)
+    // subject = name;
+    // content = new helper.Content("text/plain", contents)
+    // mail = new helper.Mail(from_email, subject, to_email, content)
 
-        user.password = req.body.password;
-        user.resetPasswordToken = undefined;
-        user.resetPasswordExpires = undefined;
+    // var sg = require('sendgrid').SendGrid('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')
+    // var requestBody = mail.toJSON()
+    // var request = sg.emptyRequest()
+    // request.method = 'POST'
+    // request.path = '/v3/mail/send'
+    // request.body = requestBody
 
-        user.save(function(err) {
-          req.logIn(user, function(err) {
-            done(err, user);
-          });
-        });
-      });
-    },
-    function(user, done) {
-      var name = 'Your password has been changed';
-      var contents = 'Hello,\n\n' +
-            'This is a confirmation that the password for your account ' + user.email + ' has just been changed.\n';
-      
-      var helper  = require('sendgrid').mail;
-      from_email = new helper.Email('passwordreset@cesarcells.com')
-      to_email = new helper.Email(user.email)
-      subject = name;
-      content = new helper.Content("text/plain", contents)
-      mail = new helper.Mail(from_email, subject, to_email, content)
-
-      var sg = require('sendgrid').SendGrid('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')
-      var requestBody = mail.toJSON()
-      var request = sg.emptyRequest()
-      request.method = 'POST'
-      request.path = '/v3/mail/send'
-      request.body = requestBody
-
-      sg.API(request, function (response) {
-        console.log(response.statusCode)
-        console.log(response.body)
-        console.log(response.headers)
-        console.log(response)
-      })
-    }
-  ], function(err) {
-      res.redirect('/');
-  });
+    // sg.API(request, function (response) {
+    //   console.log(response.statusCode)
+    //   console.log(response.body)
+    //   console.log(response.headers)
+    //   console.log(response)
+    // })
+  })
+    res.redirect('/');
+  
+ 
 });
 
 // ==== VIEW RESULTS ====
@@ -418,22 +404,7 @@ router.get('/users/stargardt-disease-registry', function (req, res) {
     user: req.user
   });
 });
-// var usernote = req.body.textfield;
-// var dateCreated = req.body.datefield;
 
-
-// var newAmsler = new Amsler({ usernote: usernote, dateCreated: dateCreated, user_id: req.user._id});
-
-// newAmsler.save(function(err) {
-
-//   if(err){
-//     console.log(err);
-//   }
-
-//   else {
-//     res.redirect('/tools/amsler-test');
-//   }
-// });
 router.post('/users/submit-stargardt-disease-registry', function (req, res) {
 
 var newStargReg = new StargReg ({

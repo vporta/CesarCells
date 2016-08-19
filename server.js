@@ -24,6 +24,7 @@ var path = require('path'),
     // sendgrid = require('./helpers/mail'),
     $ = require("jquery"),
     querystring = require('querystring'),
+    ngrok = require('ngrok'),
     sendbird = require('sendbird');
    
 
@@ -142,9 +143,12 @@ require('./config/passport');
 //5. Navigate to config vars in heroku dashboard. 
 //6. export MONGODB_URI=config var. 
 //7. 
+
+
 app.listen(port, function() {
   console.log("Let's do this! On port:", + port);
 });
+
 
 
 

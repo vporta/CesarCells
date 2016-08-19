@@ -1,5 +1,5 @@
 <h1 style="font-size: 50px; margin-top: 160px; text-align: center; margin-bottom: 45px"> {{user}}'s Genetics 
-  <canvas width="1600" height="500" style="">
+  <canvas width="1600" height="200" style="">
   </canvas>
 </h1>
 <div class="row" id="make-transparent">
@@ -240,8 +240,219 @@
         </div>
       </div>
     </div>
+  <div class="col-lg-5">
+    <h2 style="margin-top: 50px">Genes and Disease</h2>
+    <p class="lead">There are dozens of genes associated with retinal diseases.</p>
+
+   <a href="#" class="modal-trigger" data-toggle="modal" 
+    data-target="#genesDiseaseModal" id="a-genesDisease">
+      <img src="https://media.giphy.com/media/ukljbCwm7QVoY/giphy.gif" height="236" width="500" id="dna-gif">
+    </a>
+    <div class="modal modal-fullreen fade" id="genesDiseaseModal" tabindex="-1" role="dialog" aria-labelledby="genesDiseaseModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
+            <h2 class="modal-title" id="myModalLabel" style="text-align: center">GENES AND DISEASES</h2>
+          </div>
+          
+          <div class="modal-header">
+            <h2></h2>
+          </div>
+          
+          <div class="modal-body">
+            <table class="table table-hover" id="table-genes-disease">
+              <tbody>
+                <tr>
+                  <th width="50%" scope="col">Diagnoses eligible for inclusion</th>
+                  <th width="50%" scope="col">Genes that may be considered for testing</th>
+                </tr>
+
+                <tr>
+                  <td>Achromatopsia
+                  </td>
+                  <td>CNGA3, CNGB3</td>
+                </tr>
+
+                <tr>
+                  <td>Albinism </td>
+                  <td><strong>Recessive</strong> TYR, OCA2, TYRP1, SLC45A2 <br><strong>X-linked</strong> GPR143 (OA1)</td>
+                </tr>
+
+                <tr>
+                  <td>Aniridia and other developmental eye anomalies</td>
+                  <td>PAX6, WT1<sup>#</sup>, DCDC1<sup>#</sup>, ELP4<sup>#</sup> (<sup>#</sup> del/dup testing only)</td>
+                </tr>
+
+                <tr>
+                  <td>Axenfeld – Rieger Syndrome</td>
+                  <td>FOXC1, PITX2</td>
+                </tr>
+
+                <tr> 
+                  <td>Best Disease</td>
+                  <td>BEST1</td>
+                </tr>
+
+                <tr>
+                  <td>Bietti’s Crystalline Corneo-Retinal Dystrophy</td>
+                  <td>CYP4V2</td>
+                </tr>
+
+                <tr> 
+                  <td>Choroideremia</td>
+                  <td>CHM</td>
+                </tr>
+
+                <tr>
+                  <td>Chronic Progressive External Ophthalmoplegia (CPEO)</td>
+                  <td>POLG, mtDNA deletions^ (^ tested as part of a mitochondrial panel that covers different mitochondrial conditions or susceptibility to disease. Participants should be made aware of the potential for incidental findings with this test. Please refer to the 
+                    <a href="http://www.genedx.com/wp-content/uploads/crm_docs/info_sheet_Mito_58_Common.pdf" class="ext">test pamphlet<span class="ext">
+                    <span class="element-invisible"> (link is external)</span></span></a> for additional information about the conditions that might be detected with this test.
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Cone Rod Dystrophy</td>
+                  <td>ABCA4, RPGR, CRX, <br>
+                
+                  GUCY2D <em>(codon R838)</em>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Congenital Cranial Dysinnervation Diseases (CCDD)</td>
+                  <td>KIF21A, CHN1, SALL4, TUBB3, HOXA1, PHO2A, ROBO3, HOXB1</td>
+                </tr>
+
+                <tr>
+                  <td>X-linked Congenital Nystagmus</td>
+                  <td>FRMD7 (only tested in the presence of a family history of the condition)</td>
+                </tr>
+
+                <tr>
+                  <td>Congenital Stationary Night Blindness/Oguchi Disease</td>
+                  <td>GPR179, RHO, NYX, TRPM1, SAG </td>
+                </tr>
+
+                <tr>
+                  <td>Corneal Dystrophy</td>
+                  <td>TGFBI, KRT3, KRT12 </td>
+                </tr>
+
+                <tr>
+                  <td>Doyne Honeycomb Dystrophy</td>
+                  <td>EFEMP1 </td>
+                </tr>
+
+                <tr>
+                  <td>Familial  Exudative Vitreal Retinopathy</td>
+                  <td>FZD4, LRP5, NDP, TSPAN12 </td>
+                </tr>
+
+                <tr>
+                  <td>Fundus Albipunctatus/Bothnia Retinal Dystrophy</td>
+                <td>RDH5, RLBP1</td>
+                </tr>
+
+                <tr>
+                  <td>Glaucoma (juvenile open angle and congenital only)</td>
+                  <td>CYP1B1, OPTN, MYOC </td>
+                </tr>
+
+                <tr>
+                  <td>Hermansky-Pudlak Syndrome</td>
+                  <td>HPS1 and HPS3*</td> 
+                </tr>
+
+                <tr>
+                  <td>Juvenile X-linked Retinoschisis</td>
+                  <td>RS1</td>
+                </tr>
+
+                <tr>
+                  <td>Leber Hereditary Optic Neuropathy (LHON)</td>
+                  <td>LHON  will be tested as part of a mitochondrial panel that covers not only LHON but also different mitochondrial conditions or susceptibility to disease. Participants should be made aware of the potential for incidental findings with this test. Please refer to the <a href="http://www.genedx.com/wp-content/uploads/crm_docs/info_sheet_Mito_58_Common.pdf" class="ext">test pamphlet<span class="ext"><span class="element-invisible"> (link is external)</span></span></a> for additional information  about the conditions that might be detected with this test.</td>
+                </tr>
+
+                <tr>
+                  <td>Lowe Syndrome</td>
+                  <td>OCRL</td>
+                </tr>
+
+                <tr>
+                  <td>Microphthalmia and Anophthalmia</td>
+                  <td>RAX, SOX2, OTX2, VSX2, STRA6 and SIX6del/dup analysis</td>
+                </tr>
+
+                <tr>
+                  <td>Neurodegeneration with Brain Iron Accumulation (NBIA)</td>
+                  <td>FA2H, MMIN, PANK2, PLA2G6</td>
+                </tr>
+
+                <tr>
+                  <td>Occult Macular Dystrophy</td>
+                  <td>RP1L1 (R45W)</td>
+                </tr>
+
+                <tr>
+                  <td>Optic Atrophy, Dominant </td>
+                  <td>OPA1, OPA3</td>
+                </tr>
+
+                <tr>
+                  <td>Papillo-renal Syndrome</td>
+                  <td>PAX2</td>
+                </tr>
+
+                <tr>
+                  <td>Pattern Dystrophy</td>
+                  <td>PRPH2</td>
+                </tr>
+
+                <tr>
+                  <td>Retinitis Pigmentosa (RP) and Retinal Degenerations</td>
+                  <td><strong>Dominant</strong> (panel** including RHO, PRPH2, RP1, IMPDH1, PRPF8, NR2E3, PRPF3, TOPORS, PRPF31, RP1, KLHL7, SNRNP200), CA4, CRB1, CTRP5<br><strong>X-linked</strong> RPGR, RP2 <br><strong>Recessive:</strong> single genes available on as needed basis — please inquire with CC</td>
+                </tr>
+
+                <tr>
+                  <td>Retinoblastoma</td>
+                  <td>RB1</td>
+                </tr>
+
+                <tr>
+                  <td>Sorsby Fundus Dystrophy</td>
+                  <td>TIMP3</td>
+                </tr>
+
+                <tr>
+                  <td>Stargardt Disease</td>
+                  <td>ABCA4, ELOVL4, PRPH2</td>
+                </tr>
+
+                <tr>
+                  <td>Stickler Syndrome</td>
+                  <td>COL2A1</td>
+                </tr>
+
+                <tr>
+                  <td>Usher Syndrome</td>
+                  <td>Usher panel** (CDH23, CLRN1, DFNB31 (WHRN), GPR98, MYO7A, PCDH15, USH1C, USH1G, USH2A) </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+         
+          <div class="modal-footer">
+              <button type="button" class="btn btn-default" id="main-btn" data-dismiss="modal">Close</button> 
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
   </div>
 </div>
+
 <div class="row">
   <div class="col-lg-12">
     <h2>Your Genome</h2>
@@ -311,6 +522,12 @@
       </table>
     </div>
   </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="col-lg-12">
+      
+    </div>
   </div>
 </div>
 {{!-- I want to display the gene name, variants in the corresponding field --}}
