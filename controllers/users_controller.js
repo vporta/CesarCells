@@ -120,6 +120,7 @@ router.post('/users/details_new', function(req, res) {
   var sex = req.body.sexselectpicker;
   var dob = req.body.bday;
   var diagnosedStarg = req.body.diagnosedSelect;
+  var email = req.user.local.email;
 
 // console.log(req.user);
   User.findOneAndUpdate({'_id': req.user._id}, {$set: {"firstname": firstname, "lastname": lastname, "age": age, "sex": sex, "birth_day": dob, "stargardtsDiagnosis": diagnosedStarg}}, {upsert: true}).exec(function(err){
@@ -130,6 +131,27 @@ router.post('/users/details_new', function(req, res) {
 
     else{
       // SEND WELCOME EMAIL HERE;
+      var helper  = require('sendgrid').mail;
+      from_email = new helper.Email(email)
+      to_email = new helper.Email("vporta7@gmail.com")
+      var subject = "Welcome To CesarCells!";
+      var contents = "Hello " + firstname + ',\n\n' + 'The team here at CesarCells would like to welcome you on your journey to finding treatments for yourself, or your loved ones. We are here to help you succeed in finding the right treatment. There are several resources available to you on the site, but don\'t hesitate to reach out to us for any questions.\n\n' + 'Best,\n\n' + 'Vincent Porta\n\n' + 'Founder'
+      content = new helper.Content("text/plain", contents)
+      mail = new helper.Mail(from_email, subject, to_email, content)
+
+      var sg = require('sendgrid').SendGrid('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')
+      var requestBody = mail.toJSON()
+      var request = sg.emptyRequest()
+      request.method = 'POST'
+      request.path = '/v3/mail/send'
+      request.body = requestBody
+
+      sg.API(request, function (response) {
+        console.log(response.statusCode)
+        console.log(response.body)
+        console.log(response.headers)
+        console.log(response)
+  })
       res.redirect('/users/dashboard');
     }
   });
@@ -249,30 +271,31 @@ router.post('/reset/:token', function(req, res) {
   
   User.findOneAndUpdate({ resetPasswordToken: token, resetPasswordExpires: { $gt: Date.now() }}, {$set: {'local.password': _newpassword, resetPasswordToken: undefined, resetPasswordExpires: undefined}}).then(function(user) {
     
-    console.log("This is a user: " + user); 
-    // var name = 'Your password has been changed';
-    // var contents = 'Hello,\n\n' + 'This is a confirmation that the password for your account ' + user.email + ' has just been changed.\n';
+    console.log("This is a user: " + user);
 
-    // var helper  = require('sendgrid').mail;
-    // from_email = new helper.Email('passwordreset@cesarcells.com')
-    // to_email = new helper.Email(user.local.email)
-    // subject = name;
-    // content = new helper.Content("text/plain", contents)
-    // mail = new helper.Mail(from_email, subject, to_email, content)
+    var name = 'Your password has been changed';
+    var contents = 'Hello,\n\n' + 'This is a confirmation that the password for your email ' + user.local.email + ' has just been changed.\n';
 
-    // var sg = require('sendgrid').SendGrid('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')
-    // var requestBody = mail.toJSON()
-    // var request = sg.emptyRequest()
-    // request.method = 'POST'
-    // request.path = '/v3/mail/send'
-    // request.body = requestBody
+    var helper  = require('sendgrid').mail;
+    from_email = new helper.Email('passwordreset@cesarcells.com')
+    to_email = new helper.Email(user.local.email)
+    subject = name;
+    content = new helper.Content("text/plain", contents)
+    mail = new helper.Mail(from_email, subject, to_email, content)
 
-    // sg.API(request, function (response) {
-    //   console.log(response.statusCode)
-    //   console.log(response.body)
-    //   console.log(response.headers)
-    //   console.log(response)
-    // })
+    var sg = require('sendgrid').SendGrid('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')
+    var requestBody = mail.toJSON()
+    var request = sg.emptyRequest()
+    request.method = 'POST'
+    request.path = '/v3/mail/send'
+    request.body = requestBody
+
+    sg.API(request, function (response) {
+      console.log(response.statusCode)
+      console.log(response.body)
+      console.log(response.headers)
+      console.log(response)
+    })
   })
     res.redirect('/');
   
