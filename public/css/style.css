@@ -435,7 +435,7 @@ pre {
 }
 .aboutus-h1 {
     font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 75px;
+    font-size: 60px;
     text-align: center;
     line-height: 1.3;
     color: white;
@@ -444,6 +444,8 @@ pre {
     position: relative;
     display: block;
     opacity: 1;
+    margin-top: 172px;
+    top: 192px;
 }
 #genetic-ring {
     height: 500px;
@@ -480,14 +482,16 @@ pre {
 .title-trials {
     font-size: 25px;
     text-align: center;
-    margin-top: 98px;
+    margin-top: 131px;
     padding-bottom: 30px;
    /* border-color: gray;
     border-width: thin;
     border-style: solid;*/
 }
 /*What is section*/
-
+#login-h2 {
+    padding-top: 50px;
+}
 .what-is {
     font-size: 34px;
     /*color: #6e6e6e;*/
@@ -1016,6 +1020,7 @@ text-align: center;
 
 #why-register {
     margin-top: 100px;
+    background-color: transparent;
 }
 .img-genetics {
     cursor: pointer;
@@ -1048,6 +1053,9 @@ text-align: center;
     font-size: 25px;
 
 }
+.wrap-aboutus-h1 {
+    margin-top: 100px;
+}
 .about-p {
     line-height: 1.5em;
     margin: .8125em 0;
@@ -1057,8 +1065,8 @@ text-align: center;
     text-decoration: none;
     color: deeppink;
     line-height: 1.5em;
-        display: block;
-        margin: 2em 0 0;
+    display: block;
+    margin: 2em 0 0;
 
 }
 
@@ -1116,15 +1124,14 @@ text-align: center;
     display: block;
     top: 99%;
 }
-
+#your-genome-h2 {
+    color: deeppink;
+}
 .glyphicon-chevron-down {
     /*height: 140px;*/
     /*width: 60px;*/
     color: deeppink;
-    border-style: solid;
-    border-color: white;
-    border-radius: 50%;
-    padding: 10px;
+    
 }
 
 .glyphicon-chevron-down:hover {
@@ -1267,6 +1274,28 @@ text-align: center;
     /*z-index: 100;*/
     /*position: absolute;*/
 }
+.hvr-wobble-vertical {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+.hvr-wobble-vertical:hover, .hvr-wobble-vertical:focus, .hvr-wobble-vertical:active {
+  -webkit-animation-name: hvr-wobble-vertical;
+  animation-name: hvr-wobble-vertical;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+
 #img-dash {
     margin-left: 10px;
     margin-bottom: 10px;
@@ -1278,6 +1307,11 @@ text-align: center;
 #img-dash3 {
     margin-left: 10px;
     background-color: whitesmoke;
+}
+#img-dash3:hover {
+    margin-left: 35px;
+    background-color: whitesmoke;
+    opacity: .2;
 }
 #img-dash4 {
     margin-left: 10px;
@@ -1342,7 +1376,7 @@ h3 {
     height: 220px;
 }
 .nav.navbar-nav.navbar-right {
-    background-color: white;
+    background-color: whitesmoke;
     ;
     margin-top: 25px; 
     border-radius: 7px;
@@ -1413,7 +1447,8 @@ ul.dropdown-menu {
 /****************************/
 #make-transparent {
     background-color: white;
-    height: 75%;
+    height: 55%;
+    margin-top: 100px;
 }
 /*gene report table begins*/
 #gene-table {
@@ -1565,11 +1600,7 @@ ul.dropdown-menu {
 
 
 
-/*home page sign-in form*/
-form#sign-in-form.form-horizontal {
-    margin-top: 150px;
-    margin-bottom: 600px;
-}
+
 div.container-fluid.bg-info {
     background-color: transparent;
 }
@@ -1579,7 +1610,10 @@ nav.navbar.navbar-default.navbar-fixed-top {
     height: 6.9375em;
     
 }
-
+#contact-support-form {
+    padding: 30px;
+    height: 50%;
+}
 .panel-default {
     background-color: #f7f9fa;
     /*margin-top: 130px;*/
@@ -1590,7 +1624,9 @@ background-color: whitesmoke;
 padding: 60px;
  
 }
-
+#terms-h2 {
+    margin-top: 100px;
+}
 #header-details-form {
   margin-top: 120px;
   text-align: center;
@@ -1770,17 +1806,43 @@ li,ul{
     padding: 23px 15px 22px;
     width: 100%;
 }
-
+#update-pass-form {
+    font-size: 22px;
+}
+#update-pass-btn {
+    float: right;
+    color: white;
+    background-color: deeppink;
+    border-color: deeppink;
+}
+.wrap-update-pass-form {
+    background-color: whitesmoke;
+    margin-top: 200px;
+    padding: 25px;
+}
 .login-header .navbar-right {
     margin-right: 0px;
 }
 .wrap-updateinfo {
-    display: flex;
+    /*display: flex;*/
     align-content: center;
     margin-top: 100px;
+    margin-left: 40px;
+    background-color: whitesmoke;
+    padding: 20px;
 }
-.form-updateinfo {
+#wrap-contact-support-form {
+    background-color: whitesmoke;
 
+
+}
+#wrap-sign-in-form {
+    margin-top: 150px;
+    background-color: whitesmoke;
+
+}
+#contact-support-h2 {
+    margin-top: 200px;
 }
 
 
@@ -2028,7 +2090,7 @@ li,ul{
     color: khaki;
     padding: 20px;
 }
-.icon-calendar {
+.icon-tasks {
     color: burlywood;
     padding: 20px;
 }

@@ -1,6 +1,5 @@
-<h1 style="font-size: 50px; margin-top: 160px; text-align: center; margin-bottom: 45px"> {{user}}'s Genetics 
-  <canvas width="1600" height="200" style="">
-  </canvas>
+<h1 style="font-size: 50px; margin-top: 176px; text-align: center; margin-bottom: 45px"> {{user}}'s Genetics 
+
 </h1>
 <div class="row" id="make-transparent">
   <div class="col-lg-6 wrap-gene-results">
@@ -18,7 +17,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
-              <h2 class="modal-title" id="myModalLabel" style="text-align: center">Glaucoma</h2>
+              {{!-- <h1 class="modal-title" id="myModalLabel">Glaucoma</h1> --}}
               </div>
               <div style="display: flex; align-items: center; justify-content: center">
               {{!-- <img style="" src="http://brandoneye.com/wp-content/uploads/2015/07/glaucoma.png"> --}}
@@ -100,7 +99,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
-              <h2 class="modal-title" id="myModalLabel" style="text-align: center">Stargardt's Disease</h2>
+              <h2 class="modal-title" id="myModalLabel" style="text-align: center"></h2>
             </div>
             <div class="modal-header">
               <h2>Your Results</h2>
@@ -125,7 +124,7 @@
               <p class="lead">The most common cause of Stargardt’s is an autosomal recessive mutation in a gene called ABCA4. This gene normally facilitates transport of a “used” form of vitamin A out of photoreceptors, the light sensitive cells in the retina. Without ABCA4, this material builds up in the retina and contributes to the formation of lipofuscin.</p>
               <br>
               
-              <p class="lead">Patients usually inherit Stargardt disease from parents who are unaffected carriers of the disease where one of the two copies of the ABCA4 gene is each parent carries a mutation. In such families, each child has a 25 percent chance of developing Stargardt’s disease and a 50 percent chance of being an unaffected carrier.</p>
+              <p class="lead">Patients usually inherit Stargardt disease from parents who are unaffected carriers of the disease where one of the two copies of the ABCA4 gene in each parent carries a mutation. In such families, each child has a 25 percent chance of developing Stargardt’s disease and a 50 percent chance of being an unaffected carrier.</p>
               <br>
               <p class="lead">Rarely, Stargardt disease can be caused by an autosomal dominant mutation in a gene called ELOVL4. This gene is responsible for the synthesis of very long chain fatty acids. In families with this form of the disease, one parent has the disease and 50 percent of his/her children inherit one copy of a mutated version of the ELOVL4 gene and develop the disease.</p> <br>
             </div>
@@ -165,7 +164,7 @@
               
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
               
-              <h2 class="modal-title" id="myModalLabel" style="text-align: center">Age Related Macular Dengeration</h2>
+              <h2 class="modal-title" id="myModalLabel" style="text-align: center"></h2>
             </div>
             <div class="modal-header">
               <h2>Your Results</h2>
@@ -241,12 +240,12 @@
       </div>
     </div>
   <div class="col-lg-5">
-    <h2 style="margin-top: 50px">Genes and Disease</h2>
+    <h2 style="margin-top: 50px; color: deeppink">Genes and Disease</h2>
     <p class="lead">There are dozens of genes associated with retinal diseases.</p>
 
    <a href="#" class="modal-trigger" data-toggle="modal" 
     data-target="#genesDiseaseModal" id="a-genesDisease">
-      <img src="https://media.giphy.com/media/ukljbCwm7QVoY/giphy.gif" height="236" width="500" id="dna-gif">
+      <img src="http://fc00.deviantart.net/fs70/f/2013/136/2/7/commision_for_dna_projecten_bv_version_2_1__logo__by_bastiaandegoede-d65fwi5.png" height="236" width="500" id="dna-gif">
     </a>
     <div class="modal modal-fullreen fade" id="genesDiseaseModal" tabindex="-1" role="dialog" aria-labelledby="genesDiseaseModal" aria-hidden="true">
       <div class="modal-dialog modal-lg">
@@ -455,7 +454,7 @@
 
 <div class="row">
   <div class="col-lg-12">
-    <h2>Your Genome</h2>
+    <h2 id="your-genome-h2">Your Genome</h2>
    {{!--  <p class="lead text-center">Your results for these tested conditions deviate significantly from the normal range. Your current and future health might be impacted.</p> --}}
     <div class="wrap-snps table-responsive">
       <table class="table table-hover" id="genes-table" cellspacing="0" cellpadding="0" border="0">
@@ -530,70 +529,6 @@
     </div>
   </div>
 </div>
-{{!-- I want to display the gene name, variants in the corresponding field --}}
-<script type="text/javascript">
-"undefined"==typeof requestAnimationFrame&&(requestAnimationFrame="undefined"!=typeof window&&(window.msRequestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.oRequestAnimationFrame)||function(e){return setTimeout(e,17)}),function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t(exports):"function"==typeof define&&define.amd?define(["exports"],t):t(e.timer={})}(this,function(e){"use strict";function t(){l=s=0,c=1/0,n(a())}function n(e){if(!l){var n=e-Date.now();n>24?c>e&&(s&&clearTimeout(s),s=setTimeout(t,n),c=e):(s&&(s=clearTimeout(s),c=1/0),l=requestAnimationFrame(t))}}function i(e,t){this.callback=e,this.time=t,this.flush=!1,this.next=null}function o(e,t,o){o=null==o?Date.now():+o,null!=t&&(o+=+t);var u=new i(e,o);r?r.next=u:m=u,r=u,n(o)}function u(e,t,n){n=null==n?Date.now():+n,null!=t&&(n+=+t),f.callback=e,f.time=n}function a(e){e=null==e?Date.now():+e;var t=f;for(f=m;f;)e>=f.time&&(f.flush=f.callback(e-f.time,e)),f=f.next;f=t,e=1/0;for(var n,i=m;i;)i.flush?i=n?n.next=i.next:m=i.next:(i.time<e&&(e=i.time),i=(n=i).next);return r=n,e}var m,r,f,l,s,c=1/0;e.timer=o,e.timerReplace=u,e.timerFlush=a});
-
-     var canvas = document.querySelector("canvas"),
-         context = canvas.getContext("2d"),
-         width = canvas.width,
-         height = canvas.height,
-         radius = 2.5,
-         minDistance = 80,
-         maxDistance = 100,
-         minDistance2 = minDistance * minDistance,
-         maxDistance2 = maxDistance * maxDistance;
-
-     var tau = 2 * Math.PI,
-         n = 100,
-         particles = new Array(n);
-
-     for (var i = 0; i < n; ++i) {
-       particles[i] = {
-         x: width * Math.random(),
-         y0: height * Math.random(),
-         v: .1 * (Math.random() - .5)
-       };
-     }
-
-     timer.timer(function(elapsed) {
-       context.clearRect(0, 0, width, height);
-
-       context.lineWidth = 1;
-       context.strokeStyle = "#777";
-       for (var i = 0; i < n; ++i) {
-         var pi = particles[i];
-         for (var j = i + 1; j < n; ++j) {
-           var pj = particles[j],
-               dx = pi.x - pj.x,
-               dy = pi.y - pj.y,
-               d2 = dx * dx + dy * dy;
-           if (d2 < maxDistance2) {
-             context.globalAlpha = d2 > minDistance2 ? (maxDistance2 - d2) / (maxDistance2 - minDistance2) : 1;
-             context.beginPath();
-             context.arc((pi.x + pj.x) / 2, (pi.y + pj.y) / 2, Math.sqrt(d2) / 2, 0, tau);
-             context.stroke();
-           }
-         }
-       }
-       context.globalAlpha = 1;
-
-       for (var i = 0; i < n; ++i) {
-         var p = particles[i];
-         p.y = p.y0 + elapsed * p.v;
-         if (p.y > height + maxDistance) p.x = width * Math.random(), p.y0 -= height + 2 * maxDistance;
-         else if (p.y < -maxDistance) p.x = width * Math.random(), p.y0 += height + 2 * maxDistance;
-         context.beginPath();
-         context.arc(p.x, p.y, radius, 0, tau);
-         context.fill();
-       }
-     });
-
-
-</script>
-
-
-
 
 
 

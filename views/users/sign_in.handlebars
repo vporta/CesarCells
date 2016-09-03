@@ -1,18 +1,18 @@
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-6" id="wrap-sign-in-form">
 
   <form id="sign-in-form" class="form-horizontal" action="/users/dashboard" method="POST">
-  <h2>Login or Register with:</h2>
+  <h2 id="login-h2">Login</h2>
 
-          <a style="margin-left: 191px" href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Facebook</a><br><br><br>
+          
     <div class="form-group">
-      <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+      <label for="inputEmail3" class="col-sm-2 control-label">Email: </label>
       <div class="col-sm-10">
         <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email">
       </div>
     </div>
     <div class="form-group">
-      <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+      <label for="inputPassword3" class="col-sm-1 control-label">Password: </label>
       <div class="col-sm-10">
         <input type="password" class="form-control" id="inputPass" name="password" placeholder="Password">
       </div>
@@ -30,7 +30,9 @@
       <div class="col-sm-offset-2 col-sm-10">
         <button type="submit" class="btn btn-default">Sign in</button><br>
     <a href="/users/password_new">Forgot your password?</a><br>
-    <a href="/users/sign_up">Don't have an account? <i>SIGN UP</i></a>
+    <a href="/users/sign_up">Don't have an account? <i>SIGN UP</i></a><br>
+    <p>Or</p>
+    <a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Log In or Register With Facebook</a><br><br><br>
       </div>
     </div>
   </form>
@@ -44,8 +46,8 @@
         <li class="list-group-item"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>          Find treatments based on your genetics</li><br>
         <li class="list-group-item"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>          Have your 23AndMe genetic data analyzed for ARMD mutations</li><br>
         <li class="list-group-item"><span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>          Stay updated on the latest Stargardt disease research</li><br>
-        <li class="list-group-item"> <span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span>          Given your own personal dashboard</li><br>
-      </ul><br>
+        <li class="list-group-item"> <span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Given your own personal dashboard</li>
+      </ul>
     
   </div>
 </div>

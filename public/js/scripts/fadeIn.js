@@ -24,7 +24,7 @@ $(document).ready(function() {
   }); 
   /* Every time the window is scrolled ... */
   $(window).scroll( function(){
-  
+    
       /* Check the location of each desired element */
       $('.what-is-h2').each( function(i){
           

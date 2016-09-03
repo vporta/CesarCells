@@ -42,6 +42,14 @@ router.get('/accounts/privacy', function (req, res) {
   });
 });
 
+router.get('/accounts/privacy-home', function (req, res) {
+
+  res.render('account/privacy', {
+    layout: 'main',
+    user: req.user
+  });
+});
+
 router.get('/accounts/support', function (req, res) {
 
   res.render('account/support', {
@@ -84,12 +92,6 @@ var password = req.body.oldpassword;
 var newpassword = req.body.newpassword;
  _newpassword = bcrypt.hashSync(newpassword);
 
-// var hash = bcrypt.hashSync(password, saltRounds);
-// bcrypt.compareSync(password, hash);
- // _oldpassword = bcrypt.compareSync(oldpassword, req.user.local.password);
-  // console.log(req.user + 'req.user here -=================');
-  //   console.log(_newpassword + '_newpassword here -=================');
-  //   console.log(password + 'password here -=================');
 
   if (!req.user) {
     req.flash('error', 'Wrong email or password');

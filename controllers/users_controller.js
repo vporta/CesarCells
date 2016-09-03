@@ -15,6 +15,7 @@ var StargReg = require('../models/StargReg.js');
 var helper = require('sendgrid').mail
 var async = require('async');
 var crypto = require('crypto');
+var pa = require('../config/passport');
 
 
 // === HOME PAGE ======
@@ -233,16 +234,18 @@ router.get('/reset/:token', function(req, res) {
       return res.redirect('/users/password_new');
     }
     res.render('users/password_reset', {
-      user: req.user
+      user: req.user,
+      layout: 'main',
+      token: req.params.token
     });
   });
 });
 
-router.post('/reset', function(req, res) {
+router.post('/reset/:token', function(req, res) {
   var token = req.params.token;
   var newpassword = req.body.password;
-  _newpassword = encryptPassword(newpassword);
-  console.log(_newpassword);
+  _newpassword = bcrypt.hashSync(newpassword);
+  console.log(newpassword);
   
   User.findOneAndUpdate({ resetPasswordToken: token, resetPasswordExpires: { $gt: Date.now() }}, {$set: {'local.password': _newpassword, resetPasswordToken: undefined, resetPasswordExpires: undefined}}).then(function(user) {
     
