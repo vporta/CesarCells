@@ -22,9 +22,9 @@ router.get('/stargardts-glossary', function(req, res) {
   res.render('resources/glossary');
 });
 
-router.get('/stargardts-stemcell-story', function(req, res) {
-  res.render('resources/story_cesar');
-});
+// router.get('/stargardts-stemcell-story', function(req, res) {
+//   res.render('resources/story_cesar');
+// });
 
 router.get('/stargardts-assistive-technologies', function(req, res) {
   res.render('resources/assistive_tech_vendors');
