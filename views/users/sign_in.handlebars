@@ -1,18 +1,16 @@
 <div class="row">
-  <div class="col-md-6" id="wrap-sign-in-form">
+  <div class="col-lg-12" id="wrap-sign-in-form">
+  <h2 id="login-h2">Login</h2>        
 
-  <form id="sign-in-form" class="form-horizontal" action="/users/dashboard" method="POST">
-  <h2 id="login-h2">Login</h2>
-
-          
+  <form class="form-horizontal form-login-new" action="/users/dashboard" method="POST">
     <div class="form-group">
-      <label for="inputEmail3" class="col-sm-2 control-label">Email: </label>
+      <label for="inputEmail3" class="col-sm-2 control-label">EMAIL</label>
       <div class="col-sm-10">
         <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email">
       </div>
     </div>
     <div class="form-group">
-      <label for="inputPassword3" class="col-sm-1 control-label">Password: </label>
+      <label for="inputPassword3" class="col-sm-2 control-label">PASSWORD</label>
       <div class="col-sm-10">
         <input type="password" class="form-control" id="inputPass" name="password" placeholder="Password">
       </div>
@@ -28,17 +26,17 @@
     </div>
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Sign in</button><br>
+        <button id="sign-in-buddy" type="submit" class="btn btn-default">Sign in</button><br>
     <a href="/users/password_new">Forgot your password?</a><br>
     <a href="/users/sign_up">Don't have an account? <i>SIGN UP</i></a><br>
-    <p>Or</p>
-    <a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Log In or Register With Facebook</a><br><br><br>
+    {{!-- <p>Or</p> --}}
+    {{!-- <a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Log In or Register With Facebook</a><br><br><br> --}}
       </div>
     </div>
   </form>
 
   </div>
-  <div class="col-md-6" id="why-register">
+  {{!-- <div class="col-md-6" id="why-register">
 
   <h1>With your <strong>free</strong> CesarCells account you can:</h1><br>
       <ul class="list-group">
@@ -49,6 +47,6 @@
         <li class="list-group-item"> <span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Given your own personal dashboard</li>
       </ul>
     
-  </div>
+  </div> --}}
 </div>
 

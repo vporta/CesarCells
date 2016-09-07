@@ -2,14 +2,14 @@
   <div class="row">
   <br>
   <div class="col-md-6">
+    <h1 id="signup-h2">SIGNUP</h1>
 
-    <p>Login or Register with:</p>
 
-            <a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Facebook</a><br><br><br>
-    <form class='create-update-form' action="/users/sign_up" method="post" autocomplete="on">
+      {{!--       <a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Facebook</a><br><br><br> --}}
+    <form class="form-horizontal form-signup-new" action="/users/sign_up" method="post" autocomplete="on">
     
 
-    <h3> Sign Up, it's free</h3>
+    {{!-- <h3> Sign Up, it's free</h3> --}}
 
       <!-- <div class="form-group">
         <label for="uname">Username: </label>
@@ -22,12 +22,12 @@
       </div> -->
 
       <div id='emailform' class="form-group">
-        <label for="em">Email: </label>
+        <label for="em">EMAIL </label>
         <input type="email" id="e-mail" name="email" class="form-control" placeholder="Enter Email" required >
       </div>
           
       <div class="form-group">
-        <label for="pass">Password: </label>
+        <label for="pass">PASSWORD </label>
         <input title="Password must contain at least 6 characters, including UPPER/lowercase and numbers" type="password" id="pass" name="password" class="form-control" placeholder='Enter Password' required="true" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
       </div>
 
@@ -37,7 +37,7 @@
       </div> -->
 
    
-      <button type="submit" class="btn btn-default">Sign Up!</button> 
+      <button id="sign-in-buddy" type="submit" class="btn btn-default">SIGN UP!</button> 
       <br> 
       <a href="/users/password_new">Forgot your password?</a><br>
       <p> By registering you are agreeing to our <a target="_blank" href="/accounts/privacy-home">Privacy Policy and Terms & Conditions</a> </p>

@@ -120,10 +120,12 @@ router.post('/users/details_new', function(req, res) {
   var sex = req.body.sexselectpicker;
   var dob = req.body.bday;
   var diagnosedStarg = req.body.diagnosedSelect;
+  var retinalDisease = req.body.retinalDisease;
+
   var email = req.user.local.email;
 
 // console.log(req.user);
-  User.findOneAndUpdate({'_id': req.user._id}, {$set: {"firstname": firstname, "lastname": lastname, "age": age, "sex": sex, "birth_day": dob, "stargardtsDiagnosis": diagnosedStarg}}, {upsert: true}).exec(function(err){
+  User.findOneAndUpdate({'_id': req.user._id}, {$set: {"firstname": firstname, "lastname": lastname, "age": age, "sex": sex, "birth_day": dob, "retinalDiagnosis": diagnosedStarg, "retinalDisease": retinalDisease}}, {upsert: true}).exec(function(err){
 
     if(err){
       console.log(err);
@@ -132,8 +134,8 @@ router.post('/users/details_new', function(req, res) {
     else{
       // SEND WELCOME EMAIL HERE;
       var helper  = require('sendgrid').mail;
-      from_email = new helper.Email(email)
-      to_email = new helper.Email("vporta7@gmail.com")
+      from_email = new helper.Email("welcome@cesarcells.com")
+      to_email = new helper.Email(email)
       var subject = "Welcome To CesarCells!";
       var contents = "Hello " + firstname + ',\n\n' + 'The team here at CesarCells would like to welcome you on your journey to finding treatments for yourself, or your loved ones. We are here to help you succeed in finding the right treatment. There are several resources available to you on the site, but don\'t hesitate to reach out to us for any questions.\n\n' + 'Best,\n\n' + 'Vincent Porta\n\n' + 'Founder'
       content = new helper.Content("text/plain", contents)

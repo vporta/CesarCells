@@ -31,13 +31,35 @@
   Enter your Birthday<br>
   <input type="date" name="bday" id="inputBirthday" class="form-control" required="true"><br><br>
 
-  Have you been diagnosed with Stargardt disease?<br>
-  <select name="diagnosedSelect" required>
+  Have you been clinically diagnosed with a retinal disease?<br>
+<select name="diagnosedSelect" required>
       <option value=""></option>
       <option value="true">Yes</option>
       <option value="false">No</option>
-    </select>
+</select>
     <br><br>
+If you answered yes to the previous question, which retinal disease have you been diagnosed with?<br>
+<select name="retinalDisease" required>
+    <option value=""></option>
+    <option value="none">None</option>
+    <option value="stargardts">Stargardt's Disease</option>
+    <option value="glaucoma">Glaucoma</option>
+    <option value="AgeRelatedMacularDegeneration">Age Related Macular Degeneration</option>
+    <option value="RetinitisPigmentosa">Retinitis Pigmentosa</option>
+    <option value="Choroideremia">Choroideremia</option>
+    <option value="OpticNerveDisease">Optic Nerve Disease</option>
+    <option value="Achromatopsia">Achromatopsia</option>
+    <option value="Bardet-BiedlSyndrome">Bardet-Biedl Syndrome</option>
+    <option value="Bassen-KornzweigSyndrome">Bassen-Kornzweig Syndrome</option>
+    <option value="BattenDisease">Batten Disease</option>
+
+    <option value="BestDisease">Best Disease</option>
+    <option value="Cone-RodDystrophy,">Cone-Rod Dystrophy,</option>
+    <option value="LeberCongenitalAmaurosis">Leber Congenital Amaurosis</option>
+    <option value="UsherSyndrome">Usher Syndrome</option>
+    <option value="Other">Other</option>
+</select>
+  <br><br>
     
     Country<br>
       <select name="country" required>

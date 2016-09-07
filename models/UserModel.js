@@ -16,7 +16,8 @@ var UserSchema = new Schema({
   firstname: String,
   lastname: String,
   sex: String,
-  stargardtsDiagnosis: Boolean,
+  retinalDiagnosis: Boolean,
+  retinalDisease: String,
   informedConsent: Boolean,
   country: String,
   facebook: {
