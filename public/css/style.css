@@ -179,9 +179,15 @@ ul.shortcuts li {
     color: deeppink;
 }
 /*main navbar text*/
-#cesar-logo, #resources-nav-text, #howitworks-nav-text, #tools-nav-text, #treatments-nav-text, #login-nav-text, #signup-nav-text{
+#resources-nav-text, #howitworks-nav-text, #tools-nav-text, #treatments-nav-text, #login-nav-text, #signup-nav-text{
     color: darkslategray;
-    font-size: 20.5px;
+    /*font-size: 20.5px;*/
+}
+#cesar-logo {
+    font-family: helvetica;
+    letter-spacing: 3px;
+    font-size: 20px;
+
 }
 #treatments-nav-text:hover {
     color: deeppink;
