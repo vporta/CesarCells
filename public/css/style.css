@@ -1292,7 +1292,7 @@ text-align: center;
     /*padding: 38px;*/
     position: relative;
     margin-top: 80px;
-    color: white;
+    /*color: white;*/
     background-color: transparent;
     border-color: deeppink;
     transition: all 0.3s ease-out;
