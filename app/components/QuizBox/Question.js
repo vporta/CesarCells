@@ -353,15 +353,16 @@ var Question = React.createClass({
 
         <div className="question-assessment">
 
-          <h1 key={i} onChange={this.setCurrentQuestion}>{question.question}</h1>
+          <h1 className="trial-assessment-questions" key={i} onChange={this.setCurrentQuestion}>{question.question}</h1>
             {/*<button href="#" id="Y" type="submit" onClick={this.handleClick} className="myButton">Click Me</button>*/}
          <form className="questionForm">
            <div className="panel panel-default">
              <div className="panel-body">
                  
+             <button href="#" id="Y" data-value="Y" name="Y" ref='Y' type="submit" onClick={this.handleYesClick} className="btn btn-default pull-left myButton">YES</button>
+             
+             <button href="#" name="N" ref='N' type="submit" onClick={this.handleNoClick} id="N" className="btn btn-default pull-right myButton">NO</button>
              </div>
-             <button href="#" id="Y" data-value="Y" name="Y" ref='Y' type="submit" onClick={this.handleYesClick} className="myButton">YES</button>
-             <button href="#" name="N" ref='N' type="submit" onClick={this.handleNoClick} id="N" className="myButton">NO</button>
            </div>
          </form>
 

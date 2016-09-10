@@ -10,6 +10,7 @@ var SNPs = require('../models/SNPs.js');
 var oauth2 = require('simple-oauth2');
 var Amsler = require('../models/Amsler.js');
 var User = require('../models/UserModel.js');
+var AgreeToGenomeData = require('../models/AgreeToGenomeData.js');
 var flash = require('connect-flash');
 // var helpers = require('../helpers/mail.js');
 var axios = require('axios');
@@ -28,9 +29,13 @@ console.log('assessmentTaken: '+ req.user.assessmentTaken);
       layout: 'dash',
       taken: req.flash('taken'),
       assessmentTaken: req.user.assessmentTaken
+
     });
   } else {
-    res.render('tools/start_assessment', {layout: 'dash'}); 
+    res.render('tools/start_assessment', {
+      layout: 'dash',
+      user: req.user
+    }); 
   }
       
 });
@@ -42,10 +47,53 @@ router.get('/tools/stemcell-assessment', function (req, res) {
     });
 });
 
-router.get('/tools/genetic', function (req, res) {
-
+router.get('/tools/gene-data-approval', function (req, res) {
   
-  res.render('tools/genetic_report', {layout: 'dash'});
+  res.render('tools/gene_data_approval', {layout: 'dash'});
+});
+
+router.post('/tools/agree-gene-data', function (req, res) {
+  
+  //res.render('tools/gene_data_approval', {layout: 'dash'});
+
+  var formData = req.body.agree;
+  console.log(formData);
+  var newATGD = new AgreeToGenomeData({checkboxes: formData, user_id: req.user._id});
+
+  console.log(newATGD);
+
+  newATGD.save(function(err) {
+
+    if(err){
+      console.log(err);
+    }
+    else {
+      var isTrue = true;
+      User.findOneAndUpdate({_id: req.user._id}, { $set: { "agreedToAnalyzeGenome": isTrue
+      }}).then(function() {
+          req.flash('agreed', 'Welcome! Click on the button below to connect with 23andMe.')
+          if(err) throw err;
+
+          res.render('tools/genetic_report', {
+            layout: 'dash',
+            agreed: req.flash('agreed')
+
+
+          });
+      });    
+    }
+
+  });
+});
+
+router.get('/tools/genetic', function (req, res) {
+ 
+
+    res.render('tools/genetic_report', {
+      layout: 'dash'
+    
+    });
+
 });
 
 
@@ -247,6 +295,7 @@ router.get('/tools/genetic-data-retinal-diseases', function(req, res) {
 
 router.get('/tools/my-genetics', function(req, res) {
   var data = {};
+  if(req.user) {
 
   SNPs.find({user_id: req.user._id}).then(function(result) {
     data.genes = result;
@@ -259,9 +308,10 @@ router.get('/tools/my-genetics', function(req, res) {
 
   res.render('tools/gene_data', {
     data: data,
-    user: req.user.firstname,
+    user: req.user,
     layout: 'dash'
   });
+  }
 });
 
 
@@ -280,7 +330,8 @@ router.get('/tools/all-trials', function (req, res) {
     data.users = result;
     res.render('tools/all_trials', {
       data: data,
-      layout: 'dash'
+      layout: 'dash',
+      user: req.user
     });
    });
   });
@@ -295,7 +346,8 @@ router.get('/tools/amsler-test', function (req, res) {
   })
   res.render('tools/amsler_test_page', {
     data: data,
-    layout: 'dash'
+    layout: 'dash',
+    user: req.user
   });
 });
 

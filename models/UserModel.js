@@ -37,6 +37,7 @@ var UserSchema = new Schema({
   zip: Number,
   stargRegTaken: Boolean,
   geneticTestTaken: Boolean,
+  agreedToAnalyzeGenome: Boolean
 });
 
 

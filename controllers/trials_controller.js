@@ -27,7 +27,8 @@ router.get('/clinical-trials/zero', function (req, res) {
     data.users = result;
     res.render('trials/trial_zero.handlebars', {
       data: data,
-      layout: 'dash'
+      layout: 'dash',
+      user: req.user
     });
    });
   });
@@ -47,7 +48,8 @@ router.get('/clinical-trials/one', function (req, res) {
     data.users = result;
     res.render('trials/trial_one.handlebars', {
       data: data,
-      layout: 'dash'
+      layout: 'dash',
+      user: req.user
     });
    });
   });
@@ -67,7 +69,8 @@ router.get('/clinical-trials/two', function (req, res) {
     data.users = result;
     res.render('trials/trial_two.handlebars', {
       data: data,
-      layout: 'dash'
+      layout: 'dash',
+      user: req.user
     });
    });
   });
@@ -87,7 +90,8 @@ router.get('/clinical-trials/three', function (req, res) {
     data.users = result;
     res.render('trials/trial_three.handlebars', {
       data: data,
-      layout: 'dash'
+      layout: 'dash',
+      user: req.user
     });
    });
   });
@@ -107,7 +111,8 @@ router.get('/clinical-trials/four', function (req, res) {
     data.users = result;
     res.render('trials/trial_four.handlebars', {
       data: data,
-      layout: 'dash'
+      layout: 'dash',
+      user: req.user
     });
    });
   });
@@ -127,7 +132,8 @@ router.get('/clinical-trials/five', function (req, res) {
     data.users = result;
     res.render('trials/trial_five.handlebars', {
       data: data,
-      layout: 'dash'
+      layout: 'dash',
+      user: req.user
     });
    });
   });
@@ -147,7 +153,8 @@ router.get('/clinical-trials/six', function (req, res) {
     data.users = result;
     res.render('trials/trial_six.handlebars', {
       data: data,
-      layout: 'dash'
+      layout: 'dash',
+      user: req.user
     });
    });
   });
@@ -167,7 +174,8 @@ router.get('/clinical-trials/seven', function (req, res) {
     data.users = result;
     res.render('trials/trial_seven.handlebars', {
       data: data,
-      layout: 'dash'
+      layout: 'dash',
+      user: req.user
     });
    });
   });

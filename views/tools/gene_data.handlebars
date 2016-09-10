@@ -1,6 +1,9 @@
-<h1 style="font-size: 50px; margin-top: 176px; text-align: center; margin-bottom: 45px"><strong id="index-title"> {{user}}'s </strong> Genetics 
+<h1 style="font-size: 50px; margin-top: 176px; text-align: center; margin-bottom: 45px"><strong id="index-title"> {{user.firstname}}'s </strong> Genetics 
 
 </h1>
+<div class="container">
+
+
 <div class="row" id="make-transparent">
   <div class="col-lg-6 wrap-gene-results">
     <div class="list-group">
@@ -241,7 +244,7 @@
     </div>
   <div class="col-lg-5">
     <h2 style="margin-top: 50px"><strong id="index-title">Genes and Disease</strong></h2>
-    <p class="lead">There are dozens of genes associated with retinal diseases.</p>
+    <p class="lead">There are dozens of genes associated with retinal diseases. We currently tested you for 10 genetic mutations. We've compiled a list of retinal diseases per gene. Click on the DNA image below to view them.</p>
 
    <a href="#" class="modal-trigger" data-toggle="modal" 
     data-target="#genesDiseaseModal" id="a-genesDisease">
@@ -455,7 +458,7 @@
 <div class="row">
   <div class="col-lg-12">
     <h2 id="your-genome-h2"><strong id="index-title">Your Genome</strong></h2>
-   {{!--  <p class="lead text-center">Your results for these tested conditions deviate significantly from the normal range. Your current and future health might be impacted.</p> --}}
+    <p class="lead text-center">Your results are in the table below. We tested your genome for 10 genetic mutations of clinical relevance. This is not an exhaustive list, but a high level overview. The table will display for you base pairs (Your Genotype). Click on each Gene or SNP for more information.</p>
     <div class="wrap-snps table-responsive">
       <table class="table table-hover" id="genes-table" cellspacing="0" cellpadding="0" border="0">
         <thead>
@@ -522,14 +525,7 @@
     </div>
   </div>
 </div>
-<div class="row">
-  <div class="col-lg-12">
-    <div class="col-lg-12">
-      
-    </div>
-  </div>
 </div>
-
 
 
 

@@ -413,7 +413,8 @@ router.get('/users/view-results', function (req, res) {
                   // res.json(scores);
                   res.render('users/assessment_results', {
                     scores: scores,
-                    layout: 'dash'
+                    layout: 'dash',
+                    user: req.user
                   });
               });
             });

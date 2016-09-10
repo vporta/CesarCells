@@ -28,8 +28,7 @@ h3 {
     line-height: 15.4px;
 }
 #bs-example-navbar-collapse-1 {
-    /*position: relative;
-    top: 0.333333em;*/
+    margin-left: 25%;
 }
 .parallax {
     /* The image used */
@@ -92,10 +91,10 @@ h3 {
     /* The image used */ 
 
     /*background-image: url("https://static.pexels.com/photos/47446/pexels-photo-47446-large.jpeg");*/
-    background-image: url("/assets/images/coily1.jpeg");
+    background-image: url("/assets/images/eyegrad.jpeg");
 
     /* Set a specific height */
-    height: 100%;
+    height: 90%;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -286,27 +285,13 @@ pre {
     border-color: #58b8fe;
 }
 /*results circle shape*/
-.myButton {
-   
-    border-radius:5px;
-    border:1px solid #f2f6f6;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-family:Arial;
-    font-size:25px;
-    font-weight:bold;
-    padding:11px 23px;
-    text-decoration:none;
-    text-shadow:0px -1px 0px #f2f6f6;
-    width: 200px;
-    margin-left: 240px;
-    vertical-align: center;
-}
+
 .myButton:hover {
     background-color: darkslategray;
     color: white;
 }
+
+
 .myButton:active {
     position:relative;
     top:1px;
@@ -316,8 +301,6 @@ pre {
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
     border-radius:5px;
-    /*border:1px solid deeppink;*/
-    display:inline-block;
     cursor:pointer;
     color: black;
     font-family:Arial;
@@ -326,6 +309,7 @@ pre {
     padding:11px 23px;
     text-decoration:none;
     text-shadow:0px -1px 0px #2b665e;
+    width: 200px;
 }
 .myButton:hover {
     background-color: deeppink;
@@ -395,7 +379,7 @@ pre {
 }
 .jumbotron-glossary {
 
-    background-image: url("/assets/images/color.jpeg");
+    background-image: url("/assets/images/coily.jpeg");
     background-size: cover;
     height: 70%;
 }
@@ -408,7 +392,7 @@ pre {
 }
 .jumbotron-assist-tech {
 
-    background-image: url("/assets/images/color1.jpeg");
+    background-image: url("/assets/images/inverse.jpeg");
     background-size: cover;
     /*height: 70%;*/
     min-height: 70%;  /* Fallback for browsers do NOT support vh unit */
@@ -418,7 +402,7 @@ pre {
 }
 .jumbotron-whatis {
 
-    background-image: url("/assets/images/color1.jpeg");
+    background-image: url("/assets/images/coily.jpeg");
     background-size: cover;
     height: 70%;
    /* min-height: 70%;   Fallback for browsers do NOT support vh unit 
@@ -427,22 +411,23 @@ pre {
     width: 100%;
 }
 .jumbotron-clinical-trial {
-    background-image: url('/assets/images/color1.jpeg');
+    background-image: url('/assets/images/coily1.jpeg');
     background-size: cover;
     height: 70%;
 }  
 .jumbotron-gene-data {
-    background-image: url('/assets/images/color.jpeg');
+    background-image: url('/assets/images/back1.jpeg');
     background-size: cover;
     height: 45%;
 }  
 .jumbotron-aboutus {
-    background-image: url('/assets/images/color1.jpeg');
+    background-image: url('/assets/images/back1.jpeg');
     background-size: cover;
     height: 90%;
 }
 #results-h1 {
     margin-top: 200px;
+    margin-bottom: 40px;
     text-align: center;
     font-size: 55px;
     font-weight: bold;
@@ -479,27 +464,28 @@ pre {
     color: white;
     /*width: 100%;*/
     font-weight: bold;
-    margin-top: 12%;    
+    margin-top: 15%;    
 }
 .main-h1-starg {
     font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 60px;
     /*text-align: center;*/
+    background-color: whitesmoke;
     line-height: 1.3;
-    color: white;
+    color: deeppink;
     /*width: 100%;*/
     font-weight: bold;
     /*margin-left: 3;*/
     margin-top: 20%;
     position: absolute;
-    left: 33%;
+    left: 29%;
 }
 .main-h1-assistive {
     font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 60px;
-    /*text-align: center;*/
+    background-color: whitesmoke;
     line-height: 1.3;
-    color: white;
+    color: deeppink;
     /*width: 100%;*/
     font-weight: bold;
     /*margin-left: 3;*/
@@ -511,8 +497,9 @@ pre {
     font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 60px;
     /*text-align: center;*/
+    background-color: whitesmoke;
     line-height: 1.3;
-    color: white;
+    color: deeppink;
     /*width: 100%;*/
     font-weight: bold;
     /*margin-left: 3;*/
@@ -525,13 +512,14 @@ pre {
     font-size: 60px;
     /*text-align: center;*/
     line-height: 1.3;
-    color: white;
+    color: deeppink;
+    background-color: whitesmoke;
     /*width: 100%;*/
     font-weight: bold;
     /*margin-left: 3;*/
     margin-top: 20%;
     position: absolute;
-    left: 33%;
+    left: 36%;
 }
 .contain-assistive-h1 {
     height: 10em;
@@ -565,7 +553,7 @@ pre {
     position: relative;
     display: block;
     opacity: 1;
-    margin-top: 172px;
+    margin-top: 70px;
     top: 192px;
 }
 #genetic-ring {
@@ -741,11 +729,11 @@ margin-bottom: 69px;
 font-size: 50px;
 font-weight: 300;
 color: white;
-/*border-radius: 50%; */
+/*border-radius: 20%; */
 /*margin-top: 150px;*/
 background-color: white;
 /*background: rgba(255, 255, 255, 255);*/
-background: url('/assets/images/inverse.jpeg');
+background: url('/assets/images/back1.jpeg');
 background-size: cover;
 opacity: 1.3;
 z-index: 7;
@@ -887,7 +875,7 @@ text-align: center;
 }
 
 .avail-trials-h1 {
-    font-size: 50px;
+    font-size: 40px;
     padding-bottom: 20px;
     padding-top: 30px;
     margin: 0;
@@ -902,10 +890,10 @@ text-align: center;
 .what-is-header {
 
     /*margin-bottom: 10px;*/
-    /*margin-top: 100px;*/
-    background-color: whitesmoke;
+    margin-top: 100px;
+    background-color: white;
     /*background: rgba(255, 255, 255, 0.9);*/
-    background: url('/assets/images/coily.jpeg');
+    /*background: url('/assets/images/coily.jpeg');*/
     /*background-size: cover;*/
     opacity: 1.2;
     z-index: 7;
@@ -1011,16 +999,7 @@ text-align: center;
     /*background-image: url('http://feelgrafix.com/data_images/out/20/930465-dna.jpg');*/
 
 }
-#tools {
-    padding: 75px 0;
-    background-color: tomato;
-    text-align: center;
-    /*margin-bottom: 200px;*/
-    /*margin-top: 100px;*/
-    height: 844px;
-    /*background-image: url('http://feelgrafix.com/data_images/out/20/930465-dna.jpg');*/
-    background-size: cover;
-}
+
 .tools-section {
     padding: 75px 0;
     background: white;
@@ -1299,7 +1278,7 @@ text-align: center;
     padding: 10px;
 }
 .wrap-aboutus-h1 {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 .about-p {
     line-height: 1.5em;
@@ -1371,6 +1350,17 @@ text-align: center;
     background-color: deeppink;
     border-color: deeppink;
     transition: all 0.3s ease-out;
+}
+#I-Agree-to-23 {
+    font-size: 22px;
+    /*padding: 38px;*/
+    position: relative;
+    color: white;
+    background-color: green;
+    transition: all 0.3s ease-out;
+}
+.form-I-agree-23 {
+
 }
 #main-btn-register-now {
     /* width: 400px;
@@ -1464,9 +1454,10 @@ text-align: center;
     height: 95px;*/
     font-size: 22px;
     /*padding: 38px;*/
+    margin-left: 160px;
     position: relative;
-    color: white;
-    background-color: deeppink;
+    color: deeppink;
+    background-color: white;
     border-color: deeppink;
     transition: all 0.3s ease-out;
 }
@@ -1594,7 +1585,11 @@ text-align: center;
     margin-left: 10px;
     background-color: whitesmoke;
 }
-
+#img-dash5 {
+    margin-left: 15px;
+    margin-bottom: 20px;
+    background-color: whitesmoke;
+}
 #img-dash4 {
     margin-left: 10px;
 }
@@ -1907,7 +1902,9 @@ ul.dropdown-menu {
 }
 
 
-
+.container {
+    max-width: 18000px;
+}
 
 div.container-fluid.bg-info {
     background-color: transparent;
@@ -2155,6 +2152,7 @@ li,ul{
     background-color: whitesmoke;
     border-radius: 5%;  
     margin-left: 25%;
+    margin-top: 200px;
 
 }
 #wrap-sign-in-form {
@@ -2173,10 +2171,13 @@ li,ul{
     width: 100%;
     height: 100%;
 }
-#contact-support-h2 {
-    margin-top: 200px;
+.form-I-agree-23 {
+    width: 100%;
 }
 .form-login-new {
+    width: 100%;
+}
+.form-contact-us {
     width: 100%;
 }
 .form-signup-new {
@@ -2184,7 +2185,10 @@ li,ul{
     margin-left: 12px;
     padding: 20px;
 }
-
+#gene-approval-form {
+    margin-top: 100px;
+    padding: 20px;
+}
 .login-header .nav-tabs > li.active > a,
 .login-header .nav-tabs > li.active > a:focus,
 .login-header .nav-tabs > li.active > a:hover {
@@ -2327,7 +2331,7 @@ li,ul{
     border-color: deeppink;
     transition: all 0.3s ease-out;
     cursor: pointer;
-    margin-left: 50%;
+    margin-left: 48%;
    
     
     /*top: 99%;*/
@@ -2754,10 +2758,19 @@ header {
 
 }
 #wrap-bottom-index {
-    height: 10em;
-    position: relative 
+    height: 14em;
+    position: relative;
+    font-size: 30px; 
 }
-
+#wrap-contact-us-form {
+    background-color: whitesmoke;
+    /*padding: 5px;*/
+    width: 100%;
+    margin-top: 100px;
+    /*margin-left: 40px;*/
+    /*top: 50%;*/
+    min-height: 100%;
+}
 /*@media only screen and (max-device-width: 767px) {
     .login-logo img {
         margin: 0 auto;
@@ -2893,8 +2906,16 @@ header {
         width: 100%;
     }
 }*/
+
+#cesarcells-consent-language {
+    margin-top: 140px; 
+    padding: 40px; 
+    background-color: whitesmoke; 
+    border-radius: 5%; 
+    margin-left: 20%
 }
 
+/*MOBILE*/
 @media screen and (max-width: 482px) {
   
     .index-p {
@@ -2902,7 +2923,7 @@ header {
     }
 
     .main-h1 {
-        font-size: 60px;
+        font-size: 50px;
         font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
         
         /*line-height: .3;*/
@@ -2911,9 +2932,17 @@ header {
         font-weight: bold;
         /*position: relative;*/
         /*display: block;*/
-        top: 42%;
+        top: 35%;
     }
-    
+    .what-is-h2 {
+
+        font-size: 50px;
+        font-weight: 600;
+        color: darkslategray;
+        /*top: 16%;*/
+        display: block;
+        position: relative;
+    }
     .jumbotron-whatis {
         font-size: 30px;
     }
@@ -2972,12 +3001,23 @@ header {
         padding: 10px;
     }
     #wrap-sign-in-form {
-    background-color: whitesmoke;
-    /*padding: 5px;*/
-    width: 100%;
-    margin-top: 40px;
-    /*margin-left: 40px;*/
-    min-height: 100%;
+        background-color: whitesmoke;
+        /*padding: 5px;*/
+        width: 100%;
+        margin-top: 40px;
+        /*margin-left: 40px;*/
+        min-height: 100%;
+    }
+    #wrap-contact-us-form {
+        background-color: whitesmoke;
+        /*padding: 5px;*/
+        width: 100%;
+        margin-top: 40px;
+        /*margin-left: 40px;*/
+        min-height: 100%;
+    }
+    .form-contact-us {
+        margin-left: 20%;
     }
     .form-login-new {
         padding: 10px;
@@ -2994,19 +3034,277 @@ header {
          font-size: 20px;
          /*padding: 38px;*/
          /*position: relative;*/
-         line-height: .3;
+         /*line-height: .3;*/
          color: white;
          background-color: deeppink;
          border-color: deeppink;
          transition: all 0.3s ease-out;
          /*margin: 0;*/
          /*position: absolute;*/
-         top: 130%;
+         top: 80%;
          left: 50%;
          margin-right: -50%;
          transform: translate(-50%, -50%)
     }
+
+    .aboutus-h1 {
+        font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 60px;
+        text-align: center;
+        line-height: 1.3;
+        color: white;
+        width: 100%;
+        font-weight: bold;
+        /*position: relative;*/
+        /*display: block;*/
+        opacity: 1;
+        /*margin-top: 70px;*/
+        top: 10px;
+    }
+    .our-mission {
+        font-size: 10px;
+    }
+
+    .avail-trials-h1 {
+        font-size: 25px;
+        /*padding-bottom: 20px;
+        padding-top: 30px;
+        margin: 0;
+        line-height: 2;
+        position: absolute;*/
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+    }
+    #sub-main-h1 {
+        font-size: 18px;
+    }
+    /****USER/DASHBOARD BEGINS****/
+    #col-two-dash-images {
+        background-color: whitesmoke;
+        width: 460px;
+        border-radius: 10px;
+        height: 220px;
+        margin-left: 2%;
+    }
+    #col-one-dash-images {
+        background-color: whitesmoke;
+        width: 100%;
+        border-radius: 10px;
+        height: 320px;
+        margin-left: 2%;
+    }
+    #img-dash, #img-dash2 {
+        width: 200px;
+        height: 250px;
+        padding: 30px
+    }
+    #img-dash3, #img-dash4 {
+        width: 200px;
+        height: 250px;
+        padding: 30px;
+    }
+    #top-right-h3 {
+        width: 150px;
+        left: 270px;
+    }
+    #top-left-h3 {
+        width: 150px;
+        left: 70px;
+    }
+    /****USER/DASHBOARD ENDS****/
+    /****AMSLER PAGE BEGINS****/
+    #amsler-grid-h1 {
+        margin-top: 200px;
+        font-size: 45px;
+        text-align: center;
+        line-height: 1;
+    }
+    #amsler-grid-img {
+        margin-top: 50px;
+        margin-left: 50px;
+        height: 100%;
+        width: 100%;
+    }
+    /****AMSLER PAGE ENDS****/
+    /*****MY ACCOUNT BEGINS*****/
+    #wrap-updateinfo {
+        
+        margin-top: 100px;
+        margin-left: 7%;
+        background-color: whitesmoke;
+        padding: 20px;
+        border-radius: 5%;
+    }
+    .wrap-update-pass-form {
+        background-color: whitesmoke;
+        margin-top: 60px;
+        /*padding: 25px;*/
+        border-radius: 5%;
+        margin-left: 5%;
+        width: 100%;
+
+    }
+    #cesarcells-consent-language {
+        margin-top: 40px; 
+        padding: 40px; 
+        background-color: whitesmoke; 
+        border-radius: 5%; 
+        margin-left: 5%
+    }
+    #wrap-contact-support-form {
+        background-color: whitesmoke;
+        border-radius: 5%;  
+        margin-left: 5%;
+        margin-top: 60px;
+
+    }
+    /*****MY ACCOUNT ENDS*****/
+
+    /****TOOLS BEGINS*****/
+    .connect23-h1 {
+        font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 55px;
+        text-align: center;
+        line-height: 1.3;
+        color: white;
+        width: 100%;
+        font-weight: bold;
+        position: relative;
+        display: block;
+        top: 32%;
+        margin-top: 64px;
+         
+    }
+    /*****TOOLS ENDS*****/
+    /*****RESOURCES BEGINS******/
+    #results-h1 {
+        margin-top: 200px;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        line-height: 1;
+    }
+    #gene-table {
+        margin-left: 0px;
+        min-width: 100%;
+        padding: 80px;
+
+    }
+    #back-to-dash-btn{
+       /* width: 400px;
+        height: 95px;*/
+        font-size: 22px;
+        /*padding: 38px;*/
+        position: relative;
+        color: white;
+        background-color: deeppink;
+        border-color: deeppink;
+        transition: all 0.3s ease-out;
+        margin-left: 70px;
+    }
+    /*****RESOURCES ENDS*******/  
+    .myButton {
+       
+        border-radius:5px;
+        border:1px solid #f2f6f6;
+        /*display: block;*/
+        cursor:pointer;
+        color: darkslategray;
+        font-family:Arial;
+        font-size:20px;
+        font-weight:bold;
+        /*padding:1px 3px;*/
+        text-decoration:none;
+        text-shadow:0px -1px 0px #f2f6f6;
+        width: 150px;
+        /*margin-left: 35%;*/
+        /*text-align: center;*/
+    }
+    .trial-assessment-questions {
+        font-size: 20px;
+    }
 }
 
 /*dashbaord ends*/
-
+@media screen and (min-width: 482px) and (max-width: 991px)  {
+ /*   #col-two-dash-images {
+        background-color: whitesmoke;
+        width: 100%;
+        border-radius: 10px;
+        height: 220px;
+        margin-left: 2%;
+    }
+    #col-one-dash-images {
+        background-color: whitesmoke;
+        width: 100%;
+        border-radius: 10px;
+        height: 220px;
+        margin-left: 2%;
+    }*/
+    #cesarcells-consent-language {
+        margin-top: 40px; 
+        padding: 40px; 
+        background-color: whitesmoke; 
+        border-radius: 5%; 
+        margin-left: 1%
+    }
+   #amsler-grid-img {
+       margin-top: 50px;
+       margin-left: 30px;
+       height: 500px;
+   }
+   #wrap-updateinfo {
+       margin-top: 100px;
+       margin-left: 1%;
+       background-color: whitesmoke;
+       padding: 20px;
+       border-radius: 5%;
+   }
+   #wrap-contact-support-form {
+       background-color: whitesmoke;
+       border-radius: 5%;
+       margin-left: 1%;
+       margin-top: 200px;
+   }
+}
+@media screen and (min-width: 992px) and (max-width: 1198px) {
+ /*   #col-two-dash-images {
+        background-color: whitesmoke;
+        width: 100%;
+        border-radius: 10px;
+        height: 220px;
+        margin-left: 2%;
+    }
+    #col-one-dash-images {
+        background-color: whitesmoke;
+        width: 100%;
+        border-radius: 10px;
+        height: 220px;
+        margin-left: 2%;
+    }*/
+    #back-to-dash-btn {
+        margin-left: 150px;
+    }
+    #wrap-updateinfo {
+        margin-top: 100px;
+        margin-left: 1%;
+        background-color: whitesmoke;
+        padding: 20px;
+        border-radius: 5%;
+    }
+    #cesarcells-consent-language {
+        margin-top: 40px; 
+        padding: 40px; 
+        background-color: whitesmoke; 
+        border-radius: 5%; 
+        margin-left: 1%
+    }
+    #wrap-contact-support-form {
+        background-color: whitesmoke;
+        border-radius: 5%;
+        margin-left: 1%;
+        margin-top: 200px;
+    }
+}

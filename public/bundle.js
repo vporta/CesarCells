@@ -23832,10 +23832,13 @@
 	      { className: 'container' },
 	      React.createElement(
 	        'div',
-	        null,
-	        React.createElement(Question, { data: this.state.data, onUserSubmit: this.state.handleUserAnswerSubmit })
-	      ),
-	      React.createElement('div', { className: 'row' })
+	        { className: 'row' },
+	        React.createElement(
+	          'div',
+	          { className: 'col-lg-12' },
+	          React.createElement(Question, { data: this.state.data, onUserSubmit: this.state.handleUserAnswerSubmit })
+	        )
+	      )
 	    );
 	  }
 	});
@@ -25797,7 +25800,7 @@
 	          { className: 'question-assessment' },
 	          React.createElement(
 	            'h1',
-	            { key: i, onChange: this.setCurrentQuestion },
+	            { className: 'trial-assessment-questions', key: i, onChange: this.setCurrentQuestion },
 	            question.question
 	          ),
 	          React.createElement(
@@ -25806,16 +25809,19 @@
 	            React.createElement(
 	              'div',
 	              { className: 'panel panel-default' },
-	              React.createElement('div', { className: 'panel-body' }),
 	              React.createElement(
-	                'button',
-	                { href: '#', id: 'Y', 'data-value': 'Y', name: 'Y', ref: 'Y', type: 'submit', onClick: this.handleYesClick, className: 'myButton' },
-	                'YES'
-	              ),
-	              React.createElement(
-	                'button',
-	                { href: '#', name: 'N', ref: 'N', type: 'submit', onClick: this.handleNoClick, id: 'N', className: 'myButton' },
-	                'NO'
+	                'div',
+	                { className: 'panel-body' },
+	                React.createElement(
+	                  'button',
+	                  { href: '#', id: 'Y', 'data-value': 'Y', name: 'Y', ref: 'Y', type: 'submit', onClick: this.handleYesClick, className: 'btn btn-default pull-left myButton' },
+	                  'YES'
+	                ),
+	                React.createElement(
+	                  'button',
+	                  { href: '#', name: 'N', ref: 'N', type: 'submit', onClick: this.handleNoClick, id: 'N', className: 'btn btn-default pull-right myButton' },
+	                  'NO'
+	                )
 	              )
 	            )
 	          )

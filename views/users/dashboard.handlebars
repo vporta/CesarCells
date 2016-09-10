@@ -14,61 +14,66 @@
         {{/if}}
    
     </div>
-    <div class="col-md-6" >
+    <div class="container">
+        <div class="row">
 
-        <a href="/users/view-results">
+            <div class="col-md-5">
 
-        <img src="/assets/images/background1.jpeg" class="img-rounded" alt="Cinque Terre" width="500" height="298" id="img-dash3"/>
-        <h3><span>YOUR RESULTS</span></h3>
-        </a>
-        </div>
-        <div class="col-md-6" id="col-one-dash-images">
-            <div class="col-xs-9">
-                <h2 id="h1-images">What you can do</h2>
+                <a href="/users/view-results">
+
+                <img src="/assets/images/background1.jpeg" class="img-rounded" alt="Cinque Terre" width="300" height="298" id="img-dash5"/>
+                <h3><span>YOUR RESULTS</span></h3>
+                </a>
             </div>
-            {{#unless assessmentTaken}}
-            <a href="/tools/start-health-assessment">
-            <img src="/assets/images/background1.jpeg" class="img-rounded" alt="Cinque Terre" width="304" height="206" id="img-dash"/>
-            <h3><span>Take The Clinical Trial <br>Assessment</span></h3>
-            </a>
-            {{/unless}}
+            <div class="col-md-3" id="col-one-dash-images">
+                <div class="col-xs-9">
+                    <h2 id="h1-images">What you can do</h2>
+                </div>
+                {{#unless assessmentTaken}}
+                <a href="/tools/start-health-assessment">
+                <img src='/assets/images/humancell.png' class="img-rounded" alt="Cinque Terre" width="304" height="206" id="img-dash"/>
+                <h3 id="top-left-h3"><span>Take The Clinical Trial <br>Assessment</span></h3>
+                </a>
+                {{/unless}}
+                
+                {{#if assessmentTaken}}
+
+                <a href="#">
+                <img src='/assets/images/back1.jpeg' class="img-rounded" alt="Cinque Terre" width="304" height="206" id="img-dash" style="-webkit-filter: grayscale(100%); filter: grayscale(100%)" />
+                <h3 id="top-left-h3"><span>Take The Clinical Trial <br>Assessment</span></h3>
+                </a>
+                {{/if}}
+
+                <a href="/tools/my-genetics">
+                <img src='/assets/images/back1.jpeg' class="img-rounded" alt="Cinque Terre" width="304" height="206" id="img-dash2">
+                <h3 id="top-right-h3"><spanid="top-right-span">My Genetics</span></h3>
+                </a>
+            </div>
+             {{!End col-md-4}}
+            {{!-- <div class="col-md-6">
             
-            {{#if assessmentTaken}}
+            </div> --}}
+            <div class="col-md-3" id="col-two-dash-images"> 
+                <a href="/tools/amsler-test">
 
-            <a href="#">
-            <img src="/assets/images/background1.jpeg" class="img-rounded" alt="Cinque Terre" width="304" height="206" id="img-dash" style="-webkit-filter: grayscale(100%); filter: grayscale(100%)" />
-            <h3><span>Take The Clinical Trial <br>Assessment</span></h3>
-            </a>
-            {{/if}}
+                <img src="/assets/images/balls.jpeg" class="img-rounded" alt="Cinque Terre" width="304" height="206" id="img-dash3"/>
+                <h3><span>Take the Amsler Test</span></h3>
+                </a>
 
-            <a href="/tools/my-genetics">
-            <img src="/assets/images/background1.jpeg" class="img-rounded" alt="Cinque Terre" width="304" height="206" id="img-dash2">
-            <h3 id="top-right-h3"><spanid="top-right-span">My Genetics</span></h3>
-            </a>
+                <a href="/tools/all-trials">
+                <img src="/assets/images/background6.jpeg" class="img-rounded hvr-wobble-vertical" alt="Cinque Terre" width="304" height="206" id="img-dash4"/>
+                <h3 id="top-right-h3"><spanid="top-right-span">Search For Trials</span></h3>
+                </a>
+
+
+            </div>
         </div>
     </div>
-    <div class="row" id="row-btm-dash-images">
-        <div class="col-md-6">
-        
-        </div>
-        <div class="col-md-6" id="col-two-dash-images"> 
-            <a href="/tools/amsler-test">
+    
 
-            <img src="/assets/images/background1.jpeg" class="img-rounded" alt="Cinque Terre" width="304" height="206" id="img-dash3"/>
-            <h3><span>Take the Amsler Test</span></h3>
-            </a>
+ 
+           {{!-- <canvas width="1600px" height="1000"></canvas> --}}
 
-            <a href="/tools/all-trials">
-            <img src="/assets/images/background1.jpeg" class="img-rounded hvr-wobble-vertical" alt="Cinque Terre" width="304" height="206" id="img-dash4"/>
-            <h3 id="top-right-h3"><spanid="top-right-span">Search For Trials</span></h3>
-            </a>
-        </div>
-    </div>
-   <div class="row" id="main-row-sect">
-       <div class="container-lg">
-{{!--            <canvas width="1600px" height="1000"></canvas>
- --}}       <div>
-   <div>
 
    
     

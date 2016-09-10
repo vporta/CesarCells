@@ -38,13 +38,11 @@ var Quiz = React.createClass({
 
     return (
       <div className="container">
-    
-        <div>
+        <div className="row">
+        <div className="col-lg-12">
         <Question data={this.state.data} onUserSubmit={this.state.handleUserAnswerSubmit} />
         </div>
-
-        <div className="row">
-       
+      
         </div>
         
       </div>
