@@ -3,6 +3,8 @@ var Draggable = require('react-draggable');
 var DraggableCore = Draggable.DraggableCore;
 var _ = require('underscore');
 var axios = require('axios');
+var Progress = require('react-progressbar');
+var ProgressBar = require('./ProgressBar');
 
 var Question = React.createClass({
 
@@ -17,7 +19,8 @@ var Question = React.createClass({
       completed: false,
       yes: 'Y',
       no: 'N',
-      trial_one_score: 0
+      trial_one_score: 0,
+      completed: 0
     }
   },
   componentWillMount: function() {
@@ -25,6 +28,7 @@ var Question = React.createClass({
   },
   handleYesClick: function(e) {
     e.preventDefault();
+
     console.log('these are props' + this.props);
 
     if (this.state.trialNumberIndex === 0) {
@@ -33,6 +37,7 @@ var Question = React.createClass({
         
         this.setState({
           progress: this.state.progress + 1,
+          completed: this.state.completed + 3.7
         })
       }
     } if (this.state.progress === 5) {
@@ -41,14 +46,16 @@ var Question = React.createClass({
 
           this.setState({
             trialNumberIndex: this.state.trialNumberIndex + 1,
-            progress: 0 
+            progress: 0 ,
+            completed: this.state.completed + 3.7
           })
 
         } 
       }
         if (this.state.trialNumberIndex === 1) {
           this.setState({
-            progress: this.state.progress + 1
+            progress: this.state.progress + 1,
+            completed: this.state.completed + 3.7
           })
         } if (this.state.progress === 7) {
 
@@ -56,13 +63,15 @@ var Question = React.createClass({
 
               this.setState({
                 trialNumberIndex: this.state.trialNumberIndex + 1,
-                progress: 0 
+                progress: 0,
+                completed: this.state.completed + 3.7 
               })
             }
           }
             if (this.state.trialNumberIndex === 2) {
               this.setState({
-                progress: this.state.progress + 1
+                progress: this.state.progress + 1,
+                completed: this.state.completed + 3.7
               })
             } if (this.state.progress === 2) {
 
@@ -70,7 +79,8 @@ var Question = React.createClass({
 
                   this.setState({
                     trialNumberIndex: this.state.trialNumberIndex + 1,
-                    progress: 0 
+                    progress: 0,
+                    completed: this.state.completed + 3.7 
                   })
 
                 }
@@ -79,7 +89,8 @@ var Question = React.createClass({
 
                 this.setState({
 
-                  progress: this.state.progress + 1
+                  progress: this.state.progress + 1,
+                  completed: this.state.completed + 3.7
 
                 })
 
@@ -89,7 +100,8 @@ var Question = React.createClass({
 
                     this.setState ({
                       trialNumberIndex: this.state.trialNumberIndex + 1,
-                      progress: 0
+                      progress: 0,
+                      completed: this.state.completed + 3.7
                     })
 
                   }
@@ -98,7 +110,8 @@ var Question = React.createClass({
 
                   this.setState({
 
-                    progress: this.state.progress + 1
+                    progress: this.state.progress + 1,
+                    completed: this.state.completed + 3.7
 
                   })
 
@@ -109,7 +122,8 @@ var Question = React.createClass({
                       this.setState ({
 
                         trialNumberIndex: this.state.trialNumberIndex + 2,
-                        progress: 0
+                        progress: 0,
+                        completed: this.state.completed + 3.7
 
                       })
 
@@ -119,7 +133,8 @@ var Question = React.createClass({
 
                     this.setState({
 
-                      progress: this.state.progress + 1
+                      progress: this.state.progress + 1,
+                      completed: this.state.completed + 3.7
 
                     })
 
@@ -130,7 +145,8 @@ var Question = React.createClass({
                         this.setState({
 
                           trialNumberIndex: this.state.trialNumberIndex + 1,
-                          progress: 0
+                          progress: 0,
+                          completed: this.state.completed + 3.7
 
                         })
 
@@ -139,7 +155,8 @@ var Question = React.createClass({
                   }
                     if (this.state.trialNumberIndex === 7) {
                       this.setState({
-                        progress: this.state.progress + 1
+                        progress: this.state.progress + 1,
+                        completed: this.state.completed + 3.7
                       })
                     } if (this.state.progress === 2) {
                         if (this.state.trialNumberIndex === 7) {
@@ -162,6 +179,7 @@ var Question = React.createClass({
   handleNoClick: function(e) {
     e.preventDefault();
     console.log('these are props' + this.props);
+  
 
     if (this.state.trialNumberIndex === 0) {
       
@@ -169,6 +187,7 @@ var Question = React.createClass({
         
         this.setState({
           progress: this.state.progress + 1,
+          completed: this.state.completed + 3.7
         })
       }
     } if (this.state.progress === 5) {
@@ -178,14 +197,16 @@ var Question = React.createClass({
 
           this.setState({
             trialNumberIndex: this.state.trialNumberIndex + 1,
-            progress: 0 
+            progress: 0,
+            completed: this.state.completed + 3.7 
           })
 
         } 
       }
         if (this.state.trialNumberIndex === 1) {
           this.setState({
-            progress: this.state.progress + 1
+            progress: this.state.progress + 1,
+            completed: this.state.completed + 3.7
           })
         } if (this.state.progress === 7) {
 
@@ -193,13 +214,15 @@ var Question = React.createClass({
 
               this.setState({
                 trialNumberIndex: this.state.trialNumberIndex + 1,
-                progress: 0 
+                progress: 0,
+                completed: this.state.completed + 3.7 
               })
             }
           }
             if (this.state.trialNumberIndex === 2) {
               this.setState({
-                progress: this.state.progress + 1
+                progress: this.state.progress + 1,
+                completed: this.state.completed + 3.7
               })
             } if (this.state.progress === 2) {
 
@@ -207,7 +230,8 @@ var Question = React.createClass({
 
                   this.setState({
                     trialNumberIndex: this.state.trialNumberIndex + 1,
-                    progress: 0 
+                    progress: 0,
+                    completed: this.state.completed + 3.7 
                   })
 
                 }
@@ -216,7 +240,8 @@ var Question = React.createClass({
 
                 this.setState({
 
-                  progress: this.state.progress + 1
+                  progress: this.state.progress + 1,
+                  completed: this.state.completed + 3.7
 
                 })
 
@@ -226,7 +251,8 @@ var Question = React.createClass({
 
                     this.setState ({
                       trialNumberIndex: this.state.trialNumberIndex + 1,
-                      progress: 0
+                      progress: 0,
+                      completed: this.state.completed + 3.7
                     })
 
                   }
@@ -235,7 +261,8 @@ var Question = React.createClass({
 
                   this.setState({
 
-                    progress: this.state.progress + 1
+                    progress: this.state.progress + 1,
+                    completed: this.state.completed + 3.7
 
                   })
 
@@ -246,7 +273,8 @@ var Question = React.createClass({
                       this.setState ({
 
                         trialNumberIndex: this.state.trialNumberIndex + 2,
-                        progress: 0
+                        progress: 0,
+                        completed: this.state.completed + 3.7
 
                       })
 
@@ -256,7 +284,8 @@ var Question = React.createClass({
 
                     this.setState({
 
-                      progress: this.state.progress + 1
+                      progress: this.state.progress + 1,
+                      completed: this.state.completed + 3.7
 
                     })
 
@@ -267,7 +296,8 @@ var Question = React.createClass({
                         this.setState({
 
                           trialNumberIndex: this.state.trialNumberIndex + 1,
-                          progress: 0
+                          progress: 0,
+                          completed: this.state.completed + 3.7
 
                         })
 
@@ -276,7 +306,8 @@ var Question = React.createClass({
                   }
                     if (this.state.trialNumberIndex === 7) {
                       this.setState({
-                        progress: this.state.progress + 1
+                        progress: this.state.progress + 1,
+                        completed: this.state.completed + 3.7
                       })
                     } if (this.state.progress === 2) {
                         if (this.state.trialNumberIndex === 7) {
@@ -292,6 +323,7 @@ var Question = React.createClass({
   console.log('----hello world----');
   console.log('progress: ' + this.state.progress);
   console.log('trialNumberIndex: ' + this.state.trialNumberIndex);  
+  
 
   this.handleSubmit(e, 0);
   },
@@ -350,23 +382,27 @@ var Question = React.createClass({
       console.log(question);
 
       return (
+        <div className="row">
+          <div className="col-lg-12">
+            <ProgressBar completed={this.state.completed} clickedNo={this.state.handleNoClick} clickedYes={this.state.handleYesClick}/>
+            <div className="question-assessment">
 
-        <div className="question-assessment">
-
-          <h1 className="trial-assessment-questions" key={i} onChange={this.setCurrentQuestion}>{question.question}</h1>
-            {/*<button href="#" id="Y" type="submit" onClick={this.handleClick} className="myButton">Click Me</button>*/}
-         <form className="questionForm">
-           <div className="panel panel-default">
-             <div className="panel-body">
+              <h1 className="trial-assessment-questions" key={i} onChange={this.setCurrentQuestion}>{question.question}</h1>
+                {/*<button href="#" id="Y" type="submit" onClick={this.handleClick} className="myButton">Click Me</button>*/}
+             <form className="questionForm">
+               <div className="panel panel-default">
+                 <div className="panel-body">
+                     
+                 <button href="#" id="Y" data-value="Y" name="Y" ref='Y' type="submit" onClick={this.handleYesClick} className="btn btn-default pull-left myButton">YES</button>
                  
-             <button href="#" id="Y" data-value="Y" name="Y" ref='Y' type="submit" onClick={this.handleYesClick} className="btn btn-default pull-left myButton">YES</button>
-             
-             <button href="#" name="N" ref='N' type="submit" onClick={this.handleNoClick} id="N" className="btn btn-default pull-right myButton">NO</button>
-             </div>
-           </div>
-         </form>
+                 <button href="#" name="N" ref='N' type="submit" onClick={this.handleNoClick} id="N" className="btn btn-default pull-right myButton">NO</button>
+                 </div>
+               </div>
+             </form>
 
-        </div>
+            </div>
+          </div> 
+        </div> 
         )
       }
     } // End for loop

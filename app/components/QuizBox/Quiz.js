@@ -1,5 +1,6 @@
 var React = require('react');
 var axios = require('axios');
+var Progress = require('react-progressbar');
 var Draggable = require('react-draggable');
 var DraggableCore = Draggable.DraggableCore;
 var _ = require('underscore');
@@ -7,6 +8,7 @@ var _ = require('underscore');
 var QuestionForm = require('./QuestionForm');
 var Question = require('./Question');
 var Results = require('./Results');
+
 
 var Quiz = React.createClass({
   getInitialState: function() {
@@ -38,13 +40,14 @@ var Quiz = React.createClass({
 
     return (
       <div className="container">
-        <div className="row">
-        <div className="col-lg-12">
-        <Question data={this.state.data} onUserSubmit={this.state.handleUserAnswerSubmit} />
-        </div>
       
-        </div>
-        
+        <div className="row">
+
+          <div className="col-lg-12">
+            <Question data={this.state.data} onUserSubmit={this.state.handleUserAnswerSubmit} />
+          </div>
+      
+        </div>        
       </div>
     );
   }
