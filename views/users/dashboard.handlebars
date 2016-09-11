@@ -11,16 +11,17 @@
         {{#if taken}}
 
         <p class="alert alert-danger">{{taken}}</p>
-        {{/if}}
-   
+        {{/if}}  
     </div>
     <div class="container">
         <div class="row">
 
             <div class="col-md-5">
 
+            {{!-- <p>{{user.profileimage.path}}</p> --}}
                 <a href="/users/view-results">
-
+                {{!-- Testing profile image display below --}}
+                {{!-- <img src="{{user.profileimage.path}}" width="400px" height="400px"/> --}}
                 <img src="/assets/images/background1.jpeg" class="img-rounded" alt="Cinque Terre" width="300" height="298" id="img-dash5"/>
                 <h3><span>YOUR RESULTS</span></h3>
                 </a>

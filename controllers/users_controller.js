@@ -121,11 +121,11 @@ router.post('/users/details_new', function(req, res) {
   var dob = req.body.bday;
   var diagnosedStarg = req.body.diagnosedSelect;
   var retinalDisease = req.body.retinalDisease;
-
+  var userType = req.body.userType;
   var email = req.user.local.email;
 
 // console.log(req.user);
-  User.findOneAndUpdate({'_id': req.user._id}, {$set: {"firstname": firstname, "lastname": lastname, "age": age, "sex": sex, "birth_day": dob, "retinalDiagnosis": diagnosedStarg, "retinalDisease": retinalDisease}}, {upsert: true}).exec(function(err){
+  User.findOneAndUpdate({'_id': req.user._id}, {$set: {"firstname": firstname, "lastname": lastname, "age": age, "sex": sex, "birth_day": dob, "retinalDiagnosis": diagnosedStarg, "retinalDisease": retinalDisease, "userType": userType}}, {upsert: true}).exec(function(err){
 
     if(err){
       console.log(err);

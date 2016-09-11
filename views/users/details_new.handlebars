@@ -22,23 +22,39 @@
     <input type="number" id="u-age" name="userage" required="true" class="form-control" placeholder="Enter Age" autofocus>
   </div>
 
+  <div class="form-group">
   <label for="sexDetails">Sex</label>
   <select class="form-control" name="sexselectpicker">
     <option value="male" required name="male">Male</option>
     <option value="female" required name="female">Female</option>
   </select>
+  </div>
 
-  Enter your Birthday<br>
-  <input type="date" name="bday" id="inputBirthday" class="form-control" required="true"><br><br>
+  <div class="form-group">
+  <label class="required" for="Birthday">Enter your Birthday</label>
+  <input type="date" name="bday" id="inputBirthday" class="form-control" required="true">
+  </div>
 
-  Have you been clinically diagnosed with a retinal disease?<br>
-<select name="diagnosedSelect" required>
-      <option value=""></option>
-      <option value="true">Yes</option>
-      <option value="false">No</option>
-</select>
-    <br><br>
-If you answered yes to the previous question, which retinal disease have you been diagnosed with?<br>
+  <div class="form-group">
+    <label class="required" for="RetinalDiag">Have you been clinically diagnosed with a retinal disease?</label>
+    <select name="diagnosedSelect" required="true">
+        <option value=""></option>
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label class="required" for="WhoIsItFor">Who is this profile for?</label>
+    <select name="userType" required="true">
+        <option value="myself">Myself</option>
+        <option value="familyMember">A Family Member</option>
+        <option value="friend">A Friend</option>
+        <option value="mypatient">My Patient</option>
+    </select>
+  </div>
+    
+<label class="required" for="WhichDisease">If you answered yes to the previous question, which retinal disease have you been diagnosed with?</label>
 <select name="retinalDisease" required>
     <option value=""></option>
     <option value="none">None</option>

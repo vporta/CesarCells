@@ -15,6 +15,8 @@ var UserSchema = new Schema({
   birth_day: Date,
   firstname: String,
   lastname: String,
+  userType: String,
+  profileimage: Object,
   sex: String,
   retinalDiagnosis: Boolean,
   retinalDisease: String,

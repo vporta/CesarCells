@@ -6,7 +6,7 @@ $(document).ready(function() {
   $('#scroll-to-1').on('click', function() {
     $('html, body').animate({
       scrollTop: $('#part-1').offset().top
-    }, 2000);
+    }, 1000);
   });
 
   $('.main-h1').each( function(i){

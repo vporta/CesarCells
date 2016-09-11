@@ -1,42 +1,52 @@
 <div class="row"><br>
       <h2 id="header-details-form">UPDATE INFORMATION</h2>
   <div class="col-lg-6" id="wrap-updateinfo">
-  
-
-
-      <form class="form-updateinfo" action="/accounts/update-info" method="post" autocomplete="on">
+      <form class="form-updateinfo" action="/accounts/update-info" method="post" autocomplete="on" enctype="multipart/form-data">
       <br>
   
     <div class="form-group">
-      <label for="FirstName">First Name</label>
-      <input type="text" name="fname" placeholder="First name" class="form-control" autofocus> 
+      <label class="required" for="FirstName">First Name</label>
+      <input type="text" name="fname" placeholder="First name" class="form-control" autofocus required="true"> 
     </div>
 
     <div class="form-group">
-      <label for="StreetAddy">Last Name</label>
-      <input type="text" name="lname" placeholder="Last name" class="form-control" >
+      <label class="required" for="StreetAddy">Last Name</label>
+      <input type="text" name="lname" placeholder="Last name" class="form-control" required="true">
     </div>
-
+    {{!-- <div class="form-group">
+      <label for="ProfileImage">Please specify a file, or a set of files:</label>
+      <input type="file" class="btn btn-default" accept="image/jpeg,png" name="profileimage" size="40">
+    </div> --}}
+    
     <div class="form-group">
       <label for="u-age">Age: </label>
       <input type="number" id="u-age" name="userage" class="form-control" placeholder="Enter Age">
     </div>
-    <label for="sexDetails">Sex</label>
-    <select class="form-control" name="sexselectpicker">
+    <label class="required" for="sexDetails">Sex</label>
+    <select class="form-control" name="sexselectpicker" required="true">
       <option value="male" name="male">Male</option>
       <option value="female" name="female">Female</option>
     </select>
 
     <div class="form-group">
       <label for="StreetAddy">Street Address</label>
-      <input type="text" name="streetaddy" placeholder="Street Address" class="form-control" >
+      <input type="text" name="streetaddy" placeholder="Street Address" class="form-control">
     </div>
 
     <div class="form-group">
       <label for="city">City</label>
-      <input type="text" name="city" placeholder="city" class="form-control" >
+      <input type="text" name="city" placeholder="city" class="form-control">
     </div>
 
+    <div class="form-group">
+      <label class="required" for="WhoIsItFor">Who is this profile for?</label>
+      <select name="userType" required="true">
+          <option value="myself">Myself</option>
+          <option value="familyMember">A Family Member</option>
+          <option value="friend">A Friend</option>
+          <option value="mypatient">My Patient</option>
+      </select>
+    </div>
 
     <label for="statedetails">State</label><br>
     <select class="form-control" name="stateselectpicker">
@@ -94,25 +104,49 @@
     </select> <br>
     
     <div class="form-group">
-      <label for="zip">Zip: </label>
-      <input type="number" id="zip" name="zipcode" class="form-control" placeholder="Enter Age">
+      <label class="required" for="zip">Zip: </label>
+      <input type="number" id="zip" name="zipcode" class="form-control" placeholder="Enter Zipcode" required="true">
     </div>      
 
-    Enter your Birthday<br>
-    <input type="date" name="bday" id="inputBirthday" class="form-control"><br><br>
+    <div class="form-group">
+      <label class="required" for="Birthday">Enter your Birthday</label>
+      <input type="date" name="bday" id="inputBirthday" class="form-control" required="true">
+    </div>
 
     <div class="form-group">
       <label for="phone">Phone Number</label>
-      <input type="number" name="phone" placeholder="A minimum of 10 digits" class="form-control" >
+      <input type="number" name="phone" placeholder="2011234567" class="form-control">
     </div>
 
-    Have you been diagnosed with Stargardt disease?<br>
-    <select name="diagnosedSelect">
+    <label class="required" for="RetinalDiagnosis">Have you been CLINICALLY diagnosed with a retinal disease?</label>
+    <select name="diagnosedSelect" required="true">
         <option value=""></option>
         <option value="true">Yes</option>
         <option value="false">No</option>
       </select>
       <br><br>
+
+    <label class="required" for="WhichDisease">If you answered yes to the previous question, which retinal disease have you been diagnosed with?(Select "none" if you answered no)</label>
+    <select name="retinalDisease" required="true">
+        <option value="none">None</option>
+        <option value="stargardts">Stargardt's Disease</option>
+        <option value="glaucoma">Glaucoma</option>
+        <option value="AgeRelatedMacularDegeneration">Age Related Macular Degeneration</option>
+        <option value="RetinitisPigmentosa">Retinitis Pigmentosa</option>
+        <option value="Choroideremia">Choroideremia</option>
+        <option value="OpticNerveDisease">Optic Nerve Disease</option>
+        <option value="Achromatopsia">Achromatopsia</option>
+        <option value="Bardet-BiedlSyndrome">Bardet-Biedl Syndrome</option>
+        <option value="Bassen-KornzweigSyndrome">Bassen-Kornzweig Syndrome</option>
+        <option value="BattenDisease">Batten Disease</option>
+
+        <option value="BestDisease">Best Disease</option>
+        <option value="Cone-RodDystrophy,">Cone-Rod Dystrophy,</option>
+        <option value="LeberCongenitalAmaurosis">Leber Congenital Amaurosis</option>
+        <option value="UsherSyndrome">Usher Syndrome</option>
+        <option value="Other">Other</option>
+    </select><br>
+    <br>
       
         <input type="submit" value="Submit" class="btn btn-default"><br>
 
@@ -120,4 +154,5 @@
     
   </div>
 </div>
+
 

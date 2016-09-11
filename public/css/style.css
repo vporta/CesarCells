@@ -94,7 +94,7 @@ h3 {
     background-image: url("/assets/images/eyegrad.jpeg");
 
     /* Set a specific height */
-    height: 90%;
+    height: 99%;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -125,10 +125,15 @@ h3 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 100px;
 }
 .form-update-pass {
     width: 100%;
 
+}
+.required:before {
+    color: red;
+    content: '*';
 }
 /*http://www.stemcentrx.com/img/home_science.png*/
 /*http://www.stemcentrx.com/img/clinical-bg.png*/
@@ -175,6 +180,11 @@ ul.shortcuts li {
     margin-left: 100px;
     font-size: 18px;
     margin-top: 42px;
+}
+span.glyphicon.glyphicon-asterisk {
+    font-size: 10px;
+    color: red;
+
 }
 /*glossary*/
 .glossary-h2 {
@@ -657,6 +667,7 @@ pre {
     /*margin-bottom: 69px;*/
 
 }
+
 .index-page {
     margin-top: 80px;
     line-height: 2;
@@ -664,7 +675,7 @@ pre {
     font-weight: 300;
     padding-left: 30px;
     padding-right: 30px;
-    /*background-color: white;*/
+    background-color: white;
     border-top-style: solid;
     /*border-top-width: 3px;*/
     /*border-top-color: whitesmoke;*/
@@ -707,6 +718,8 @@ margin-bottom: 69px;
     display: block;
     position: relative;
     opacity: 0;
+    margin-top: 65px;
+
 }
 .clinical-trials-h2-top {
 
@@ -714,6 +727,7 @@ margin-bottom: 69px;
     font-weight: 600;
     color: darkslategray;
     top: 20%;
+    margin-top: 100px;
   
 }
 .DNA-h2-top {
@@ -722,6 +736,7 @@ margin-bottom: 69px;
     font-weight: 600;
     color: darkslategray;
     top: 20%;
+    margin-top: 80px;
   
 }
 .tools-h2 {
@@ -1220,6 +1235,7 @@ text-align: center;
    background-color: deeppink;
    border-color: deeppink;
    transition: all 0.3s ease-out;
+   margin-bottom: 50px;
 }
 #sign-in-buddy {
     font-size: 22px;
@@ -2313,14 +2329,17 @@ li,ul{
 .form-details {
     padding: 35px 0;
 }
+
 .form-updateinfo {
     margin: 0;
     /*margin-left: 50%;*/
 
 }
+
 .tab-content .tab-pane {
     padding: 70px 0;
 }
+
 #scroll-to-1 {
     font-size: 22px;
     /*padding: 38px;*/
@@ -3225,6 +3244,9 @@ header {
     .trial-assessment-questions {
         font-size: 20px;
     }
+    #clin-trial-img {
+        width: 100%;
+    }
 }
 
 /*dashbaord ends*/
@@ -3268,6 +3290,9 @@ header {
        margin-left: 1%;
        margin-top: 200px;
    }
+   #clin-trial-img {
+       width: 50%;
+   }
 }
 @media screen and (min-width: 992px) and (max-width: 1198px) {
  /*   #col-two-dash-images {
@@ -3306,5 +3331,8 @@ header {
         border-radius: 5%;
         margin-left: 1%;
         margin-top: 200px;
+    }
+    #clin-trial-img {
+        width: 30%;
     }
 }
