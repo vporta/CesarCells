@@ -131,6 +131,9 @@ h3 {
     width: 100%;
 
 }
+.instructions-parents {
+    margin-top: 120px;
+}
 .required:before {
     color: red;
     content: '*';
