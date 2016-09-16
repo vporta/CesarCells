@@ -9,6 +9,17 @@ var UserSchema = new Schema({
     email: String,
     password: String, 
   },
+  admin: {
+      type: Boolean,
+      default: false
+  },
+  products: [
+    {
+      productID: String,
+      token: String,
+      time: { type: Date, default: Date.now }
+    }
+  ],
   resetPasswordToken: String,
   resetPasswordExpires: Date,
   age: Number,
@@ -39,7 +50,8 @@ var UserSchema = new Schema({
   zip: Number,
   stargRegTaken: Boolean,
   geneticTestTaken: Boolean,
-  agreedToAnalyzeGenome: Boolean
+  geneReportPurchase: Boolean
+  
 });
 
 

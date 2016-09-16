@@ -13,7 +13,8 @@ If you are a parent or guardian looking for study information for children under
     <div class="col-lg-12 wrap-trial-form">
         
             <form action="/clinical-trials/contact/one" method="post" class="form-horizontal trial-contact-forms">
-                <h2 class="title-trials"> <br><strong>TRIAL NAME: {{data.trials.7.name}}</strong></h2>
+                {{!-- <h2 class="title-trials"> <br><strong>TRIAL NAME: {{data.trials.7.name}}</strong></h2> --}}
+                <h2> <br><strong>Status: {{data.trials.7.status}}</strong></h2>
 
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Subject: </label>
@@ -50,4 +51,19 @@ If you are a parent or guardian looking for study information for children under
         
     </div>
 </div>
+<div class="row">
+  <div class="col-lg-12">
+        <div class="panel-group">
+          <div class="panel panel-default">
+            <div class="panel-body">
+            <p class="lead">Note: By registering at this site, you agree to be contacted by the study site that you 
+  selected. By clicking submit, the information you provided will be governed by our 
+  privacy policy. For important information about how your personal information will be 
+  used by CESARCELLS, view our terms and conditions, which includes our privacy policy.</p>
+          </div>
+          </div>
+          
+        <span class="glyphicon glyphicon-star" aria-hidden="true">     Trials are derived from: <img src="/assets/images/clintrial.png" width="50%" style="-webkit-filter: grayscale(100%); filter: grayscale(100%); padding: 50px;"></span>
+  </div>
+</div> {{!Row ends}}
 </div>

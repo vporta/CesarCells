@@ -47,44 +47,43 @@ router.get('/tools/stemcell-assessment', function (req, res) {
     });
 });
 
-router.get('/tools/gene-data-approval', function (req, res) {
+// router.get('/tools/gene-data-approval', function (req, res) {
   
-  res.render('tools/gene_data_approval', {layout: 'dash'});
-});
+//   res.render('tools/gene_data_approval', {layout: 'dash'});
+// });
 
-router.post('/tools/agree-gene-data', function (req, res) {
+// router.post('/tools/agree-gene-data', function (req, res) {
   
-  //res.render('tools/gene_data_approval', {layout: 'dash'});
+//   //res.render('tools/gene_data_approval', {layout: 'dash'});
 
-  var formData = req.body.agree;
-  console.log(formData);
-  var newATGD = new AgreeToGenomeData({checkboxes: formData, user_id: req.user._id});
+//   var formData = req.body.agree;
+//   console.log(formData);
+//   var newATGD = new AgreeToGenomeData({checkboxes: formData, user_id: req.user._id});
 
-  console.log(newATGD);
+//   console.log(newATGD);
 
-  newATGD.save(function(err) {
+//   newATGD.save(function(err) {
 
-    if(err){
-      console.log(err);
-    }
-    else {
-      var isTrue = true;
-      User.findOneAndUpdate({_id: req.user._id}, { $set: { "agreedToAnalyzeGenome": isTrue
-      }}).then(function() {
-          req.flash('agreed', 'Welcome! Click on the button below to connect with 23andMe.')
-          if(err) throw err;
+//     if(err){
+//       console.log(err);
+//     }
+//     else {
+//       var isTrue = true;
+//       User.findOneAndUpdate({_id: req.user._id}, { $set: { "agreedToAnalyzeGenome": isTrue
+//       }}).then(function() {
+//           req.flash('agreed', 'Welcome! Click on the button below to connect with 23andMe.')
+//           if(err) throw err;
 
-          res.render('tools/genetic_report', {
-            layout: 'dash',
-            agreed: req.flash('agreed')
+//           res.render('charge/charge', {
+//             layout: 'dash',
+//             agreed: req.flash('agreed')
 
 
-          });
-      });    
-    }
-
-  });
-});
+//           });
+//       });    
+//     }
+//   });
+// });
 
 router.get('/tools/genetic', function (req, res) {
  
@@ -315,27 +314,27 @@ router.get('/tools/my-genetics', function(req, res) {
 });
 
 
-router.get('/tools/all-trials', function (req, res) {
+// router.get('/tools/all-trials', function (req, res) {
   
-  var data = {};
+//   var data = {};
   
-  Trial.find({
-  }).then(function(result) {
+//   Trial.find({
+//   }).then(function(result) {
     
-  data.trials = result;
+//   data.trials = result;
    
-   User.find({ 
-   }).then(function(result) {
+//    User.find({ 
+//    }).then(function(result) {
 
-    data.users = result;
-    res.render('tools/all_trials', {
-      data: data,
-      layout: 'dash',
-      user: req.user
-    });
-   });
-  });
-});
+//     data.users = result;
+//     res.render('tools/all_trials', {
+//       data: data,
+//       layout: 'dash',
+//       user: req.user
+//     });
+//    });
+//   });
+// });
 
 // AMSLER PAGE ROUTES
 router.get('/tools/amsler-test', function (req, res) {

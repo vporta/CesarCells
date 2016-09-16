@@ -103,6 +103,8 @@ app.use('/', chats_controller);
 var sitemap_controller = require('./controllers/sitemap_controller.js');
 app.use('/', sitemap_controller);
 
+var charges_controller = require('./controllers/charges_controller.js');
+app.use('/', charges_controller);
 // ==== APIs ====
 var routing = require('./routing/api-trials');
 app.use('/', routing);

@@ -2,10 +2,24 @@
   
       <div class="row parallax-5" id="cta">
         <div class="col-lg-12" id="wrap-main-h1">
-  
-          <h1 class="main-h1"> <br><strong id="index-title">Find a retinal disease treatment.</strong></h1>
-          <h1 style="text-align: center" id="sub-main-h1"> CESARCELLS makes it easy for you to qualify for clinical trials based on a 2 minute assessment. </h1>
-         {{!--  <a href="/users/sign-in" type="submit" class="btn btn-primary" id="main-btn"> <span class="glyphicon glyphicon-arrow-right icon-arrow"> </span> Try It Free</a> --}}
+        
+         {{!--  <h1 class="main-h1"> <br><strong id="index-title">Find a retinal disease treatment.</strong></h1>
+          <h1 style="text-align: center" id="sub-main-h1"> CESARCELLS makes it easy for you to qualify for clinical trials. You take a 2 minute assessment. Then you contact the trials. </h1> --}}
+         
+         <div class="row">
+           <div class="col-xs- col-sm-2">
+             
+           </div>
+           <div class="col-xs-12 col-sm-8" style="text-align: center">
+             <h1 class="main-h1"> <br><strong id="index-title">Are you looking for a retinal disease treatment?</strong></h1>
+              <a href="/users/sign_up" type="submit" class="btn btn-primary" id="yes-btn"> <span class="glyphicon glyphicon-arrow-right icon-arrow"> </span> Yes</a>
+              <a href="/users/no" type="submit" class="btn btn-primary" id="no-btn"> <span class="glyphicon glyphicon-arrow-right icon-arrow"> </span> No</a>
+             <h1 style="text-align: center" id="sub-main-h1"> CESARCELLS makes it easy for you to qualify for clinical trials. You take a brief assessment. Then you contact the trials. </h1>
+           </div>
+           <div class="col-xs- col-sm-2">
+             
+           </div>
+        </div>
          <br>
          <br>
               <a id="scroll-to-1"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a>
@@ -37,9 +51,8 @@
          <div class="row">
            <div class="col-lg-12 what-is-header">
 
-             <h2 class="what-is-h2">What is Cesarcells.com?</h2>
+             <h2 class="what-is-h2">Cesarcells is your partner</h2>
 
-             <p class="lead index-page">
              Cesarcells.com helps you find and qualify for retinal disease clinical trials. 
 
              It is also an independent resource on <strong id="index-title">Age Related Macular Degeneration (ARMD)</strong> and other retinal diseases. 
@@ -48,7 +61,8 @@
              </p> <br>
              <a class="btn btn-primary btn-lg" href="/about_us/aboutus" role="button" id="learn-more">Learn More About Us</a>
              <p class="what-is-sci"><strong>We currently have over 8 ARMD clinical trials.</strong></p>
-             <img src="/assets/images/clintrial.png" width="30%" style="-webkit-filter: grayscale(100%); filter: grayscale(100%); padding: 10px; margin-bottom: 40px" id="clin-trial-img"></p>
+             {{!-- <img src="/assets/images/clintrial.png" width="30%" style="-webkit-filter: grayscale(100%); filter: grayscale(100%); padding: 10px; margin-bottom: 40px" id="clin-trial-img"></p> --}}
+             <span class="glyphicon glyphicon-star" aria-hidden="true">     Trials are derived from: <img src="/assets/images/clintrial.png" width="50%" style="-webkit-filter: grayscale(100%); filter: grayscale(100%); padding: 50px;"></span>
              
             
              
@@ -70,15 +84,8 @@
                
 
                 <p class="lead index-page">Take a <strong id="index-title">3-5 minute assessment</strong> to see if you're likely to <strong id="index-title">qualify for clinical trials.</strong> 
-               Then <strong id="index-title">contact the clinics</strong> you qualified for.</p>
-
-
-
-
-                
-                
-               
-                <a class="btn btn-primary btn-lg" href="#" role="button" id="learn-more-how">Learn More</a>
+               Then <strong id="index-title">contact the clinics</strong> you qualified for.</p>              
+                <a class="btn btn-primary btn-lg" href="/users/sign_up" role="button" id="learn-more-how">Learn More</a>
 
                 
            
@@ -168,7 +175,7 @@
 
                 <div class="col-sm-4">
 
-                    <h2 class="main-tools-title" > <span class="glyphicon glyphicon-comment icon-comment" aria-hidden="true"></span><br>   Discussion Forum</h2>
+                    <h2 class="main-tools-title" > <span class="glyphicon glyphicon-phone icon-comment" aria-hidden="true"></span><br>   Mobile Friendly</h2>
                 
                 </div>
                 <div class="col-sm-4">
@@ -186,6 +193,7 @@
 
             </h2>
         </header>
+
     </div>
            
 {{!-- </section> --}}
@@ -194,39 +202,125 @@
 
             
     {{!-- </section> --}}
-    {{!-- <section id="cta" class="parallax-6"> --}}
+   
            
-               <div class="row">
-                   <header class="DNA-header">
-                        <h2 class="DNA-h2-top">Take a DNA Test </h2>                        
-                           <div class="col-md-6">
-                           <h2 class="avail-trials-h2">We currently work with raw data from the direct-to-consumer <strong id="index-title">23andMe genetic </strong>service</h2>
+     <div class="row">
+        <header class="DNA-header">
+          <h2 class="DNA-h2-top">Take a DNA Test </h2>                        
+             <div class="col-md-6">
+             <h2 class="avail-trials-h2">We currently work with data from the direct-to-consumer <strong id="index-title">23andMe genetic </strong>service</h2>
 
-                            <ul class="list" style="text-align: left">
-                              <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>     Learn about your genetic susceptibility to certain <strong id="index-title">retinal diseases</strong></li><br>
-                              <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>     Find out if you are  <strong id="index-title">homozygous, or heterozygous for each gene.</strong></li><br>
+              <ul class="list" style="text-align: left">
+                <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>     Learn about your genetic susceptibility to certain <strong id="index-title">retinal diseases</strong></li><br>
+                <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>     Find out if you are  <strong id="index-title">homozygous, or heterozygous for each gene.</strong></li><br>
 
-                              <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>     Understand the <strong id="index-title">SNPs that contribute to genetic retinal diseases</strong></li>
+                <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>     Understand the <strong id="index-title">SNPs that contribute to genetic retinal diseases</strong></li><br>
 
-                            </ul>
-                           </div>
-                           <div class="col-md-5">
-                           <img src="/assets/images/23andMe_Box.jpg" id="two3andme-img-index">
+                <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>     Share your results with <strong id="index-title"> your clinic for even better collaboration</strong></li><br>
 
-                           </div>                             
-                  </header>
-              </div>
-           
 
+              </ul>
+             </div>
+             <div class="col-md-5">
+              <img src="/assets/images/23andMe_Box.jpg" id="two3andme-img-index">
+
+             </div>                             
+        </header>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="Gene-h2-top">Obtain a Gene Report </h2>  
+           <h2 class="avail-trials-h2">We scan your genome for the following <strong id="index-title">CLINICALLY RELEVANT SNPs</strong></h2>
+
+
+
+      </div> 
+    </div>  
+    <div class="row">        
+      <div class="col-lg-4">
+
+      </div>          
+      <div class="col-lg-3">
+                              
+           <ul class="list" style="text-align: left">
+             <li><span class="glyphicon glyphicon-star star-it" aria-hidden="true"></span>  <strong id="index-title">MYOC</strong></li><br>
+             <li><span class="glyphicon glyphicon-star star-it" aria-hidden="true"></span> <strong id="index-title">LOXL1</strong></li><br>
+
+             <li><span class="glyphicon glyphicon-star star-it" aria-hidden="true"></span>         <strong id="index-title">C3</strong></li><br>
+
+           </ul>
+      </div>      
+            
               
-      {{!-- </section> --}}
-    
+      <div class="col-lg-3">      
+            <ul class="list" style="text-align: left">
+              <li><span class="glyphicon glyphicon-star star-it" aria-hidden="true"></span>         <strong id="index-title">CFH</strong></li><br>
+
+              <li><span class="glyphicon glyphicon-star star-it" aria-hidden="true"></span>         <strong id="index-title">TLR3</strong></li><br>
+
+              <li><span class="glyphicon glyphicon-star star-it" aria-hidden="true"></span>         <strong id="index-title">ABCA4</strong></li><br>
+            </ul>
+            
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <h2 class="avail-trials-h2">Genes by <strong id="index-title">Retinal Diseases</strong></h2>
+
+        <ul class="list" style="text-align: center; margin-top: 6%">
+          <li>ABCA4     <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>      <strong id="index-title">     Stargardt's Disease</strong></li><br>
+          <li>MYOC     <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>      <strong id="index-title">     Glaucoma</strong></li><br>
+
+         <li>CFH     <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>      <strong id="index-title">     ARMD</strong></li><br>
+
+         <li>      <strong id="index-title">     AND MORE!</strong></li><br>
+        </ul>
+        <h2 class="sample-genereport-h2"><strong id="index-title">Gene Report</strong></h2>
+        <img src="/assets/images/samplereport.png" width="100%" height="100%" style="padding: 30px; -webkit-filter: blur(5px); filter: blur(5px)" class="img-rounded" id="img-genereport">
+        
+
+      </div>
+      
+      <div class="col-lg-6">
+        <h2 class="sample-genetable-h2"><strong id="index-title">Gene Table</strong></h2>
+
+        <img src="/assets/images/gene-table.png" width="100%" height="100%" style="padding: 30px; -webkit-filter: blur(5px); filter: blur(5px)" class="img-rounded">
+        <h2 class="sample-genetable-h2"><strong id="index-title">Genetics </strong> Results Page</h2>
+        <img src="/assets/images/mac.jpeg" width="100%" height="100%" style="padding: 30px" class="img-rounded">
+
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+      <p class="lead" style="text-align: center">Each report is just $19 and comes with a free dietary protocol complete with specific vitamin, mineral, and nutragenomic recommendations for each retinal disease. *No refunds on virtual products</p>
+      <a href="/users/sign-in" type="submit" class="btn btn-primary" id="buy-gene-btn-register-now" style="margin-top: 50px" > <span class="glyphicon glyphicon-arrow-right icon-arrow"> </span>       Yes! I want a Gene Report</a><br>
+      </div>
+      
+    </div> 
+
+    <div class="row">
+    <div class="col-lg-12" id="faqs-index">
+      <h2 class="faqs-h2-top">FAQ </h2>
+      
+      <p class="lead faqs-p"><strong>How does CESARCELLS Gene Report differ from others?</strong> CESARCELLS Gene Report provides only well-researched SNPs that have clinical relevance to retinal disease patients and physicians. We are also one of the only companies to offer a retinal disease gene report.</p>
+
+      <p class="lead faqs-p"><strong>Who can order the CESARCELLS Gene Report?</strong> Anyone can order the Gene report!</p>
+
+      <p class="lead faqs-p"><strong>Can I use Ancestry.com or other gene services' raw data?</strong> Unfortunately no. We found that 23andMe has the most robust library of SNPs to work with, which ultimately gives us the opportunity to provide a better service to our customers.</p>
+
+    </div>
+    </div> 
+
+     
+
     <div class="row">
         <div class="col-lg-12" id="wrap-bottom-index">
         <h1 class="avail-trials-h1">Get Started Finding Your <strong id="index-title">Clinical Trial </strong></h1>
             <a href="/users/sign-in" type="submit" class="btn btn-primary" id="main-btn-register-now"> <span class="glyphicon glyphicon-arrow-right icon-arrow"> </span>       Register Now</a>
       
-        </div>
+    </div>
          
-    </div><br><br><br>
+</div><br><br><br>
 

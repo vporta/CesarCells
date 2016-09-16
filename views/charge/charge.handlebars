@@ -1,0 +1,150 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-5" style="margin-top: 200px; padding: 10px; -webkit-filter: blur(3px); filter: blur(3px)">
+      <img src="/assets/images/samplereport.png" class="img-responsive">
+    </div>
+
+    <div class="col-sm-12 col-md-7" style="margin-top: 100px; padding: 50px">
+    
+    <h1 style="margin-bottom: 50px" id="charge-h1"><strong id="index-title">CESAR</strong>CELLS GENE REPORT</h1>
+    
+    <table id="cart" class="table table-hover table-condensed" style="margin-top: 40px">
+          <thead>
+          <tr>
+            <th style="width:60%">Product</th>
+            <th style="width:20%">Price</th>
+            <th style="width:8%">Quantity</th>
+            <th style="width:30%" class="text-center">Subtotal</th>
+            {{!-- <th style="width:10%"></th> --}}
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-th="Your Order">
+              <div class="row">
+                <div class="col-sm-2 hidden-xs"><img src="/assets/images/logo.jpeg" alt="..." class="img-responsive"/></div>
+                <div class="col-sm-6">
+                  <h4 class="nomargin">Gene Report</h4>
+                  <p>Free Nutrition Protocol and Supplement Reports Included.</p>
+                </div>
+              </div>
+            </td>
+            <td data-th="Price">$19</td>
+            <td data-th="Quantity">
+              <input type="number" class="form-control text-center" value="1" max="1" min="1">
+            </td>
+            <td data-th="Subtotal" class="text-center">$19</td>
+            {{!-- <td class="actions" data-th="">
+              <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+              <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>                
+            </td> --}}
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr class="visible-xs">
+            <td class="text-center"><strong>Total $19</strong></td>
+          </tr>
+          <tr>
+           {{!--  <td><a href="/tools/my-genetics" class="btn btn-warning"><i class="fa fa-angle-left"></i> Back To My Genetics</a></td> --}}
+            <td><form action="/stripe-charge" method="POST">
+            <script
+              src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="pk_test_NRRb4eHDv9hbBRFT9kY90ZWN"
+              data-amount="1900"
+              data-name="CESARCELLS"
+              data-description="Gene Report"
+              data-zip-code="true"
+              data-locale="auto"
+              data-billing-address="true"
+              >
+            </script>
+            </form></td>
+
+            <td colspan="2" class="hidden-xs"></td>
+            <td class="hidden-xs text-center"><strong>Total $19</strong></td>
+           
+          </tr>
+        </tfoot>
+    </table>
+      <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button_count&size=small&mobile_iframe=true&appId=1769236296667454&width=88&height=20" width="88" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+      <p class="lead">Know if you are homozygous or heterozygous for your SNPs or that of your patient’s SNPs using CesarCells Genetic Analysis! After months of research, the CESARCELLS research team has identified key SNPs which are clinically relevant in the diagnosis of retinal disease – and more importantly – which ones are not.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-12" style="margin-top: 20px; padding: 10px">
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Product Description</div>
+        <div class="panel-body">
+          <p>Is this Gene Report right for you?</p>
+          <p class="lead">This report is for people who have ordered the 23andMe test. If you have not taken the 23andMe test, then this report isn't for you. If you have a family history of retinal disease, we highly recommend ordering the 23andMe test.</p>
+        </div>
+        <div class="panel-body">
+          <p>What is the Gene Report?</p>
+          <p class="lead"> This Gene Report is a genetic reporting tool that uses 23andMe data.
+          By limiting report data to 3 retinal diseases of well-researched SNPs, a qualified health care practitioner is able to create a specific testing and treatment plan for you.
+          </p>
+        </div>
+        <div class="panel-body">
+          <p>What does the Gene Report provide?</p>
+         
+        <!-- List group -->
+        <ul class="list-group">
+          <li class="list-group-item">1. SNPs identified by 23andMe</li>
+          <li class="list-group-item">2. SNPs of clinical relevance</li>
+          <li class="list-group-item">3. Pathegenic SNPs</li>
+          <li class="list-group-item">4. Your pathegenic risk per SNPs</li>
+          <li class="list-group-item">5. Nutrition and Supplementation Protocol per disease</li>
+        </ul>
+        </div>
+        <div class="panel-body">
+          <p>How does the Gene Report layout look?</p>
+         
+          <!-- List group -->
+          <ul class="list-group">
+            <li class="list-group-item">1. Table display of your SNPs with gene, rsid, variant names, genotype, and risk allele</li>
+            <li class="list-group-item">2. Results for each disease with a description of your genotype and risk of developing the disease</li>
+            <li class="list-group-item">3. A bonus nutritional and supplement protocol. This is a discussion of supplementation and nutritional guidance based on your report</li>
+        
+          </ul>
+        </div>
+        <div class="panel-body">
+          <p>Genes evaluated by the Gene Report</p>
+         
+          <!-- List group -->
+          <ul class="list-group">
+            <li class="list-group-item">MYOC</li>
+            <li class="list-group-item">CFH</li>
+            <li class="list-group-item">LOXL1</li>
+            <li class="list-group-item">TLR3</li>
+            <li class="list-group-item">C3</li>
+            <li class="list-group-item">ABCA4</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h1>Get Your Gene Report</h1>
+  <form action="/stripe-charge" method="POST">
+              <script
+                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="pk_test_NRRb4eHDv9hbBRFT9kY90ZWN"
+                data-amount="1999"
+                data-name="CESARCELLS"
+                data-description="Gene Report"
+                data-zip-code="true"
+                data-locale="auto"
+                data-billing-address="true"
+                >
+              </script>
+              </form>
+  <div class="row">
+    <div class="panel panel-default" style="height: 100px">
+      <div class="panel-footer" style="height: 100px"> 
+
+        <a href="/contact_us/contact" class="links-footer">Contact Us</a>
+        <a target="_blank" class="links-footer" href="/accounts/privacy-home">Privacy Policy & Terms and Conditions</a> 
+      </div>  
+  </div>
+</div>    

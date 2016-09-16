@@ -4,9 +4,9 @@ body {
     font-variant: normal;
     font-weight: 500;
     /*line-height: 26.4px;*/
-    color: darkslategray 
+    color: black; 
 ;
-    background-color: white;
+    background-color: transparent;
     /*padding: 5px;*/
     font-size: 23px;
     /*line-height: .6;*/
@@ -57,6 +57,8 @@ h3 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+         
+       
 }
 .parallax-3 {
     /* The image used */
@@ -207,6 +209,11 @@ span.glyphicon.glyphicon-asterisk {
     font-size: 20px;
 
 }
+#charge-h1 {
+    font-family: helvetica;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
 #treatments-nav-text:hover {
     color: deeppink;
     transition: all .5s ease-out;
@@ -284,7 +291,24 @@ pre {
     font-weight: 400;
     line-height: 18.5714px;
 }
-
+.faqs-h2-top {
+     font-size: 60px;
+     font-weight: 600;
+     color: darkslategray;
+     top: 20%;
+     margin-top: 10px;
+     margin-bottom: 80px;
+}
+.faqs-p {
+    padding: 10 100 10 100px;
+    margin: 10 100 10 100px;;
+    /*font-size: 40px;*/
+}
+#faqs-index {
+    background-color: whitesmoke;
+    margin-top: 120px;
+    padding: 50px;
+}
 /*results circle shape*/
 .circle-shape-results {
     width: 100%;
@@ -298,7 +322,9 @@ pre {
     border-color: #58b8fe;
 }
 /*results circle shape*/
-
+.disabled_a_href {
+    pointer-events: none;
+}
 .myButton:hover {
     background-color: darkslategray;
     color: white;
@@ -493,6 +519,18 @@ pre {
     position: absolute;
     left: 29%;
 }
+#charge-thanks {
+    font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    /*text-align: center;*/
+    background-color: whitesmoke;
+    line-height: 1.3;
+    color: deeppink;
+    /*width: 100%;*/
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+}
 .main-h1-assistive {
     font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 60px;
@@ -678,13 +716,9 @@ pre {
     font-weight: 300;
     padding-left: 30px;
     padding-right: 30px;
-    background-color: white;
+    /*background-color: white;*/
     border-top-style: solid;
-    /*border-top-width: 3px;*/
-    /*border-top-color: whitesmoke;*/
-
-    /*text-align: left;*/
-
+    color: black;
 }
 .index-p {
     margin-top: 80px;
@@ -742,6 +776,23 @@ margin-bottom: 69px;
     margin-top: 80px;
   
 }
+.star-it {
+    color: yellow;
+}
+.star-it:hover {
+    color: deeppink;
+    opacity: .6;
+}
+.Gene-h2-top {
+
+    font-size: 60px;
+    font-weight: 600;
+    color: darkslategray;
+    top: 20%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  
+}
 .tools-h2 {
 
 font-size: 50px;
@@ -765,6 +816,16 @@ z-index: 100;
 color: #433F4E;
 text-align: center;
 
+}
+#genes-row-index {
+    /*background: url('/assets/images/background1.jpeg');*/
+    /*background-color: whitesmoke;*/
+    background-size: cover;
+    opacity: 1.3;
+    z-index: 7;
+    /*position: fixed;*/
+    /*width: 50%;*/
+    height: 100%;
 }
 .page-trials {
     /*width: 50%;*/
@@ -878,6 +939,13 @@ text-align: center;
     /*padding: 100px;*/
     /*margin-left: 50px;*/
     /*width: 100%;*/
+    color: black;
+}
+#sub-main-h1 {
+    font-size: 29px;
+    color: white;
+    line-height: 1.8;
+    /*font-family: Circular Book;*/
 }
 #our-mission {
     margin-top: 10%;
@@ -887,11 +955,23 @@ text-align: center;
 }
 .avail-trials-h2 {
     font-size: 38px;
-    margin-top: 50px;
+    margin-top: 55px;
     color: darkslategray;
 
 }
-
+.sample-genetable-h2 {
+    font-size: 38px;
+    margin-top: 50px;
+    color: darkslategray;
+}
+.sample-genereport-h2 {
+    font-size: 38px;
+    margin-top: 12%;
+    color: darkslategray;
+}
+#img-genereport {
+    border-radius: 30%;
+}
 .avail-trials-h1 {
     font-size: 40px;
     padding-bottom: 20px;
@@ -955,9 +1035,22 @@ text-align: center;
     color: #433F4E;
     text-align: center;
 }
+.Gene-header {
+
+    background: rgba(255, 255, 255, 255);
+    opacity: 1.3;
+    z-index: 7;
+    /*background: url('/assets/images/background1.jpeg');*/
+    /*width: 50%;*/
+    height: 700px;
+    box-sizing: border-box;
+    z-index: 100;
+    color: #433F4E;
+    text-align: center;
+} 
 .how-it-header {
     
-    /*background: rgba(255, 255, 255, 0.9);*/
+    background: rgba(255, 255, 255, 0.6);
     /*background: rgba(255, 255, 255, 255);*/
 
     opacity: 1.3;
@@ -1346,6 +1439,7 @@ text-align: center;
     border-color: white;
     border-width: 5px;
     border-style: solid;
+    margin-top: 60px;
 }
 #learn-more-how:hover {
     background-color:  white;
@@ -1369,6 +1463,48 @@ text-align: center;
     background-color: deeppink;
     border-color: deeppink;
     transition: all 0.3s ease-out;
+}
+#yes-btn {
+     width: 20%;
+     height: 10%;
+     font-size: 29px;
+     padding: 18px;
+     position: relative;
+     color: white;
+     background-color: deeppink;
+     border-color: deeppink;
+     transition: all 0.3s ease-out;
+}
+#yes-btn:hover {
+    font-size: 22px;
+    /*padding: 38px;*/
+    position: relative;
+    color: deeppink;
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: solid;
+    background-color: transparent;
+}
+#no-btn {
+     width: 20%;
+     height: 10%;
+     font-size: 29px;
+     padding: 18px;
+     position: relative;
+     color: white;
+     background-color: deeppink;
+     border-color: deeppink;
+     transition: all 0.3s ease-out;
+}
+#no-btn:hover {
+    font-size: 22px;
+    /*padding: 38px;*/
+    position: relative;
+    color: deeppink;
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: solid;
+    background-color: transparent;
 }
 #I-Agree-to-23 {
     font-size: 22px;
@@ -1398,6 +1534,17 @@ text-align: center;
          margin-right: -50%;
          transform: translate(-50%, -50%)
 }
+#main-btn-go-to-connect23 {
+    font-size: 22px;
+    /*padding: 38px;*/
+    position: relative;
+    color: white;
+    background-color: deeppink;
+    border-color: deeppink;
+    transition: all 0.3s ease-out;
+    left: 45%;
+    margin-right: -50%;
+}
 #main-btn-register-now:hover {
     /*width: 400px;
     height: 95px;*/
@@ -1410,6 +1557,25 @@ text-align: center;
     border-style: solid;
     background-color: transparent;
 }
+#buy-gene-btn-register-now {
+     width: 100%;
+     /*height: 95px;*/
+     margin-top: 40px;
+     font-size: 36px;
+     padding: 20px;
+     position: relative;
+     color: white;
+     background-color: deeppink;
+     border-color: deeppink;
+     transition: all 0.3s ease-out;
+     /*margin: 0;*/
+     position: absolute;
+     top: 90%;
+     left: 50%;
+     margin-right: -50%;
+     transform: translate(-50%, -50%)
+}
+
 
 
 #your-genome-h2 {
@@ -1698,7 +1864,7 @@ h3 {
 }
 #a-dash:hover {
     color: deeppink;
-    transition: all 1s ease-out;
+    transition: all .5s ease-out;
 
 }
 #a-dash-one {
@@ -1706,7 +1872,7 @@ h3 {
 }
 #a-dash-one:hover {
     color: deeppink;
-    transition: all 1s ease-out;
+    transition: all .5s ease-out;
 
 }
 #a-dash-two {
@@ -1714,7 +1880,7 @@ h3 {
 }
 #a-dash-two:hover {
     color: deeppink;
-    transition: all 1s ease-out;
+    transition: all .5s ease-out;
 
 }
 #a-dash-three {
@@ -1722,7 +1888,7 @@ h3 {
 }
 #a-dash-three:hover {
     color: deeppink;
-    transition: all 1s ease-out;
+    transition: all .5s ease-out;
 
 }
 #a-dash-four {
@@ -1730,7 +1896,7 @@ h3 {
 }
 #a-dash-four:hover {
     color: deeppink;
-    transition: all 1s ease-out;
+    transition: all .5s ease-out;
 
 }
 li.a:hover {
@@ -1750,8 +1916,8 @@ ul.dropdown-menu {
     /*background-color: #e8efef;*/
 }
 .panel-body {
-    border-top: deeppink;
-    border-top-style: solid;
+    /*border-top: deeppink;*/
+    /*border-top-style: solid;*/
 }
 /*dashboard home ends*/
 
@@ -1779,7 +1945,8 @@ ul.dropdown-menu {
 }
 #genes-table {
     margin-top: 30px;
-    width: 50%;
+    width: 60%;
+    
 }
 #a-glaucoma {
     border-color: deeppink;
@@ -2102,6 +2269,7 @@ li,ul{
     list-style: none;
     padding: 0;
     margin: 0;
+    color: black;
 }
 .header-top i {
     font-size: 18px;
@@ -2112,6 +2280,9 @@ li,ul{
     width: 100%;
     height: 100vh;
     display: table;
+}
+.results-modal {
+    width: 80%;
 }
 
 .login-header {
@@ -2185,6 +2356,7 @@ li,ul{
     border-radius: 5%;  
     padding-left: 25%;
     padding-right: 25%;
+    margin-bottom: 30px;
 }
 .trial-contact-forms {
     width: 100%;
@@ -2591,9 +2763,9 @@ header {
 }
 
 .navbar-default {
-    background-color: white;
-    border-color: #ffffff;
-    box-shadow: 2px 2px 2px 2px #888888;
+    background-color: transparent;
+    border-color: transparent;
+    /*box-shadow: 2px 2px 2px 2px #888888;*/
 }
 
 .navbar-toggle {
@@ -2758,11 +2930,10 @@ header {
     position: relative;
     
 }
-.modal{
-    /*top: 20%; */
-}
+
 .modal-header .close {
     margin-top: 2px;
+    background-color: whitesmoke;
 }
 .search input:focus{
     border-bottom: 1px solid #BDC4D4;
@@ -3250,6 +3421,28 @@ header {
     #clin-trial-img {
         width: 100%;
     }
+    #yes-btn {
+         width: 30%;
+         height: 10%;
+         font-size: 20px;
+         padding: 18px;
+         position: relative;
+         color: white;
+         background-color: deeppink;
+         border-color: deeppink;
+         transition: all 0.3s ease-out;
+    }
+    #no-btn {
+         width: 30%;
+         height: 10%;
+         font-size: 20px;
+         padding: 18px;
+         position: relative;
+         color: white;
+         background-color: deeppink;
+         border-color: deeppink;
+         transition: all 0.3s ease-out;
+    }
 }
 
 /*dashbaord ends*/
@@ -3296,6 +3489,23 @@ header {
    #clin-trial-img {
        width: 50%;
    }
+
+   .Gene-h2-top {
+
+       font-size: 60px;
+       font-weight: 600;
+       color: darkslategray;
+       top: 20%;
+       margin-top: 340px;
+       margin-bottom: 80px;
+     
+   }
+   .sample-genetable-h2 {
+       font-size: 38px;
+       margin-top: 100px;
+       color: darkslategray;
+   }
+   
 }
 @media screen and (min-width: 992px) and (max-width: 1198px) {
  /*   #col-two-dash-images {

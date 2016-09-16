@@ -70,6 +70,7 @@
     "sendgrid": "^3.0.10",
     "simple-oauth2": "^0.8.0",
     "sitemap": "^1.8.1",
+    "stripe": "4.10.0",
     "underscore": "^1.8.3",
     "webpack": "^1.13.1"
   },

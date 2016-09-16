@@ -96,7 +96,7 @@ router.get('/users/dashboard', function (req, res) {
       data: data,
       layout: 'dash',
       user: req.user,
-      successFlash: 'Howdy, ' + req.user.firstname,
+      successFlash: 'Hey, ' + req.user.firstname,
       failureFlash: 'Invalid email or password!'
 
       });
@@ -494,6 +494,10 @@ router.get('/users/my-appointments', function (req, res) {
     layout: 'dash',
     user: req.user
   });
+});
+
+router.get('/users/no', function(req, res) {
+  res.render('users/no');
 });
 
 

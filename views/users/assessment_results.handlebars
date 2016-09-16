@@ -4,6 +4,7 @@
       <div class="panel panel-default">
         <div class="panel-body"><h1 id="results-h1"> Your Assessment Results </h1></div>
       </div>
+      {{#if scores.0.points}}
       <div class="panel panel-default">
         <div class="panel-body"><p class="lead">View your results in the table below. Click on 'Ask About This Trial' only if your points are equal to the qualifying points and you are ready to contact the clinic.</p></div>
       </div>
@@ -90,6 +91,7 @@
 
       </div>
     </div>
+    
   </div> {{! Row ends}}
   <div class="row">
     <div class="col-lg-12">
@@ -102,8 +104,16 @@
     used by CESARCELLS, view our terms and conditions, which includes our privacy policy.</p>
             </div>
             </div>
+           
             
-          <img src="/assets/images/clintrial.png" width="50%" style="-webkit-filter: grayscale(100%); filter: grayscale(100%); padding: 50px;">
+          <span class="glyphicon glyphicon-star" aria-hidden="true">     Trials are derived from: <img src="/assets/images/clintrial.png" width="50%" style="-webkit-filter: grayscale(100%); filter: grayscale(100%); padding: 50px;"></span>
     </div>
+    {{else}}
+      <div class="modal-body genotypes-can-do">
+        <h2 class="lead" style="text-align: center"><a href="/tools/start-health-assessment">TAKE THE CLINICAL TRIAL ASSESSMENT </a> to view your results.</h2>
+      </div>
+      
+    <span class="glyphicon glyphicon-star" aria-hidden="true">     Trials are derived from: <img src="/assets/images/clintrial.png" width="50%" style="-webkit-filter: grayscale(100%); filter: grayscale(100%); padding: 50px;"></span>
+    {{/if}}
   </div> {{!Row ends}}
 </div> {{! Container ends}}

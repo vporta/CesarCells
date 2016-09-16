@@ -1,0 +1,3447 @@
+body {
+    font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    /*line-height: 26.4px;*/
+    color: black; 
+;
+    background-color: white;
+    padding: 5px;
+    font-size: 23px;
+    /*line-height: .6;*/
+}
+h1 {
+    font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26.4px;
+}
+h3 {
+    font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 15.4px;
+}
+#bs-example-navbar-collapse-1 {
+    margin-left: 25%;
+}
+.parallax {
+    /* The image used */
+    /*background-image: url("http://wallpapercave.com/wp/wZR4Saq.jpg");*/
+    background-image: url("/assets/images/color1.jpeg");
+
+    /* Set a specific height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax-2 {
+    /* The image used */
+    /*background-image: url("https://static.pexels.com/photos/30763/pexels-photo-30763-large.jpg");*/
+    background-image: url("/assets/images/office.jpg");
+
+    /* Set a specific height 
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax-3 {
+    /* The image used */
+    /*background-image: url("http://www.stemcentrx.com/img/home_science.png");*/
+    background-image: url("/assets/images/color1.jpeg");
+
+    /* Set a specific height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax-4 {
+    /* The image used */ 
+
+    /*background-image: url("http://feelgrafix.com/data_images/out/28/1008780-doctor.jpg");*/
+    background-image: url("/assets/images/pixel-photos.jpg");
+
+    /* Set a specific height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax-5 {
+    /* The image used */ 
+
+    /*background-image: url("https://static.pexels.com/photos/47446/pexels-photo-47446-large.jpeg");*/
+    background-image: url("/assets/images/eyegrad.jpeg");
+
+    /* Set a specific height */
+    height: 99%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+.parallax-6 {
+    /* The image used */ 
+
+    /*background-image: url("http://feelgrafix.com/data_images/out/28/1008780-doctor.jpg");*/
+    background-image: url("/assets/images/color1.jpeg");
+
+    /* Set a specific height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.clin-trial-img {
+    width: 250px;
+    height: 150px;
+    opacity: 1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+.form-update-pass {
+    width: 100%;
+
+}
+.instructions-parents {
+    margin-top: 120px;
+}
+.required:before {
+    color: red;
+    content: '*';
+}
+/*http://www.stemcentrx.com/img/home_science.png*/
+/*http://www.stemcentrx.com/img/clinical-bg.png*/
+/*#inputEmail {
+    margin-left: 20px;
+    margin-top: 15px;
+
+}*/
+.pipeline-chart {
+    margin: 4.875em auto 2.8125em 100px;
+    padding: 4.8em 0;
+    background: white;
+    border: 1px solid #D6D6D6;
+    border-radius: 5px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.content-inner {
+    width: 84%;
+    margin: 0 auto;
+}
+.pipeline-chart .chart {
+    position: relative;
+    margin-top: 10em;
+    }
+ul.shortcuts li {
+    display: inline-block;
+    margin: 0.5em;
+}
+/*#inputPass {
+    margin-left: 90px;
+    margin-top: 15px;
+    width: 342px;
+}*/
+
+#priv-policy {
+    padding-left: 30px;
+    font-size: 15px;
+}
+#terms-conditions {
+    font-size: 15px;
+}
+#tabs-amsler {
+    margin-left: 100px;
+    font-size: 18px;
+    margin-top: 42px;
+}
+span.glyphicon.glyphicon-asterisk {
+    font-size: 10px;
+    color: red;
+
+}
+/*glossary*/
+.glossary-h2 {
+    font-size: 30px;
+    text-align: left;
+    color: deeppink;
+    padding: 10px;
+}
+/*main navbar text*/
+#resources-nav-text, #howitworks-nav-text, #tools-nav-text, #treatments-nav-text, #login-nav-text, #signup-nav-text{
+    color: darkslategray;
+    /*font-size: 20.5px;*/
+}
+#cesar-logo {
+    font-family: helvetica;
+    letter-spacing: 3px;
+    font-size: 20px;
+
+}
+#treatments-nav-text:hover {
+    color: deeppink;
+    transition: all .5s ease-out;
+
+}
+#tools-nav-text:hover {
+    color: deeppink;
+    transition: all .5s ease-out;
+
+}
+#howitworks-nav-text:hover {
+    color: deeppink;
+    transition: all .5s ease-out;
+
+}
+#resources-nav-text:hover {
+    color: deeppink;
+    transition: all .5s ease-out;
+
+}
+#signup-nav-text:hover{
+    color: deeppink;
+    transition: all .5s ease-out;
+
+}
+
+
+#login-nav-text {
+    /*background-color: whitesmoke;*/
+    border-radius: 7%;
+}
+#login-nav-text:hover {
+    /*background-color: whitesmoke;*/
+    color: deeppink;
+    border-radius: 7%;
+    opacity: 7px;
+    transition: .5s ease-out;
+}
+#signup-nav-text {
+    background-color: transparent;
+    border-radius: 7%;
+    color: deeppink;
+}
+#signup-nav-text:hover {
+    background-color: transparent;
+    color: darkslategray;
+    border-radius: 7%;
+    opacity: 4;
+}
+
+th {
+    font-size: 20px;
+}
+td {
+    font-size: 16px;
+}
+#table-genes-disease {
+    width: 100%;
+    padding: 5 50 5 50px;
+    background-color: white;
+}
+blockquote {
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+pre {
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 18.5714px;
+}
+.faqs-h2-top {
+     font-size: 60px;
+     font-weight: 600;
+     color: darkslategray;
+     top: 20%;
+     margin-top: 10px;
+     margin-bottom: 80px;
+}
+.faqs-p {
+    padding: 10 100 10 100px;
+    margin: 10 100 10 100px;;
+    /*font-size: 40px;*/
+}
+#faqs-index {
+    background-color: whitesmoke;
+    margin-top: 120px;
+    padding: 50px;
+}
+/*results circle shape*/
+.circle-shape-results {
+    width: 100%;
+    height: 300px;
+    /*background: white;*/
+    /*border-radius: 30%;*/
+    padding: 25.5px;
+    margin-top: 75px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #58b8fe;
+}
+/*results circle shape*/
+
+.myButton:hover {
+    background-color: darkslategray;
+    color: white;
+}
+
+
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+.myButton {
+    background-color:white;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    cursor:pointer;
+    color: black;
+    font-family:Arial;
+    font-size:18px;
+    font-weight:bold;
+    padding:11px 23px;
+    text-decoration:none;
+    text-shadow:0px -1px 0px #2b665e;
+    width: 200px;
+}
+.myButton:hover {
+    background-color: deeppink;
+    color: white;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+#amsler-grid-img {
+    margin-top: 50px;
+    margin-left: 200px;
+    height: 500px;
+}
+#amsler-grid-h1 {
+    margin-top: 200px;
+    font-size: 55px;
+    text-align: center;
+}
+/*react #app div*/
+#app {
+    margin-top: 170px;
+}
+
+/*all_trails page begins*/
+.all-trials{
+    background-color: #e8efef;
+    position: relative;
+    min-height: 100%;
+    margin-bottom: 35px;
+
+}
+.trials-first-row {
+    /*width: 100%;
+    max-height: 100%;*/
+    display: inline-block;
+    margin: 0;
+    color: white;
+    text-align: center;
+    vertical-align: top;
+    display: inline-block;
+    padding: 7.5px;
+   
+}
+.inner {
+    height: 600px;
+    width: 600px;
+    padding: 1em .25em 1.5em;
+    position: relative;
+    top: 50%;
+    _-webkit-transform: translateY(-50%);
+    _-ms-transform: translateY(-50%);
+    _xtransform: translateY(-50%);
+    border: 5px solid white;
+    /*border-right: 1px solid white;*/
+    margin-left: 30px;
+}
+/*main page begins*/
+.jumbotron-main {
+
+    background-image: url("http://www.hdwallpaperspulse.com/wp-content/uploads/2014/05/07/53353.jpeg");
+    background-size: cover;
+    height: 100%;
+    background-color: mediumaquamarine; 
+
+}
+.jumbotron-glossary {
+
+    background-image: url("/assets/images/coily.jpeg");
+    background-size: cover;
+    height: 70%;
+}
+.jumbotron-my-genetics {
+
+    background-image: url("/assets/images/color.jpeg");
+    background-size: cover;
+    height: 30%;
+
+}
+.jumbotron-assist-tech {
+
+    background-image: url("/assets/images/inverse.jpeg");
+    background-size: cover;
+    /*height: 70%;*/
+    min-height: 70%;  /* Fallback for browsers do NOT support vh unit */
+    /*display: flex;
+    align-items: center;*/
+    /*width: 100%;*/
+}
+.jumbotron-whatis {
+
+    background-image: url("/assets/images/coily.jpeg");
+    background-size: cover;
+    height: 70%;
+   /* min-height: 70%;   Fallback for browsers do NOT support vh unit 
+    display: flex;
+    align-items: center;*/
+    width: 100%;
+}
+.jumbotron-clinical-trial {
+    background-image: url('/assets/images/coily1.jpeg');
+    background-size: cover;
+    height: 70%;
+}  
+.jumbotron-gene-data {
+    background-image: url('/assets/images/back1.jpeg');
+    background-size: cover;
+    height: 45%;
+}  
+.jumbotron-aboutus {
+    background-image: url('/assets/images/back1.jpeg');
+    background-size: cover;
+    height: 90%;
+}
+#results-h1 {
+    margin-top: 200px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 55px;
+    font-weight: bold;
+}
+#speaker-homepage {
+    height: 20px;
+    margin-left: 22px;
+    margin-top: 5px;
+}
+#speaker-homepage:hover {
+    display: block;
+    cursor: pointer;
+}
+#span-element {
+    border: 1px solid #ccc;
+    display: none;
+    font-size: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    text-transform: uppercase;
+}
+#wrap-23-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+#twothree-btn {
+}
+.main-h1 {
+    font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 70px;
+    text-align: center;
+    line-height: 1.3;
+    color: white;
+    /*width: 100%;*/
+    font-weight: bold;
+    margin-top: 15%;    
+}
+.main-h1-starg {
+    font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 60px;
+    /*text-align: center;*/
+    background-color: whitesmoke;
+    line-height: 1.3;
+    color: deeppink;
+    /*width: 100%;*/
+    font-weight: bold;
+    /*margin-left: 3;*/
+    margin-top: 20%;
+    position: absolute;
+    left: 29%;
+}
+.main-h1-assistive {
+    font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 60px;
+    background-color: whitesmoke;
+    line-height: 1.3;
+    color: deeppink;
+    /*width: 100%;*/
+    font-weight: bold;
+    /*margin-left: 3;*/
+    margin-top: 20%;
+    position: absolute;
+    left: 33%;      
+}
+.main-h1-clini-trial {
+    font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 60px;
+    /*text-align: center;*/
+    background-color: whitesmoke;
+    line-height: 1.3;
+    color: deeppink;
+    /*width: 100%;*/
+    font-weight: bold;
+    /*margin-left: 3;*/
+    margin-top: 20%;
+    position: absolute;
+    left: 33%; 
+}
+.main-h1-glossary {
+    font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 60px;
+    /*text-align: center;*/
+    line-height: 1.3;
+    color: deeppink;
+    background-color: whitesmoke;
+    /*width: 100%;*/
+    font-weight: bold;
+    /*margin-left: 3;*/
+    margin-top: 20%;
+    position: absolute;
+    left: 36%;
+}
+.contain-assistive-h1 {
+    height: 10em;
+    position: relative
+}
+.connect23-h1 {
+    font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 75px;
+    text-align: center;
+    line-height: 1.3;
+    color: white;
+    width: 100%;
+    font-weight: bold;
+    position: relative;
+    display: block;
+    top: 32%;
+    margin-top: 114px;
+     
+}
+#index-title {
+    color: deeppink;
+}
+.aboutus-h1 {
+    font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 60px;
+    text-align: center;
+    line-height: 1.3;
+    color: white;
+    width: 100%;
+    font-weight: bold;
+    position: relative;
+    display: block;
+    opacity: 1;
+    margin-top: 70px;
+    top: 192px;
+}
+#genetic-ring {
+    height: 500px;
+    width: 500px
+}
+.genetics-h1 {
+    padding-top: 75px;
+    font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 65px;
+    text-align: center;
+    line-height: 1.3;
+    color: white;
+    width: 100%;
+    font-weight: bold;
+    margin-top: 0;
+}
+.main-h1-2 {
+    padding-top: 155px;
+    font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 65px;
+    text-align: center;
+    line-height: 2;
+    color: white;
+    width: 100%;
+    font-weight: bold;
+    margin-top: 0;
+}
+#main-row-sect {
+    background-color: white;
+    background-size: cover;
+
+}
+/*main page ends*/
+.title-trials {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 131px;
+    padding-bottom: 30px;
+   /* border-color: gray;
+    border-width: thin;
+    border-style: solid;*/
+}
+/*What is section*/
+#login-h2 {
+    padding-top: 50px;
+}
+#signup-h2 {
+    font-size: 40px;
+    padding: 20px;
+    color: deeppink;
+}
+.what-is {
+    font-size: 34px;
+    /*color: #6e6e6e;*/
+    font-weight: 100;
+    margin-bottom: 40px;
+    padding: 15px;
+    margin: 10px;
+
+
+}
+
+.browse-trials-h2 {
+    font-size: 34px;
+    /*color: #6e6e6e;*/
+    font-weight: 100;
+    margin-bottom: 40px;
+    padding: 15px;
+    margin: 10px;
+}
+.what-is-sci {
+    font-size: 24px;
+    /*color: #6e6e6e;*/
+    font-weight: 300;
+    /*margin-bottom: 40px;*/
+    /*padding: 5px;*/
+    /*margin: 10px;*/
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+}
+.what-are-trials-h2 {
+
+   font-size: 60px;
+       font-weight: 600;
+       color: deeppink;
+       margin-bottom: 69px;
+}
+.what-is-h2 {
+
+    font-size: 60px;
+    font-weight: 600;
+    color: darkslategray;
+    /*top: 16%;*/
+    display: block;
+    position: relative;
+    opacity: 0;
+    
+
+    /*margin-bottom: 69px;*/
+
+}
+
+.index-page {
+    margin-top: 80px;
+    line-height: 2;
+    font-size: 26px;
+    font-weight: 300;
+    padding-left: 30px;
+    padding-right: 30px;
+    /*background-color: white;*/
+    border-top-style: solid;
+    color: black;
+}
+.index-p {
+    margin-top: 80px;
+    line-height: 2;
+    font-size: 26px;
+    font-weight: 300;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-top-style: solid;
+    /*border-top-width: 5px;*/
+    /*border-top-color: deeppink;*/
+    /*text-align: left;*/
+
+}
+.what-is-h2-stargardt {
+    font-size: 60px;
+    font-weight: 600;
+    color: deeppink;
+    margin-bottom: 69px;
+}
+.how-it-works-h2 {
+
+font-size: 50px;
+font-weight: 300;
+color: darkslategray;
+margin-bottom: 69px;
+}
+.how-it-works-h2-top {
+
+    font-size: 60px;
+    font-weight: 600;
+    color: darkslategray;
+    top: 10%;
+    display: block;
+    position: relative;
+    opacity: 0;
+    margin-top: 65px;
+
+}
+.clinical-trials-h2-top {
+
+    font-size: 60px;
+    font-weight: 600;
+    color: darkslategray;
+    top: 20%;
+    margin-top: 100px;
+  
+}
+.DNA-h2-top {
+
+    font-size: 60px;
+    font-weight: 600;
+    color: darkslategray;
+    top: 20%;
+    margin-top: 80px;
+  
+}
+.star-it {
+    color: yellow;
+}
+.star-it:hover {
+    color: deeppink;
+    opacity: .6;
+}
+.Gene-h2-top {
+
+    font-size: 60px;
+    font-weight: 600;
+    color: darkslategray;
+    top: 20%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  
+}
+.tools-h2 {
+
+font-size: 50px;
+font-weight: 300;
+color: white;
+/*border-radius: 20%; */
+/*margin-top: 150px;*/
+background-color: white;
+/*background: rgba(255, 255, 255, 255);*/
+background: url('/assets/images/back1.jpeg');
+background-size: cover;
+opacity: 1.3;
+z-index: 7;
+/*position: fixed;*/
+/*width: 50%;*/
+height: 100%;
+/*margin: 0;*/
+box-sizing: border-box;
+float: left;
+z-index: 100;
+color: #433F4E;
+text-align: center;
+
+}
+#genes-row-index {
+    /*background: url('/assets/images/background1.jpeg');*/
+    /*background-color: whitesmoke;*/
+    background-size: cover;
+    opacity: 1.3;
+    z-index: 7;
+    /*position: fixed;*/
+    /*width: 50%;*/
+    height: 100%;
+}
+.page-trials {
+    /*width: 50%;*/
+    height: 100%;
+}
+
+
+/*.pages-tools {
+    height: 100%;
+}*/
+.page-whatis {
+    /*width: 50%;*/
+    height: 100%;
+}
+.space-taker {
+    width: 50%;
+    
+}
+.tool-main-h2 {
+    position: absolute; 
+    top: -100px; 
+    left: 0; 
+    width: 100%; 
+    font-size: 50px;
+    
+    color: white;
+}
+.trial-main-h2 {
+    /*position: absolute; */
+    top: 244px; 
+    left: 0; 
+    width: 100%; 
+    font-size: 50px;
+    
+    color: white;
+}
+.tool-main-h2-CTQ {
+    position: absolute; 
+    top: -62px; 
+    left: -65px; 
+    width: 100%; 
+    font-size: 55px;
+    margin-left: 95px;
+    color: midnightblue;
+}
+.tool-main-h2-SNP {
+    position: absolute; 
+    top: 48px; 
+    left: -65px; 
+    width: 100%; 
+    font-size: 55px;
+    margin-left: 95px;
+    color: midnightblue;
+}
+.tool-main-h2-VAFD {
+    position: absolute; 
+    top: 172px; 
+    left: -110px; 
+    width: 100%; 
+    font-size: 55px;
+    margin-left: 95px;
+    color: midnightblue;
+}
+.tool-main-h2-text-reader {
+    position: absolute; 
+    top: 190px; 
+    left: -190px; 
+    width: 100%; 
+    font-size: 55px;
+    margin-left: 95px;
+    color: midnightblue;
+}
+.tool-main-h2-amsler {
+    position: absolute; 
+    top: -61px; 
+    left: -150px; 
+    width: 100%; 
+    font-size: 55px;
+    margin-left: 95px;
+    color: midnightblue;
+}
+.tool-main-h2-glossary {
+    position: absolute; 
+    top: 43px; 
+    left: -191px; 
+    width: 100%; 
+    font-size: 55px;
+    margin-left: 95px;
+    color: midnightblue;
+}
+.icon-test {
+    color: white;
+    padding: 20px;
+}
+.icon-arrow {
+
+}
+.glossary-a {
+    font-size: 24px;
+}
+.glossary-a:hover {
+    color: deeppink;
+    font-size: 24px;
+
+}
+.tools-image {
+    position: relative; 
+    width: 100%;
+}
+.main-tools-title {
+    /*padding: 100px;*/
+    /*margin-left: 50px;*/
+    /*width: 100%;*/
+    color: black;
+}
+#our-mission {
+    margin-top: 10%;
+    line-height: 1.3;
+    text-align: left;
+    margin-bottom: 10%;
+}
+.avail-trials-h2 {
+    font-size: 38px;
+    margin-top: 55px;
+    color: darkslategray;
+
+}
+.sample-genetable-h2 {
+    font-size: 38px;
+    margin-top: 50px;
+    color: darkslategray;
+}
+.sample-genereport-h2 {
+    font-size: 38px;
+    margin-top: 12%;
+    color: darkslategray;
+}
+#img-genereport {
+    border-radius: 30%;
+}
+.avail-trials-h1 {
+    font-size: 40px;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    margin: 0;
+    line-height: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.what-is-header {
+
+    /*margin-bottom: 10px;*/
+    margin-top: 100px;
+    background-color: white;
+    /*background: rgba(255, 255, 255, 0.9);*/
+    /*background: url('/assets/images/coily.jpeg');*/
+    /*background-size: cover;*/
+    opacity: 1.2;
+    z-index: 7;
+    /*border-radius: 50%; */
+    /*position: fixed;*/
+    width: 100%;
+    height: 100%;
+    /*margin: 0;*/
+    box-sizing: border-box;
+    /*float: left;*/
+    z-index: 100;
+    color: #433F4E;
+    text-align: center;
+}
+
+.avail-header {
+    
+    /*background: rgba(255, 255, 255, 255);*/
+    background-color: white;
+    opacity: 1.3;
+    z-index: 7;
+    background: url('/assets/images/coily1.jpeg');
+    /*width: 50%;*/
+    height: 700px;
+    /*box-sizing: border-box;*/
+    background-size: cover;
+    z-index: 100;
+    color: #433F4E;
+    text-align: center;
+}
+.DNA-header {
+    
+    background: rgba(255, 255, 255, 255);
+    opacity: 1.3;
+    z-index: 7;
+    /*background: url('/assets/images/background1.jpeg');*/
+    /*width: 50%;*/
+    height: 700px;
+    box-sizing: border-box;
+    z-index: 100;
+    color: #433F4E;
+    text-align: center;
+}
+.Gene-header {
+
+    background: rgba(255, 255, 255, 255);
+    opacity: 1.3;
+    z-index: 7;
+    /*background: url('/assets/images/background1.jpeg');*/
+    /*width: 50%;*/
+    height: 700px;
+    box-sizing: border-box;
+    z-index: 100;
+    color: #433F4E;
+    text-align: center;
+} 
+.how-it-header {
+    
+    /*background: rgba(255, 255, 255, 0.9);*/
+    /*background: rgba(255, 255, 255, 255);*/
+
+    opacity: 1.3;
+    z-index: 7;
+    width: 100%;
+    height: 700px;
+    box-sizing: border-box;
+    z-index: 100;
+    color: #433F4E;
+    text-align: center;
+    position: relative;
+}
+.trials-header {
+
+    margin-bottom: 10px;
+    margin-top: 100px;
+    /*background-color: whitesmoke;*/
+    background: rgba(255, 255, 255, 0.9);
+    opacity: 1;
+    z-index: 7;
+    /*border-radius: 50%; */
+    /*position: fixed;*/
+    width: 100%;
+    height: 100%;
+    /*margin: 0;*/
+    box-sizing: border-box;
+    /*float: left;*/
+    z-index: 100;
+    color: #433F4E;
+    text-align: center;
+}
+
+#how-it-works {
+    padding: 75px 0;
+    background: white;
+    text-align: center;
+    /*margin-bottom: 200px;*/
+    /*border-radius: 30%;*/
+    /*margin-top: 20px;*/
+    height: 1058px;
+    background-size: cover;
+    background-image: url('');
+
+}
+
+#intro {
+    padding: 75px 0;
+    /*background: #58b8fe;*/
+    text-align: center;
+    /*margin-bottom: 200px;*/
+    /*border-radius: 30%;*/
+    margin-top: 20px;
+    background-size: cover;
+    background-color: whitesmoke;
+    margin-left: 15px;
+    margin-right: 15px;
+    /*background-image: url('http://feelgrafix.com/data_images/out/20/930465-dna.jpg');*/
+
+}
+
+.tools-section {
+    padding: 75px 0;
+    background: white;
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    /*margin-bottom: 200px;*/
+    /*border-radius: 30%;*/
+    /*margin-top: 20px;*/
+}
+#treatments {
+    padding: 98px 0;
+    background: mediumturquoise;
+    /*background-image: url('http://feelgrafix.com/data_images/out/20/930465-dna.jpg');*/
+    background-size: cover;
+    text-align: center;
+    /*margin-bottom: 200px;*/
+    /*border-radius: 30%;*/
+    /*margin-top: 244px;*/
+    height: 1051px;
+  /*  -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);*/
+   /* -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);*/
+   /* filter: FlipH;
+    -ms-filter: "FlipH";*/
+
+
+    
+}
+
+#retinal-disease-icon:hover {
+    color: deeppink;
+    cursor: pointer;
+}
+
+#gene-icon:hover {
+    color: deeppink;
+    cursor: pointer;
+}
+#variant-icon:hover {
+    color: deeppink;
+    cursor: pointer;
+}
+#snps-icon:hover {
+    color: deeppink;
+    cursor: pointer;
+}
+#genotypes-icon:hover {
+    color: deeppink;
+    cursor: pointer;
+}
+
+
+.span-class-rd-popup {
+    height: 100px;
+    width: 400px;
+    background-color: white;
+    display: block;
+    top: 70px;
+    left: 50px;
+    /*display:none;*/
+    padding:0 20px;
+    border: 5px solid #DFDFDF;
+    color: darkslategray;
+    font-size: 16px;
+    /*height: 30px;*/
+    letter-spacing: 1px;
+    line-height: 30px;
+    position: absolute;
+    text-align: left;
+    text-transform: uppercase;
+    /*-moz-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    transform:rotate(45deg);
+    z-index: 1000;*/
+
+}
+.span-class-gene-popup {
+    height: 200px;
+    width: 800px;
+    background-color: white;
+    display: block;
+    top: -30px;
+    left: 350px;
+    /*display:none;*/
+    padding:0 20px;
+    border: 5px solid #DFDFDF;
+    color: darkslategray;
+    font-size: 16px;
+    /*height: 30px;*/
+    letter-spacing: 1px;
+    line-height: 30px;
+    position: absolute;
+    text-align: left;
+    text-transform: uppercase;
+   
+
+}
+.span-class-variant-popup {
+    height: 200px;
+    width: 800px;
+    background-color: white;
+    display: block;
+    top: -30px;
+    left: 350px;
+    /*display:none;*/
+    padding:0 20px;
+    border: 5px solid #DFDFDF;
+    color: darkslategray;
+    font-size: 16px;
+    /*height: 30px;*/
+    letter-spacing: 1px;
+    line-height: 30px;
+    position: absolute;
+    text-align: left;
+    text-transform: uppercase;
+    
+}
+.span-class-snps-popup {
+    height: 350px;
+    width: 800px;
+    background-color: white;
+    display: block;
+    top: -185px;
+    left: 390px;
+    /*display:none;*/
+    padding:0 20px;
+    border: 5px solid #DFDFDF;
+    color: darkslategray;
+    font-size: 16px;
+    /*height: 30px;*/
+    letter-spacing: 1px;
+    line-height: 30px;
+    position: absolute;
+    text-align: left;
+    text-transform: uppercase;
+    
+}
+.span-class-genotype-popup {
+    height: 190px;
+    width: 500px;
+    background-color: white;
+    display: block;
+    top: -35px;
+    left: 890px;
+    /*display:none;*/
+    padding:0 20px;
+    border: 5px solid #DFDFDF;
+    color: darkslategray;
+    font-size: 16px;
+    /*height: 30px;*/
+    letter-spacing: 1px;
+    line-height: 30px;
+    position: absolute;
+    text-align: left;
+    text-transform: uppercase;
+    
+}
+.genotypes-can-do {
+    padding: 100px;
+}
+.treatments-section {
+    padding: 75px 0;
+    background: white;
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    /*margin-bottom: 200px;*/
+    /*border-radius: 30%;*/
+    /*margin-top: 20px;*/
+}
+.intro-clinics {
+    /*padding: 75px 0;*/
+    background: white;
+    text-align: center;
+    /*margin-bottom: 200px;*/
+    /*border-radius: 30%;*/
+    /*margin-top: 20px;*/
+}
+
+#intro-stargardts-defined {
+    padding: 75px 0;
+    background: transparent;
+    text-align: text;
+    margin-bottom: 200px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/*what is ends*/
+
+#why-register {
+    margin-top: 100px;
+    background-color: transparent;
+}
+.img-genetics {
+    cursor: pointer;
+}
+
+.img-spans-main {
+    width: 13.2%;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    height: 75px;
+    width: 75px;
+    margin-left: 135px;
+    margin-top: 10px;  
+    background-color:  white;
+}
+#learn-more {
+   font-size: 22px;
+   /*padding: 38px;*/
+   position: relative;
+   color: white;
+   background-color: deeppink;
+   border-color: deeppink;
+   transition: all 0.3s ease-out;
+   margin-bottom: 50px;
+}
+#sign-in-buddy {
+    font-size: 22px;
+    /*padding: 38px;*/
+    position: relative;
+    color: white;
+    background-color: deeppink;
+    border-color: deeppink;
+    transition: all 0.3s ease-out;
+}
+#sign-up-buddy {
+
+}
+#contact-trial-btn {
+    font-size: 22px;
+    /*padding: 38px;*/
+    position: relative;
+    color: white;
+    background-color: deeppink;
+    border-color: deeppink;
+    transition: all 0.3s ease-out;
+}
+#lets-go {
+   font-size: 22px;
+   /*padding: 38px;*/
+   position: relative;
+   color: white;
+   background-color: deeppink;
+   border-color: deeppink;
+   transition: all 0.3s ease-out;
+}
+#lets-go:hover {
+    background-color:  white;
+    color: deeppink;
+    transition: .3s ease-out;
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: solid;
+}
+.starg {
+    line-height: 1.7;
+    text-align: left;
+    font-size: 25px;
+
+}
+.p-glossary {
+    line-height: 1.7;
+    text-align: left;
+    font-size: 25px;
+    padding: 10px;
+}
+.p-assist {
+    line-height: 1.7;
+    text-align: left;
+    font-size: 25px;
+    padding: 10px;
+}
+.wrap-aboutus-h1 {
+    margin-top: 50px;
+}
+.about-p {
+    line-height: 1.5em;
+    margin: .8125em 0;
+    margin-bottom: 10%;
+}
+.modal-trigger {
+    text-decoration: none;
+    color: deeppink;
+    line-height: 1.5em;
+    display: block;
+    margin: 2em 0 0;
+
+}
+
+.modal-lg {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+.modal-body {
+    background-color: whitesmoke;
+}
+#eye-diseases {
+    color: deeppink;
+}
+.modal-trigger:hover {
+    text-decoration: none;
+    color: deeppink;
+}
+.job-title {
+    color: darkslategray;
+}
+#learn-more:hover {
+    background-color:  transparent;
+    color: deeppink;
+    transition: 1s ease-out;
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: solid;
+}
+#learn-more-how {
+    background-color:  transparent;
+    color: white;
+    transition: 1s ease-out;
+    border-color: white;
+    border-width: 5px;
+    border-style: solid;
+    margin-top: 60px;
+}
+#learn-more-how:hover {
+    background-color:  white;
+    color: deeppink;
+    transition: 1s ease-out;
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: solid;
+}
+.new-window {
+    height: 130px;
+    width: 130px;
+}
+#main-btn{
+   /* width: 400px;
+    height: 95px;*/
+    font-size: 22px;
+    /*padding: 38px;*/
+    position: relative;
+    color: white;
+    background-color: deeppink;
+    border-color: deeppink;
+    transition: all 0.3s ease-out;
+}
+#I-Agree-to-23 {
+    font-size: 22px;
+    /*padding: 38px;*/
+    position: relative;
+    color: white;
+    background-color: green;
+    transition: all 0.3s ease-out;
+}
+.form-I-agree-23 {
+
+}
+#main-btn-register-now {
+    /* width: 400px;
+     height: 95px;*/
+     font-size: 22px;
+     /*padding: 38px;*/
+     position: relative;
+     color: white;
+     background-color: deeppink;
+     border-color: deeppink;
+     transition: all 0.3s ease-out;
+     margin: 0;
+         position: absolute;
+         top: 90%;
+         left: 50%;
+         margin-right: -50%;
+         transform: translate(-50%, -50%)
+}
+#main-btn-register-now:hover {
+    /*width: 400px;
+    height: 95px;*/
+    font-size: 22px;
+    /*padding: 38px;*/
+    position: relative;
+    color: deeppink;
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: solid;
+    background-color: transparent;
+}
+#buy-gene-btn-register-now {
+     width: 100%;
+     /*height: 95px;*/
+     margin-top: 40px;
+     font-size: 36px;
+     padding: 20px;
+     position: relative;
+     color: white;
+     background-color: deeppink;
+     border-color: deeppink;
+     transition: all 0.3s ease-out;
+     /*margin: 0;*/
+     position: absolute;
+     top: 90%;
+     left: 50%;
+     margin-right: -50%;
+     transform: translate(-50%, -50%)
+}
+
+
+
+#your-genome-h2 {
+    color: deeppink;
+}
+
+.links-footer {
+    color: whitesmoke;
+}
+.links-footer:hover {
+    color: whitesmoke;
+    background-color: transparent;
+    text-decoration: none;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-bottom-color: whitesmoke;
+    transition: border-bottom-width 0.3s ease-out;
+
+}
+/*.glyphicon-chevron-down:hover {*/
+    /*height: 140px;*/
+    /*width: 60px;*/
+   /* color: deeppink;
+    border-style: solid;
+    border-color: deeppink;
+    border-radius: 50%;
+    padding: 10px;
+    transition: .2s ease-out;*/
+/*}*/
+#get-started-btn {
+    /* width: 400px;
+    height: 95px;*/
+    font-size: 22px;
+    /*padding: 38px;*/
+    /*position: relative;*/
+    color: white;
+    background-color: deeppink;
+    border-color: deeppink;
+    transition: all 0.3s ease-out;   
+    margin:auto;
+    display:block;
+     
+}
+#get-started-btn:hover {
+    /* width: 400px;
+     height: 95px;*/
+     font-size: 22px;
+     /*padding: 38px;*/
+     /*position: relative;*/
+
+     transition: all 0.3s ease-out;   
+     color: deeppink;
+     border-color: deeppink;
+     border-width: 5px;
+     border-style: solid;
+     background-color: transparent;
+     
+}
+#back-to-dash-btn{
+   /* width: 400px;
+    height: 95px;*/
+    font-size: 22px;
+    /*padding: 38px;*/
+    margin-left: 160px;
+    position: relative;
+    color: deeppink;
+    background-color: white;
+    border-color: deeppink;
+    transition: all 0.3s ease-out;
+}
+#back-to-dash-btn:hover{
+   /* width: 400px;
+    height: 95px;*/
+    font-size: 22px;
+    /*padding: 38px;*/
+    position: relative;
+    color: deeppink;
+    background-color: transparent;
+    border-color: transparent;
+    transition: all 0.3s ease-out;
+}
+.ask {
+    width: 250px;
+    height: 45px;
+    font-size: 22px;
+    padding: 8px;
+    position: relative;
+    color: darkslategray;
+    background-color: white;
+    border-style: none;
+}
+.ask:hover {
+    width: 250px;
+    height: 45px;
+    font-size: 22px;
+    padding: 8px;
+    position: relative;
+    color: white;
+    background-color: deeppink;
+}
+#cesar-btn {
+    width: 400px;
+    height: 95px;
+    font-size: 22px;
+    padding: 38px;
+    position: relative;
+    color: midnightblue;
+    background-color: white;
+}
+#main-btn:hover {
+    /*width: 400px;
+    height: 95px;*/
+    font-size: 22px;
+    /*padding: 38px;*/
+    position: relative;
+    color: deeppink;
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: solid;
+    background-color: transparent;
+}
+#cesar-btn:hover {
+    width: 400px;
+    height: 95px;
+    font-size: 22px;
+    padding: 38px;
+    position: relative;
+    color: white;
+
+    background-color: midnightblue;
+}
+
+#how-it-works {
+    padding: 20px 0 20px 0;
+    background-color:   mediumaquamarine;  
+}
+
+#dod-how-it-works_left {
+    position: relative;
+    z-index: 8;
+}
+.how-it-works-svg {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+/*all trials_page ends*/
+#userRegister {
+  margin-top: 100px;
+}
+/*dashboard home*/
+.h1-dashboard {
+    margin-top: 50px;
+    text-align: center;
+    line-height: 3;
+    font-size: 45px;
+    /*z-index: 100;*/
+    /*position: absolute;*/
+}
+.hvr-wobble-vertical {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+.hvr-wobble-vertical:hover, .hvr-wobble-vertical:focus, .hvr-wobble-vertical:active {
+  -webkit-animation-name: hvr-wobble-vertical;
+  animation-name: hvr-wobble-vertical;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+
+#img-dash {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+#img-dash2 {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+#img-dash3 {
+    margin-left: 10px;
+    background-color: whitesmoke;
+}
+#img-dash5 {
+    margin-left: 15px;
+    margin-bottom: 20px;
+    background-color: whitesmoke;
+}
+#img-dash4 {
+    margin-left: 10px;
+}
+#row-top-dash-images {
+    margin-top: 165px;
+}
+#row-btm-dash-images {
+    height: 50%;
+
+}
+#col-one-dash-images {
+    background-color: whitesmoke;
+    width: 680px;
+    border-radius: 10px;
+    position: relative;
+
+}
+.dropdown-menu{
+    color: deeppink;
+    
+
+}
+.dropdown-menu:hover{
+    color: deeppink;
+
+}
+.dropdown-menu, a:hover{
+    color: deeppink;
+    background-color: white;
+
+}
+
+h3 {
+    position: absolute;
+    /*left: 0;*/
+    top: 100px;
+    width: 100%;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+
+}
+ h3 span {
+    color: white; 
+    font: bold 24px/45px Helvetica, Sans-Serif; 
+    letter-spacing: -1px;  
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+
+ }
+#top-right-h3 {
+    position: absolute;
+    line-height: 1;
+    left: 370px;
+    top: 95px;
+    width: 300px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font: bold 24px/45px;
+    letter-spacing: 0px;
+    padding: 16px;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+
+
+    /* padding-left: 3px; */
+    /*height: 50px;*/
+}
+ #top-right-span {
+ }
+
+#col-two-dash-images {
+    background-color: whitesmoke;
+    width: 680px;
+    border-radius: 10px;
+    height: 220px;
+}
+.nav.navbar-nav.navbar-right {
+    background-color: whitesmoke;
+    ;
+    margin-top: 25px; 
+    border-radius: 7px;
+    border-bottom: solid 2px #D1E2E5;
+}
+#a-dash {
+    color: darkslategray;
+}
+#a-dash:hover {
+    color: deeppink;
+    transition: all 1s ease-out;
+
+}
+#a-dash-one {
+    color: darkslategray;
+}
+#a-dash-one:hover {
+    color: deeppink;
+    transition: all 1s ease-out;
+
+}
+#a-dash-two {
+    color: darkslategray;
+}
+#a-dash-two:hover {
+    color: deeppink;
+    transition: all 1s ease-out;
+
+}
+#a-dash-three {
+    color: darkslategray;
+}
+#a-dash-three:hover {
+    color: deeppink;
+    transition: all 1s ease-out;
+
+}
+#a-dash-four {
+    color: darkslategray;
+}
+#a-dash-four:hover {
+    color: deeppink;
+    transition: all 1s ease-out;
+
+}
+li.a:hover {
+    color: deeppink;
+}
+#h1-images {
+    font-size: 20px;
+    text-align: center;
+    margin-left: 150px;
+}
+.img-desc {
+    font-size: 14px;
+}
+ul.dropdown-menu {
+    font-size: 20px;
+    color: midnightblue;
+    /*background-color: #e8efef;*/
+}
+.panel-body {
+    border-top: deeppink;
+    border-top-style: solid;
+}
+/*dashboard home ends*/
+
+/****************************/
+#make-transparent {
+    background-color: white;
+    height: 55%;
+    margin-top: 100px;
+}
+/*gene report table begins*/
+#gene-table {
+    margin-left: 100px;
+    width: 80%;
+}
+.list-group {
+    margin-bottom: 20px;
+    padding-right: 0;
+}
+#snps-table {
+    margin-top: 30px;
+    width: 50%;
+    
+    /*background-color: whitesmoke;*/
+
+}
+#genes-table {
+    margin-top: 30px;
+    width: 50%;
+}
+#a-glaucoma {
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: none none none solid;
+    background-color: transparent;
+    padding-left: 10px;
+    color: darkslategray;
+    text-decoration: none;
+}
+#a-glaucoma:hover {
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: none none none solid;
+    background-color: deeppink;
+    padding-left: 10px;
+    color: white;
+    text-decoration: none;
+    transition: all 1s ease-out;
+
+}
+#a-genesDisease {
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: none none none solid;
+    background-color: transparent;
+    padding-left: 10px;
+    color: darkslategray;
+    text-decoration: none;
+}
+#a-genesDisease:hover {
+    opacity: .7;
+    border-width: 15px;
+
+}
+#snp-link:hover {
+    color: deeppink;
+}
+#genename-link:hover {
+    color: deeppink;
+}   
+#a-stargardts {
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: none none none solid;
+    background-color: transparent;
+    padding-left: 10px;
+    color: darkslategray;
+}
+#a-stargardts:hover {
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: none none none solid;
+    background-color: deeppink;
+    padding-left: 10px;
+    color: white;
+    text-decoration: none;
+    transition: all 1s ease-out;
+
+
+}
+#a-armd {
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: none none none solid;
+    background-color: transparent;
+    padding-left: 10px;
+    color: darkslategray;
+    text-decoration: none;
+
+}
+#a-armd:hover {
+    border-color: deeppink;
+    border-width: 5px;
+    border-style: none none none solid;
+    background-color: deeppink;
+    padding-left: 10px;
+    color: white;
+    text-decoration: none;
+    transition: all 1s ease-out;
+
+
+}
+.amsler-p {
+    line-height: 2;
+    padding: 25 25 25 25px;
+}
+#wrap-amsler-intro {
+    position: relative;
+    padding-left: 60px;
+    padding-top: 60px;
+}
+#wrap-amsler-instructions {
+    position: relative;
+    padding-left: 60px;
+    padding-top: 60px;
+}
+#wrap-amsler-grid {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.bigArrow {
+  display: block;
+  text-align: center;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #a0989d;
+  border: 2px solid rgba(255,255,255,0.4);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 29px;
+  left: 50%;
+  margin-left: -35px;
+  z-index: 100;
+  color: #fff;
+  font-size: 40px;
+}
+.wrap-gene-results {
+    background-color: transparent;
+    margin: 20px 0 0 20px;
+}
+/*#snps-table th td tr{
+    color: gray;
+}*/
+
+.wrap-snps {
+    /*position: relative;*/
+    display: flex;
+    align-items: center;
+}
+.td-trials {
+    font-size: 17px;
+}
+.td-trials-head {
+    font-size: 19px;
+}
+
+
+.container {
+    max-width: 18000px;
+}
+
+div.container-fluid.bg-info {
+    background-color: transparent;
+}
+nav.navbar.navbar-default.navbar-fixed-top {
+    /*background-color: white;
+    border-color: transparent;
+    height: 4.9375em;*/
+    
+}
+#contact-support-form {
+    padding: 30px;
+    height: 100%;
+    width: 100%;
+}
+.panel-default {
+    background-color: #f7f9fa;
+    /*margin-top: 130px;*/
+}
+.details-new-form {
+
+background-color: whitesmoke;
+padding: 60px;
+border-radius: 5%;
+ 
+}
+#terms-h2 {
+    margin-top: 100px;
+}
+#header-details-form {
+  margin-top: 120px;
+  text-align: center;
+}
+#header-passreset-form {
+  margin-top: 120px;
+}
+/*.create-update-form {
+  width: 500px;
+}*/
+.reset-password-form {
+  margin-top: 30px;
+  width: 400px;
+}
+ol, ul {
+  list-style:none;
+}
+strong {
+  font-weight:700;
+}
+#frame {
+  max-width:620px;
+  width:auto;
+  border:1px solid #ccc;
+  background:#fff;
+  padding:10px;
+  margin:3px;
+}
+/*h1 {
+    font:normal bold 2em/1.8em;
+    text-align:left;
+    border-bottom:1px solid #999;
+    padding:0;
+    width:auto
+}*/
+h2 {
+    font:italic bold 1.3em/1.2em;
+    padding:0;
+    text-align:center;
+    margin:20px 0;
+}
+p.pager {
+    margin:5px 0 5px;
+    font:bold 1em/1em"Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:#999;
+}
+img.question-image {
+    display:block;
+    max-width:250px;
+    margin:10px auto;
+    border:1px solid #ccc;
+    width:100%;
+    height:auto;
+}
+#choice-block {
+    display:block;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+#submitbutton {
+    background:#5a6b8c;
+}
+#submitbutton:hover {
+    background:#7b8da6;
+}
+#explanation {
+    margin:0 auto;
+    padding:20px;
+    width:75%;
+}
+.choice-box {
+    display:block;
+    text-align:center;
+    margin:8px auto;
+    padding:10px 0;
+    border:1px solid #666;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.panel-footer {
+  height: 400px;
+  background-color: #2a272e;
+  margin-top:  0px;
+ }
+#start-panel-head {
+  text-align: center;
+  /*add border*/
+}
+#start-panel-begin {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  /*add border*/
+}
+/*rotating double helix*/ 
+.image-helix {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+/*Stem Cell Assessment Begins*/
+div.col-xs-6.col-md-3 {
+  background-color: #ffffff;
+  padding: 45px;
+  border:6px solid #f7f9fa;
+  
+}
+.page-header {
+  margin-top: 150px;
+}
+
+#assessment-header {
+  font:normal bold 2em/1.8em"Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  /*border-bottom:1px solid #999;*/
+  padding:0;
+  width:auto
+}
+
+/*Stem Cell Assessment Ends*/
+
+/*dashboard begins*/
+/*Main CSS*/
+
+
+/*Login Signup Page*/
+a {
+    outline:none;
+    text-decoration: none;
+    font-size: 18px;
+    color: darkslategray;
+}
+li,ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+.header-top i {
+    font-size: 18px;
+}
+.bg-image {
+    background: url(../images/background-login.jpg) no-repeat 0 0 / cover;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: table;
+}
+.results-modal {
+    width: 80%;
+}
+
+.login-header {
+    display: inline-block;
+    width: 100%;
+    background: #0e1a35;
+}
+
+.login-signup {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.login-logo img {
+    cursor: pointer;
+    max-width: 171px;
+    padding: 23px 15px 22px;
+    width: 100%;
+}
+#update-pass-form {
+    font-size: 22px;
+    border-radius: 5%;
+
+}
+#update-pass-btn {
+    float: right;
+    color: white;
+    background-color: deeppink;
+    border-color: deeppink;
+}
+.wrap-update-pass-form {
+    background-color: whitesmoke;
+    margin-top: 200px;
+    padding: 25px;
+    border-radius: 5%;
+    margin-left: 25%;
+    width: 50%;
+
+}
+.login-header .navbar-right {
+    margin-right: 0px;
+}
+#wrap-updateinfo {
+    
+    margin-top: 100px;
+    margin-left: 25%;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 5%;
+}
+#wrap-starg-form {
+    border-radius: 5%;  
+    margin-left: 20%;
+}
+#wrap-contact-support-form {
+    background-color: whitesmoke;
+    border-radius: 5%;  
+    margin-left: 25%;
+    margin-top: 200px;
+
+}
+#wrap-sign-in-form {
+    margin-top: 100px;
+    background-color: whitesmoke;
+    padding: 150px;
+
+}
+.wrap-trial-form {
+    background-color: whitesmoke;
+    border-radius: 5%;  
+    padding-left: 25%;
+    padding-right: 25%;
+    margin-bottom: 30px;
+}
+.trial-contact-forms {
+    width: 100%;
+    height: 100%;
+}
+.form-I-agree-23 {
+    width: 100%;
+}
+.form-login-new {
+    width: 100%;
+}
+.form-contact-us {
+    width: 100%;
+}
+.form-signup-new {
+    width: 100%;
+    margin-left: 12px;
+    padding: 20px;
+}
+#gene-approval-form {
+    margin-top: 100px;
+    padding: 20px;
+}
+.login-header .nav-tabs > li.active > a,
+.login-header .nav-tabs > li.active > a:focus,
+.login-header .nav-tabs > li.active > a:hover {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+
+.login-header .nav-tabs > li > a {
+    border: medium none;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 48px;
+    padding: 15px 30px;
+    color: #fff;
+}
+
+.login-header .nav-tabs {
+    border-bottom: none;
+}
+
+.login-header .nav-tabs > li {
+    margin-bottom: 0px;
+}
+
+.login-header .nav > li > a:focus,
+.login-header .nav > li > a:hover {
+    background: none;
+    text-decoration: none;
+}
+
+.login-header .nav-tabs > li.active {
+    border-bottom: 6px solid #5584ff;
+}
+
+.login-inner h1 {
+    color: #8492af;
+    font-size: 48px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.login-inner h1 span {
+    color: #5584ff;
+}
+
+.login-form {
+    text-align: center;
+}
+
+.login-form input {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border-color: -moz-use-text-color -moz-use-text-color #d4d9e3;
+    border-image: none;
+    border-style: none none solid;
+    border-width: medium medium 1px;
+    font-size: 13px;
+    font-weight: 300;
+    width: 100%;
+    color: #8492af;
+    padding: 15px 50px;
+    font-size: 17px;
+    max-width: 550px;
+}
+
+.login-form label {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.user input {
+    background: rgba(0, 0, 0, 0) url("../images/user.png") no-repeat scroll 7px 12px;
+}
+
+.pass input {
+    background: rgba(0, 0, 0, 0) url("../images/password.png") no-repeat scroll 7px 12px;
+}
+
+.mail input {
+    background: rgba(0, 0, 0, 0) url("../images/mail.png") no-repeat scroll 4px 12px;
+}
+
+.login-signup .tab-content {
+    background: #ffffff none repeat scroll 0 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    display: inline-block;
+    margin-top: -8px;
+    width: 100%;
+}
+
+.form-btn {
+    background: #5584ff none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 100px;
+    color: #ffffff;
+    font-weight: 400;
+    max-width: 250px;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    margin: 40px 0;
+    box-shadow: 0 2px 8px #d2d2d2;
+    -moz-box-shadow: 0 2px 8px #d2d2d2;
+    -webkit-box-shadow: 0 2px 8px #d2d2d2;
+}
+
+.form-btn::before {
+    content: "";
+    font-family: FontAwesome;
+    position: absolute;
+    right: 17px;
+    top: 9px;
+}
+
+.form-details {
+    padding: 35px 0;
+}
+
+.form-updateinfo {
+    margin: 0;
+    /*margin-left: 50%;*/
+
+}
+
+.tab-content .tab-pane {
+    padding: 70px 0;
+}
+
+#scroll-to-1 {
+    font-size: 22px;
+    /*padding: 38px;*/
+    /*position: relative;*/
+    /*margin-top: 80px;*/
+    /*color: white;*/
+    background-color: transparent;
+    border-color: deeppink;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    margin-left: 48%;
+   
+    
+    /*top: 99%;*/
+}
+
+/*Login Signup Page*/
+
+
+/*Home Page*/
+#home-find-trail-btn {
+    border-radius: 50px;
+}
+.home {
+    background: #f6f7fa;
+}
+
+#navigation {
+    background: #0e1a35;
+}
+
+#navigation {
+    padding: 0;
+}
+
+.display-table {
+    /*margin-top: 95px;*/
+    display: table;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.display-table-row {
+    display: table-row;
+    height: 100%;
+}
+
+.display-table-cell {
+    display: table-cell;
+    float: none;
+    height: 100%;
+}
+
+.v-align {
+    vertical-align: top;
+}
+.logo img {
+    max-width: 180px;
+    padding: 16px 0 17px;
+    width: 100%;
+}
+
+.header-top {
+    margin: 0;
+    padding-top: 2px;
+}
+
+.header-top img {
+    
+
+    border-radius: 50%;
+    max-width: 48px !important;
+    width: 100%;
+}
+
+.add-project {
+    background: #5584ff none repeat scroll 0 0;
+    border-radius: 100px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 27px 10px 45px;
+    position: relative;
+}
+
+.header-rightside .nav > li > a:focus,
+.header-rightside .nav > li > a:hover {
+    background: none;
+    text-decoration: none;
+}
+
+.add-project::before {
+    background: rgba(0, 0, 0, 0) url("../images/plus.png") no-repeat scroll 0 0;
+    content: "";
+    ;
+    height: 12px;
+    left: 17px;
+    position: absolute;
+    top: 12px;
+    width: 12px;
+}
+
+.add-project:hover {
+    color: #ffffff;
+}
+
+.header-top i {
+    color: #0e1a35;
+}
+
+.icon-info {
+    position: relative;
+}
+.icon-book {
+    color: white;
+    padding: 20px;
+}
+.icon-check {
+    color: white;
+    padding: 20px;
+}
+.icon-comment {
+    color: white;
+    padding: 20px;
+}
+.icon-bull {
+    color: white;
+    padding: 20px;
+}
+.icon-tasks {
+    color: white;
+    padding: 20px;
+}
+.navi i {
+    font-size: 18px;
+}
+.label.label-primary {
+    border-radius: 50%;
+    font-size: 9px;
+    left: 8px;
+    position: absolute;
+    top: -9px;
+}
+
+.icon-info .label {
+    border: 2px solid #ffffff;
+    font-weight: 500;
+    padding: 3px 5px;
+    text-align: center;
+}
+
+.header-top li {
+    display: inline-block;
+    text-align: center;
+}
+
+.header-top .dropdown-toggle {
+    color: #0e1a35;
+}
+
+.header-top .dropdown-menu {
+    border: medium none;
+    left: -85px;
+    padding: 17px;
+}
+.view {
+    background: #5584ff none repeat scroll 0 0;
+    border-radius: 100px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+    padding: 10px 15px;
+}
+
+.navbar-content > span {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.img-responsive {
+    width: 100%;
+}
+#navigation{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.search input {
+    border: none;
+    font-size: 15px;
+    padding: 15px 9px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0) url("../images/search.png") no-repeat scroll 99% 12px;
+    color: #8492af;
+}
+
+header {
+    background: none repeat scroll 0 0;
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.04);
+    display: inline-block !important;
+    line-height: 23px;
+    padding: 15px;
+    transition: all 0.5s ease 0s;
+    width: 100%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.logo {
+    text-align: center;
+}
+
+.navi a {
+    border-bottom: 1px solid #0d172e;
+    border-top: 1px solid #0d172e;
+    color: #ffffff;
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 28px 20px;
+    text-decoration: none;
+}
+
+.navi i {
+    margin-right: 15px;
+    color: #5584ff;
+}
+
+.navi .active a {
+    background: #122143;
+    border-left: 5px solid #5584ff;
+    padding-left: 15px;
+}
+
+.navi a:hover {
+    background: #122143 none repeat scroll 0 0;
+    border-left: 5px solid #5584ff;
+    display: block;
+    padding-left: 15px;
+}
+
+.navbar-default {
+    background-color: white;
+    border-color: #ffffff;
+    box-shadow: 2px 2px 2px 2px #888888;
+}
+
+.navbar-toggle {
+    border: none;
+}
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #005470;
+}
+
+.circle-logo {
+    margin: 0 auto;
+    max-width: 30px !important;
+    text-align: center;
+}
+.hidden-xs{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.user-dashboard {
+    padding: 0 20px;
+}
+
+.user-dashboard h1 {
+    color: #0e1a35;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0;
+    padding: 21px 0;
+}
+.sales {
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #d4d9e3;
+    display: inline-block;
+    padding: 15px;
+    width: 100%;
+}
+.sales button {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 1px solid #dadee7;
+    border-radius: 100px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding-right: 32px;
+    color: #0e1a35;
+}
+
+.sales button::before {
+    content: "";
+    font-family: FontAwesome;
+    position: absolute;
+    right: 12px;
+    top: 11px;
+}
+.sales  .btn-group {
+    float: right;
+}
+.sales h2 {
+    color: #8492af;
+    float: left;
+    font-size: 21px;
+    font-weight: 600;
+    margin: 0;
+    padding: 9px 0 0;
+}
+.btn.btn-secondary.btn-lg.dropdown-toggle > span {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.sales .dropdown-menu{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    border-radius: 8px;
+    width: 100%;
+    color: #0e1a35;
+}
+.sales .btn-group.open .dropdown-toggle, .btn.active, .btn:active{
+    box-shadow: none;
+}
+
+.sales .dropdown-menu > a {
+    color: #0e1a35;
+    display: inline-block;
+    font-weight: 800;
+    padding: 9px 0;
+    text-align: center;
+    width: 100%;
+}
+#my-cool-chart svg {
+    width: 100%;
+}
+.sales .dropdown-menu > a:hover{
+    color: #5584FF;   
+}
+.shield-buttons {
+    display: none;
+}
+.close, .close:focus, .close:hover {
+    color: #fff;;
+    opacity: 1;
+    text-shadow: none;
+}
+.modal-body input {
+    border: 1px solid #d4d9e3;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 5px 0;
+    padding: 14px 10px;
+    width: 100%;
+    color: #8492af;
+}
+.modal-body textarea {
+    border: 1px solid #d4d9e3;
+    font-size: 14px;
+    font-weight: 300;
+    height: 200px;
+    margin-top: 5px;
+    padding: 9px 10px;
+    width: 100%;
+    color: #8492af;
+}
+.navbar-brand {
+    color: white;
+}
+.modal-header.login-header h4 {
+    color: #ffffff;
+}
+.modal-footer .add-project {
+    background: #5584ff none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 100px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 30px;
+    position: relative;
+}
+.modal-footer .add-project::before{display: none;}
+.modal-footer {
+    border: 0 none;
+    padding: 10px 15px 26px;
+    text-align: right;
+}
+.cancel {
+    background: #0E1A35     ;
+    border: medium none;
+    border-radius: 100px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 30px;
+    position: relative;
+    
+}
+
+.modal-header .close {
+    margin-top: 2px;
+    background-color: whitesmoke;
+}
+.search input:focus{
+    border-bottom: 1px solid #BDC4D4;
+    line-height:22px;
+    transition: 0.1s all;
+}
+.modal-header.login-header {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+/*Main CSS*/
+
+}
+#two3andme-img-index {
+    margin-top: 50px;
+
+}
+#wrap-bottom-index {
+    height: 14em;
+    position: relative;
+    font-size: 30px; 
+}
+#wrap-contact-us-form {
+    background-color: whitesmoke;
+    /*padding: 5px;*/
+    width: 100%;
+    margin-top: 100px;
+    /*margin-left: 40px;*/
+    /*top: 50%;*/
+    min-height: 100%;
+}
+/*@media only screen and (max-device-width: 767px) {
+    .login-logo img {
+        margin: 0 auto;
+    }
+    .login-details .nav-tabs > li {
+        text-align: center;
+        width: 50%;
+    }
+    .login-signup .login-inner h1 {
+        font-size: 26px;
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+    .login-inner .login-form input {
+        font-size: 15px;
+        max-width: 100%;
+        padding: 15px 45px;
+    }
+    .login-inner .form-details {
+        padding: 25px;
+    }
+    .login-inner .login-form label {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .login-inner .form-btn {
+        margin: 0;
+        max-width: 180px;
+    }
+    .tab-content .tab-pane {
+        padding: 20px 0;
+    }
+    #navigation .navi a {
+        font-size: 14px;
+        padding: 20px;
+        text-align: center;
+    }
+    #navigation .navi i {
+        margin-right: 0px;
+    }
+    #navigation .navi a:hover,
+    #navigation .navi .active a {
+        background: #122143 none repeat scroll 0 0;
+        border-left: none;
+        display: block;
+        padding-left: 20px;
+    }
+    header .header-top img {
+        max-width: 38px !important;
+    }
+    .v-align header {
+        padding: 12px 15px;
+    }
+    header .header-top li {
+        padding-left: 13px;
+        padding-right: 6px;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: rgba(0, 0, 0, 0);
+    }
+    .navbar-header .navbar-toggle {
+        float: left;
+        margin: 0;
+        padding: 0;
+        top: 12px;
+    }
+    button,
+        html [type="button"],
+        [type="reset"],
+        [type="submit"] {
+            outline: medium none;
+    }
+    .user-dashboard .sales h2 {
+        color: #8492af;
+        float: left;
+        font-size: 14px;
+        font-weight: 600;
+        margin: 0;
+        padding: 13px 0 0;
+}
+    .user-dashboard .btn.btn-secondary.btn-lg.dropdown-toggle > span {
+        font-size: 11px;
+}
+    .user-dashboard .sales button {
+        font-size: 11px;
+        padding-right: 23px;
+}  
+    .user-dashboard .sales h2 {
+    font-size: 12px;
+}
+.gutter{
+    padding: 0;
+}
+}
+
+@media only screen and (max-device-width: 992px) {
+    header .header-top li {
+        padding-left: 20px !important;
+        padding-right: 0;
+}
+    header .logo img {
+        max-width: 125px !important;
+}
+
+}
+
+@media only screen and (min-device-width: 767px) and (max-device-width: 998px){
+    .user-dashboard .header-top {
+        padding-top: 5px;
+}
+    .user-dashboard .header-rightside {
+        display: inline-block;
+        float: left;
+        width: 100%;
+}
+    .user-dashboard .header-rightside .header-top img {
+        max-width: 41px !important;
+} 
+    .user-dashboard .sales button {
+    font-size: 10px;
+}
+    .user-dashboard .btn.btn-secondary.btn-lg.dropdown-toggle > span {
+    font-size: 12px;
+}
+    .user-dashboard .sales h2 {
+    font-size: 15px;
+}
+}
+@media only screen and (min-device-width:998px) and (max-device-width: 1350px){
+    #navigation .logo img {
+        max-width: 130px;
+        padding: 16px 0 17px;
+        width: 100%;
+    }
+}*/
+
+#cesarcells-consent-language {
+    margin-top: 140px; 
+    padding: 40px; 
+    background-color: whitesmoke; 
+    border-radius: 5%; 
+    margin-left: 20%
+}
+
+/*MOBILE*/
+@media screen and (max-width: 482px) {
+  
+    .index-p {
+        text-align: center;
+    }
+
+    .main-h1 {
+        font-size: 50px;
+        font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+        
+        /*line-height: .3;*/
+        color: white;
+        width: 100%;
+        font-weight: bold;
+        /*position: relative;*/
+        /*display: block;*/
+        top: 35%;
+    }
+    .what-is-h2 {
+
+        font-size: 50px;
+        font-weight: 600;
+        color: darkslategray;
+        /*top: 16%;*/
+        display: block;
+        position: relative;
+    }
+    .jumbotron-whatis {
+        font-size: 30px;
+    }
+    .main-h1-starg {
+        font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 33px;
+        line-height: 1.3;
+        color: white;
+        font-weight: bold;
+        margin-top: 40%;
+        position: absolute;
+        left: 5%;
+    }
+    .what-is-h2-stargardt {
+        font-size: 45px;
+    }
+    #scroll-to-1 {
+        margin-left: 46.5%;
+    }
+    .main-h1-assistive {
+        font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 45px;
+        line-height: 1.3;
+        color: white;
+        font-weight: bold;
+        margin-top: 35%;
+        position: absolute;
+        left: 6%;        
+    }
+
+    .main-h1-clini-trial {
+        font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 45px;
+        line-height: 1.3;
+        color: white;
+        font-weight: bold;
+        margin-top: 35%;
+        position: absolute;
+        left: 6%; 
+    }
+    .what-are-trials-h2 {
+        font-size: 40px;
+    }
+    .main-h1-glossary {
+        font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 45px;
+        line-height: 1.3;
+        color: white;
+        font-weight: bold;
+        margin-top: 35%;
+        position: absolute;
+        left: 26%; 
+    }
+    .shortcuts, .glossary-a {
+        font-size: 20px;
+        padding: 10px;
+    }
+    #wrap-sign-in-form {
+        background-color: whitesmoke;
+        /*padding: 5px;*/
+        width: 100%;
+        margin-top: 40px;
+        /*margin-left: 40px;*/
+        min-height: 100%;
+    }
+    #wrap-contact-us-form {
+        background-color: whitesmoke;
+        /*padding: 5px;*/
+        width: 100%;
+        margin-top: 40px;
+        /*margin-left: 40px;*/
+        min-height: 100%;
+    }
+    .form-contact-us {
+        margin-left: 20%;
+    }
+    .form-login-new {
+        padding: 10px;
+    }
+    #two3andme-img-index {
+        margin-top: 5px;
+        width: 10px;
+        height: 10px;
+        
+    }
+    #main-btn-register-now {
+        /* width: 400px;
+         height: 95px;*/
+         font-size: 20px;
+         /*padding: 38px;*/
+         /*position: relative;*/
+         /*line-height: .3;*/
+         color: white;
+         background-color: deeppink;
+         border-color: deeppink;
+         transition: all 0.3s ease-out;
+         /*margin: 0;*/
+         /*position: absolute;*/
+         top: 80%;
+         left: 50%;
+         margin-right: -50%;
+         transform: translate(-50%, -50%)
+    }
+
+    .aboutus-h1 {
+        font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 60px;
+        text-align: center;
+        line-height: 1.3;
+        color: white;
+        width: 100%;
+        font-weight: bold;
+        /*position: relative;*/
+        /*display: block;*/
+        opacity: 1;
+        /*margin-top: 70px;*/
+        top: 10px;
+    }
+    .our-mission {
+        font-size: 10px;
+    }
+
+    .avail-trials-h1 {
+        font-size: 25px;
+        /*padding-bottom: 20px;
+        padding-top: 30px;
+        margin: 0;
+        line-height: 2;
+        position: absolute;*/
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+    }
+    #sub-main-h1 {
+        font-size: 18px;
+    }
+    /****USER/DASHBOARD BEGINS****/
+    #col-two-dash-images {
+        background-color: whitesmoke;
+        width: 460px;
+        border-radius: 10px;
+        height: 220px;
+        margin-left: 2%;
+    }
+    #col-one-dash-images {
+        background-color: whitesmoke;
+        width: 100%;
+        border-radius: 10px;
+        height: 320px;
+        margin-left: 2%;
+    }
+    #img-dash, #img-dash2 {
+        width: 200px;
+        height: 250px;
+        padding: 30px
+    }
+    #img-dash3, #img-dash4 {
+        width: 200px;
+        height: 250px;
+        padding: 30px;
+    }
+    #top-right-h3 {
+        width: 150px;
+        left: 270px;
+    }
+    #top-left-h3 {
+        width: 150px;
+        left: 70px;
+    }
+    /****USER/DASHBOARD ENDS****/
+    /****AMSLER PAGE BEGINS****/
+    #amsler-grid-h1 {
+        margin-top: 200px;
+        font-size: 45px;
+        text-align: center;
+        line-height: 1;
+    }
+    #amsler-grid-img {
+        margin-top: 50px;
+        margin-left: 50px;
+        height: 100%;
+        width: 100%;
+    }
+    /****AMSLER PAGE ENDS****/
+    /*****MY ACCOUNT BEGINS*****/
+    #wrap-updateinfo {
+        
+        margin-top: 100px;
+        margin-left: 7%;
+        background-color: whitesmoke;
+        padding: 20px;
+        border-radius: 5%;
+    }
+    .wrap-update-pass-form {
+        background-color: whitesmoke;
+        margin-top: 60px;
+        /*padding: 25px;*/
+        border-radius: 5%;
+        margin-left: 5%;
+        width: 100%;
+
+    }
+    #cesarcells-consent-language {
+        margin-top: 40px; 
+        padding: 40px; 
+        background-color: whitesmoke; 
+        border-radius: 5%; 
+        margin-left: 5%
+    }
+    #wrap-contact-support-form {
+        background-color: whitesmoke;
+        border-radius: 5%;  
+        margin-left: 5%;
+        margin-top: 60px;
+
+    }
+    /*****MY ACCOUNT ENDS*****/
+
+    /****TOOLS BEGINS*****/
+    .connect23-h1 {
+        font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 55px;
+        text-align: center;
+        line-height: 1.3;
+        color: white;
+        width: 100%;
+        font-weight: bold;
+        position: relative;
+        display: block;
+        top: 32%;
+        margin-top: 64px;
+         
+    }
+    /*****TOOLS ENDS*****/
+    /*****RESOURCES BEGINS******/
+    #results-h1 {
+        margin-top: 200px;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        line-height: 1;
+    }
+    #gene-table {
+        margin-left: 0px;
+        min-width: 100%;
+        padding: 80px;
+
+    }
+    #back-to-dash-btn{
+       /* width: 400px;
+        height: 95px;*/
+        font-size: 22px;
+        /*padding: 38px;*/
+        position: relative;
+        color: white;
+        background-color: deeppink;
+        border-color: deeppink;
+        transition: all 0.3s ease-out;
+        margin-left: 70px;
+    }
+    /*****RESOURCES ENDS*******/  
+    .myButton {
+       
+        border-radius:5px;
+        border:1px solid #f2f6f6;
+        /*display: block;*/
+        cursor:pointer;
+        color: darkslategray;
+        font-family:Arial;
+        font-size:20px;
+        font-weight:bold;
+        /*padding:1px 3px;*/
+        text-decoration:none;
+        text-shadow:0px -1px 0px #f2f6f6;
+        width: 150px;
+        /*margin-left: 35%;*/
+        /*text-align: center;*/
+    }
+    .trial-assessment-questions {
+        font-size: 20px;
+    }
+    #clin-trial-img {
+        width: 100%;
+    }
+}
+
+/*dashbaord ends*/
+@media screen and (min-width: 482px) and (max-width: 991px)  {
+ /*   #col-two-dash-images {
+        background-color: whitesmoke;
+        width: 100%;
+        border-radius: 10px;
+        height: 220px;
+        margin-left: 2%;
+    }
+    #col-one-dash-images {
+        background-color: whitesmoke;
+        width: 100%;
+        border-radius: 10px;
+        height: 220px;
+        margin-left: 2%;
+    }*/
+    #cesarcells-consent-language {
+        margin-top: 40px; 
+        padding: 40px; 
+        background-color: whitesmoke; 
+        border-radius: 5%; 
+        margin-left: 1%
+    }
+   #amsler-grid-img {
+       margin-top: 50px;
+       margin-left: 30px;
+       height: 500px;
+   }
+   #wrap-updateinfo {
+       margin-top: 100px;
+       margin-left: 1%;
+       background-color: whitesmoke;
+       padding: 20px;
+       border-radius: 5%;
+   }
+   #wrap-contact-support-form {
+       background-color: whitesmoke;
+       border-radius: 5%;
+       margin-left: 1%;
+       margin-top: 200px;
+   }
+   #clin-trial-img {
+       width: 50%;
+   }
+
+   .Gene-h2-top {
+
+       font-size: 60px;
+       font-weight: 600;
+       color: darkslategray;
+       top: 20%;
+       margin-top: 340px;
+       margin-bottom: 80px;
+     
+   }
+   .sample-genetable-h2 {
+       font-size: 38px;
+       margin-top: 100px;
+       color: darkslategray;
+   }
+}
+@media screen and (min-width: 992px) and (max-width: 1198px) {
+ /*   #col-two-dash-images {
+        background-color: whitesmoke;
+        width: 100%;
+        border-radius: 10px;
+        height: 220px;
+        margin-left: 2%;
+    }
+    #col-one-dash-images {
+        background-color: whitesmoke;
+        width: 100%;
+        border-radius: 10px;
+        height: 220px;
+        margin-left: 2%;
+    }*/
+    #back-to-dash-btn {
+        margin-left: 150px;
+    }
+    #wrap-updateinfo {
+        margin-top: 100px;
+        margin-left: 1%;
+        background-color: whitesmoke;
+        padding: 20px;
+        border-radius: 5%;
+    }
+    #cesarcells-consent-language {
+        margin-top: 40px; 
+        padding: 40px; 
+        background-color: whitesmoke; 
+        border-radius: 5%; 
+        margin-left: 1%
+    }
+    #wrap-contact-support-form {
+        background-color: whitesmoke;
+        border-radius: 5%;
+        margin-left: 1%;
+        margin-top: 200px;
+    }
+    #clin-trial-img {
+        width: 30%;
+    }
+}
