@@ -2,8 +2,10 @@
 $(window).scroll(function() {
     if ($(".navbar").offset().top > 50) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
+        $(".navbar-fixed-top").css('background-color', 'white');
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
+        $(".navbar-fixed-top").css('background-color', 'transparent');
     }
 });
 
@@ -25,6 +27,8 @@ $(window).scroll(function(){
 function closeSPopup(){
     $('#spopup').hide('slow');
 }
+
+// nav.navbar.navbar-default.navbar-fixed-top
 
 
 

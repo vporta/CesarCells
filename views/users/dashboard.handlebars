@@ -5,7 +5,7 @@
         {{/if}}
 
         {{#if successFlash}}
-        <h2 >{{successFlash}}</h2>
+        <h2 style="font-size: 36px">{{successFlash}}</h2>
         {{/if}}
 
         {{#if taken}}
@@ -14,66 +14,65 @@
         {{/if}}  
     </div>
     <div class="container">
+        
+
         <div class="row">
+          <div class="col-xs-12 col-sm-12">
 
-            <div class="col-sm-12 col-md-5">
+          {{!-- <p>{{user.profileimage.path}}</p> --}}
+              <a href="/users/view-results">
+              {{!-- Testing profile image display below --}}
+              {{!-- <img src="{{user.profileimage.path}}" width="400px" height="400px"/> --}}
+              <img src="/assets/images/justwhite.jpeg" class="img-rounded" alt="Cinque Terre" width="100%" height="200px" id="img-dash5"/>
+              <h3 class="dash-h3s"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true">     YOUR RESULTS</span></h3>
+              </a>
+          </div>
+          <div class="col-xs-6 col-sm-6">
+            {{#if user.assessmentTaken}}
 
-            {{!-- <p>{{user.profileimage.path}}</p> --}}
-                <a href="/users/view-results">
-                {{!-- Testing profile image display below --}}
-                {{!-- <img src="{{user.profileimage.path}}" width="400px" height="400px"/> --}}
-                <img src="/assets/images/background1.jpeg" class="img-rounded" alt="Cinque Terre" width="300" height="298" id="img-dash5"/>
-                <h3><span>YOUR RESULTS</span></h3>
-                </a>
-            </div>
-            <div class="col-sm-12 col-md-3" id="col-one-dash-images">
-                <div class="col-xs-9">
-                    <h2 id="h1-images">What you can do</h2>
-                </div>
-                
-                {{#if user.assessmentTaken}}
+            <a href="#" class="disabled_a_href">
+            <img src='/assets/images/justwhite.jpeg' class="img-rounded" alt="Cinque Terre" width="100%" height="206"/>
+            <h3 class="dash-h3s" id="top-left-h3" style="color: deeppink"><span class="glyphicon glyphicon-ok" aria-hidden="true">     You Took The Clinical Trial <br>Assessment</span></h3>
+            </a>
+            {{else}}
+            <a href="/tools/start-health-assessment">
+            <img src='/assets/images/justwhite.jpeg' class="img-rounded" alt="Cinque Terre" width="100%" height="206"/>
+            <h3 class="dash-h3s" id="top-left-h3"><span class="glyphicon glyphicon-unchecked" aria-hidden="true">     Take The Clinical Trial <br>Assessment</span></h3>
+            </a>
+            {{/if}}
+          </div>
+          <div class="col-xs-6 col-sm-6">
+            <a href="/tools/my-genetics">
+            <img src='/assets/images/justwhite.jpeg' class="img-rounded" alt="Cinque Terre" width="100%" height="206">
+            <h3 class="dash-h3s" id="top-right-h3"><spanid="top-right-span" class="glyphicon glyphicon-stats" aria-hidden="true">     My Genetics</span></h3>
+            </a>
+          </div>
 
-                <a href="#" class="disabled_a_href">
-                <img src='http://www.clipartbest.com/cliparts/9cR/Ryb/9cRRyboGi.png' class="img-rounded" alt="Cinque Terre" width="304" height="206" id="img-dash"/>
-                <h3 id="top-left-h3"><span>Take The Clinical Trial <br>Assessment</span></h3>
-                </a>
-                {{else}}
-                <a href="/tools/start-health-assessment">
-                <img src='/assets/images/humancell.png' class="img-rounded" alt="Cinque Terre" width="304" height="206" id="img-dash"/>
-                <h3 id="top-left-h3"><span>Take The Clinical Trial <br>Assessment</span></h3>
-                </a>
-                {{/if}}
+          <!-- Add the extra clearfix for only the required viewport -->
+          <div class="clearfix visible-xs-block"></div>
 
-                <a href="/tools/my-genetics">
-                <img src='/assets/images/back1.jpeg' class="img-rounded" alt="Cinque Terre" width="304" height="206" id="img-dash2">
-                <h3 id="top-right-h3"><spanid="top-right-span">My Genetics</span></h3>
-                </a>
-            
-            </div>
-             {{!End col-md-4}}
-            {{!-- <div class="col-md-6">
-            
-            </div> --}}
-            <div class="col-sm-12 col-md-3" id="col-two-dash-images"> 
-                <a href="/tools/amsler-test">
+          <div class="col-xs-6 col-sm-6">
+            <a href="/tools/amsler-test">
 
-                <img src="/assets/images/balls.jpeg" class="img-rounded" alt="Cinque Terre" width="304" height="206" id="img-dash3"/>
-                <h3><span>Take the Amsler Test</span></h3>
-                </a>
+            <img src="/assets/images/justwhite.jpeg" class="img-rounded" alt="Cinque Terre" width="100%" height="206"/>
+            <h3 class="dash-h3s"><span class="glyphicon glyphicon-tasks" aria-hidden="true">     Take the Amsler Test</span></h3>
+            </a>
 
-                {{#if user.geneReportPurchase}}
-                <a href="/charge" class="disabled_a_href">
-                <img src="http://www.clipartbest.com/cliparts/9cR/Ryb/9cRRyboGi.png" class="img-rounded hvr-wobble-vertical" alt="Cinque Terre" width="304" height="206" id="img-dash4" />
-                <h3 id="top-right-h3"><spanid="top-right-span">Purchase Gene Report</span></h3>
-                {{else}}
-                <a href="/charge">
-                <img src="/assets/images/background6.jpeg" class="img-rounded hvr-wobble-vertical" alt="Cinque Terre" width="304" height="206" id="img-dash4"/>
-                <h3 id="top-right-h3"><spanid="top-right-span">Purchase Gene Report</span></h3>
-                {{/if}}
-                </a>
+          </div>
+          <div class="col-xs-6 col-sm-6">
+            {{#if user.geneReportPurchase}}
+            <a href="/charge" class="disabled_a_href">
+            <img src="/assets/images/justwhite.jpeg" class="img-rounded hvr-wobble-vertical" alt="Cinque Terre" width="100%" height="206"/>
+            <h3 class="dash-h3s" id="top-right-h3" style="color: deeppink"><spanid="top-right-span" class="glyphicon glyphicon-ok" aria-hidden="true">     You Purchased a Gene Report</span></h3>
+            {{else}}
+            <a href="/charge">
+            <img src="/assets/images/justwhite.jpeg" class="img-rounded hvr-wobble-vertical" alt="Cinque Terre" width="100%" height="206"/>
+            <h3 class="dash-h3s" id="top-right-h3"><spanid="top-right-span" class="glyphicon glyphicon-unchecked" aria-hidden="true">     Purchase Gene Report</span></h3>
+            {{/if}}
+            </a>
 
+          </div>
 
-            </div>
         </div>
     </div>
     

@@ -27,7 +27,7 @@
         <div class="modal-dialog modal-lg results-modal">
           <div class="modal-content">
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
               {{!-- <h1 class="modal-title" id="myModalLabel">Glaucoma</h1> --}}
               </div>
               <div style="display: flex; align-items: center; justify-content: center">
@@ -40,15 +40,16 @@
               {{#if data.genes}}
               <div class="modal-body genotypes-can-do">
               {{#each data.genes}}
-                <p class="lead">We tested your genome for three SNPs (See Table Below) for Genes: {{diseases.0.diseasegenename}} and {{diseases.1.diseasegenename}} that have been shown to be associated with a risk of developing certain forms of Glaucoma, specifically: {{diseases.0.diseasename}} and {{diseases.8.diseasename}}. Your genotypes for Glaucoma are {{genotypes.rs28936694}} and {{genotypes.rs3825942}}, and {{genotypes.rs1048661}}. </p>
+                <p class="lead">We tested your genome for three SNPs (See Table Below) for Genes: {{diseases.0.diseasegenename}} and {{diseases.1.diseasegenename}} that have been shown to be associated with a risk of developing certain forms of Glaucoma, specifically: {{diseases.0.diseasename}} and {{diseases.8.diseasename}}. Your genotypes for Glaucoma are {{genotypes.rs28936694}}, {{genotypes.rs3825942}}, and {{genotypes.rs1048661}}. </p>
 
                 <ul class="list-group">
-                  <li class="list-group-item lead">1. Genotype {{genotypes.rs28936694}} carries a {{diseases.0.risk}} {{diseases.0.descr}}
+                  <li class="list-group-item lead">1. For {{diseases.0.snp}}, your Genotype is {{genotypes.rs28936694}}. This snp is {{diseases.0.risk}} {{diseases.0.descr}} This snp is located on {{diseases.0.location}}.
                   </li>
-                  <li class="list-group-item lead">2. Genotype {{genotypes.rs3825942}} carries a {{diseases.1.risk}} {{diseases.1.descr}}
+                  <li class="list-group-item lead">2. For {{diseases.1.snp}}, your Genotype is {{genotypes.rs3825942}}. {{diseases.1.risk}} {{diseases.1.descr}} This snp is located on {{diseases.1.location}}.
                   </li> 
                   <li class="list-group-item lead">
-                  3. Genotype {{genotypes.rs1048661}} carries a {{diseases.8.risk}} {{diseases.8.descr}}</li>
+                  3. For {{diseases.8.snp}}, your Genotype is {{genotypes.rs1048661}}. {{diseases.8.risk}} {{diseases.8.descr}} This snp is located on {{diseases.8.location}}.
+                  </li>
                 </ul>
               {{/each}}
               </div>
@@ -136,12 +137,12 @@
             {{#if data.genes}}
             <div class="modal-body genotypes-can-do">
               {{#each data.genes}}
-                <p class="lead">We tested your genome for three SNPs (See Table Below) for the {{diseases.6.diseasegenename}} Gene. {{diseases.6.diseasegenename}} has been shown to be associated with a risk of developing certain forms of Stargardt's Disease, specifically: {{diseases.6.diseasename}}. Your genotypes for Stargardt's Disease are {{genotypes.rs61753034}} and {{genotypes.rs61753033}}.</p>
+                <p class="lead">We tested your genome for two SNPs for the {{diseases.6.diseasegenename}} Gene. {{diseases.6.diseasegenename}} has been shown to be associated with a risk of developing certain forms of Stargardt's Disease, specifically: {{diseases.6.diseasename}}. Your genotypes for Stargardt's Disease are {{genotypes.rs61753034}} and {{genotypes.rs61753033}}.</p>
 
                 <ul class="list-group">
-                  <li class="list-group-item lead">1. Genotype {{genotypes.rs61753034}} carries a {{diseases.6.risk}} {{diseases.6.descr}}
+                  <li class="list-group-item lead">1. For {{diseases.6.snp}}, your Genotype is {{genotypes.rs61753034}}. Data show that this snp is  {{diseases.6.risk}}. The associated risk allele is (C). {{diseases.6.descr}} This snp is located on {{diseases.6.location}}.
                   </li>
-                  <li class="list-group-item lead">2. Genotype {{genotypes.rs61753033}} carries a {{diseases.7.risk}} {{diseases.7.descr}}
+                  <li class="list-group-item lead">2. For {{diseases.7.snp}}, your Genotype is {{genotypes.rs61753033}}. Data show that this snp is {{diseases.7.risk}}. {{diseases.7.descr}}. The associated risk allele is (C). If you Genotype is '__', 23andMe was unable to accurately determine your genotype at that location. This snp is located on {{diseases.7.location}}.
                   </li> 
                  
                 </ul>
@@ -199,7 +200,7 @@
       </div>
 
       <a href="#" class="modal-trigger" data-toggle="modal" 
-      data-target="#armdModal" id="a-armd">Age Related Macular Dengeration (ARMD)
+      data-target="#armdModal" id="a-armd">Age Related Macular Degeneration (ARMD)
         <br>
         <p>Learn more about your ARMD risks</p>
       </a>
@@ -209,7 +210,7 @@
           <div class="modal-content">
             <div class="modal-header">
               
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
               
               <h2 class="modal-title" id="myModalLabel" style="text-align: center"></h2>
             </div>
@@ -222,15 +223,15 @@
                 <p class="lead">We tested your genome for five SNPs (See Table Below) for the {{diseases.2.diseasegenename}}, {{diseases.3.diseasegenename}}, {{diseases.4.diseasegenename}}, and {{diseases.5.diseasegenename}} Genes that have been shown to be associated with a risk of developing certain forms of ARMD, specifically: {{diseases.2.diseasename}}, {{diseases.4.diseasename}}, and {{diseases.5.diseasename}}. </p>
 
                 <ul class="list-group">
-                  <li class="list-group-item lead">1. Genotype {{genotypes.rs2230199}} carries a {{diseases.2.risk}} {{diseases.2.descr}}
+                  <li class="list-group-item lead">1. For {{diseases.2.snp}}, your Genotype is {{genotypes.rs2230199}} carries a {{diseases.2.risk}} {{diseases.2.descr}} This snp is located on {{diseases.2.location}}.
                   </li>
-                  <li class="list-group-item lead">2. Genotype {{genotypes.rs800292}} carries a {{diseases.3.risk}} {{diseases.3.descr}}
+                  <li class="list-group-item lead">2. For {{diseases.3.snp}}, your Genotype is {{genotypes.rs800292}} carries a {{diseases.3.risk}} {{diseases.3.descr}} This snp is located on {{diseases.3.location}}.
                   </li> 
-                  <li class="list-group-item lead">3. Genotype {{genotypes.rs3775291}} carries a {{diseases.4.risk}} {{diseases.4.descr}}
+                  <li class="list-group-item lead">3. For {{diseases.4.snp}}, your Genotype is {{genotypes.rs3775291}} carries a {{diseases.4.risk}} {{diseases.4.descr}} This snp is located on {{diseases.4.location}}.
                   </li> 
-                  <li class="list-group-item lead">4. Genotype {{genotypes.rs3775291}} carries a {{diseases.5.risk}} {{diseases.5.descr}}
+                  <li class="list-group-item lead">4. For {{diseases.5.snp}}, your Genotype is {{genotypes.rs3775291}} carries a {{diseases.5.risk}} {{diseases.5.descr}} This snp is located on {{diseases.5.location}}.
                   </li> 
-                  <li class="list-group-item lead">4. Genotype {{genotypes.rs1061170}} carries a {{diseases.9.risk}} {{diseases.9.descr}}
+                  <li class="list-group-item lead">4. For {{diseases.9.snp}}, your Genotype is {{genotypes.rs1061170}} carries a {{diseases.9.risk}} {{diseases.9.descr}} This snp is located on {{diseases.9.location}}.
                   </li>
                  
                 </ul>
@@ -303,7 +304,7 @@
     </div>
   <div class="col-lg-5">
     <h2 style="margin-top: 50px"><strong id="index-title">Genes and Disease</strong></h2>
-    <p class="lead">There are dozens of genes associated with retinal diseases. We currently tested you for 10 genetic mutations. We've compiled a list of retinal diseases per gene. Click on the DNA image below to view them.</p>
+    <p class="lead">There are dozens of genes associated with retinal diseases. Click on the DNA image below to view them.</p>
 
    <a href="#" class="modal-trigger" data-toggle="modal" 
     data-target="#genesDiseaseModal" id="a-genesDisease">
@@ -320,12 +321,12 @@
           <div class="modal-header">
             <h2></h2>
           </div>
-          
+          {{#if data.genes}}
           <div class="modal-body">
             <table class="table table-hover" id="table-genes-disease">
               <tbody>
                 <tr>
-                  <th width="50%" scope="col">Diagnoses eligible for inclusion</th>
+                  <th width="50%" scope="col">Diagnoses</th>
                   <th width="50%" scope="col">Genes that may be considered for testing</th>
                 </tr>
 
@@ -503,7 +504,12 @@
               </tbody>
             </table>
           </div>
-         
+         {{else}}
+
+         <div class="modal-body">
+           <p class="lead"><a href="/charge">PURCHASE A GENE REPORT </a> to view your results.</p>
+         </div>
+         {{/if}}
           <div class="modal-footer">
               <button type="button" class="btn btn-default" id="main-btn" data-dismiss="modal">Close</button> 
           </div>
@@ -513,18 +519,7 @@
     </div>
   </div>
 </div>
-<div class="row">
-  {{!-- <div class="col-sm-12 col-md-6">
-    <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-      Link with href
-    </a>
-    <div class="collapse" id="collapseExample">
-      <div class="well">
-        ...
-      </div>
-    </div>
-  </div> --}}
-</div>
+
 <div class="row">
   <div class="col-lg-12">
     <h2 id="your-genome-h2"><strong id="index-title">Your Genome</strong></h2>
@@ -601,6 +596,100 @@
     </div>
     {{/if}}
   </div>
+</div>
+<div class="row">
+  {{!-- <div class="col-xs-12 col-sm-2">
+   
+  </div> --}}
+    <div class="col-xs-12 col-sm-12" style="padding: 10px">
+    {{!-- <h1>Nutrition Support Protocol</h1> --}}
+      <a class="btn btn-primary" id="well-supps" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Nutrition Support Protocol
+      </a>
+      <div class="collapse" id="collapseExample">
+      {{#if data.genes}}
+        <div class="well">
+        <h2 class="list-group-item-heading">Lifestyle recommendations</h2>
+          <ul class="list-group">
+            <li class="list-group-item">Termination of cigarette/cigar habit is critical to the reduction in AMD risk</li>
+            <li class="list-group-item">Minimize exposure to UV/chemical contaminants to protect the eye from damaging fumes and oxidation that may incite the destructive processes of degeneration</li>
+            <li class="list-group-item">Maintain normal body fat (BMI < 30)</li>
+            <li class="list-group-item">Strive to exercise daily to improve circulation</li>
+            <li class="list-group-item">Get outdoors as often as possible and take frequent “screen breaks” from computers/tablets by looking at a distance
+several times an hour</li>
+            <li class="list-group-item">Address lifestyle strategies, exercise and diet to correct abnormal blood glucose, lipids, blood pressure, circulation, and
+homocysteine levels</li>
+          </ul>
+          <h2 class="list-group-item-heading">Dietary tips and caveats</h2>
+            <ul class="list-group">
+              <li class="list-group-item">Consume foods high in lutein and zeaxanthin such as spinach, kale, broccoli, turnip greens, and egg yolks</li>
+              <li class="list-group-item">In order to receive a broad spectrum of antioxidants, eating 5-9 servings of a variety of fresh, organic fruits and
+              vegetables is strongly advised</li>
+              <li class="list-group-item">Emphasize omega-3 fatty acids (salmon, mackerel, herring, light tuna) and omega-9 fats (olive oil, olives, almonds,
+hazelnuts, avocados, macadamia oil and coconut oil)</li>
+              <li class="list-group-item">Choose lean, clean quality protein at each meal such as chicken breast, turkey breast, lean beef, fish (especially
+salmon and tuna), eggs and whey protein</li>
+              <li class="list-group-item">Avoid fried foods, trans fats and smoked meats; cook with olive oil at low heat or coconut or avocado oil if using high heat</li>
+              <li class="list-group-item">Aim to get more zinc and copper in the diet. Good food sources of zinc include beef, pork, lamb, fish, chicken (especially dark meat), peanuts, peanut butter and beans. Good sources of copper include crab, lobster, shrimp, oysters, beans, nuts, and white potatoes – make sure animal protein sources are antibiotic and hormone-free, and preferably organic</li>
+              <li class="list-group-item">Drink at least 64 ounces of filtered or non-chlorinated water every day</li>
+              <li class="list-group-item">Substitute complex carbohydrates, such as brown rice and quinoa, for refined and simple carbohydrates</li>
+              <li class="list-group-item">Substitute complex carbohydrates, such as brown rice and quinoa, for refined and simple carbohydrates</li>
+              <li class="list-group-item">Strive to keep blood sugar optimal and snack on healthy fats such as coconut, nuts, seeds, avocados, and PaleoBars™
+              as needed to avoid hypoglycemia</li>
+
+            </ul>
+            <h2 class="list-group-item-heading">Supplement recommendations</h2>
+              <ul class="list-group">
+                <li class="list-group-item">*Vitamin A (from Palmitate and Mixed Carotenoids): 3,000 - 15,000 IU/day </li>
+                <li class="list-group-item">Methylated B-Complex</li>
+                <li class="list-group-item">Zinc (chelated forms are easily absorbed): 15 - 50mg/day</li>
+                <li class="list-group-item">Selenium: 50 - 200mcg/day</li>
+                <li class="list-group-item">Taurine: 200 - 1000mg/day</li>
+                <li class="list-group-item">N-Acetyl-Cysteine (NAC): 200 - 800mg/day</li>
+                <li class="list-group-item">Quercetin: 100 - 400mg/day </li>
+                <li class="list-group-item">Bilberry: 100 - 400mg/day [standardized to contain at least 25% anthocyanidins]</li>
+                <li class="list-group-item">High Gamma Mixed Tocopherols: 100 - 400mg/day</li>
+                <li class="list-group-item">Ginkgo Biloba: 60mg/day [standardized to contain at least 15mg gingkoflavonglycosides]</li>
+                <li class="list-group-item">Alpha lipoic acid: 50 - 400mg/day</li>
+                <li class="list-group-item">Turmeric: 200 - 500mg/day</li>
+                <li class="list-group-item">Green tea: 1-2 cups per day</li>
+                <li class="list-group-item">Natural Lutein Esters: 10 - 50mg/day</li>
+                <li class="list-group-item">Zeaxanthin esters: 2 - 10mg/day</li>
+                <li class="list-group-item">Astaxanthin: 10 - 20mg/day</li>
+                <li class="list-group-item"> Carnosine and Benfotiamine (taken together): 450mg and 100mg/day, respectively</li>
+                <li class="list-group-item"> Omega 3 fatty acids EPA/DHA combo: 5,000mg/day</li>
+              </ul>
+              <p class="lead">*Note: Carotenoids such as beta-carotene may slightly decrease lutein absorption. Check with your doctor before consuming Vitamin A supplements if you have a retinal disease.</p>
+              <p class="lead" style="border-style: solid; padding: 6px">THIS INFORMATION IS PROVIDED FOR THE USE OF PHYSICIANS AND OTHER LICENSED HEALTH CARE PRACTITIONERS ONLY. THIS INFORMATION IS INTENDED FOR PHYSICIANS AND OTHER LICENSED HEALTH CARE PROVIDERS TO USE AS A BASIS FOR DETERMINING WHETHER OR NOT TO RECOMMEND THESE PRODUCTS TO THEIR PATIENTS. THIS MEDICAL AND SCIENTIFIC INFORMATION IS NOT FOR USE BY CONSUMERS. THE DIETARY SUPPLEMENT ADVICE STATED ABOVE IS NOT INTENDED FOR USE BY CONSUMERS AS A MEANS TO CURE, TREAT, PREVENT, DIAGNOSE, OR MITIGATE ANY DISEASE OR OTHER MEDICAL CONDITION.</p>
+              <h1>Citations</h1>
+              <p class="lead">Vitamin A as a risk factor to ARMD: <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/27502478"> Study</a></p>
+              <p class="lead">Dietary Antioxidants and the reduced risk of ARMD: <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/17664009"> Study</a></p>
+              <p class="lead">Dietary Antioxidants and zinc supplementation: <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/27471039"> Study</a></p>
+              <p class="lead">Vitamins A, C, and E, and advanced age-related macular degeneration: <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/7933422"> Study</a></p>
+              <p class="lead">Taurine provides neuroprotection against retinal ganglion cell degeneration: <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/23115615"> Study</a></p>
+              <p class="lead">N-acetylcysteine amide prevents oxidative stress-induced effects: <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/26842754"> Study</a></p>
+              <p class="lead">Polyphenols might prevent or delay the onset and maturation of cataract: <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/27261615"> Study</a></p>
+              <p class="lead">Effect of fermented bilberry extracts on visual outcomes in eyes with myopia: a prospective, randomized, placebo-controlled study: <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/23113643"> Study</a></p>
+              <p class="lead">Impact of diets containing corn oil or olive/sunflower oil mixture on the human plasma and lipoprotein lipid metabolism: <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/11905957"> Study</a></p>
+              <p class="lead">Ginkgo biloba extract for age-related macular degeneration: <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/23440785"> Study</a></p>
+              <p class="lead">α-Lipoic Acid in Soluplus(®) Polymeric Nanomicelles for Ocular Treatment of Diabetes-Associated Corneal Diseases: <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/27103010"> Study</a></p>
+              <p class="lead">Clinical development of curcumin in neurodegenerative disease: <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/26035622"> Study</a></p>
+              <p class="lead">Green tea catechins are potent anti-oxidants that ameliorate sodium iodate-induced retinal degeneration in rats: <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/27383468"> Study</a></p>
+              <p class="lead">Dietary carotenoids in normal and pathological tissues of corpus uteri: <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/19056531"> Study</a></p>
+              <p class="lead">Long-term plant stanol and sterol ester-enriched functional food consumption, serum lutein/zeaxanthin concentration and macular pigment optical density: <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/18986598"> Study</a></p>
+              <p class="lead">The effect of astaxanthin on vascular endothelial growth factor (VEGF) levels and peroxidation reactions in the aqueous humor: <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/27499573"> Study</a></p>
+              <p class="lead">Increased protein damage in renal glomeruli, retina, nerve, plasma and urine and its prevention by thiamine and benfotiamine therapy in a rat model of diabetes: <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/20369223"> Study</a></p>
+              <p class="lead">Intravitreal injection of forskolin, homotaurine, and L-carnosine affords neuroprotection to retinal ganglion cells following retinal ischemic injury: <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/26167113"> Study</a></p>
+              <p class="lead">Systemic confounders affecting serum measurements of omega-3 and -6 polyunsaturated fatty acids in patients with retinal disease: <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/27596098"> Study</a></p>
+        </div>
+        {{else}}
+        <div class="well well-lg">
+          <p class="lead"><a href="/charge">PURCHASE A GENE REPORT </a> to view your results.</p>
+        </div>
+        {{/if}}
+      </div>
+    </div>
+    
 </div>
 </div>
 
