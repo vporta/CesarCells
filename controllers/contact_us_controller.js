@@ -29,7 +29,7 @@ router.post('/contact_us/send', function (req, res) {
   content = new helper.Content("text/plain", contents)
   mail = new helper.Mail(from_email, subject, to_email, content)
 
-  var sg = require('sendgrid').SendGrid('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')
+  var sg = require('sendgrid').SendGrid(process.env.SENDGRID_API_KEY)
   var requestBody = mail.toJSON()
   var request = sg.emptyRequest()
   request.method = 'POST'

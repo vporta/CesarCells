@@ -12,10 +12,8 @@ var Trial = require('../models/Trial.js');
 var Answer = require('../models/Answers.js');
 var sg = require('sendgrid').SendGrid(process.env.SENDGRID_API_KEY)
 var helper = require('sendgrid').mail
-// var helpers = require('../helpers/mail');
 var async = require('async');
-var multer  = require('multer');
-var upload = multer({ dest: 'uploads/' });
+
 
 
 
@@ -60,7 +58,7 @@ router.get('/accounts/support', function (req, res) {
   });
 });
 
-router.post('/accounts/update-info', upload.single('profileimage'), function (req, res) {
+router.post('/accounts/update-info', function (req, res) {
 
   var firstname = req.body.fname;
   var lastname = req.body.lname;
@@ -71,14 +69,14 @@ router.post('/accounts/update-info', upload.single('profileimage'), function (re
   var state = req.body.stateselectpicker;
   var zip = req.body.zipcode;
   var dob = req.body.bday;
-  var profileImage = req.file;
+  // var profileImage = req.file;
   var diagnosedDis = req.body.diagnosedSelect;
   var retinalDisease = req.body.retinalDisease;
   var userType = req.body.userType;
 
-  console.log(profileImage);
+  // console.log(profileImage);
 
-  User.findOneAndUpdate({'_id': req.user._id}, {$set: {"firstname": firstname, "lastname": lastname, "age": age, "sex": sex, "birth_day": dob, "retinalDiagnosis": diagnosedDis, "retinalDisease": retinalDisease, "city": city, "address": address, "state": state, "zipcode": zip, "profileimage": profileImage, "userType": userType}}, {upsert: true}).exec(function(err){
+  User.findOneAndUpdate({'_id': req.user._id}, {$set: {"firstname": firstname, "lastname": lastname, "age": age, "sex": sex, "birth_day": dob, "retinalDiagnosis": diagnosedDis, "retinalDisease": retinalDisease, "city": city, "address": address, "state": state, "zipcode": zip, "userType": userType}}, {upsert: true}).exec(function(err){
 
     if(err){
       console.log(err);
