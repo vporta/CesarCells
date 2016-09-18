@@ -16,15 +16,21 @@ var pa = require('../config/passport');
 
 var stripe = require('stripe')('sk_test_5XkvbjH8H3iaICCflRksOepj');
 
+var ensureAuthenticated = function(req, res, next){
+    if (req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect('/users/sign-in');
+};
 
-router.get('/charge', function(req, res) {
+router.get('/charge', ensureAuthenticated, function(req, res) {
 
   res.render('charge/charge', {
     layout: 'dash'
   })
 });
 
-router.get('/thanks-for-your-order', function(req, res) {
+router.get('/thanks-for-your-order', ensureAuthenticated, function(req, res) {
   req.flash('thanks', 'Thanks for purchasing the Gene Report!');
 
   res.render('charge/thankyou', {
@@ -33,7 +39,7 @@ router.get('/thanks-for-your-order', function(req, res) {
   })
 });
 
-router.post('/stripe-charge', function(req, res) {
+router.post('/stripe-charge', ensureAuthenticated, function(req, res) {
   // var stripeToken = req.body.stripeToken;
   // Get the credit card details submitted by the form
   var token = req.body.stripeToken; // Using Express

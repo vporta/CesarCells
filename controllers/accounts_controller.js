@@ -15,10 +15,15 @@ var helper = require('sendgrid').mail
 var async = require('async');
 
 
-
+var ensureAuthenticated = function(req, res, next){
+    if (req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect('/users/sign-in');
+};
 
 // === HOME PAGE ======
-router.get('/accounts/updateinfo', function (req, res) {
+router.get('/accounts/updateinfo', ensureAuthenticated, function (req, res) {
 
   res.render('account/updateinfo', {
     layout: 'dash',
@@ -26,7 +31,7 @@ router.get('/accounts/updateinfo', function (req, res) {
   });
 });
 
-router.get('/accounts/password', function (req, res) {
+router.get('/accounts/password', ensureAuthenticated, function (req, res) {
 
   res.render('account/password', {
     layout: 'dash',
@@ -34,7 +39,7 @@ router.get('/accounts/password', function (req, res) {
   });
 });
 
-router.get('/accounts/privacy', function (req, res) {
+router.get('/accounts/privacy', ensureAuthenticated, function (req, res) {
 
   res.render('account/privacy', {
     layout: 'dash',
@@ -42,7 +47,7 @@ router.get('/accounts/privacy', function (req, res) {
   });
 });
 
-router.get('/accounts/privacy-home', function (req, res) {
+router.get('/accounts/privacy-home', ensureAuthenticated, function (req, res) {
 
   res.render('account/privacy', {
     layout: 'main',
@@ -50,7 +55,7 @@ router.get('/accounts/privacy-home', function (req, res) {
   });
 });
 
-router.get('/accounts/support', function (req, res) {
+router.get('/accounts/support', ensureAuthenticated, function (req, res) {
 
   res.render('account/support', {
     layout: 'dash',
@@ -58,7 +63,7 @@ router.get('/accounts/support', function (req, res) {
   });
 });
 
-router.post('/accounts/update-info', function (req, res) {
+router.post('/accounts/update-info', ensureAuthenticated, function (req, res) {
 
   var firstname = req.body.fname;
   var lastname = req.body.lname;

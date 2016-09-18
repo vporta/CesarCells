@@ -18,6 +18,12 @@ var crypto = require('crypto');
 var pa = require('../config/passport');
 
 
+var ensureAuthenticated = function(req, res, next){
+    if (req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect('/users/sign-in');
+};
 // === HOME PAGE ======
 router.get('/', function (req, res) {
 
@@ -79,7 +85,7 @@ router.get('/auth/facebook/callback',
 );
 
 // ==== PERSONAL USER DASHBOARD ====
-router.get('/users/dashboard', function (req, res) {
+router.get('/users/dashboard', ensureAuthenticated, function (req, res) {
   // console.log(req.user.local.email);
   console.log('req.user: ' + req.user)
   var data = {};
@@ -105,7 +111,7 @@ router.get('/users/dashboard', function (req, res) {
 });
 
 // ==== SECOND SIGNUP FORM USER DETAILS FORM ====
-router.get('/users/details_new', function(req, res) {
+router.get('/users/details_new', ensureAuthenticated, function(req, res) {
   
   res.render('users/details_new', {
     successFlash: 'You are now signed up!',
@@ -113,7 +119,7 @@ router.get('/users/details_new', function(req, res) {
   });
 });
 
-router.post('/users/details_new', function(req, res) {
+router.post('/users/details_new', ensureAuthenticated, function(req, res) {
   var firstname = req.body.fname;
   var lastname = req.body.lname;
   var age = req.body.userage;
@@ -304,7 +310,7 @@ router.post('/reset/:token', function(req, res) {
 });
 
 // ==== VIEW RESULTS ====
-router.get('/users/view-results', function (req, res) {
+router.get('/users/view-results', ensureAuthenticated, function (req, res) {
     var scores = [];
 
       Answer.find({user_id: req.user._id, trial_id: 0}, function(err, doc) {
@@ -425,7 +431,7 @@ router.get('/users/view-results', function (req, res) {
 });
 
 // ==== STARGARDT DISEASE REGISTRY FORM ====
-router.get('/users/stargardt-disease-registry', function (req, res) {
+router.get('/users/stargardt-disease-registry', ensureAuthenticated, function (req, res) {
 
   res.render('users/star_disease_reg', {
     layout: 'dash',
@@ -433,7 +439,7 @@ router.get('/users/stargardt-disease-registry', function (req, res) {
   });
 });
 
-router.post('/users/submit-stargardt-disease-registry', function (req, res) {
+router.post('/users/submit-stargardt-disease-registry', ensureAuthenticated, function (req, res) {
 
 var newStargReg = new StargReg ({
   visualtrouble: req.body.visualtrouble,
@@ -487,7 +493,7 @@ if (req.user && req.user.stargRegTaken) {
 }
 });
 
-router.get('/users/my-appointments', function (req, res) {
+router.get('/users/my-appointments', ensureAuthenticated, function (req, res) {
 
   res.render('users/appointments', {
     layout: 'dash',

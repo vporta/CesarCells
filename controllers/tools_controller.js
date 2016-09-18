@@ -19,7 +19,14 @@ var _ = require('underscore');
 var querystring = require('querystring');
 var diseases = require('../data/disease.js');
 
-router.get('/tools/start-health-assessment', function (req, res) {
+var ensureAuthenticated = function(req, res, next){
+    if (req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect('/users/sign-in');
+};
+
+router.get('/tools/start-health-assessment', ensureAuthenticated, function (req, res) {
 console.log('assessmentTaken: '+ req.user.assessmentTaken);
   if (req.user && req.user.assessmentTaken) {
     
@@ -40,19 +47,19 @@ console.log('assessmentTaken: '+ req.user.assessmentTaken);
       
 });
 
-router.get('/tools/stemcell-assessment', function (req, res) {
+router.get('/tools/stemcell-assessment', ensureAuthenticated, function (req, res) {
  
     res.render('tools/stemcell_assessment', {
       layout: 'dash'
     });
 });
 
-// router.get('/tools/gene-data-approval', function (req, res) {
+// router.get('/tools/gene-data-approval', ensureAuthenticated, function (req, res) {
   
 //   res.render('tools/gene_data_approval', {layout: 'dash'});
 // });
 
-// router.post('/tools/agree-gene-data', function (req, res) {
+// router.post('/tools/agree-gene-data', ensureAuthenticated, function (req, res) {
   
 //   //res.render('tools/gene_data_approval', {layout: 'dash'});
 
@@ -85,7 +92,7 @@ router.get('/tools/stemcell-assessment', function (req, res) {
 //   });
 // });
 
-router.get('/tools/genetic', function (req, res) {
+router.get('/tools/genetic', ensureAuthenticated, function (req, res) {
  
 
     res.render('tools/genetic_report', {
@@ -98,8 +105,8 @@ router.get('/tools/genetic', function (req, res) {
 
 // **********23ANDME OAUTH2************
 var oauth2 = require('simple-oauth2')({
-  clientID: 'dd6b7f51cb19ee4bd93bfe59438f7956',
-  clientSecret: '56d48e1817b9efd9b94db085a3f54164',
+  clientID: process.env.TWOTHREEANDME_CLIENT_ID,
+  clientSecret: process.env.TWOTHREEANDME_CLIENT_SECRET,
   site: 'https://api.23andme.com',
   tokenPath: '/token',
   authorizationPath: '/authorize'
@@ -113,7 +120,7 @@ var authorization_uri = oauth2.authCode.authorizeURL({
 
 
 
-router.get('/auth', function (req, res) {
+router.get('/auth', ensureAuthenticated, function (req, res) {
   if (req.user && req.user.geneticTestTaken) {
     
     req.flash('info', 'You\'ve already submitted your data, ' + req.user.firstname + '!');
@@ -128,7 +135,7 @@ router.get('/auth', function (req, res) {
   }
 });
 
-router.get('/receive_code', function(req, res) {
+router.get('/receive_code', ensureAuthenticated, function(req, res) {
  
  var code = req.query.code;
 
@@ -314,7 +321,7 @@ router.get('/tools/my-genetics', function(req, res) {
 });
 
 
-// router.get('/tools/all-trials', function (req, res) {
+// router.get('/tools/all-trials', ensureAuthenticated, function (req, res) {
   
 //   var data = {};
   
@@ -337,7 +344,7 @@ router.get('/tools/my-genetics', function(req, res) {
 // });
 
 // AMSLER PAGE ROUTES
-router.get('/tools/amsler-test', function (req, res) {
+router.get('/tools/amsler-test', ensureAuthenticated, function (req, res) {
   var data = {};
   Amsler.find({user_id: req.user._id}).then(function(result) {
     data.notes = result;
@@ -350,7 +357,7 @@ router.get('/tools/amsler-test', function (req, res) {
   });
 });
 
-router.post('/tools/amsler-grid-results', function(req, res) {
+router.post('/tools/amsler-grid-results', ensureAuthenticated, function(req, res) {
   
   var usernote = req.body.textfield;
   var dateCreated = req.body.datefield;
@@ -370,7 +377,7 @@ router.post('/tools/amsler-grid-results', function(req, res) {
   });
 });
 
-router.delete('/delete-note/:_id', function (req, res) {
+router.delete('/delete-note/:_id', ensureAuthenticated, function (req, res) {
 var deleteNote = req.params._id;
   if (req.user) {
 

@@ -21,7 +21,6 @@ var path = require('path'),
     Trial = require('./models/Trial'),
     SNPs = require('./models/SNPs'),
     User = require('./models/UserModel'),
-    // sendgrid = require('./helpers/mail'),
     $ = require("jquery"),
     querystring = require('querystring'),
     ngrok = require('ngrok'),
@@ -37,7 +36,7 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 app.use(cookieParser('ILovemom')); //create env variable
 
 //======Passport========      
-app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret create env variable
+app.use(session({ secret: 'angiepangie23', cookie: { maxAge: 600000 } })); // session secret create env variable
 app.use(flash()); // use connect-flash for flash messages stored in session
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions

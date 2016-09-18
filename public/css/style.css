@@ -3496,6 +3496,14 @@ header {
         height: 220px;
         margin-left: 2%;
     }*/
+    #results-h1 {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        text-align: center;
+        font-size: 45px;
+        font-weight: bold;
+        line-height: 1;
+    }
     #amsler-grid-h1 {
         margin-top: 200px;
         font-size: 39px;
@@ -3545,6 +3553,18 @@ header {
        font-size: 38px;
        margin-top: 100px;
        color: darkslategray;
+   }
+   .avail-trials-h1 {
+       font-size: 28px;
+       /*padding-bottom: 20px;
+       padding-top: 30px;
+       margin: 0;
+       line-height: 2;
+       position: absolute;*/
+       top: 50%;
+       left: 50%;
+       margin-right: -50%;
+       transform: translate(-50%, -50%)
    }
    
 }
