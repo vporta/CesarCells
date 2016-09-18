@@ -121,22 +121,22 @@ var mongoose = require('mongoose');
 var db = 'mongodb://localhost/mongoCesarcells';
 //mongodb://mongoCesarcells:Angela23$@ds033116.mlab.com:33116/heroku_m1fsw4l6
 
-var options = { 
-  server: { 
-    socketOptions: { 
-      keepAlive: 300000, connectTimeoutMS: 30000 
-    } 
-  }, 
-  replset: { 
-    socketOptions: { 
-      keepAlive: 300000, 
-      connectTimeoutMS : 30000 
-    } 
-  } 
-};
+// var options = { 
+//   server: { 
+//     socketOptions: { 
+//       keepAlive: 300000, connectTimeoutMS: 30000 
+//     } 
+//   }, 
+//   replset: { 
+//     socketOptions: { 
+//       keepAlive: 300000, 
+//       connectTimeoutMS : 30000 
+//     } 
+//   } 
+// };
 
 if(process.env.MONGODB_URI) {
-  mongoose.connect(process.env.MONGODB_URI, options);
+  mongoose.connect(process.env.MONGODB_URI);
 } else {
 
   // Connect that directory to Mongoose, for simple, powerful querying
