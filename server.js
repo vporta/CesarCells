@@ -161,9 +161,12 @@ require('./config/passport');
 //2. See Homeworkwk18 for DB connection information in server.js, if that doesn't work, follow homework19
 //3. Heroku Login. Heroku Create. Push up to origin and heroku master. (Eventually Purchase a production version of mongodb_URI) 
 //4. Provision mLab. 
-//5. Navigate to config vars in heroku dashboard. 
+//5. Navigate to config vars in heroku dashboard. Set config vars for sendgrid, 23andme. 
 //6. export MONGODB_URI=config var. ** Type: heroku config in the terminal to reveal the mongodb_uri
-//7. 
+//7. Add domain to heroku domains. 
+//8. configure godaddy to point to heroku url
+//9. Obtain ssl certificate and configure it to cesarcells.com and www.cesarcells.com
+//10. Set 23andme callback url as https://cesarcells.com 
 
 
 app.listen(port, function() {
