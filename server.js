@@ -26,7 +26,7 @@ var path = require('path'),
     ngrok = require('ngrok'),
     sendbird = require('sendbird');
    
-
+//mongodb://heroku_dzqdjbpp:m4q2mgf93oiqlk2h0os6ocgq3s@ds139655.mlab.com:39655/heroku_dzqdjbpp
 //======Express========
 var app = express();
 
@@ -119,18 +119,38 @@ var mongoose = require('mongoose');
 
 // Save MongoDB directory to a db var
 var db = 'mongodb://localhost/mongoCesarcells';
+//mongodb://mongoCesarcells:Angela23$@ds033116.mlab.com:33116/heroku_m1fsw4l6
 
-// Connect that directory to Mongoose, for simple, powerful querying
-mongoose.connect(db, function(err){
-  // log any errors connecting with mongoose
-  if(err){
-    console.log(err);
+var options = { 
+  server: { 
+    socketOptions: { 
+      keepAlive: 300000, connectTimeoutMS: 30000 
+    } 
+  }, 
+  replset: { 
+    socketOptions: { 
+      keepAlive: 300000, 
+      connectTimeoutMS : 30000 
+    } 
   } 
-  // or log a success message
-  else {
-    console.log('mongoose connection is successful on: ' + db);
-  }
-});
+};
+
+if(process.env.MONGODB_URI) {
+  mongoose.connect(process.env.MONGODB_URI, options);
+} else {
+
+  // Connect that directory to Mongoose, for simple, powerful querying
+  mongoose.connect(db, function(err){
+    // log any errors connecting with mongoose
+    if(err){
+      console.log(err);
+    } 
+    // or log a success message
+    else {
+      console.log('mongoose connection is successful on: ' + db);
+    }
+  });
+}
 require('./config/passport');
 
 
@@ -142,7 +162,7 @@ require('./config/passport');
 //3. Heroku Login. Heroku Create. Push up to origin and heroku master. (Eventually Purchase a production version of mongodb_URI) 
 //4. Provision mLab. 
 //5. Navigate to config vars in heroku dashboard. 
-//6. export MONGODB_URI=config var. 
+//6. export MONGODB_URI=config var. ** Type: heroku config in the terminal to reveal the mongodb_uri
 //7. 
 
 
