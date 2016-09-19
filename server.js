@@ -21,9 +21,7 @@ var path = require('path'),
     SNPs = require('./models/SNPs'),
     User = require('./models/UserModel'),
     $ = require("jquery"),
-    querystring = require('querystring'),
-    ngrok = require('ngrok'),
-    sendbird = require('sendbird');
+    ngrok = require('ngrok');
    
 //mongodb://heroku_dzqdjbpp:m4q2mgf93oiqlk2h0os6ocgq3s@ds139655.mlab.com:39655/heroku_dzqdjbpp
 //======Express========
