@@ -14,7 +14,7 @@ var Answer = require('../models/Answers');
 require('../config/passport');
 
   router.get('/api/trials', function(req, res){
-    Trial.find({_id: -1}).exec(function(err, doc){
+    Trial.find().sort({_id: 1}).exec(function(err, doc){
 
         if(err){
           console.log(err);
