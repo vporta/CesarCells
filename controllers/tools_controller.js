@@ -91,8 +91,8 @@ router.get('/tools/stemcell-assessment', ensureAuthenticated, function (req, res
 //     }
 //   });
 // });
-router.get('/indexOne.html', function(req, res) {
-  res.sendFile('./public/indexOne.hml');
+router.get('*', function(req, res) {
+  res.sendFile(path.resolve(__dirname, 'public', 'indexOne.html'));
 });
 
 router.get('/tools/genetic', ensureAuthenticated, function (req, res) {
