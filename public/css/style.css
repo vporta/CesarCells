@@ -3447,7 +3447,8 @@ header {
         /*text-align: center;*/
     }
     .trial-assessment-questions {
-        font-size: 20px;
+        font-size: 50px;
+        color: black;
     }
     #clin-trial-img {
         width: 100%;
