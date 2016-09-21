@@ -4,7 +4,7 @@
 {{#if data.genes}}
 
 {{else}} {{! If they don't pay for the gene test, display text below}}
-<div class="modal-body genotypes-can-do"> j
+<div class="modal-body genotypes-can-do"> 
   <h2 class="lead" style="text-align: center"><a href="/charge">PURCHASE A GENE REPORT </a> to view your results.</h2>
 </div>
 {{/if}}
@@ -37,7 +37,7 @@
 
                 <h2 style="text-align: center">Your Results</h2>
               </div>
-              {{#if data.genes}}
+              {{!-- {{#if data.genes}} --}}
               <div class="modal-body genotypes-can-do">
               {{!-- {{#each data.genes}} --}}
                 <p class="lead">We tested your genome for three SNPs (See Table Below) for Genes: {{diseases.0.diseasegenename}} and {{diseases.1.diseasegenename}} that have been shown to be associated with a risk of developing certain forms of Glaucoma, specifically: {{diseases.0.diseasename}} and {{diseases.8.diseasename}}. Your genotypes for Glaucoma are {{genotypes.rs28936694}}, {{genotypes.rs3825942}}, and {{genotypes.rs1048661}}. </p>
@@ -53,11 +53,11 @@
                 </ul>
               {{!-- {{/each}} --}}
               </div>
-              {{else}} {{! If they don't pay for the gene test, display text below}}
+              {{!-- {{else}} {{! If they don't pay for the gene test, display text below}} --}}
               <div class="modal-body genotypes-can-do">
                 <p class="lead">Purchase a gene report to view your results.</p>
               </div>
-              {{/if}}
+              {{!-- {{/if}} --}}
               <div class="modal-header">
               <h2>About The Disease</h2>
               </div>
