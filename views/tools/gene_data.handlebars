@@ -37,9 +37,9 @@
 
                 <h2 style="text-align: center">Your Results</h2>
               </div>
-              {{#if data.genes.genotypes}}
+              {{#if data.genotypes}}
               <div class="modal-body genotypes-can-do">
-              {{#each data.genes.genotypes}}
+              {{#each data.genotypes}}
                 <p class="lead">We tested your genome for three SNPs (See Table Below) for Genes: {{diseases.0.diseasegenename}} and {{diseases.1.diseasegenename}} that have been shown to be associated with a risk of developing certain forms of Glaucoma, specifically: {{diseases.0.diseasename}} and {{diseases.8.diseasename}}. Your genotypes for Glaucoma are {{genotypes.rs28936694}}, {{genotypes.rs3825942}}, and {{genotypes.rs1048661}}. </p>
 
                 <ul class="list-group">
