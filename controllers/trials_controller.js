@@ -199,7 +199,7 @@ router.post('/clinical-trials/contact/zero', ensureAuthenticated, function (req,
           
           var helper  = require('sendgrid').mail;
           from_email = new helper.Email(email)
-          to_email = new helper.Email('vporta7@gmail.com') // trials@alkeus.com
+          to_email = new helper.Email('vporta7@yahoo.com') // trials@alkeus.com
           subject = mailsubject;
           content = new helper.Content("text/plain", usercomment)
           mail = new helper.Mail(from_email, subject, to_email, content)

@@ -138,7 +138,7 @@ router.post('/users/details_new', ensureAuthenticated, function(req, res) {
     }
 
     else{
-      // SEND WELCOME EMAIL HERE;
+      // SEND WELCOME EMAIL HERE
       var helper  = require('sendgrid').mail;
       from_email = new helper.Email("welcome@cesarcells.com")
       to_email = new helper.Email(email)
