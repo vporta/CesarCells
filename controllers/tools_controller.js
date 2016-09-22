@@ -113,8 +113,16 @@ var oauth2 = require('simple-oauth2')({
   authorizationPath: '/authorize'
 });
 
+// var oauth2 = require('simple-oauth2')({
+//   clientID: 'dd6b7f51cb19ee4bd93bfe59438f7956',
+//   clientSecret: '56d48e1817b9efd9b94db085a3f54164',
+//   site: 'https://api.23andme.com',
+//   tokenPath: '/token',
+//   authorizationPath: '/authorize'
+// });
+
 var authorization_uri = oauth2.authCode.authorizeURL({
-  redirect_uri: 'https://www.cesarcells.com/receive_code/',
+  redirect_uri: 'https://pure-chamber-88814.herokuapp.com/receive_code/',
   scope: 'basic names analyses rs61753033 rs61753034 rs11200638 rs1061170 rs800292 rs2230199 rs3775291 rs28936694 rs1048661 rs3825942',
   state: 'angie1'
 });
@@ -153,7 +161,7 @@ router.get('/receive_code', ensureAuthenticated, function(req, res) {
         
       code: code,
         
-      redirect_uri: 'https://www.cesarcells.com/receive_code/'
+      redirect_uri: 'https://pure-chamber-88814.herokuapp.com/receive_code/'
       
     }, saveToken);
      

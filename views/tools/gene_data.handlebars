@@ -1,7 +1,7 @@
 <h1 style="font-size: 50px; margin-top: 176px; text-align: center; margin-bottom: 45px"><strong id="index-title"> {{user.firstname}}'s </strong> Genetics 
 
 </h1>
-{{#if data.genes.genotypes}}
+{{#if data.genes}}
 
 {{else}} {{! If they don't pay for the gene test, display text below}}
 <div class="modal-body genotypes-can-do"> 
@@ -37,9 +37,9 @@
 
                 <h2 style="text-align: center">Your Results</h2>
               </div>
-              {{#if data.genotypes}}
+              {{#if data.genes}}
               <div class="modal-body genotypes-can-do">
-              {{#each data.genotypes}}
+              {{#each data.genes}}
                 <p class="lead">We tested your genome for three SNPs (See Table Below) for Genes: {{diseases.0.diseasegenename}} and {{diseases.1.diseasegenename}} that have been shown to be associated with a risk of developing certain forms of Glaucoma, specifically: {{diseases.0.diseasename}} and {{diseases.8.diseasename}}. Your genotypes for Glaucoma are {{genotypes.rs28936694}}, {{genotypes.rs3825942}}, and {{genotypes.rs1048661}}. </p>
 
                 <ul class="list-group">
