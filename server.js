@@ -116,8 +116,6 @@ var mongoose = require('mongoose');
 
 // Save MongoDB directory to a db var
 var db = 'mongodb://localhost/mongoCesarcells';
-//mongodb://mongoCesarcells:Angela23$@ds033116.mlab.com:33116/heroku_m1fsw4l6
-
 var options = { 
   server: { 
     socketOptions: { 
