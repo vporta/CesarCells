@@ -14,7 +14,7 @@ var StargReg = require('../models/StargReg.js');
 var helper = require('sendgrid').mail
 var pa = require('../config/passport');
 
-var stripe = require('stripe')('sk_test_5XkvbjH8H3iaICCflRksOepj');
+var stripe = require('stripe')('sk_live_59AMChVyPYfH78IFtWe6h9kp');
 
 var ensureAuthenticated = function(req, res, next){
     if (req.isAuthenticated()) {
