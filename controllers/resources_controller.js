@@ -30,5 +30,9 @@ router.get('/stargardts-assistive-technologies', function(req, res) {
   res.render('resources/assistive_tech_vendors');
 });
 
+router.get('/take-the-betatest-survey', function(req, res) {
+  res.render('resources/beta-test-survey');
+});
+
 
 module.exports = router;

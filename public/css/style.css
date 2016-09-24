@@ -96,7 +96,7 @@ h3 {
     background-image: url("/assets/images/eyegrad.jpeg");
 
     /* Set a specific height */
-    height: 99%;
+    height: 100%;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -448,6 +448,7 @@ pre {
     display: flex;
     align-items: center;*/
     width: 100%;
+    text-align: center;
 }
 .jumbotron-clinical-trial {
     background-image: url('/assets/images/coily1.jpeg');
@@ -503,7 +504,8 @@ pre {
     color: white;
     /*width: 100%;*/
     font-weight: bold;
-    margin-top: 15%;    
+    margin-top: 9%; 
+    opacity: 0;   
 }
 .main-h1-starg {
     font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -518,6 +520,7 @@ pre {
     margin-top: 20%;
     position: absolute;
     left: 29%;
+
 }
 #charge-thanks {
     font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -765,6 +768,7 @@ margin-bottom: 69px;
     color: darkslategray;
     top: 20%;
     margin-top: 100px;
+    opacity: 0;
   
 }
 .DNA-h2-top {
@@ -774,6 +778,7 @@ margin-bottom: 69px;
     color: darkslategray;
     top: 20%;
     margin-top: 80px;
+    opacity: 0;
   
 }
 .star-it {
@@ -3158,6 +3163,7 @@ header {
         /*display: block;*/
         top: 35%;
     }
+  
     .what-is-h2 {
 
         font-size: 50px;
@@ -3174,7 +3180,7 @@ header {
         font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 33px;
         line-height: 1.3;
-        color: white;
+        color: deeppink;
         font-weight: bold;
         margin-top: 40%;
         position: absolute;
@@ -3214,7 +3220,7 @@ header {
         font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 45px;
         line-height: 1.3;
-        color: white;
+        color: deeppink;
         font-weight: bold;
         margin-top: 35%;
         position: absolute;
@@ -3273,7 +3279,7 @@ header {
 
     .aboutus-h1 {
         font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 60px;
+        font-size: 40px;
         text-align: center;
         line-height: 1.3;
         color: white;
@@ -3283,10 +3289,12 @@ header {
         /*display: block;*/
         opacity: 1;
         /*margin-top: 70px;*/
-        top: 10px;
+        top: 200px;
     }
-    .our-mission {
-        font-size: 10px;
+    #our-mission {
+        font-size: 20px;
+        padding: 10px;
+        line-height: 1.8;
     }
 
     .avail-trials-h1 {
@@ -3478,6 +3486,25 @@ header {
     .span-share-us {
         font-size: 18px;
     }
+    .main-h1-assistive {
+        font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 50px;
+        background-color: whitesmoke;
+        line-height: 1;
+        color: deeppink;
+        /*width: 100%;*/
+        font-weight: bold;
+        /*margin-left: 3;*/
+        margin-top: 20%;
+        position: absolute;
+        /*left: 33%;      */
+    }
+    .about-p {
+        line-height: 1.5em;
+        margin: .8125em 0;
+        margin-bottom: 10%;
+        padding: 20px;
+    }
 
 }
 
@@ -3497,6 +3524,51 @@ header {
         height: 220px;
         margin-left: 2%;
     }*/
+    .about-p {
+        line-height: 1.5em;
+        margin: .8125em 0;
+        margin-bottom: 10%;
+        padding: 20px;
+        font-size: 20px;
+    }
+    #our-mission {
+        font-size: 30px;
+        padding: 20px;
+        line-height: 1.8;
+    }
+    .main-h1-assistive {
+        font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 60px;
+        background-color: whitesmoke;
+        line-height: 1;
+        color: deeppink;
+        /*width: 100%;*/
+        font-weight: bold;
+        /*margin-left: 3;*/
+        margin-top: 20%;
+        position: absolute;
+        left: 18%;      
+    }
+    .main-h1-glossary {
+        font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 60px;
+        line-height: 1.3;
+        color: deeppink;
+        font-weight: bold;
+        margin-top: 35%;
+        position: absolute;
+        left: 26%; 
+    }
+    .main-h1-starg {
+        font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 53px;
+        line-height: 1.3;
+        color: deeppink;
+        font-weight: bold;
+        margin-top: 40%;
+        position: absolute;
+        left: 5%;
+    }
     #results-h1 {
         margin-top: 20px;
         margin-bottom: 40px;
@@ -3548,6 +3620,7 @@ header {
        top: 20%;
        margin-top: 340px;
        margin-bottom: 80px;
+       opacity: 0;
      
    }
    .sample-genetable-h2 {
@@ -3569,7 +3642,7 @@ header {
    }
    
 }
-@media screen and (min-width: 992px) and (max-width: 1198px) {
+@media screen and (min-width: 991px) and (max-width: 1198px) {
  /*   #col-two-dash-images {
         background-color: whitesmoke;
         width: 100%;
@@ -3584,6 +3657,28 @@ header {
         height: 220px;
         margin-left: 2%;
     }*/
+    .about-p {
+        line-height: 1.5em;
+        margin: .8125em 0;
+        margin-bottom: 10%;
+        padding: 20px;
+        font-size: 20px;
+    }
+    #our-mission {
+        font-size: 30px;
+        padding: 20px;
+        line-height: 1.8;
+    }
+    .main-h1-starg {
+        font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 63px;
+        line-height: 1.3;
+        color: deeppink;
+        font-weight: bold;
+        margin-top: 40%;
+        position: absolute;
+        left: 16%;
+    }
     #back-to-dash-btn {
         margin-left: 150px;
     }
