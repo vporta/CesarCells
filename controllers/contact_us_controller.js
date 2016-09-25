@@ -20,10 +20,12 @@ router.get('/contact_us/contact', function (req, res) {
 router.post('/contact_us/send', function (req, res) {
   var name = req.body.name;
   var email = req.body.email;
-  var contents = req.body.content;
+  console.log('this is the comments ' + req.body.comments)
+  var contents = 'This is ' + name + '\n\nEmail: '+ req.body.email +'\n\nMessage: ' + req.body.comments;
+
   
   var helper  = require('sendgrid').mail;
-  from_email = new helper.Email(email)
+  from_email = new helper.Email('support@cesarcells.com')
   to_email = new helper.Email("vporta7@gmail.com")
   subject = name;
   content = new helper.Content("text/plain", contents)

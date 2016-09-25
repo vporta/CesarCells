@@ -195,7 +195,7 @@ router.post('/clinical-trials/contact/zero', ensureAuthenticated, function (req,
           var mailsubject = req.body.subject;
           var name = req.body.name;
           var email = req.body.email;
-          var usercomment = req.body.usercomment;
+          var usercomment = 'Hello From Cesarcells,\n\n One of our users\' has qualified for your trial. Information is below. \n\n Name: ' + name + '\n\n Email: ' + email + '\n\n Message: ' + req.body.usercomment + '\n\n Please contact the user within 24 hours. If you have any questions for Cesarcells, please contact us at 201-892-7991.';
           
           var helper  = require('sendgrid').mail;
           from_email = new helper.Email(email)
@@ -237,7 +237,7 @@ router.post('/clinical-trials/contact/one', ensureAuthenticated, function (req, 
     var mailsubject = req.body.subject;
     var name = req.body.name;
     var email = req.body.email;
-    var usercomment = req.body.usercomment;
+    var usercomment = 'Hello From Cesarcells,\n\n One of our users\' has qualified for your trial. Information is below. \n\n Name: ' + name + '\n\n Email: ' + email + '\n\n Message: ' + req.body.usercomment + '\n\n Please contact the user within 24 hours. If you have any questions for Cesarcells, please contact us at 201-892-7991.';
     
     var helper  = require('sendgrid').mail;
     from_email = new helper.Email(email)
@@ -272,7 +272,7 @@ router.post('/clinical-trials/contact/two', ensureAuthenticated, function (req, 
       var mailsubject = req.body.subject;
       var name = req.body.name;
       var email = req.body.email;
-      var usercomment = req.body.usercomment;
+      var usercomment = 'Hello From Cesarcells,\n\n One of our users\' has qualified for your trial. Information is below. \n\n Name: ' + name + '\n\n Email: ' + email + '\n\n Message: ' + req.body.usercomment + '\n\n Please contact the user within 24 hours. If you have any questions for Cesarcells, please contact us at 201-892-7991.';
       
       var helper  = require('sendgrid').mail;
       from_email = new helper.Email(email)
@@ -306,7 +306,7 @@ router.post('/clinical-trials/contact/three', ensureAuthenticated, function (req
     var mailsubject = req.body.subject;
     var name = req.body.name;
     var email = req.body.email;
-    var usercomment = req.body.usercomment;
+    var usercomment = 'Hello From Cesarcells,\n\n One of our users\' has qualified for your trial. Information is below. \n\n Name: ' + name + '\n\n Email: ' + email + '\n\n Message: ' + req.body.usercomment + '\n\n Please contact the user within 24 hours. If you have any questions for Cesarcells, please contact us at 201-892-7991.';
     
     var helper  = require('sendgrid').mail;
     from_email = new helper.Email(email)
@@ -340,7 +340,7 @@ router.post('/clinical-trials/contact/four', ensureAuthenticated, function (req,
     var mailsubject = req.body.subject;
     var name = req.body.name;
     var email = req.body.email;
-    var usercomment = req.body.usercomment;
+    var usercomment = 'Hello From Cesarcells,\n\n One of our users\' has qualified for your trial. Information is below. \n\n Name: ' + name + '\n\n Email: ' + email + '\n\n Message: ' + req.body.usercomment + '\n\n Please contact the user within 24 hours. If you have any questions for Cesarcells, please contact us at 201-892-7991.';
     
     var helper  = require('sendgrid').mail;
     from_email = new helper.Email(email)
@@ -374,7 +374,7 @@ router.post('/clinical-trials/contact/five', ensureAuthenticated, function (req,
     var mailsubject = req.body.subject;
     var name = req.body.name;
     var email = req.body.email;
-    var usercomment = req.body.usercomment;
+    var usercomment = 'Hello From Cesarcells,\n\n One of our users\' has qualified for your trial. Information is below. \n\n Name: ' + name + '\n\n Email: ' + email + '\n\n Message: ' + req.body.usercomment + '\n\n Please contact the user within 24 hours. If you have any questions for Cesarcells, please contact us at 201-892-7991.';
     
     var helper  = require('sendgrid').mail;
     from_email = new helper.Email(email)
@@ -408,7 +408,7 @@ router.post('/clinical-trials/contact/six', ensureAuthenticated, function (req, 
     var mailsubject = req.body.subject;
     var name = req.body.name;
     var email = req.body.email;
-    var usercomment = req.body.usercomment;
+    var usercomment = 'Hello From Cesarcells,\n\n One of our users\' has qualified for your trial. Information is below. \n\n Name: ' + name + '\n\n Email: ' + email + '\n\n Message: ' + req.body.usercomment + '\n\n Please contact the user within 24 hours. If you have any questions for Cesarcells, please contact us at 201-892-7991.';
     
     var helper  = require('sendgrid').mail;
     from_email = new helper.Email(email)
@@ -442,7 +442,7 @@ router.post('/clinical-trials/contact/seven', ensureAuthenticated, function (req
     var mailsubject = req.body.subject;
     var name = req.body.name;
     var email = req.body.email;
-    var usercomment = req.body.usercomment;
+    var usercomment = 'Hello From Cesarcells,\n\n One of our users\' has qualified for your trial. Information is below. \n\n Name: ' + name + '\n\n Email: ' + email + '\n\n Message: ' + req.body.usercomment + '\n\n Please contact the user within 24 hours. If you have any questions for Cesarcells, please contact us at 201-892-7991.';
     
     var helper  = require('sendgrid').mail;
     from_email = new helper.Email(email)

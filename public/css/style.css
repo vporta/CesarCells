@@ -653,7 +653,12 @@ pre {
 }
 /*What is section*/
 #login-h2 {
-    padding-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 40px;
+    font-weight: 500;
+    color: deeppink;
+    text-align: left;
 }
 #signup-h2 {
     font-size: 40px;
@@ -3150,7 +3155,24 @@ header {
     .index-p {
         text-align: center;
     }
-
+    #buy-gene-btn-register-now {
+         width: 100%;
+         /*height: 95px;*/
+         margin-top: 40px;
+         font-size: 26px;
+         padding: 20px;
+         position: relative;
+         color: white;
+         background-color: deeppink;
+         border-color: deeppink;
+         transition: all 0.3s ease-out;
+         /*margin: 0;*/
+         position: absolute;
+         top: 90%;
+         left: 50%;
+         margin-right: -50%;
+         transform: translate(-50%, -50%)
+    }
     .main-h1 {
         font-size: 50px;
         font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;

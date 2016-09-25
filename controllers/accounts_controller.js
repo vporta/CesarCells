@@ -132,8 +132,36 @@ var newpassword = req.body.newpassword;
       })
     }
   }
-    
+});
 
+router.post('/contact/support', function (req, res) {
+  var name = req.body.namesupport;
+  var email = req.body.emailsupport;
+  var contents = 'This is User ' + req.user.local.email +'\n\n message: ' + req.body.messagesupport;
+
+  
+  var helper  = require('sendgrid').mail;
+  from_email = new helper.Email('support@cesarcells.com')
+  to_email = new helper.Email("vporta7@gmail.com")
+  subject = name;
+  content = new helper.Content("text/plain", contents)
+  mail = new helper.Mail(from_email, subject, to_email, content)
+
+  var sg = require('sendgrid').SendGrid(process.env.SENDGRID_API_KEY)
+  var requestBody = mail.toJSON()
+  var request = sg.emptyRequest()
+  request.method = 'POST'
+  request.path = '/v3/mail/send'
+  request.body = requestBody
+
+  sg.API(request, function (response) {
+    console.log(response.statusCode)
+    console.log(response.body)
+    console.log(response.headers)
+    console.log(response)
+  })
+
+  res.redirect('/users/dashboard');
 });
 
 

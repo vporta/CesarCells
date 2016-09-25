@@ -4,19 +4,20 @@
 
   <form class="form-horizontal form-login-new" action="/users/dashboard" method="POST">
     <div class="form-group">
-      <label for="inputEmail3" class="col-sm-2 control-label">EMAIL</label>
-      <div class="col-sm-10">
+      
+      <div class="col-xs-12 col-sm-7">
+      <label for="inputEmail3" class="col-xs-1 control-label">EMAIL</label>
         <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email">
       </div>
     </div>
     <div class="form-group">
-      <label for="inputPassword3" class="col-sm-2 control-label">PASSWORD</label>
-      <div class="col-sm-10">
+      <div class="col-xs-12 col-sm-7">
+      <label for="inputPassword3" class="col-xs-1 control-label">PASSWORD</label>
         <input type="password" class="form-control" id="inputPass" name="password" placeholder="Password">
       </div>
     </div>
     <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
+      <div class="col-xs-12 col-sm-7">
         <div class="checkbox">
           <label>
             <input type="checkbox"> Remember me
@@ -25,10 +26,10 @@
       </div>
     </div>
     <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
+      <div class="col-xs-12 col-sm-7">
         <button id="sign-in-buddy" type="submit" class="btn btn-default">Sign in</button><br>
     <a href="/users/password_new">Forgot your password?</a><br>
-    <a href="/users/sign_up">Don't have an account? <i>SIGN UP</i></a><br>
+    <a href="/users/sign_up">Don't have an account? <i>SIGN UP</i></a>
     {{!-- <p>Or</p> --}}
     {{!-- <a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Log In or Register With Facebook</a><br><br><br> --}}
       </div>
