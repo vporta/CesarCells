@@ -199,7 +199,7 @@ router.post('/clinical-trials/contact/zero', ensureAuthenticated, function (req,
           
           var helper  = require('sendgrid').mail;
           from_email = new helper.Email(email)
-          to_email = new helper.Email('vporta7@yahoo.com') // trials@alkeus.com
+          to_email = new helper.Email('trials@alkeus.com') // trials@alkeus.com
           subject = mailsubject;
           content = new helper.Content("text/plain", usercomment)
           mail = new helper.Mail(from_email, subject, to_email, content)
@@ -241,7 +241,7 @@ router.post('/clinical-trials/contact/one', ensureAuthenticated, function (req, 
     
     var helper  = require('sendgrid').mail;
     from_email = new helper.Email(email)
-    to_email = new helper.Email("vporta7@yahoo.com") //Contact-Us@40sanofi.com
+    to_email = new helper.Email("Contact-Us@40sanofi.com") //Contact-Us@40sanofi.com
     subject = mailsubject;
     content = new helper.Content("text/plain", usercomment)
     mail = new helper.Mail(from_email, subject, to_email, content)
@@ -276,7 +276,7 @@ router.post('/clinical-trials/contact/two', ensureAuthenticated, function (req, 
       
       var helper  = require('sendgrid').mail;
       from_email = new helper.Email(email)
-      to_email = new helper.Email("vporta7@yahoo.com") //shiying_li@40126.com
+      to_email = new helper.Email("shiying_li@40126.com") //shiying_li@40126.com
       subject = mailsubject;
       content = new helper.Content("text/plain", usercomment)
       mail = new helper.Mail(from_email, subject, to_email, content)
@@ -310,7 +310,7 @@ router.post('/clinical-trials/contact/three', ensureAuthenticated, function (req
     
     var helper  = require('sendgrid').mail;
     from_email = new helper.Email(email)
-    to_email = new helper.Email("vporta7@yahoo.com") //Coordinator@40MyRetinaTracker.org
+    to_email = new helper.Email("Coordinator@40MyRetinaTracker.org") //Coordinator@40MyRetinaTracker.org
     subject = mailsubject;
     content = new helper.Content("text/plain", usercomment)
     mail = new helper.Mail(from_email, subject, to_email, content)
@@ -344,7 +344,7 @@ router.post('/clinical-trials/contact/four', ensureAuthenticated, function (req,
     
     var helper  = require('sendgrid').mail;
     from_email = new helper.Email(email)
-    to_email = new helper.Email("vporta7@yahoo.com") //bamjia@40nei.nih.gov
+    to_email = new helper.Email("bamjia@40nei.nih.gov") //bamjia@40nei.nih.gov
     subject = mailsubject;
     content = new helper.Content("text/plain", usercomment)
     mail = new helper.Mail(from_email, subject, to_email, content)
@@ -378,7 +378,7 @@ router.post('/clinical-trials/contact/five', ensureAuthenticated, function (req,
     
     var helper  = require('sendgrid').mail;
     from_email = new helper.Email(email)
-    to_email = new helper.Email("vporta7@yahoo.com") //jwmorgan@40mail.med.upenn.edu
+    to_email = new helper.Email("jwmorgan@40mail.med.upenn.edu") //jwmorgan@40mail.med.upenn.edu
     subject = mailsubject;
     content = new helper.Content("text/plain", usercomment)
     mail = new helper.Mail(from_email, subject, to_email, content)
@@ -412,7 +412,7 @@ router.post('/clinical-trials/contact/six', ensureAuthenticated, function (req, 
     
     var helper  = require('sendgrid').mail;
     from_email = new helper.Email(email)
-    to_email = new helper.Email("vporta7@yahoo.com") //stevenlevy@40mdstemcells.com
+    to_email = new helper.Email("stevenlevy@40mdstemcells.com") //stevenlevy@40mdstemcells.com
     subject = mailsubject;
     content = new helper.Content("text/plain", usercomment)
     mail = new helper.Mail(from_email, subject, to_email, content)
@@ -446,7 +446,7 @@ router.post('/clinical-trials/contact/seven', ensureAuthenticated, function (req
     
     var helper  = require('sendgrid').mail;
     from_email = new helper.Email(email)
-    to_email = new helper.Email("vporta7@yahoo.com") //bamjia@40nei.nih.gov brooksb@40mail.nih.gov
+    to_email = new helper.Email("brooksb@40mail.nih.gov") //bamjia@40nei.nih.gov brooksb@40mail.nih.gov
     subject = mailsubject;
     content = new helper.Content("text/plain", usercomment)
     mail = new helper.Mail(from_email, subject, to_email, content)
