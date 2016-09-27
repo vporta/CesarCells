@@ -318,7 +318,7 @@ router.get('/tools/my-genetics', ensureAuthenticated, function(req, res) {
     console.log('===result inside here===: ' + result);
 
 
-  })
+  });
   // console.log('req.user here:------' + req.user);
 
   res.render('tools/gene_data', {

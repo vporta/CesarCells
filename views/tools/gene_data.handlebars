@@ -1,8 +1,10 @@
 <h1 style="font-size: 50px; margin-top: 176px; text-align: center; margin-bottom: 45px"><strong id="index-title"> {{user.firstname}}'s </strong> Genetics 
 
 </h1>
-{{#if data.genes}}
-
+{{#if user.geneReportPurchase}}
+<div class="modal-body genotypes-can-do"> 
+  <h2 class="lead" style="text-align: center">It worked</h2>
+</div>
 {{else}} {{! If they don't pay for the gene test, display text below}}
 <div class="modal-body genotypes-can-do"> 
   <h2 class="lead" style="text-align: center"><a href="/charge">PURCHASE A GENE REPORT </a> to view your results.</h2>
