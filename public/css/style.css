@@ -1377,6 +1377,7 @@ text-align: center;
    border-color: deeppink;
    transition: all 0.3s ease-out;
    margin-bottom: 50px;
+   width: 15%;
 }
 #sign-in-buddy {
     font-size: 22px;
@@ -1485,7 +1486,7 @@ text-align: center;
     border-width: 5px;
     border-style: solid;
     margin-top: 60px;
-    width: 10%;
+    width: 15%;
     font-size: 22px;
 }
 #learn-more-how:hover {

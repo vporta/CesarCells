@@ -116,22 +116,22 @@ var mongoose = require('mongoose');
 
 // Save MongoDB directory to a db var
 var db = 'mongodb://localhost/mongoCesarcells';
-var options = { 
-  server: { 
-    socketOptions: { 
-      keepAlive: 300000, connectTimeoutMS: 30000 
-    } 
-  }, 
-  replset: { 
-    socketOptions: { 
-      keepAlive: 300000, 
-      connectTimeoutMS : 30000 
-    } 
-  } 
-};
+// var options = { 
+//   server: { 
+//     socketOptions: { 
+//       keepAlive: 300000, connectTimeoutMS: 30000 
+//     } 
+//   }, 
+//   replset: { 
+//     socketOptions: { 
+//       keepAlive: 300000, 
+//       connectTimeoutMS : 30000 
+//     } 
+//   } 
+// };
 
 if(process.env.MONGODB_URI) {
-  mongoose.connect(process.env.MONGODB_URI, options);
+  mongoose.connect(process.env.MONGODB_URI);
 } else {
 
   // Connect that directory to Mongoose, for simple, powerful querying
