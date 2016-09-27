@@ -102,6 +102,7 @@ h3 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
     
 
 }
@@ -173,7 +174,11 @@ ul.shortcuts li {
     margin-top: 15px;
     width: 342px;
 }*/
-
+#transparent-div {
+    background: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    width: 100%;
+}
 #priv-policy {
     padding-left: 30px;
     font-size: 15px;
@@ -205,9 +210,26 @@ span.glyphicon.glyphicon-asterisk {
 }
 #cesar-logo {
     font-family: helvetica;
-    letter-spacing: 3px;
-    font-size: 20px;
+    letter-spacing: 4px;
+    font-size: 26px;
+    font-weight: 600;
+    /*background-color: white;*/
+   -webkit-animation-name: example; /* Chrome, Safari, Opera */
+   -webkit-animation-duration: 7s; /* Chrome, Safari, Opera */
+   animation-name: example;
+   animation-duration: 7s;
 
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    from {background-color: white; color: white;}
+    to {background-color: transparent;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    from {background-color: white; color: white;}
+    to {background-color: transparent;}
 }
 #charge-h1 {
     font-family: helvetica;
@@ -495,6 +517,11 @@ pre {
     justify-content: center
 }
 #twothree-btn {
+}
+#wrap-main-h1 {
+        background: rgba(255, 255, 255, 0.5);
+        height: 100%;
+
 }
 .main-h1 {
     font-family: "effra", Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -953,7 +980,7 @@ text-align: center;
 }
 #sub-main-h1 {
     font-size: 27px;
-    color: white;
+    color: darkslategray;
     line-height: 1.8;
     /*font-family: Circular Book;*/
 }
@@ -1068,10 +1095,10 @@ text-align: center;
 } 
 .how-it-header {
     
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.8);
     /*background: rgba(255, 255, 255, 255);*/
 
-    opacity: 1.3;
+    /*opacity: 1.3;*/
     z-index: 7;
     width: 100%;
     height: 700px;
@@ -1451,13 +1478,15 @@ text-align: center;
     border-style: solid;
 }
 #learn-more-how {
-    background-color:  transparent;
+    background-color:  deeppink;
     color: white;
     transition: 1s ease-out;
-    border-color: white;
+    border-color: transparent;
     border-width: 5px;
     border-style: solid;
     margin-top: 60px;
+    width: 10%;
+    font-size: 22px;
 }
 #learn-more-how:hover {
     background-color:  white;
