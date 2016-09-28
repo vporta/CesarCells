@@ -1633,8 +1633,8 @@ text-align: center;
      padding: 20px;
      position: relative;
      color: white;
-     background-color: deeppink;
-     border-color: deeppink;
+     background-color: green;
+     border-color: transparent;
      transition: all 0.3s ease-out;
      /*margin: 0;*/
      position: absolute;
