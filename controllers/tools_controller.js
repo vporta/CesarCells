@@ -305,7 +305,7 @@ router.get('/tools/my-genetics', ensureAuthenticated, function(req, res) {
   var data = {};
   if(req.user) {
 
-  SNPs.find({user_id: req.user._id}).sort({_id: 1}).then(function(result) {
+  SNPs.find({user_id: req.user._id}).then(function(result) {
     data.genes = result;
     // console.log('===data inside here===: ' + data);
     console.log('===result inside here===: ' + result);
