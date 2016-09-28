@@ -3,7 +3,9 @@
 </h1>
 {{#if user.geneReportPurchase}}
 <div class="modal-body genotypes-can-do"> 
-  <h2 class="lead" style="text-align: center">It worked</h2>
+  <h2 class="lead" style="text-align: center">{{result.genotypes}}</h2>
+  <h2 class="lead" style="text-align: center">{{result.genotypes.rs1061170}}</h2>
+
 </div>
 {{else}} {{! If they don't pay for the gene test, display text below}}
 <div class="modal-body genotypes-can-do"> 
@@ -60,7 +62,7 @@
                 <p class="lead">Purchase a gene report to view your results.</p>
               </div>
               {{/if}}
-              
+
               <div class="modal-header">
               <h2>About The Disease</h2>
               </div>
