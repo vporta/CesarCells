@@ -23,7 +23,6 @@ var path = require('path'),
     $ = require("jquery"),
     ngrok = require('ngrok');
    
-//mongodb://heroku_dzqdjbpp:m4q2mgf93oiqlk2h0os6ocgq3s@ds139655.mlab.com:39655/heroku_dzqdjbpp
 //======Express========
 var app = express();
 
@@ -116,22 +115,22 @@ var mongoose = require('mongoose');
 
 // Save MongoDB directory to a db var
 var db = 'mongodb://localhost/mongoCesarcells';
-// var options = { 
-//   server: { 
-//     socketOptions: { 
-//       keepAlive: 300000, connectTimeoutMS: 30000 
-//     } 
-//   }, 
-//   replset: { 
-//     socketOptions: { 
-//       keepAlive: 300000, 
-//       connectTimeoutMS : 30000 
-//     } 
-//   } 
-// };
+var options = { 
+  server: { 
+    socketOptions: { 
+      keepAlive: 300000, connectTimeoutMS: 30000 
+    } 
+  }, 
+  replset: { 
+    socketOptions: { 
+      keepAlive: 300000, 
+      connectTimeoutMS : 30000 
+    } 
+  } 
+};
 
 if(process.env.MONGODB_URI) {
-  mongoose.connect(process.env.MONGODB_URI);
+  mongoose.connect(process.env.MONGODB_URI, options);
 } else {
 
   // Connect that directory to Mongoose, for simple, powerful querying
@@ -147,21 +146,6 @@ if(process.env.MONGODB_URI) {
   });
 }
 require('./config/passport');
-
-
-
-
-//NOTE: To deploy, you must: follow homework19 server.js file
-//1. Remove the start script in package.json, and replace it with node server.js
-//2. See Homeworkwk18 for DB connection information in server.js, if that doesn't work, follow homework19
-//3. Heroku Login. Heroku Create. Push up to origin and heroku master. (Eventually Purchase a production version of mongodb_URI) 
-//4. Provision mLab. 
-//5. Navigate to config vars in heroku dashboard. Set config vars for sendgrid, 23andme. 
-//6. export MONGODB_URI=config var. ** Type: heroku config in the terminal to reveal the mongodb_uri
-//7. Add domain to heroku domains. 
-//8. configure godaddy to point to heroku url
-//9. Obtain ssl certificate and configure it to cesarcells.com and www.cesarcells.com
-//10. Set 23andme callback url as https://cesarcells.com 
 
 
 app.listen(port, function() {
