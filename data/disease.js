@@ -69,7 +69,7 @@ module.exports = [
     snp: 'rs61753034',
     location: 'Chromosome 1',
     variants: 'A or C',
-    risk: 'clinically significant for Glaucoma pathogenicity',
+    risk: 'clinically significant for pathogenicity',
     descr: ''
   },
   {
