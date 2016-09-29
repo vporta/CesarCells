@@ -343,7 +343,7 @@ router.get('/tools/my-genetics', ensureAuthenticated, function(req, res) {
 //     });
 //    });
 //   });
-// });
+// });  
 
 // AMSLER PAGE ROUTES
 router.get('/tools/amsler-test', ensureAuthenticated, function (req, res) {
