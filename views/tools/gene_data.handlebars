@@ -41,8 +41,8 @@
               </div>
               {{#if user.geneReportPurchase}}
               <div class="modal-body genotypes-can-do">
-              {{!-- {{#each data.genes}} --}}
-                <p class="lead">We tested your genome for three SNPs (See Table Below) for Genes: {{data.genes.diseases.0.diseasegenename}} and {{data.genes.diseases.1.diseasegenename}} that have been shown to be associated with a risk of developing certain forms of Glaucoma, specifically: {{data.genes.diseases.0.diseasename}} and {{data.genes.diseases.8.diseasename}}. Your genotypes for Glaucoma are {{data.genes.genotypes.rs28936694}}, {{data.genes.genotypes.rs3825942}}, and {{data.genes.genotypes.rs1048661}}. </p>
+              {{#each data.genes}}
+                <p class="lead">We tested your genome for three SNPs (See Table Below) for Genes: {{diseases.0.diseasegenename}} and {{diseases.1.diseasegenename}} that have been shown to be associated with a risk of developing certain forms of Glaucoma, specifically: {{diseases.0.diseasename}} and {{diseases.8.diseasename}}. Your genotypes for Glaucoma are {{genotypes.rs28936694}}, {{genotypes.rs3825942}}, and {{genotypes.rs1048661}}. </p>
 
                 <ul class="list-group">
                   <li class="list-group-item lead">1. For {{diseases.0.snp}}, your Genotype is {{genotypes.rs28936694}}. This snp is {{diseases.0.risk}} {{diseases.0.descr}} This snp is located on {{diseases.0.location}}.
@@ -53,7 +53,7 @@
                   3. For {{diseases.8.snp}}, your Genotype is {{genotypes.rs1048661}}. {{diseases.8.risk}} {{diseases.8.descr}} This snp is located on {{diseases.8.location}}.
                   </li>
                 </ul>
-              {{!-- {{/each}} --}}
+              {{/each}}
               </div>
               {{else}} {{! If they don't pay for the gene test, display text below}}
               <div class="modal-body genotypes-can-do">
