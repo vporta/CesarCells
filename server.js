@@ -26,36 +26,69 @@ var path = require('path'),
 //======Express========
 var app = express();
 
+// ==== REQUIRE MONGOOSE ====
+var mongoose = require('mongoose');
+
+// Save MongoDB directory to a db var
+var db = 'mongodb://localhost/mongoCesarcells';
+// mongoose.connect(db);
+mongoose.connect(process.env.MONGODB_URI);
+
+// var options = { 
+//   server: { 
+//     socketOptions: { 
+//       keepAlive: 300000, connectTimeoutMS: 30000 
+//     } 
+//   }, 
+//   replset: { 
+//     socketOptions: { 
+//       keepAlive: 300000, 
+//       connectTimeoutMS : 30000 
+//     } 
+//   } 
+// };
+
+// if(process.env.MONGODB_URI) {
+//   mongoose.connect(process.env.MONGODB_URI);
+
+// } else {
+
+//   mongoose.connect(db, function(err){
+//     if(err){
+//       console.log(err);
+//     } 
+//     else {
+//       console.log('mongoose connection is successful on: ' + db);
+//     }
+//   });
+// }
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 app.use(cookieParser('ILovemom')); //create env variable
 
+
+const MongoStore = require('connect-mongo')(session);
+app.use(session({
+  secret: 'linkit',
+  saveUninitialized: true,
+  resave: true,
+  store: new MongoStore({ mongooseConnection: mongoose.connection })
+}));
 //======Passport========      
-app.use(session({ secret: 'angiepangie23', cookie: { maxAge: 600000 } })); // session secret create env variable
+// app.use(session({ 
+
+//   secret: 'angiepangie23', 
+//   cookie: { 
+//     maxAge: 600000000 
+//   },
+
+// })); 
 app.use(flash()); // use connect-flash for flash messages stored in session
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
-//app.use(app.router);
 
-
-
-// // Session-persisted message middleware
-// app.use(function(req, res, next){
-//   var err = req.session.error,
-//       msg = req.session.notice,
-//       success = req.session.success;
-
-//   delete req.session.error;
-//   delete req.session.success;
-//   delete req.session.notice;
-
-//   if (err) res.locals.error = err;
-//   if (msg) res.locals.notice = msg;
-//   if (success) res.locals.success = success;
-
-//   next();
-// });
 
 //Override with POST having ?_method=DELETE
 app.use(methodOverride('_method'));
@@ -100,6 +133,7 @@ app.use('/', sitemap_controller);
 
 var charges_controller = require('./controllers/charges_controller.js');
 app.use('/', charges_controller);
+
 // ==== APIs ====
 var routing = require('./routing/api-trials');
 app.use('/', routing);
@@ -108,43 +142,6 @@ app.use('/', routing);
 var port = process.env.PORT || 3000;
 
 
-
-
-// ==== REQUIRE MONGOOSE ====
-var mongoose = require('mongoose');
-
-// Save MongoDB directory to a db var
-var db = 'mongodb://localhost/mongoCesarcells';
-var options = { 
-  server: { 
-    socketOptions: { 
-      keepAlive: 300000, connectTimeoutMS: 30000 
-    } 
-  }, 
-  replset: { 
-    socketOptions: { 
-      keepAlive: 300000, 
-      connectTimeoutMS : 30000 
-    } 
-  } 
-};
-
-if(process.env.MONGODB_URI) {
-  mongoose.connect(process.env.MONGODB_URI, options);
-} else {
-
-  // Connect that directory to Mongoose, for simple, powerful querying
-  mongoose.connect(db, function(err){
-    // log any errors connecting with mongoose
-    if(err){
-      console.log(err);
-    } 
-    // or log a success message
-    else {
-      console.log('mongoose connection is successful on: ' + db);
-    }
-  });
-}
 require('./config/passport');
 
 
