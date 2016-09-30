@@ -15,7 +15,7 @@ var StargRegSchema = new Schema({
   filledoutform: String,
   stargRegTaken: Boolean,
   dateCreated: Date,
-  user_id: [{ type: Schema.Types.ObjectId, ref: 'User' }]
+  user_id: { type: Schema.Types.ObjectId, ref: 'User' }
 
 });
 
