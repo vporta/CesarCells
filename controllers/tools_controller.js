@@ -303,23 +303,25 @@ router.get('/tools/genetic-data-retinal-diseases', ensureAuthenticated, function
 
 router.get('/tools/my-genetics', ensureAuthenticated, function(req, res) {
   var data = {};
-  if(req.user) {
+  // if(req.user) {
 
-  SNPs.find({user_id: req.user._id}).exec(function(result) {
+  SNPs.find({user_id: req.user._id}, function(err, result) {
+    
     data.genes = result;
     // console.log('===data inside here===: ' + data);
     console.log('===result inside here===: ' + result);
 
 
-  });
+ 
   // console.log('req.user here:------' + req.user);
 
+  })
   res.render('tools/gene_data', {
     data: data,
     user: req.user,
     layout: 'dash'
   });
-  }
+  // }
 });
 
 
