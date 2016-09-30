@@ -6,7 +6,7 @@ var Schema = mongoose.Schema;
 var SNPsSchema = new Schema({
   genotypes: Object,
   diseases: Array,
-  user_id: [{ type: Schema.Types.ObjectId, ref: 'User' }]
+  user_id: { type: Schema.Types.ObjectId, ref: 'User' }
 
 });
 
@@ -14,4 +14,4 @@ var SNPsSchema = new Schema({
 var SNPs = mongoose.model('SNPs', SNPsSchema);
 
 // Export it for use elsewhere
-module.exports = SNPs;
+module.exports = SNPs;  

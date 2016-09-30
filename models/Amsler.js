@@ -6,7 +6,7 @@ var Schema = mongoose.Schema;
 var AmslerSchema = new Schema({
   usernote: String,
   dateCreated: Date,
-  user_id: [{ type: Schema.Types.ObjectId, ref: 'User' }]
+  user_id: { type: Schema.Types.ObjectId, ref: 'User' }
 
 });
 
