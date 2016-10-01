@@ -77,15 +77,7 @@ app.use(session({
   resave: true,
   store: new MongoStore({ mongooseConnection: mongoose.connection })
 }));
-//======Passport========      
-// app.use(session({ 
-
-//   secret: 'angiepangie23', 
-//   cookie: { 
-//     maxAge: 600000000 
-//   },
-
-// })); 
+ 
 app.use(flash()); // use connect-flash for flash messages stored in session
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions

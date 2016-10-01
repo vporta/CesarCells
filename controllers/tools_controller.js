@@ -179,7 +179,7 @@ router.get('/receive_code', ensureAuthenticated, function(req, res) {
   }
 });
 
-router.get('/tools/genetic-data-retinal-diseases', ensureAuthenticated, function(req, res) {
+router.get('/tools/genetic-data-retinal-diseases', function(req, res) {
 
   // var dataMediate = {}; // ==== MEDIATOR ====
 
@@ -298,7 +298,7 @@ router.get('/tools/genetic-data-retinal-diseases', ensureAuthenticated, function
 
 // console.log(DEFAULT_SCOPE);
 
-router.get('/tools/my-genetics', ensureAuthenticated, function(req, res) {
+router.get('/tools/my-genetics', function(req, res) {
   var data = {};
   // if(req.user) {
 

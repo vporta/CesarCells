@@ -51,6 +51,7 @@
     "jsonwebtoken": "^7.1.6",
     "loadtest": "2.0.2",
     "method-override": "^2.3.6",
+    "mongodb": "2.2.10",
     "mongojs": "^2.4.0",
     "mongoose": "^4.5.3",
     "morgan": "^1.7.0",
