@@ -303,7 +303,7 @@ router.get('/tools/my-genetics', function(req, res) {
   var data = {};
   // if(req.user) {
 
-  SNPs.findOne({user_id: req.user._id}, function(err, result) {
+  SNPs.find({user_id: req.user._id}, function(err, result) {
     if(err) {
       console.log(err);
     }
