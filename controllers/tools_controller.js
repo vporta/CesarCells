@@ -4,6 +4,7 @@ var router = express.Router();
 var request = require('request');
 var bcrypt = require('bcryptjs');
 var path = require('path');
+var mongoose = require('mongoose');
 var passport = require('passport');
 var Trial = require('../models/Trial.js');
 var SNPs = require('../models/SNPs.js');
@@ -297,14 +298,15 @@ router.get('/tools/genetic-data-retinal-diseases', function(req, res) {
 // var DEFAULT_SCOPE = 'basic names analyses rs28938473';
 
 // console.log(DEFAULT_SCOPE);
-
+  
 router.get('/tools/my-genetics', function(req, res) {
   var data = {};
   // if(req.user) {
 
-  SNPs.find({user_id: req.user._id}, function(err, result) {
-    if(err) throw err;
-
+  SNPs.findOne({user_id: req.user._id}, function(err, result) {
+    if(err) {
+      console.log(err);
+    }
     data.genes = result;
     console.log('===result inside here===: ' + result);
 
