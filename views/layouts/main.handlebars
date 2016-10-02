@@ -61,19 +61,24 @@
         return text;
     }
     $(document).ready(function (){ // when the document has completed loading
-       $(document).mouseup(function (e){ // attach the mouseup event for the document
+        $(document).mouseup(function (e){ // attach the mouseup event for the document
         responsiveVoice.cancel(); // stop anything currently being spoken
         responsiveVoice.speak(getSelectionText()); //speak the text as returned by getSelectionText
-       })
+        })
 
 
+        $("div.lazy").lazyload({
+            effect : "fadeIn"
+        });
     });
+
     </script>
     
             
    
     <script src="/js/magnific-popup/jquery.magnific-popup.js"></script>
     <script src="/js/scripts/fadeIn.js"></script>
+    <script src="jquery.lazyload.js"></script>
 
 </body>
 </html>
