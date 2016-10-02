@@ -3,7 +3,6 @@ var router = express.Router();
 var session = require('express-session');
 var bcrypt = require('bcryptjs');
 var passport = require('passport');
-var router = express.Router();
 var LocalStrategy = require('passport-local').Strategy;
 var _ = require('underscore');
 var axios = require('axios');

@@ -1,15 +1,15 @@
 <h1 style="font-size: 50px; margin-top: 176px; text-align: center; margin-bottom: 45px"><strong id="index-title"> {{user.firstname}}'s </strong> Genetics 
 
 </h1>
-{{!-- {{#if user.geneReportPurchase}} --}}
+{{#if user.geneReportPurchase}}
 <div class="modal-body genotypes-can-do"> 
   <h2 class="lead" style="text-align: center">View your results below</h2>
 </div>
-{{!-- {{else}} {{! If they don't pay for the gene test, display text below}} --}}
+{{else}} {{! If they don't pay for the gene test, display text below}}
 <div class="modal-body genotypes-can-do"> 
   <h2 class="lead" style="text-align: center"><a href="/charge">PURCHASE A GENE REPORT </a> to view your results.</h2>
 </div>
-{{!-- {{/if}} --}}
+{{/if}}
 <div class="container">
 
 
@@ -39,7 +39,7 @@
 
                 <h2 style="text-align: center">Your Results</h2>
               </div>
-              {{!-- {{#if user.geneReportPurchase}} --}}
+              {{#if user.geneReportPurchase}}
               <div class="modal-body genotypes-can-do">
               {{#each data.genes}}
                 <p class="lead">We tested your genome for three SNPs (See Table Below) for Genes: {{diseases.0.diseasegenename}} and {{diseases.1.diseasegenename}} that have been shown to be associated with a risk of developing certain forms of Glaucoma, specifically: {{diseases.0.diseasename}} and {{diseases.8.diseasename}}. Your genotypes for Glaucoma are {{genotypes.rs28936694}}, {{genotypes.rs3825942}}, and {{genotypes.rs1048661}}. </p>
@@ -55,16 +55,16 @@
                 </ul>
               {{/each}}
               </div>
-              {{!-- {{else}} {{! If they don't pay for the gene test, display text below}} --}}
+              {{else}} {{! If they don't pay for the gene test, display text below}}
               <div class="modal-body genotypes-can-do">
                 <p class="lead">Purchase a gene report to view your results.</p>
               </div>
-              {{!-- {{/if}} --}}
+              {{/if}}
 
               <div class="modal-header">
               <h2>About The Disease</h2>
               </div>
-              {{!-- {{#if user.geneReportPurchase}} --}}
+              {{#if user.geneReportPurchase}}
               <div class="modal-body genotypes-can-do">
 
                   <p class="lead">Glaucoma is a group of eye diseases that damage the optic nerve (the bundle of nerve fibers that carries information from the eye to the brain) and can lead to vision loss and possibly blindness.</p>
@@ -80,15 +80,15 @@
                   <p class="lead">Open-angle glaucoma is three to four times more common in African Americans than in non-Hispanic whites. Between the ages of 45 and 64, glaucoma is fifteen times more likely to cause blindness in African Americans than in Caucasians.</p>
 
               </div>
-              {{!-- {{else}} {{! If they don't pay for the gene test, display text below}} --}}
+              {{else}} {{! If they don't pay for the gene test, display text below}}
               <div class="modal-body genotypes-can-do">
                 <p class="lead">Purchase a gene report to view your results.</p>
               </div>
-              {{!-- {{/if}} --}}
+              {{/if}}
               <div class="modal-header">
               <h2>What You Can Do</h2>
               </div>
-              {{!-- {{#if user.geneReportPurchase}} --}}
+              {{#if user.geneReportPurchase}}
               <div class="modal-body genotypes-can-do">
 
                 <p class="lead">Individuals at high risk for glaucoma should have a dilated-pupil eye examination at least every two years. Eye doctors use several tests to detect glaucoma.</p>
@@ -109,11 +109,11 @@
                   </li>
                 </ul>
               </div>
-              {{!-- {{else}} {{! If they don't pay for the gene test, display text below}} --}}
+              {{else}} {{! If they don't pay for the gene test, display text below}}
               <div class="modal-body genotypes-can-do">
                 <p class="lead">Purchase a gene report to view your results.</p>
               </div>
-              {{!-- {{/if}} --}}
+              {{/if}}
               <div class="modal-footer">
                   <button type="button" class="btn btn-default" id="main-btn"data-dismiss="modal">Close</button>
                   
@@ -137,7 +137,7 @@
             <div class="modal-header">
               <h2>Your Results</h2>
             </div>
-            {{!-- {{#if user.geneReportPurchase}} --}}
+            {{#if user.geneReportPurchase}}
             <div class="modal-body genotypes-can-do">
               {{#each data.genes}}
                 <p class="lead">We tested your genome for two SNPs for the {{diseases.6.diseasegenename}} Gene. {{diseases.6.diseasegenename}} has been shown to be associated with a risk of developing certain forms of Stargardt's Disease, specifically: {{diseases.6.diseasename}}. Your genotypes for Stargardt's Disease are {{genotypes.rs61753034}} and {{genotypes.rs61753033}}.</p>
@@ -151,15 +151,15 @@
                 </ul>
               {{/each}}   
             </div>
-            {{!-- {{else}} {{! If they don't pay for the gene test, display text below}} --}}
+            {{else}} {{! If they don't pay for the gene test, display text below}}
             <div class="modal-body genotypes-can-do">
               <p class="lead">Purchase a gene report to view your results.</p>
             </div>
-            {{!-- {{/if}} --}}
+            {{/if}}
             <div class="modal-header">
             <h2>About The Disease</h2>
             </div>
-            {{!-- {{#if user.geneReportPurchase}} --}}
+            {{#if user.geneReportPurchase}}
             <div class="modal-body genotypes-can-do">
               <p class="lead">The most common cause of Stargardt’s is an autosomal recessive mutation in a gene called ABCA4. This gene normally facilitates transport of a “used” form of vitamin A out of photoreceptors, the light sensitive cells in the retina. Without ABCA4, this material builds up in the retina and contributes to the formation of lipofuscin.</p>
               <br>
@@ -168,15 +168,15 @@
               <br>
               <p class="lead">Rarely, Stargardt disease can be caused by an autosomal dominant mutation in a gene called ELOVL4. This gene is responsible for the synthesis of very long chain fatty acids. In families with this form of the disease, one parent has the disease and 50 percent of his/her children inherit one copy of a mutated version of the ELOVL4 gene and develop the disease.</p> <br>
             </div>
-            {{!-- {{else}} --}} {{! If they don't pay for the gene test, display text below}}
+            {{else}} {{! If they don't pay for the gene test, display text below}}
             <div class="modal-body genotypes-can-do">
               <p class="lead">Purchase a gene report to view your results.</p>
             </div>
-            {{!-- {{/if}} --}}
+            {{/if}}
             <div class="modal-header">
               <h2>What You Can Do</h2>
             </div>
-            {{!-- {{#if user.geneReportPurchase}} --}}
+            {{#if user.geneReportPurchase}}
             <div class="modal-body genotypes-can-do">
               <p class="lead">Individuals with a family history for Stargardt's Disease should try to obtain a clinical diagnosis through genetic testing. </p>
               <ul class="list-group">
@@ -190,11 +190,11 @@
                 </li>             
               </ul>
             </div>
-            {{!-- {{else}} --}} {{! If they don't pay for the gene test, display text below}}
+            {{else}} {{! If they don't pay for the gene test, display text below}}
             <div class="modal-body genotypes-can-do">
               <p class="lead">Purchase a gene report to view your results.</p>
             </div>
-            {{!-- {{/if}} --}}
+            {{/if}}
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" id="main-btn" data-dismiss="modal">Close</button> 
             </div>
@@ -220,7 +220,7 @@
             <div class="modal-header">
               <h2>Your Results</h2>
             </div> 
-            {{!-- {{#if user.geneReportPurchase}} --}}
+            {{#if user.geneReportPurchase}}
             <div class="modal-body genotypes-can-do">
             {{#each data.genes}}
                 <p class="lead">We tested your genome for five SNPs (See Table Below) for the {{diseases.2.diseasegenename}}, {{diseases.3.diseasegenename}}, {{diseases.4.diseasegenename}}, and {{diseases.5.diseasegenename}} Genes that have been shown to be associated with a risk of developing certain forms of ARMD, specifically: {{diseases.2.diseasename}}, {{diseases.4.diseasename}}, and {{diseases.5.diseasename}}. </p>
@@ -240,16 +240,16 @@
                 </ul>
                 {{/each}}
             </div>
-            {{!-- {{else}} --}} {{! If they don't pay for the gene test, display text below}}
+            {{else}} {{! If they don't pay for the gene test, display text below}}
             <div class="modal-body genotypes-can-do">
               <p class="lead">Purchase a gene report to view your results.</p>
             </div>
-            {{!-- {{/if}} --}}
+            {{/if}}
 
             <div class="modal-header">
               <h2>About The Disease</h2>
             </div>
-            {{!-- {{#if user.geneReportPurchase}} --}}
+            {{#if user.geneReportPurchase}}
             <div class="modal-body genotypes-can-do">
               <p class="lead">There are two forms of AMD: dry and wet. It is possible for a person to suffer from both forms and for the disease to progress slowly or rapidly.</p>
               <br>
@@ -262,15 +262,15 @@
 
 
             </div>
-            {{!-- {{else}} --}} {{! If they don't pay for the gene test, display text below}}
+            {{else}} {{! If they don't pay for the gene test, display text below}}
             <div class="modal-body genotypes-can-do">
               <p class="lead">Purchase a gene report to view your results.</p>
             </div>
-            {{!-- {{/if}} --}}
+            {{/if}}
             <div class="modal-header">
               <h2>What You Can Do</h2>
             </div>
-            {{!-- {{#if user.geneReportPurchase}} --}}
+            {{#if user.geneReportPurchase}}
             <div class="modal-body genotypes-can-do">
               <p class="lead">Several genes are believed to be strongly associated with the risk of developing AMD:</p>
               <br>
@@ -293,11 +293,11 @@
                 </li>
               </ul>
             </div>
-            {{!-- {{else}} --}} {{! If they don't pay for the gene test, display text below}}
+            {{else}} {{! If they don't pay for the gene test, display text below}}
             <div class="modal-body genotypes-can-do">
               <p class="lead">Purchase a gene report to view your results.</p>
             </div>
-            {{!-- {{/if}} --}}
+            {{/if}}
             <div class="modal-footer">
               <button type="button" class="btn btn-default" id="main-btn" data-dismiss="modal">Close</button>               
             </div>
@@ -324,7 +324,7 @@
           <div class="modal-header">
             <h2></h2>
           </div>
-          {{!-- {{#if user.geneReportPurchase}} --}}
+          {{#if user.geneReportPurchase}}
           <div class="modal-body">
             <table class="table table-hover" id="table-genes-disease">
               <tbody>
@@ -507,12 +507,12 @@
               </tbody>
             </table>
           </div>
-         {{!-- {{else}} --}}
+         {{else}}
 
          <div class="modal-body">
            <p class="lead"><a href="/charge">PURCHASE A GENE REPORT </a> to view your results.</p>
          </div>
-         {{!-- {{/if}} --}}
+         {{/if}}
           <div class="modal-footer">
               <button type="button" class="btn btn-default" id="main-btn" data-dismiss="modal">Close</button> 
           </div>
@@ -526,7 +526,7 @@
 <div class="row">
   <div class="col-lg-12">
     <h2 id="your-genome-h2"><strong id="index-title">Your Genome</strong></h2>
-    {{!-- {{#if user.geneReportPurchase}} --}}
+    {{#if user.geneReportPurchase}}
     <p class="lead text-center">Your results are in the table below. We tested your genome for 10 genetic mutations of clinical relevance. This is not an exhaustive list, but a high level overview. The table will display for you base pairs (Your Genotype). Click on each Gene or SNP for more information.</p>
 
     <div class="wrap-snps table-responsive">
@@ -593,11 +593,11 @@
           
       </table>
     </div>
-    {{!-- {{else}} --}} {{! If they don't pay for the gene test, display text below}}
+    {{else}} {{! If they don't pay for the gene test, display text below}}
     <div class="modal-body genotypes-can-do">
       <p class="lead"><a href="/charge">PURCHASE A GENE REPORT </a> to view your results.</p>
     </div>
-    {{!-- {{/if}} --}}
+    {{/if}}
   </div>
 </div>
 <div class="row">
@@ -610,7 +610,7 @@
         Nutrition Support Protocol
       </a>
       <div class="collapse" id="collapseExample">
-      {{!-- {{#if user.geneReportPurchase}} --}}
+      {{#if user.geneReportPurchase}}
         <div class="well">
         <h2 class="list-group-item-heading">Lifestyle recommendations</h2>
           <ul class="list-group">
@@ -685,11 +685,11 @@ salmon and tuna), eggs and whey protein</li>
               <p class="lead">Intravitreal injection of forskolin, homotaurine, and L-carnosine affords neuroprotection to retinal ganglion cells following retinal ischemic injury: <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/26167113"> Study</a></p>
               <p class="lead">Systemic confounders affecting serum measurements of omega-3 and -6 polyunsaturated fatty acids in patients with retinal disease: <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/27596098"> Study</a></p>
         </div>
-        {{!-- {{else}} --}}
+        {{else}}
         <div class="well well-lg">
           <p class="lead"><a href="/charge">PURCHASE A GENE REPORT </a> to view your results.</p>
         </div>
-        {{!-- {{/if}} --}}
+        {{/if}}
       </div>
     </div>
     

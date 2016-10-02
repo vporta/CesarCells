@@ -1,16 +1,16 @@
 var express = require('express');
-var session = require('express-session');
 var router = express.Router();
+var session = require('express-session');
 var request = require('request');
 var bcrypt = require('bcryptjs');
 var path = require('path');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var Trial = require('../models/Trial.js');
+var User = require('../models/UserModel.js');
 var SNPs = require('../models/SNPs.js');
 var oauth2 = require('simple-oauth2');
 var Amsler = require('../models/Amsler.js');
-var User = require('../models/UserModel.js');
 var AgreeToGenomeData = require('../models/AgreeToGenomeData.js');
 var flash = require('connect-flash');
 // var helpers = require('../helpers/mail.js');
@@ -19,6 +19,7 @@ var cheerio = require('cheerio');
 var _ = require('underscore');
 var querystring = require('querystring');
 var diseases = require('../data/disease.js');
+var LocalStrategy = require('passport-local').Strategy;
 
 var ensureAuthenticated = function(req, res, next){
     if (req.isAuthenticated()) {
