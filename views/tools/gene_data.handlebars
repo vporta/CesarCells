@@ -222,7 +222,7 @@
             </div> 
             {{!-- {{#if user.geneReportPurchase}} --}}
             <div class="modal-body genotypes-can-do">
-                <p class="lead">{{#each data.genes}}
+            {{#each data.genes}}
                 <p class="lead">We tested your genome for five SNPs (See Table Below) for the {{diseases.2.diseasegenename}}, {{diseases.3.diseasegenename}}, {{diseases.4.diseasegenename}}, and {{diseases.5.diseasegenename}} Genes that have been shown to be associated with a risk of developing certain forms of ARMD, specifically: {{diseases.2.diseasename}}, {{diseases.4.diseasename}}, and {{diseases.5.diseasename}}. </p>
 
                 <ul class="list-group">
@@ -238,7 +238,7 @@
                   </li>
                  
                 </ul>
-              {{/each}}</p>     
+                {{/each}}
             </div>
             {{!-- {{else}} --}} {{! If they don't pay for the gene test, display text below}}
             <div class="modal-body genotypes-can-do">
