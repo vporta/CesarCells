@@ -20,9 +20,7 @@ var path = require('path'),
     _ = require('underscore'),
     Trial = require('./models/Trial'),
     SNPs = require('./models/SNPs'),
-    User = require('./models/UserModel'),
-    $ = require("jquery"),
-    ngrok = require('ngrok');
+    User = require('./models/UserModel');
    
 //======Express========
 var app = express();
@@ -32,9 +30,9 @@ var mongoose = require('mongoose');
 
 // Save MongoDB directory to a db var
 var db = 'mongodb://localhost/mongoCesarcells';
-// mongoose.connect(db);
+mongoose.connect(db);
 
-mongoose.connect(process.env.MONGODB_URI);
+// mongoose.connect(process.env.MONGODB_URI);
 
 // var options = { 
 //   server: { 
@@ -74,8 +72,8 @@ app.use(cookieParser('ILovemom')); //create env variable
 const MongoStore = require('connect-mongo')(session);
 app.use(session({
   secret: 'linkit',
-  saveUninitialized: true,
-  resave: true,
+  // saveUninitialized: true,
+  // resave: true,
   store: new MongoStore({ mongooseConnection: mongoose.connection })
 }));
  

@@ -109,7 +109,7 @@ router.get('/tools/genetic', ensureAuthenticated, function (req, res) {
 // **********23ANDME OAUTH2************
 var oauth2 = require('simple-oauth2')({
   clientID: process.env.TWOTHREEANDME_CLIENT_ID,
-  clientSecret: process.env.TWOTHREEANDME_CLIENT_SECRET,
+  clientSecret: process.env.TWOTHREEANDME_CLIENT_SECRET, 
   site: 'https://api.23andme.com',
   tokenPath: '/token',
   authorizationPath: '/authorize'
@@ -300,22 +300,25 @@ router.get('/tools/genetic-data-retinal-diseases', function(req, res) {
 
 // console.log(DEFAULT_SCOPE);
   
-router.get('/tools/my-genetics', function(req, res) {
+router.get('/tools/my-genetics', ensureAuthenticated, function(req, res) {
   var data = {};
   // if(req.user) {
 
-  SNPs.find({user_id: req.user._id}, function(err, result) {
+  SNPs.find({user_id: req.user._id}).exec(function(err, result) {
+    data.genes = result;
+
+  
     if(err) {
       console.log(err);
-    }
-    data.genes = result;
-    console.log('===result inside here===: ' + result);
+    }else {
+      console.log('===result inside here===: ' + result);
 
-  });
-  res.render('tools/gene_data', {
-    data: data,
-    user: req.user,
-    layout: 'dash'
+      res.render('tools/gene_data', {
+        data: data,
+        user: req.user,
+        layout: 'dash'
+      });      
+    }
   });
   // }
 });
@@ -346,14 +349,20 @@ router.get('/tools/my-genetics', function(req, res) {
 // AMSLER PAGE ROUTES
 router.get('/tools/amsler-test', ensureAuthenticated, function (req, res) {
   var data = {};
-  Amsler.find({user_id: req.user._id}).then(function(result) {
+  Amsler.find({user_id: req.user._id}).exec(function(err, result) {
     data.notes = result;
-    console.log('==========================000000====================' + result);
-  })
-  res.render('tools/amsler_test_page', {
-    data: data,
-    layout: 'dash',
-    user: req.user
+    if(err) {
+      console.log(err);
+    }else {
+
+      console.log('==========================Result:====================' + result);
+    
+      res.render('tools/amsler_test_page', {
+        data: data,
+        layout: 'dash',
+        user: req.user
+      });
+    }
   });
 });
 
