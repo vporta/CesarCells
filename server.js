@@ -30,9 +30,9 @@ var mongoose = require('mongoose');
 
 // Save MongoDB directory to a db var
 var db = 'mongodb://localhost/mongoCesarcells';
-mongoose.connect(db);
+// mongoose.connect(db);
 
-// mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI);
 
 // var options = { 
 //   server: { 
