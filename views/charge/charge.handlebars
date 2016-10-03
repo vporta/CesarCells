@@ -6,7 +6,7 @@
 
     <div class="col-sm-12 col-md-7" style="margin-top: 100px; padding: 50px">
     
-    <h1 style="margin-bottom: 50px" id="charge-h1"><strong id="index-title">CESAR</strong>CELLS GENE REPORT</h1>
+    <h1 style="margin-bottom: 50px" id="charge-h1"><strong id="index-title">CESAR</strong>CELLS GENE REPORT | Beta Price: $1.99</h1>
     
     <table id="cart" class="table table-hover table-condensed" style="margin-top: 40px">
           <thead>
@@ -29,11 +29,11 @@
                 </div>
               </div>
             </td>
-            <td data-th="Price">$19</td>
+            <td data-th="Price" style="text-decoration: line-through">$25</td>
             <td data-th="Quantity">
               <input type="number" class="form-control text-center" value="1" max="1" min="1">
             </td>
-            <td data-th="Subtotal" class="text-center">$19</td>
+            <td data-th="Subtotal" class="text-center" style="text-decoration: line-through">$25</td>
             {{!-- <td class="actions" data-th="">
               <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
               <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>                
@@ -42,15 +42,15 @@
         </tbody>
         <tfoot>
           <tr class="visible-xs">
-            <td class="text-center"><strong>Total $19</strong></td>
+            <td class="text-center" style="text-decoration: line-through"><strong>Total $25</strong></td>
           </tr>
           <tr>
            {{!--  <td><a href="/tools/my-genetics" class="btn btn-warning"><i class="fa fa-angle-left"></i> Back To My Genetics</a></td> --}}
             <td><form action="/stripe-charge" method="POST">
             <script
               src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-              data-key="pk_test_NRRb4eHDv9hbBRFT9kY90ZWN"
-              data-amount="1900"
+              data-key="pk_live_fAyJYhYErHQWeMAGika1cYOZ"
+              data-amount="199"
               data-name="CESARCELLS"
               data-description="Gene Report"
               data-zip-code="true"
@@ -61,7 +61,7 @@
             </form></td>
 
             <td colspan="2" class="hidden-xs"></td>
-            <td class="hidden-xs text-center"><strong>Total $19</strong></td>
+            <td class="hidden-xs text-center"><strong>Total $1.99</strong></td>
            
           </tr>
         </tfoot>
@@ -130,7 +130,7 @@
               <script
                 src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                 data-key="pk_live_fAyJYhYErHQWeMAGika1cYOZ"
-                data-amount="1999"
+                data-amount="199"
                 data-name="CESARCELLS"
                 data-description="Gene Report"
                 data-zip-code="true"

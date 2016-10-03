@@ -215,20 +215,20 @@ span.glyphicon.glyphicon-asterisk {
     font-weight: 600;
     /*background-color: white;*/
    -webkit-animation-name: example; /* Chrome, Safari, Opera */
-   -webkit-animation-duration: 7s; /* Chrome, Safari, Opera */
+   -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
    animation-name: example;
-   animation-duration: 7s;
+   animation-duration: 2s;
 
 }
 /* Chrome, Safari, Opera */
 @-webkit-keyframes example {
-    from {background-color: white; color: white;}
+    from {background-color: darkslategray; color: white;}
     to {background-color: transparent;}
 }
 
 /* Standard syntax */
 @keyframes example {
-    from {background-color: white; color: white;}
+    from {background-color: deeppink; color: white;}
     to {background-color: transparent;}
 }
 #charge-h1 {
