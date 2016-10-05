@@ -72,8 +72,8 @@ app.use(cookieParser('ILovemom')); //create env variable
 const MongoStore = require('connect-mongo')(session);
 app.use(session({
   secret: 'linkit',
-  // saveUninitialized: true,
-  // resave: true,
+  saveUninitialized: true,
+  resave: true,
   store: new MongoStore({ mongooseConnection: mongoose.connection })
 }));
  
@@ -136,6 +136,9 @@ var port = process.env.PORT || 3000;
 
 require('./config/passport');
 
+// === Security Uncomment===
+// var helmet = require('helmet');
+// app.use(helmet());
 
 app.listen(port, function() {
   console.log("Let's do this! On port:", + port);
