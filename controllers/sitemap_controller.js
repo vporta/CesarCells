@@ -8,12 +8,12 @@ var sitemap = sm.createSitemap ({
       hostname: 'https://cesarcells.com/',
       cacheTime: 600000,        // 1,440 minutes (one day) regenerate sitemap
       urls: [
-        { url: '/',  changefreq: 'daily', priority: 0.3 },
+        { url: '/',  changefreq: 'daily', priority: 0.8 },
         { url: '/contact_us/contact' },
-        { url: '/about_us/aboutus' },
-        { url: '/whats-stargardts-disease' },
-        { url: '/stargardts-clinical-trials' },
-        { url: '/stargardts-glossary' },
+        { url: '/about_us/aboutus', priority: 0.7 },
+        { url: '/whats-stargardts-disease', priority: 0.6 },
+        { url: '/stargardts-clinical-trials', priority: 0.5 },
+        { url: '/stargardts-glossary', priority: 0.4 },
         { url: '/stargardts-stemcell-story' },
         { url: '/stargardts-assistive-technologies' },
         { url: '/tools/stemcell-assessment' },
