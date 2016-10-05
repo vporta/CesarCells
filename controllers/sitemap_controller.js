@@ -5,8 +5,8 @@ var sm = require('sitemap');
 
 /// Generate sitemap for SEO once per day
 var sitemap = sm.createSitemap ({
-      hostname: 'http://localhost:3000/',
-      cacheTime: 1440000,        // 1,440 minutes (one day) regenerate sitemap
+      hostname: 'https://cesarcells.com/',
+      cacheTime: 600000,        // 1,440 minutes (one day) regenerate sitemap
       urls: [
         { url: '/',  changefreq: 'daily', priority: 0.3 },
         { url: '/contact_us/contact' },
