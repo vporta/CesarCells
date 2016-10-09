@@ -1,4 +1,5 @@
 require('newrelic');
+// 'use strict';
 var path = require('path'),
     express = require('express'),
     sm = require('sitemap'),
@@ -21,7 +22,7 @@ var path = require('path'),
     Trial = require('./models/Trial'),
     SNPs = require('./models/SNPs'),
     User = require('./models/UserModel');
-   
+    
 //======Express========
 var app = express();
 
@@ -137,8 +138,8 @@ var port = process.env.PORT || 3000;
 require('./config/passport');
 
 // === Security Uncomment===
-// var helmet = require('helmet');
-// app.use(helmet());
+var helmet = require('helmet');
+app.use(helmet());
 
 app.listen(port, function() {
   console.log("Let's do this! On port:", + port);

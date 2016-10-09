@@ -102,7 +102,7 @@ router.get('/users/dashboard', ensureAuthenticated, function (req, res) {
       data: data,
       layout: 'dash',
       user: req.user,
-      successFlash: 'Hey, ' + req.user.firstname,
+      successFlash: 'Welcome To Your Cesarcell\'s Dashboard, ' + req.user.firstname,
       failureFlash: 'Invalid email or password!'
 
       });

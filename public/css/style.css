@@ -263,6 +263,7 @@ span.glyphicon.glyphicon-asterisk {
 }
 
 
+
 #login-nav-text {
     /*background-color: whitesmoke;*/
     border-radius: 7%;
@@ -1460,6 +1461,12 @@ text-align: center;
 .modal-body {
     background-color: whitesmoke;
 }
+.about-body {
+    background-color: #ff90a1;
+}
+/*.about-body, p {
+    color: white;
+}*/
 #eye-diseases {
     color: deeppink;
 }
@@ -1843,24 +1850,53 @@ text-align: center;
     margin-bottom: 20px;
     /*background-color: whitesmoke;*/
 }
+
 #img-dash4 {
     margin-left: 10px;
 }
 #row-top-dash-images {
-    margin-top: 165px;
+    margin-top: 125px;
+    margin-bottom: 125px;
 }
 #row-btm-dash-images {
     height: 50%;
 
 }
+.wrap-results {
+    background-color: white; 
+    height: 140px;
+    border-width: 1px;
+    border-style: ridge;
+    margin-bottom: 30px;
+
+}
+
+.wrap-results:hover {
+    /*cursor: pointer;*/
+    background-color: #ff69b4;
+    height: 140px;
+    border-color: deeppink;
+    border-width: 4px;
+    border-style: ridge;
+    /*margin: 4px;*/
+
+
+}
+
 .dash-h3s {
-    color: black;
+    color: darkslategray;
     font-size: 28px;
-    font-weight: 600px;
+    font-weight: 600;
+    vertical-align: middle;
+   
+    margin: 0;
+    padding: 0;
+    
 
 }
 .dash-h3s:hover {
-    color: deeppink;
+    color: black;
+    cursor: pointer
 
 }
 .img-rounded {
@@ -1922,14 +1958,14 @@ h3 {
     height: 220px;
 }
 .nav.navbar-nav.navbar-right {
-    background-color: whitesmoke;
+    background-color: white;
     ;
     margin-top: 25px; 
     border-radius: 7px;
     border-bottom: solid 2px #D1E2E5;
 }
 #a-dash {
-    color: darkslategray;
+    color: black;
 }
 #a-dash:hover {
     color: deeppink;
@@ -1937,7 +1973,7 @@ h3 {
 
 }
 #a-dash-one {
-    color: darkslategray;
+    color: black;
 }
 #a-dash-one:hover {
     color: deeppink;
@@ -1945,7 +1981,7 @@ h3 {
 
 }
 #a-dash-two {
-    color: darkslategray;
+    color: black;
 }
 #a-dash-two:hover {
     color: deeppink;
@@ -1953,7 +1989,7 @@ h3 {
 
 }
 #a-dash-three {
-    color: darkslategray;
+    color: black;
 }
 #a-dash-three:hover {
     color: deeppink;
@@ -1961,7 +1997,7 @@ h3 {
 
 }
 #a-dash-four {
-    color: darkslategray;
+    color: black;
 }
 #a-dash-four:hover {
     color: deeppink;
