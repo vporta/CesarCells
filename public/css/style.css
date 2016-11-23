@@ -1946,7 +1946,7 @@ h3 {
     height: 220px;
 }
 .nav.navbar-nav.navbar-right {
-    background-color: white;
+    background-color: whitesmoke;
     ;
     margin-top: 25px; 
     border-radius: 7px;
@@ -2440,7 +2440,6 @@ li,ul{
 }
 .wrap-trial-form {
     background-color: whitesmoke;
-    border-radius: 5%;  
     padding-left: 25%;
     padding-right: 25%;
     margin-bottom: 30px;
