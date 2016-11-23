@@ -1459,7 +1459,7 @@ text-align: center;
     margin: 0 auto;
 }
 .modal-body {
-    background-color: whitesmoke;
+    /*background-color: whitesmoke;*/
 }
 .about-body {
     background-color: #ff90a1;
@@ -1856,39 +1856,27 @@ text-align: center;
 }
 #row-top-dash-images {
     margin-top: 125px;
-    margin-bottom: 125px;
+    margin-bottom: 5px;
 }
 #row-btm-dash-images {
     height: 50%;
 
 }
 .wrap-results {
-    background-color: white; 
+    /*background-color: white; */
     height: 140px;
-    border-width: 1px;
-    border-style: ridge;
+    border-width: 2px;
+    border-style: solid;
     margin-bottom: 30px;
-
+    border-color: whitesmoke;
 }
 
-.wrap-results:hover {
-    /*cursor: pointer;*/
-    background-color: #ff69b4;
-    height: 140px;
-    border-color: deeppink;
-    border-width: 4px;
-    border-style: ridge;
-    /*margin: 4px;*/
-
-
-}
 
 .dash-h3s {
-    color: darkslategray;
+    color: black;
     font-size: 28px;
     font-weight: 600;
     vertical-align: middle;
-   
     margin: 0;
     padding: 0;
     
@@ -2176,9 +2164,7 @@ ul.dropdown-menu {
     background-color: transparent;
     margin: 20px 0 0 20px;
 }
-/*#snps-table th td tr{
-    color: gray;
-}*/
+
 
 .wrap-snps {
     /*position: relative;*/
@@ -2192,6 +2178,9 @@ ul.dropdown-menu {
     font-size: 19px;
 }
 
+.control-label {
+    font-weight: 200;
+}
 
 .container {
     max-width: 18000px;
@@ -2211,16 +2200,12 @@ nav.navbar.navbar-default.navbar-fixed-top {
     height: 100%;
     width: 100%;
 }
-.panel-default {
-    background-color: #f7f9fa;
-    /*margin-top: 130px;*/
-}
-.details-new-form {
 
-background-color: whitesmoke;
-padding: 60px;
-border-radius: 5%;
- 
+.details-new-form {
+    background-color: whitesmoke;
+    padding: 60px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 #terms-h2 {
     margin-top: 100px;
@@ -2317,7 +2302,7 @@ img.question-image {
   /*add border*/
 }
 #start-panel-begin {
-  margin-top: 40px;
+  margin-top: 80px;
   padding: 20px;
   text-align: center;
   /*add border*/
@@ -2423,7 +2408,6 @@ li,ul{
     background-color: whitesmoke;
     margin-top: 200px;
     padding: 25px;
-    border-radius: 5%;
     margin-left: 25%;
     width: 50%;
 
@@ -2437,7 +2421,6 @@ li,ul{
     margin-left: 25%;
     background-color: whitesmoke;
     padding: 20px;
-    border-radius: 5%;
 }
 #wrap-starg-form {
     border-radius: 5%;  
@@ -2445,7 +2428,6 @@ li,ul{
 }
 #wrap-contact-support-form {
     background-color: whitesmoke;
-    border-radius: 5%;  
     margin-left: 25%;
     margin-top: 200px;
 
@@ -3209,7 +3191,6 @@ header {
     margin-top: 140px; 
     padding: 40px; 
     background-color: whitesmoke; 
-    border-radius: 5%; 
     margin-left: 20%
 }
 

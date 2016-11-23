@@ -37,7 +37,7 @@
 
   <div class="form-group">
     <label class="required" for="RetinalDiag">Have you been clinically diagnosed with a retinal disease?</label>
-    <select name="diagnosedSelect" required="true">
+    <select class="form-control" name="diagnosedSelect" required="true">
         <option value=""></option>
         <option value="true">Yes</option>
         <option value="false">No</option>
@@ -46,7 +46,7 @@
 
   <div class="form-group">
     <label class="required" for="WhoIsItFor">Who is this profile for?</label>
-    <select name="userType" required="true">
+    <select class="form-control" name="userType" required="true">
         <option value="myself">Myself</option>
         <option value="familyMember">A Family Member</option>
         <option value="friend">A Friend</option>
@@ -55,7 +55,9 @@
   </div>
     
 <label class="required" for="WhichDisease">If you answered yes to the previous question, which retinal disease have you been diagnosed with?</label>
-<select name="retinalDisease" required>
+
+<div class="form-group">
+<select class="form-control" name="retinalDisease" required>
     <option value=""></option>
     <option value="none">None</option>
     <option value="stargardts">Stargardt's Disease</option>
@@ -75,10 +77,11 @@
     <option value="UsherSyndrome">Usher Syndrome</option>
     <option value="Other">Other</option>
 </select>
+</div>
   <br><br>
     
     Country<br>
-      <select name="country" required>
+      <select class="form-control" name="country" required>
       <option value="">Country...</option>
       <option value="Afganistan">Afghanistan</option>
       <option value="Albania">Albania</option>
