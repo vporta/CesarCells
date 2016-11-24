@@ -32,19 +32,21 @@ router.get('/tools/start-health-assessment', ensureAuthenticated, function (req,
 console.log('assessmentTaken: '+ req.user.assessmentTaken);
   if (req.user && req.user.assessmentTaken) {
     
-    req.flash('taken', 'You\'ve already taken the assessment.')
+    // req.flash('taken', 'You\'ve already taken the assessment.')
 
-    res.render('users/dashboard', {
-      layout: 'dash',
-      taken: req.flash('taken'),
-      assessmentTaken: req.user.assessmentTaken
+    // res.render('users/dashboard', {
+    //   layout: 'dash',
+    //   taken: req.flash('taken'),
+    //   assessmentTaken: req.user.assessmentTaken
 
-    });
+    // });
+    res.redirect('/users/dashboard') 
+
   } else {
     res.render('tools/start_assessment', {
       layout: 'dash',
       user: req.user
-    }); 
+    });
   }
       
 });
